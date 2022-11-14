@@ -8,7 +8,7 @@ import {
 } from 'react-notifications';
 import 'react-notifications/lib/notifications.css';
 import * as yup from 'yup';
-import { sendMessage } from 'src/api/telegramApi';
+import { sendMessage } from '../../api/telegramApi';
 import * as s from './Form.module.css';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
@@ -158,6 +158,7 @@ export const Form = () => {
       // --- TELEGRAM ---
       let text = `<b>Повідомлення з сайту!</b>\n`;
       text += `<b>Відправник: </b> ${data.name}\n`;
+      text += `<b>Телефон: </b> ${data.phone}\n`;
       text += `<b>Пошта: </b> ${data.email}\n`;
       text += `<b>Повідомлення: </b> ${data.message}\n`;
       text += `<b>Форма отримана з:</b>\n`;
