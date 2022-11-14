@@ -22,13 +22,13 @@ module.exports = {
         root: path.join(__dirname, 'src'),
       },
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: ``,
-    //     path: `${__dirname}/content`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/content`,
+      },
+    },
   ],
 };
 
