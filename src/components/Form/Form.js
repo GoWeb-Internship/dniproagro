@@ -8,7 +8,7 @@ import {
 } from 'react-notifications';
 import 'react-notifications/lib/notifications.css';
 import * as yup from 'yup';
-import { sendMessage } from 'src/api/telegramApi';
+import { sendMessage } from '../../api/telegramApi';
 import * as s from './Form.module.css';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
