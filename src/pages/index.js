@@ -1,5 +1,7 @@
 import * as React from 'react';
+import { graphql } from 'gatsby';
 import { Form, Statistics } from '../components';
+import Map from '../components/Map/Map';
 
 const pageStyles = {
   color: '#232129',
@@ -129,6 +131,7 @@ const IndexPage = () => {
     <main style={pageStyles}>
       <Statistics />
       <Form />
+      <Map />
       <h1 style={headingStyles}>
         Congratulations
         <br />
@@ -179,3 +182,17 @@ const IndexPage = () => {
 export default IndexPage;
 
 export const Head = () => <title>Home Page</title>;
+
+// export const query = graphql`
+//   query($language: String!) {
+//     locales: allLocale(language: {eq: $language}}) {
+//       edges {
+//         node {
+//           ns
+//           data
+//           language
+//         }
+//       }
+//     }
+//   }
+// `;
