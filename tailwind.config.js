@@ -37,7 +37,7 @@ module.exports = {
         accent: {
           DEFAULT: '#3B82F6', // class="bg-accent text-accent border-accent"
           dark: '#0F0E39', // class="bg-accent-dark text-accent-dark border-accent-dark"
-        },
+        }, 
       },
       // CONTAINER
       container: {
