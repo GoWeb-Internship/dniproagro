@@ -8,15 +8,34 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
+    "develop": "npm run clean && gatsby develop",
+    "start": "npm run develop",
+    "build": "npm run clean && gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "gatsby": "^5.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "gatsby": "4.24.4",
+    "gatsby-plugin-image": "^2.24.0",
+    "gatsby-plugin-netlify-cms": "6.24.0",
+    "gatsby-source-filesystem": "4.24.0",
+    "gatsby-transformer-remark": "5.24.0",
+    "netlify-cms-app": "^2.15.72",
+    "react": "17.0.0",
+    "react-dom": "17.0.0"
+  },
+  "devDependencies": {
+    "@headlessui/react": "^1.7.4",
+    "@heroicons/react": "^2.0.13",
+    "eslint": "^8.27.0",
+    "eslint-config-react-app": "^7.0.1",
+    "gatsby-plugin-postcss": "^5.24.0",
+    "gatsby-plugin-root-import": "^2.0.9",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "postcss": "^8.4.18",
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.13",
+    "tailwindcss": "^3.1.8"
   }
 }

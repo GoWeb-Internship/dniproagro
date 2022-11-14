@@ -1,0 +1,677 @@
+backend:
+  name: git-gateway
+  branch: master
+  commit_messages:
+    create: 'Create {{collection}} “{{slug}}” {{commit_date}}'
+    update: 'Update {{collection}} “{{slug}}” {{commit_date}}'
+    delete: 'Delete {{collection}} “{{slug}}” {{commit_date}}'
+    uploadMedia: '[skip ci] Upload “{{path}}” {{commit_date}}'
+    deleteMedia: '[skip ci] Delete “{{path}}” {{commit_date}}'
+
+local_backend: true
+media_folder: /static/img
+public_folder: /img
+
+collections:
+  - label: 'Перелік мов контенту'
+    name: 'list_of_languages'
+    identifier_field: name
+    description: 'Перелік мов контенту, які використовуються на сайті'
+    folder: 'content/list-of-languages'
+    create: false
+    delete: false
+    hide: true
+    path: 'list-of-languages'
+    fields:
+      [
+        {
+          label: 'Title at admin panel',
+          name: 'title',
+          widget: 'hidden',
+          default: 'Перелік мов контенту',
+        },
+        {
+          label: 'language item',
+          name: 'language_item',
+          widget: 'list',
+          fields:
+            [
+              {
+                label: 'language title',
+                name: 'language_title',
+                widget: string,
+                required: true,
+                pattern:
+                  [
+                    '^[a-z]{1,3}$',
+                    'Назва мови може містити тільки малі латинські літери. Не
+                    більше 3 символів',
+                  ],
+                hint: 'Мова для внесення контенту - згідно з html стандартом',
+              },
+              {
+                label: 'Title at admin panel',
+                name: 'title',
+                widget: 'string',
+                required: true,
+                hint: 'Назва мови',
+              },
+            ],
+        },
+      ]
+  - label: 'Наш слоган'
+    name: 'our_slogan'
+    identifier_field: language
+    description: 'Розділ "Наш слоган"'
+    folder: 'content/our-slogan'
+    create: true
+    delete: true
+    path: '{{language}}'
+    sortable_fields: ['commit_date', 'title', 'language']
+    fields:
+      - {
+          label: 'Chapter',
+          name: 'chapter',
+          widget: 'hidden',
+          default: 'our_slogan',
+        }
+      - {
+          label: 'Language',
+          name: 'language',
+          collection: 'list_of_languages',
+          widget: 'relation',
+          required: true,
+          search_fields: ['language_item.*.language_title'],
+          value_field: 'language_item.*.language_title',
+          display_fields:
+            ['language_item.*.language_title', 'language_item.*.title'],
+          hint: 'Виберіть мову, яка відповідає контенту даного розділу',
+        }
+      - {
+          label: 'Title at page',
+          name: 'title',
+          widget: 'string',
+          required: true,
+          hint: 'Введіть слоган компанії, який буде відображатися на сторінці',
+        }
+      - {
+          label: 'Content',
+          name: 'content',
+          widget: 'markdown',
+          editor_components: [],
+          buttons: ['bold', 'code', 'link', 'bulleted-list'],
+          required: true,
+          hint: 'Введіть контент розділу "Наш слоган"',
+        }
+      - {
+          label: 'Company phone number',
+          name: 'phone',
+          widget: 'string',
+          default: '+380',
+          required: true,
+          pattern: [
+              '^[+380]{1,}([0-9]){12}$',
+              # "+380([0-9]{9})$",
+              "Номер телефону може містити тільки цифри та знак +, повинен
+              починатися на '+380' та містити 13 символів",
+            ],
+          hint: "Введіть телефон компанії для зворотнього зв'язку",
+        }
+      - {
+          label: 'Add video file',
+          name: 'video_file',
+          widget: 'file',
+          media_folder: /static/video,
+          public_folder: /video,
+          choose_url: false,
+        }
+  - label: 'Про компанію'
+    name: 'about_company'
+    identifier_field: language
+    description: 'Розділ "Про компанію"'
+    folder: 'content/about-company'
+    create: true
+    delete: true
+    path: '{{language}}'
+    sortable_fields: ['commit_date', 'title', 'language']
+    fields:
+      - {
+          label: 'Chapter',
+          name: 'chapter',
+          widget: 'hidden',
+          default: 'about_company',
+        }
+      - {
+          label: 'Language',
+          name: 'language',
+          collection: 'list_of_languages',
+          widget: 'relation',
+          required: true,
+          search_fields: ['language_item.*.language_title'],
+          value_field: 'language_item.*.language_title',
+          display_fields:
+            ['language_item.*.language_title', 'language_item.*.title'],
+          hint: 'Виберіть мову, яка відповідає контенту даного розділу',
+        }
+      - {
+          label: 'Title at page',
+          name: 'title',
+          widget: 'string',
+          required: true,
+          hint:
+            'Введіть назву для даного розділу, яка буде відображатися на
+            сторінці',
+        }
+      - {
+          label: 'Content',
+          name: 'content',
+          widget: 'markdown',
+          editor_components: [],
+          buttons: ['bold', 'code', 'link', 'bulleted-list'],
+          required: true,
+          hint: "Введіть контент розділу 'Про компанію'",
+        }
+      - {
+          label: 'Reporting',
+          name: 'reporting',
+          widget: 'object',
+          required: true,
+          fields:
+            [
+              {
+                label: 'Title',
+                name: 'title',
+                widget: 'string',
+                required: true,
+                hint: 'Введіть назву для кнопки звітності',
+              },
+              {
+                label: 'Absolute path to report file',
+                name: 'path',
+                widget: 'string',
+                required: true,
+                hint: 'Введіть абсолютний шлях до файлу звітності',
+              },
+            ],
+        }
+      - {
+          label: 'Statistics',
+          name: 'statistics',
+          widget: 'list',
+          required: true,
+          fields:
+            [
+              {
+                label: 'Category',
+                name: 'category',
+                widget: 'string',
+                required: true,
+                hint: 'Введіть назву категорії для статистики',
+              },
+              {
+                label: 'Value',
+                name: 'value',
+                widget: 'string',
+                required: true,
+                hint: 'Введіть значення для даної категорії',
+              },
+              {
+                label: 'Units of dimension',
+                name: 'units',
+                widget: 'string',
+                required: true,
+                hint: 'Введіть одиниці вимірювання для даної категорії',
+              },
+            ],
+        }
+  - label: 'Технологія посіву'
+    name: 'sowing_technology'
+    identifier_field: language
+    description: 'Розділ "Технологія посіву"'
+    folder: 'content/sowing_technology'
+    create: true
+    delete: true
+    path: '{{language}}'
+    sortable_fields: ['commit_date', 'title', 'language']
+    fields:
+      - {
+          label: 'Chapter',
+          name: 'chapter',
+          widget: 'hidden',
+          default: 'sowing_technology',
+        }
+      - {
+          label: 'Language',
+          name: 'language',
+          collection: 'list_of_languages',
+          widget: 'relation',
+          required: true,
+          search_fields: ['language_item.*.language_title'],
+          value_field: 'language_item.*.language_title',
+          display_fields:
+            ['language_item.*.language_title', 'language_item.*.title'],
+          hint: 'Виберіть мову, яка відповідає контенту даного розділу',
+        }
+      - {
+          label: 'Title at page',
+          name: 'title',
+          widget: 'string',
+          required: true,
+          hint:
+            'Введіть назву для даного розділу, яка буде відображатися на
+            сторінці',
+        }
+      - {
+          label: 'Content',
+          name: 'content',
+          widget: 'markdown',
+          editor_components: [],
+          buttons: ['bold', 'code', 'link', 'bulleted-list'],
+          required: true,
+          hint: "Введіть контент розділу 'Технологія посіву'",
+        }
+  - label: 'Культури'
+    name: 'cultures'
+    identifier_field: language
+    description: 'Розділ "Культури"'
+    folder: 'content/cultures'
+    media_folder: '/static/img'
+    public_folder: /img
+    create: true
+    delete: true
+    path: '{{language}}'
+    sortable_fields: ['commit_date', 'title', 'language']
+    fields:
+      - {
+          label: 'Chapter',
+          name: 'chapter',
+          widget: 'hidden',
+          default: 'cultures',
+        }
+      - {
+          label: 'Language',
+          name: 'language',
+          collection: 'list_of_languages',
+          widget: 'relation',
+          required: true,
+          search_fields: ['language_item.*.language_title'],
+          value_field: 'language_item.*.language_title',
+          display_fields:
+            ['language_item.*.language_title', 'language_item.*.title'],
+          hint: 'Виберіть мову, яка відповідає контенту даного розділу',
+        }
+      - {
+          label: 'Cultures',
+          name: 'cultures_list',
+          widget: 'list',
+          required: true,
+          fields:
+            [
+              {
+                label: 'Culture',
+                name: 'culture',
+                widget: 'string',
+                required: true,
+                hint: 'Введіть назву культури',
+              },
+              {
+                label: 'Description',
+                name: 'description',
+                widget: 'markdown',
+                editor_components: [],
+                buttons: ['bold', 'code', 'link', 'bulleted-list'],
+                required: true,
+                hint: 'Введіть опис для даної культури',
+              },
+              {
+                label: 'Image',
+                name: 'image',
+                widget: 'image',
+                required: true,
+                hint: 'Завантажте зображення даної культури',
+              },
+              {
+                label: 'File',
+                name: 'culture_file',
+                widget: 'file',
+                required: true,
+                media_folder: /static/files,
+                public_folder: /files,
+                choose_url: false,
+                hint: 'Завантажте медіа-файл даної культури',
+              },
+              {
+                label: 'Alt title of image',
+                name: 'alt',
+                widget: 'string',
+                required: true,
+                hint:
+                  'Введіть альтернативну назву для зображення (на мові колекції)',
+              },
+            ],
+        }
+  - label: 'Персонал'
+    name: 'personnel'
+    identifier_field: language
+    description: 'Розділ "Персонал"'
+    folder: 'content/personnel'
+    media_folder: '/static/img'
+    public_folder: /img
+    create: true
+    delete: true
+    path: '{{language}}'
+    sortable_fields: ['commit_date', 'title', 'language']
+    fields:
+      - {
+          label: 'Chapter',
+          name: 'chapter',
+          widget: 'hidden',
+          default: 'personnel',
+        }
+      - {
+          label: 'Language',
+          name: 'language',
+          collection: 'list_of_languages',
+          widget: 'relation',
+          required: true,
+          search_fields: ['language_item.*.language_title'],
+          value_field: 'language_item.*.language_title',
+          display_fields:
+            ['language_item.*.language_title', 'language_item.*.title'],
+          hint: 'Виберіть мову, яка відповідає контенту даного розділу',
+        }
+      - {
+          label: 'Workers',
+          name: 'workers_list',
+          widget: 'list',
+          required: true,
+          fields:
+            [
+              {
+                label: 'Worker',
+                name: 'worker',
+                widget: 'string',
+                required: true,
+                hint: "Введіть прізвище, ім'я та по батькові працівника",
+              },
+              {
+                label: 'Length of service',
+                name: 'length_of_service',
+                widget: 'string',
+                required: true,
+                hint: "Введіть стаж роботи працівника у форматі 'N років'",
+              },
+              {
+                label: 'Position',
+                name: 'position',
+                widget: 'string',
+                required: true,
+                hint: 'Введіть назву посади працівника',
+              },
+              {
+                label: 'Description',
+                name: 'description',
+                widget: 'markdown',
+                editor_components: [],
+                buttons: ['bold', 'code', 'link', 'bulleted-list'],
+                required: true,
+                hint: 'Введіть інформацію про працівника',
+              },
+              {
+                label: 'Photo',
+                name: 'photo',
+                widget: 'image',
+                required: true,
+                hint: 'Завантажте фото працівника',
+              },
+              {
+                label: 'Alt title of photo',
+                name: 'alt',
+                widget: 'string',
+                required: true,
+                hint:
+                  'Введіть альтернативну назву для зображення (на мові колекції)',
+              },
+            ],
+        }
+  - label: 'Технічні засоби'
+    name: 'technical_equipments'
+    identifier_field: language
+    description: 'Розділ "Технічні засоби"'
+    folder: 'content/technical_equipments'
+    media_folder: '/static/img'
+    public_folder: /img
+    create: true
+    delete: true
+    path: '{{language}}'
+    sortable_fields: ['commit_date', 'title', 'language']
+    fields:
+      - {
+          label: 'Chapter',
+          name: 'chapter',
+          widget: 'hidden',
+          default: 'technical_equipments',
+        }
+      - {
+          label: 'Language',
+          name: 'language',
+          collection: 'list_of_languages',
+          widget: 'relation',
+          required: true,
+          search_fields: ['language_item.*.language_title'],
+          value_field: 'language_item.*.language_title',
+          display_fields:
+            ['language_item.*.language_title', 'language_item.*.title'],
+          hint: 'Виберіть мову, яка відповідає контенту даного розділу',
+        }
+      - {
+          label: 'Equipments',
+          name: 'Equipments_list',
+          widget: 'list',
+          required: true,
+          fields:
+            [
+              {
+                label: 'Equipment',
+                name: 'equipment',
+                widget: 'string',
+                required: true,
+                hint: 'Введіть назву технічного засобу',
+              },
+              {
+                label: 'Description',
+                name: 'description',
+                widget: 'markdown',
+                editor_components: [],
+                buttons: ['bold', 'code', 'link', 'bulleted-list'],
+                required: true,
+                hint: 'Введіть опис для даного технічного засобу',
+              },
+              {
+                label: 'Image',
+                name: 'image',
+                widget: 'image',
+                required: true,
+                hint: 'Завантажте зображення даного технічного засобу',
+              },
+              {
+                label: 'Alt title of image',
+                name: 'alt',
+                widget: 'string',
+                required: true,
+                hint:
+                  'Введіть альтернативну назву для зображення технічного засобу
+                  (на мові колекції)',
+              },
+            ],
+        }
+  - label: 'Галерея'
+    name: 'gallery'
+    identifier_field: language
+    description: 'Розділ "Галерея"'
+    folder: 'content/gallery'
+    media_folder: '/static/img'
+    public_folder: /img
+    create: true
+    delete: true
+    path: '{{language}}'
+    sortable_fields: ['commit_date', 'title', 'language']
+    fields:
+      - {
+          label: 'Chapter',
+          name: 'chapter',
+          widget: 'hidden',
+          default: 'gallery',
+        }
+      - {
+          label: 'Language',
+          name: 'language',
+          collection: 'list_of_languages',
+          widget: 'relation',
+          required: true,
+          search_fields: ['language_item.*.language_title'],
+          value_field: 'language_item.*.language_title',
+          display_fields:
+            ['language_item.*.language_title', 'language_item.*.title'],
+          hint: 'Виберіть мову, яка відповідає контенту даного розділу',
+        }
+      - {
+          label: 'Photos',
+          name: 'Photos_list',
+          widget: 'list',
+          required: true,
+          fields:
+            [
+              {
+                label: 'Photo',
+                name: 'photo',
+                widget: 'image',
+                required: true,
+                hint: 'Завантажте фото для галереї',
+              },
+              {
+                label: 'Alt title of photo',
+                name: 'alt',
+                widget: 'string',
+                required: true,
+                hint:
+                  'Введіть альтернативну назву для фото галереї (на мові
+                  колекції)',
+              },
+            ],
+        }
+  - label: 'Наша адреса'
+    name: 'contacts'
+    identifier_field: language
+    description: 'Розділ "Наша адреса"'
+    folder: 'content/contacts'
+    media_folder: '/static/img'
+    public_folder: /img
+    create: true
+    delete: true
+    path: '{{language}}'
+    sortable_fields: ['commit_date', 'title', 'language']
+    fields:
+      - {
+          label: 'Chapter',
+          name: 'chapter',
+          widget: 'hidden',
+          default: 'contacts',
+        }
+      - {
+          label: 'Language',
+          name: 'language',
+          collection: 'list_of_languages',
+          widget: 'relation',
+          required: true,
+          search_fields: ['language_item.*.language_title'],
+          value_field: 'language_item.*.language_title',
+          display_fields:
+            ['language_item.*.language_title', 'language_item.*.title'],
+          hint: 'Виберіть мову, яка відповідає контенту даного розділу',
+        }
+      - {
+          label: 'Address',
+          name: 'address',
+          widget: 'string',
+          required: true,
+          hint: 'Введіть фізичну адресу компанії',
+        }
+      - {
+          label: 'Location',
+          name: 'location',
+          widget: 'map',
+          required: true,
+          hint:
+            'Виберіть локацію на карті, змінюючи масштаб та клікнувши для
+            виставлення мітки',
+        }
+      - {
+          label: 'Contacts',
+          name: 'contacts',
+          widget: 'list',
+          required: true,
+          fields:
+            [
+              {
+                label: 'Department',
+                name: 'department',
+                widget: 'string',
+                required: true,
+                hint: 'Введіть назву відділу, для якого задаєте контактні дані',
+              },
+              {
+                label: 'Phone',
+                name: 'phone',
+                widget: 'string',
+                required: true,
+                pattern: [
+                    '^[+380]{1,}([0-9]){12}$',
+                    # "+380([0-9]{9})$",
+                    "Номер телефону може містити тільки цифри та знак +, повинен
+                    починатися на '+380' та містити 13 символів",
+                  ],
+                hint: 'Введіть абсолютний шлях до файлу звітності',
+              },
+              {
+                label: 'Telegram',
+                name: 'telegram',
+                widget: 'string',
+                required: true,
+                hint: 'Введіть контакти в соцмережі Telegram',
+              },
+              {
+                label: 'Viber',
+                name: 'viber',
+                widget: 'string',
+                required: true,
+                hint: 'Введіть контакти в соцмережі Viber',
+              },
+              {
+                label: 'WhatsApp',
+                name: 'whatsapp',
+                widget: 'string',
+                required: true,
+                hint: 'Введіть контакти в соцмережі WhatsApp',
+              },
+            ],
+        }
+      - {
+          label: 'Schedule',
+          name: 'schedule',
+          widget: 'string',
+          required: true,
+          hint: 'Введіть графік роботи компанії',
+        }
+      - {
+          label: 'Company email',
+          name: 'email',
+          widget: 'string',
+          required: true,
+          # pattern: [
+          #     "^[+380]{1,}([0-9]){12}$",
+          #     # "+380([0-9]{9})$",
+          #     "Номер телефону може містити тільки цифри та знак +, повинен починатися на '+380' та містити 13 символів",
+          #   ],
+          hint: 'Введіть електронну пошту компанії',
+        }
