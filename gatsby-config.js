@@ -16,13 +16,13 @@ module.exports = {
     `gatsby-plugin-netlify-cms`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-postcss`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/locales`,
-        name: `locale`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     path: `${__dirname}/locales`,
+    //     name: `locale`,
+    //   },
+    // },
     // {
     //   resolve: `gatsby-plugin-react-i18next`,
     //   options: {
