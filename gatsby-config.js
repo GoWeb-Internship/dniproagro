@@ -1,6 +1,10 @@
 /**
  * @type {import('gatsby').GatsbyConfig}
+ *
  */
+
+const path = require('path');
+
 module.exports = {
   siteMetadata: {
     siteUrl: `https://www.yourdomain.tld`,
@@ -12,6 +16,12 @@ module.exports = {
     `gatsby-plugin-netlify-cms`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-postcss`,
+    {
+      resolve: 'gatsby-plugin-root-import',
+      options: {
+        root: path.join(__dirname, 'src'),
+      },
+    },
     // {
     //   resolve: `gatsby-source-filesystem`,
     //   options: {
