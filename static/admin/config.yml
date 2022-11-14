@@ -107,23 +107,38 @@ collections:
           label: 'Company phone number',
           name: 'phone',
           widget: 'string',
-          default: '+380',
           required: true,
-          pattern: [
-              '^[+380]{1,}([0-9]){12}$',
-              # "+380([0-9]{9})$",
-              "Номер телефону може містити тільки цифри та знак +, повинен
-              починатися на '+380' та містити 13 символів",
+          pattern:
+            [
+              '^[+0-9 ]{12,17}$',
+              'Номер телефону може містити тільки цифри, знак + та пробіл',
             ],
           hint: "Введіть телефон компанії для зворотнього зв'язку",
         }
       - {
-          label: 'Add video file',
-          name: 'video_file',
-          widget: 'file',
-          media_folder: /static/video,
-          public_folder: /video,
-          choose_url: false,
+          label: 'Images for slider',
+          name: 'images_list',
+          widget: 'list',
+          required: true,
+          fields:
+            [
+              {
+                label: 'Image',
+                name: 'image',
+                widget: 'image',
+                required: true,
+                hint: 'Завантажте фото для галереї',
+              },
+              {
+                label: 'Alternative title of image',
+                name: 'alt',
+                widget: 'string',
+                required: true,
+                hint:
+                  'Введіть альтернативну назву для фото галереї (на мові
+                  колекції)',
+              },
+            ],
         }
   - label: 'Про компанію'
     name: 'about_company'
@@ -224,59 +239,11 @@ collections:
               },
             ],
         }
-  - label: 'Технологія посіву'
-    name: 'sowing_technology'
-    identifier_field: language
-    description: 'Розділ "Технологія посіву"'
-    folder: 'content/sowing_technology'
-    create: true
-    delete: true
-    path: '{{language}}'
-    sortable_fields: ['commit_date', 'title', 'language']
-    fields:
-      - {
-          label: 'Chapter',
-          name: 'chapter',
-          widget: 'hidden',
-          default: 'sowing_technology',
-        }
-      - {
-          label: 'Language',
-          name: 'language',
-          collection: 'list_of_languages',
-          widget: 'relation',
-          required: true,
-          search_fields: ['language_item.*.language_title'],
-          value_field: 'language_item.*.language_title',
-          display_fields:
-            ['language_item.*.language_title', 'language_item.*.title'],
-          hint: 'Виберіть мову, яка відповідає контенту даного розділу',
-        }
-      - {
-          label: 'Title at page',
-          name: 'title',
-          widget: 'string',
-          required: true,
-          hint:
-            'Введіть назву для даного розділу, яка буде відображатися на
-            сторінці',
-        }
-      - {
-          label: 'Content',
-          name: 'content',
-          widget: 'markdown',
-          editor_components: [],
-          buttons: ['bold', 'code', 'link', 'bulleted-list'],
-          required: true,
-          hint: "Введіть контент розділу 'Технологія посіву'",
-        }
-  - label: 'Культури'
+  - label: 'Культури і технології посіву'
     name: 'cultures'
     identifier_field: language
-    description: 'Розділ "Культури"'
+    description: 'Розділ "Культури і технології посіву"'
     folder: 'content/cultures'
-    media_folder: '/static/img'
-    public_folder: /img
     create: true
     delete: true
     path: '{{language}}'
@@ -301,6 +268,15 @@ collections:
           hint: 'Виберіть мову, яка відповідає контенту даного розділу',
         }
       - {
+          label: 'Title at page',
+          name: 'title',
+          widget: 'string',
+          required: true,
+          hint:
+            'Введіть назву для даного розділу, яка буде відображатися на
+            сторінці',
+        }
+      - {
           label: 'Cultures',
           name: 'cultures_list',
           widget: 'list',
@@ -321,7 +297,7 @@ collections:
                 editor_components: [],
                 buttons: ['bold', 'code', 'link', 'bulleted-list'],
                 required: true,
-                hint: 'Введіть опис для даної культури',
+                hint: 'Введіть опис технології посіву для даної культури',
               },
               {
                 label: 'Image',
@@ -329,16 +305,6 @@ collections:
                 widget: 'image',
                 required: true,
                 hint: 'Завантажте зображення даної культури',
-              },
-              {
-                label: 'File',
-                name: 'culture_file',
-                widget: 'file',
-                required: true,
-                media_folder: /static/files,
-                public_folder: /files,
-                choose_url: false,
-                hint: 'Завантажте медіа-файл даної культури',
               },
               {
                 label: 'Alt title of image',
@@ -379,6 +345,15 @@ collections:
           display_fields:
             ['language_item.*.language_title', 'language_item.*.title'],
           hint: 'Виберіть мову, яка відповідає контенту даного розділу',
+        }
+      - {
+          label: 'Title at page',
+          name: 'title',
+          widget: 'string',
+          required: true,
+          hint:
+            'Введіть назву для даного розділу, яка буде відображатися на
+            сторінці',
         }
       - {
           label: 'Workers',
@@ -430,7 +405,8 @@ collections:
                 widget: 'string',
                 required: true,
                 hint:
-                  'Введіть альтернативну назву для зображення (на мові колекції)',
+                  'Введіть альтернативну назву для зображення - ПІБ (на мові
+                  колекції)',
               },
             ],
         }
@@ -463,6 +439,15 @@ collections:
           display_fields:
             ['language_item.*.language_title', 'language_item.*.title'],
           hint: 'Виберіть мову, яка відповідає контенту даного розділу',
+        }
+      - {
+          label: 'Title at page',
+          name: 'title',
+          widget: 'string',
+          required: true,
+          hint:
+            'Введіть назву для даного розділу, яка буде відображатися на
+            сторінці',
         }
       - {
           label: 'Equipments',
@@ -536,8 +521,17 @@ collections:
           hint: 'Виберіть мову, яка відповідає контенту даного розділу',
         }
       - {
+          label: 'Title at page',
+          name: 'title',
+          widget: 'string',
+          required: true,
+          hint:
+            'Введіть назву для даного розділу, яка буде відображатися на
+            сторінці',
+        }
+      - {
           label: 'Photos',
-          name: 'Photos_list',
+          name: 'photos_list',
           widget: 'list',
           required: true,
           fields:
@@ -560,10 +554,10 @@ collections:
               },
             ],
         }
-  - label: 'Наша адреса'
+  - label: 'Контакти'
     name: 'contacts'
     identifier_field: language
-    description: 'Розділ "Наша адреса"'
+    description: 'Розділ "Контакти"'
     folder: 'content/contacts'
     media_folder: '/static/img'
     public_folder: /img
@@ -589,6 +583,15 @@ collections:
           display_fields:
             ['language_item.*.language_title', 'language_item.*.title'],
           hint: 'Виберіть мову, яка відповідає контенту даного розділу',
+        }
+      - {
+          label: 'Title at page',
+          name: 'title',
+          widget: 'string',
+          required: true,
+          hint:
+            'Введіть назву для даного розділу, яка буде відображатися на
+            сторінці',
         }
       - {
           label: 'Address',
@@ -618,41 +621,40 @@ collections:
                 name: 'department',
                 widget: 'string',
                 required: true,
-                hint: 'Введіть назву відділу, для якого задаєте контактні дані',
+                hint: 'Введіть назву відділу, для якого хочете додати контакти',
               },
               {
                 label: 'Phone',
                 name: 'phone',
                 widget: 'string',
                 required: true,
-                pattern: [
-                    '^[+380]{1,}([0-9]){12}$',
-                    # "+380([0-9]{9})$",
-                    "Номер телефону може містити тільки цифри та знак +, повинен
-                    починатися на '+380' та містити 13 символів",
+                pattern:
+                  [
+                    '^[+0-9 ]{12,17}$',
+                    'Номер телефону може містити тільки цифри, знак + та пробіл',
                   ],
-                hint: 'Введіть абсолютний шлях до файлу звітності',
+                hint: 'Введіть номер телефону даного відділу',
               },
               {
                 label: 'Telegram',
                 name: 'telegram',
                 widget: 'string',
                 required: true,
-                hint: 'Введіть контакти в соцмережі Telegram',
+                hint: 'Введіть контакти даного відділу в соцмережі Telegram',
               },
               {
                 label: 'Viber',
                 name: 'viber',
                 widget: 'string',
                 required: true,
-                hint: 'Введіть контакти в соцмережі Viber',
+                hint: 'Введіть контакти даного відділу в соцмережі Viber',
               },
               {
                 label: 'WhatsApp',
                 name: 'whatsapp',
                 widget: 'string',
                 required: true,
-                hint: 'Введіть контакти в соцмережі WhatsApp',
+                hint: 'Введіть контакти даного відділу в соцмережі WhatsApp',
               },
             ],
         }
@@ -668,10 +670,5 @@ collections:
           name: 'email',
           widget: 'string',
           required: true,
-          # pattern: [
-          #     "^[+380]{1,}([0-9]){12}$",
-          #     # "+380([0-9]{9})$",
-          #     "Номер телефону може містити тільки цифри та знак +, повинен починатися на '+380' та містити 13 символів",
-          #   ],
           hint: 'Введіть електронну пошту компанії',
         }
