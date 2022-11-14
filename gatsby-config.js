@@ -12,13 +12,42 @@ module.exports = {
     `gatsby-plugin-netlify-cms`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-postcss`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/locales`,
+        name: `locale`,
+      },
+    },
     // {
-    //   resolve: `gatsby-source-filesystem`,
+    //   resolve: `gatsby-plugin-react-i18next`,
     //   options: {
-    //     name: ``,
-    //     path: `${__dirname}/content`,
+    //     localeJsonSourceName: `locale`,
+    //     languages: [`uk`, `en`, `pl`, `de`],
+    //     defaultLanguage: `uk`,
+    //     generateDefaultLanguagePage: '/uk',
+    //     siteUrl: ``,
+
+    //     i18nextOptions: {
+    //       lng: 'uk',
+    //       load: 'currentOnly',
+
+    //       interpolation: {
+    //         escapeValue: false,
+    //       },
+
+    //       keySeparator: false,
+    //       nsSeparator: false,
+    //     },
     //   },
     // },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/content`,
+      },
+    },
   ],
 };
 
