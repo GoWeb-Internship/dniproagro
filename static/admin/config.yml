@@ -107,13 +107,11 @@ collections:
           label: 'Company phone number',
           name: 'phone',
           widget: 'string',
-          default: '+380',
           required: true,
           pattern:
             [
-              '^[+380]{1,}([0-9]){12}$',
-              "Номер телефону може містити тільки цифри та знак +, повинен
-              починатися на '+380' та містити 13 символів",
+              '^[+0-9 ]{12,17}$',
+              'Номер телефону може містити тільки цифри, знак + та пробіл',
             ],
           hint: "Введіть телефон компанії для зворотнього зв'язку",
         }
@@ -523,6 +521,15 @@ collections:
           hint: 'Виберіть мову, яка відповідає контенту даного розділу',
         }
       - {
+          label: 'Title at page',
+          name: 'title',
+          widget: 'string',
+          required: true,
+          hint:
+            'Введіть назву для даного розділу, яка буде відображатися на
+            сторінці',
+        }
+      - {
           label: 'Photos',
           name: 'photos_list',
           widget: 'list',
@@ -547,10 +554,10 @@ collections:
               },
             ],
         }
-  - label: 'Наша адреса'
+  - label: 'Контакти'
     name: 'contacts'
     identifier_field: language
-    description: 'Розділ "Наша адреса"'
+    description: 'Розділ "Контакти"'
     folder: 'content/contacts'
     media_folder: '/static/img'
     public_folder: /img
@@ -576,6 +583,15 @@ collections:
           display_fields:
             ['language_item.*.language_title', 'language_item.*.title'],
           hint: 'Виберіть мову, яка відповідає контенту даного розділу',
+        }
+      - {
+          label: 'Title at page',
+          name: 'title',
+          widget: 'string',
+          required: true,
+          hint:
+            'Введіть назву для даного розділу, яка буде відображатися на
+            сторінці',
         }
       - {
           label: 'Address',
@@ -605,41 +621,40 @@ collections:
                 name: 'department',
                 widget: 'string',
                 required: true,
-                hint: 'Введіть назву відділу, для якого задаєте контактні дані',
+                hint: 'Введіть назву відділу, для якого хочете додати контакти',
               },
               {
                 label: 'Phone',
                 name: 'phone',
                 widget: 'string',
                 required: true,
-                pattern: [
-                    '^[+380]{1,}([0-9]){12}$',
-                    # "+380([0-9]{9})$",
-                    "Номер телефону може містити тільки цифри та знак +, повинен
-                    починатися на '+380' та містити 13 символів",
+                pattern:
+                  [
+                    '^[+0-9 ]{12,17}$',
+                    'Номер телефону може містити тільки цифри, знак + та пробіл',
                   ],
-                hint: 'Введіть абсолютний шлях до файлу звітності',
+                hint: 'Введіть номер телефону даного відділу',
               },
               {
                 label: 'Telegram',
                 name: 'telegram',
                 widget: 'string',
                 required: true,
-                hint: 'Введіть контакти в соцмережі Telegram',
+                hint: 'Введіть контакти даного відділу в соцмережі Telegram',
               },
               {
                 label: 'Viber',
                 name: 'viber',
                 widget: 'string',
                 required: true,
-                hint: 'Введіть контакти в соцмережі Viber',
+                hint: 'Введіть контакти даного відділу в соцмережі Viber',
               },
               {
                 label: 'WhatsApp',
                 name: 'whatsapp',
                 widget: 'string',
                 required: true,
-                hint: 'Введіть контакти в соцмережі WhatsApp',
+                hint: 'Введіть контакти даного відділу в соцмережі WhatsApp',
               },
             ],
         }
@@ -655,10 +670,5 @@ collections:
           name: 'email',
           widget: 'string',
           required: true,
-          # pattern: [
-          #     "^[+380]{1,}([0-9]){12}$",
-          #     # "+380([0-9]{9})$",
-          #     "Номер телефону може містити тільки цифри та знак +, повинен починатися на '+380' та містити 13 символів",
-          #   ],
           hint: 'Введіть електронну пошту компанії',
         }
