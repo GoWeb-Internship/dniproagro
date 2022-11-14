@@ -13,4 +13,7 @@ statistics:
   - category: Продано
     value: "65848"
     units: га
+  - category: Зібрано
+    value: "6541"
+    units: кг
 ---
