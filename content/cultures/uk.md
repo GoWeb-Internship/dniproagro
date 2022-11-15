@@ -10,8 +10,8 @@ cultures_list:
       amet tempore? Dolorum iure ab nisi dignissimos harum non provident illum
       doloremque accusantium quidem, ipsum mollitia! Dolorem, incidunt? Vel
       illo, sequi reiciendis libero harum quis obcaecati?
-    image: kukuruza.jpg
-    alt: кукурудза
+    image: /img/kukuruza.jpg
+    alt: "кукурудза "
   - culture: Соняшник
     description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
       vitae quisquam ab veritatis aut facere. Omnis commodi reiciendis, fuga
@@ -19,6 +19,6 @@ cultures_list:
       necessitatibus distinctio incidunt delectus saepe ea doloribus natus in
       dolorum ut cum consectetur at accusantium nihil! Quia id veniam cumque
       soluta sequi.
-    image: son.jpg
+    image: /img/son.jpg
     alt: Соняшник
 ---
