@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: dev
   commit_messages:
     create: 'Create {{collection}} “{{slug}}” {{commit_date}}'
     update: 'Update {{collection}} “{{slug}}” {{commit_date}}'
@@ -110,7 +110,7 @@ collections:
           required: true,
           pattern:
             [
-              '^[+0-9 ]{12,17}$',
+              '^[+0-9 ]{12,19}$',
               'Номер телефону може містити тільки цифри, знак + та пробіл',
             ],
           hint: "Введіть телефон компанії для зворотнього зв'язку",
@@ -244,6 +244,8 @@ collections:
     identifier_field: language
     description: 'Розділ "Культури і технології посіву"'
     folder: 'content/cultures'
+    media_folder: '/static/img'
+    public_folder: /img
     create: true
     delete: true
     path: '{{language}}'
@@ -559,8 +561,6 @@ collections:
     identifier_field: language
     description: 'Розділ "Контакти"'
     folder: 'content/contacts'
-    media_folder: '/static/img'
-    public_folder: /img
     create: true
     delete: true
     path: '{{language}}'
@@ -630,7 +630,7 @@ collections:
                 required: true,
                 pattern:
                   [
-                    '^[+0-9 ]{12,17}$',
+                    '^[+0-9 ]{12,19}$',
                     'Номер телефону може містити тільки цифри, знак + та пробіл',
                   ],
                 hint: 'Введіть номер телефону даного відділу',
@@ -657,13 +657,6 @@ collections:
                 hint: 'Введіть контакти даного відділу в соцмережі WhatsApp',
               },
             ],
-        }
-      - {
-          label: 'Schedule',
-          name: 'schedule',
-          widget: 'string',
-          required: true,
-          hint: 'Введіть графік роботи компанії',
         }
       - {
           label: 'Company email',
