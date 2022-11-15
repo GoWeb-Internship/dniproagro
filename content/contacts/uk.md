@@ -6,5 +6,21 @@ address: 51940 Украіна,  Дніпропетровська обл., Вас
   Свиридове, вул. Дзержинського, буд. 42
 location: '{"type":"Point","coordinates":[30.523505,50.4734924]}'
 schedule: інео
-email: DNIPROAGRO@gmail.com
+contacts:
+  - department: Генеральний Директор
+    telegram: тг
+    phone: +380 67 853 38 18
+    viber: viber
+    whatsapp: whatsapp
+  - department: Виконавчий директор
+    phone: +380 96 520 80 60
+    telegram: telegram
+    viber: viber
+    whatsapp: whatsapp
+  - department: Бухгалтерія
+    phone: +380 98 209 81 86
+    telegram: telegram
+    viber: viber
+    whatsapp: whatsapp
+email: dniproagro@gmail.com
 ---
