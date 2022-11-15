@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
-import { Section, Form, Statistics, Map } from '../components';
+import Map from '../components/Map/Map';
+import { Section, Form, Statistics } from '../components';
 
 const IndexPage = ({ data }) => {
   const chapters = data.allMarkdownRemark.nodes;
