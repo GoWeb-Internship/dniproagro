@@ -11,7 +11,7 @@ cultures_list:
       doloremque accusantium quidem, ipsum mollitia! Dolorem, incidunt? Vel
       illo, sequi reiciendis libero harum quis obcaecati?
     image: kukuruza.jpg
-    alt: кукурудза
+    alt: "кукурудза "
   - culture: Соняшник
     description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
       vitae quisquam ab veritatis aut facere. Omnis commodi reiciendis, fuga
