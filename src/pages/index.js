@@ -4,13 +4,16 @@ import Section from 'components/Section';
 import Statistics from 'components/Statistics';
 import Form from 'components/Form';
 import Map from 'components/Map/Map';
+import SwitchLang from 'components/SwitchLang';
 
 const IndexPage = ({ data }) => {
   // const chapters = data.allMarkdownRemark.nodes;
 
   return (
     <>
-      <header></header>
+      <header>
+        <SwitchLang />
+      </header>
 
       <main>
         {/* слоган */}
