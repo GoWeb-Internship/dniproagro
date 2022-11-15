@@ -4,13 +4,16 @@ import Section from 'components/Section';
 import Statistics from 'components/Statistics';
 import Form from 'components/Form';
 import Map from 'components/Map/Map';
+import Logo from 'components/Logo';
 
 const IndexPage = ({ data }) => {
   // const chapters = data.allMarkdownRemark.nodes;
 
   return (
     <>
-      <header></header>
+      <header>
+        <Logo />
+      </header>
 
       <main>
         {/* слоган */}
