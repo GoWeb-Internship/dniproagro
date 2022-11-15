@@ -1,10 +1,12 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
-import Map from '../components/Map/Map';
-import { Section, Form, Statistics } from '../components';
+import Section from 'components/Section';
+import Statistics from 'components/Statistics';
+import Form from 'components/Form';
+import Map from 'components/Map/Map';
 
 const IndexPage = ({ data }) => {
-  const chapters = data.allMarkdownRemark.nodes;
+  // const chapters = data.allMarkdownRemark.nodes;
 
   return (
     <>
@@ -12,30 +14,30 @@ const IndexPage = ({ data }) => {
 
       <main>
         {/* слоган */}
-        <Section></Section>
+        {/* <Section></Section> */}
 
         {/* про компанію */}
-        <Section>
-          <Statistics />
-        </Section>
+        {/* <Section> */}
+        <Statistics />
+        {/* </Section> */}
 
         {/* культури */}
-        <Section></Section>
+        {/* <Section></Section> */}
 
         {/* персонал */}
-        <Section></Section>
+        {/* <Section></Section> */}
 
         {/* техзасоби */}
-        <Section></Section>
+        {/* <Section></Section> */}
 
         {/* галерея */}
-        <Section></Section>
+        {/* <Section></Section> */}
 
         {/* контакти */}
-        <Section>
-          <Form />
-          <Map />
-        </Section>
+        {/* <Section> */}
+        <Form />
+        <Map />
+        {/* </Section> */}
       </main>
 
       <footer></footer>

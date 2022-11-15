@@ -15,6 +15,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-transformer-remark`,
+    `gatsby-plugin-root-import`,
     `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -43,12 +44,6 @@ module.exports = {
           keySeparator: false,
           nsSeparator: false,
         },
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-root-import',
-      options: {
-        root: path.join(__dirname, 'src'),
       },
     },
     {
