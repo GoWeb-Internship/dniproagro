@@ -5,6 +5,7 @@ import Statistics from 'components/Statistics';
 import Form from 'components/Form';
 import Map from 'components/Map/Map';
 import Logo from 'components/Logo';
+import SwitchLang from 'components/SwitchLang';
 
 const IndexPage = ({ data }) => {
   // const chapters = data.allMarkdownRemark.nodes;
@@ -13,6 +14,7 @@ const IndexPage = ({ data }) => {
     <>
       <header>
         <Logo />
+        <SwitchLang />
       </header>
 
       <main>

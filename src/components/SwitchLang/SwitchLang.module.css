@@ -1,0 +1,39 @@
+.langSwitch {
+  @apply relative box-border w-full max-md:p-4;
+}
+
+.buttonSwitch {
+  @apply flex h-full w-full items-center gap-x-2 text-[14px] leading-[17px];
+}
+
+.langLabel {
+  @apply text-emerald-800;
+}
+
+.globeIcon {
+  @apply h-6 w-6 text-emerald-800;
+}
+
+.langBackdrop {
+  @apply fixed top-0 left-0 z-10 h-full w-full;
+}
+
+.langList {
+  @apply absolute left-0 z-20 mt-6 box-border max-h-60  overflow-auto rounded-md bg-slate-200 shadow-main ring-1 ring-black ring-opacity-5;
+}
+
+.langListItem {
+  @apply flex  h-11 cursor-pointer items-center  justify-center border-b-2 bg-slate-200  py-1 text-sm leading-4 shadow-main transition-all last:border-transparent hover:bg-emerald-800 hover:text-slate-300;
+}
+
+.langItemLink {
+  @apply flex h-full w-full items-center  justify-center px-[38px] hover:text-slate-300;
+}
+
+.langItemLinkActive {
+  @apply text-green-900 underline decoration-green-900 underline-offset-4 hover:text-slate-300  hover:decoration-slate-300;
+}
+
+.langItemLinkMain {
+  @apply text-gray-900;
+}
