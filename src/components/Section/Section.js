@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Container } from '../components';
+import { Container } from '../../components';
 
 export const Section = ({ children, className }) => {
   return (
