@@ -4,6 +4,8 @@ import { Form, Statistics } from '../components';
 import Map from '../components/Map/Map';
 
 const IndexPage = ({ data }) => {
+  console.log(data);
+
   return (
     <main>
       <Statistics />
