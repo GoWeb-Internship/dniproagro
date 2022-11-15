@@ -34,6 +34,7 @@
     "react-i18next": "^11.18.6",
     "react-notifications": "^1.7.4",
     "react-phone-input-2": "^2.15.1",
+    "react-scroll": "^1.8.8",
     "swiper": "^8.4.4",
     "yup": "^0.32.11"
   },
