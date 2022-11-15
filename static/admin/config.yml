@@ -64,6 +64,8 @@ collections:
     identifier_field: language
     description: 'Розділ "Наш слоган"'
     folder: 'content/our-slogan'
+    media_folder: '/static/img'
+    public_folder: /img
     create: true
     delete: true
     path: '{{language}}'
@@ -145,6 +147,8 @@ collections:
     identifier_field: language
     description: 'Розділ "Про компанію"'
     folder: 'content/about-company'
+    media_folder: '/static/img'
+    public_folder: /img
     create: true
     delete: true
     path: '{{language}}'
@@ -185,6 +189,31 @@ collections:
           buttons: ['bold', 'code', 'link', 'bulleted-list'],
           required: true,
           hint: "Введіть контент розділу 'Про компанію'",
+        }
+      - {
+          label: 'Background Image',
+          name: 'bg-img',
+          widget: 'object',
+          required: true,
+          fields:
+            [
+              {
+                label: 'Photo',
+                name: 'photo',
+                widget: 'image',
+                required: true,
+                hint: 'Завантажте фото для галереї',
+              },
+              {
+                label: 'Alt title of photo',
+                name: 'alt',
+                widget: 'string',
+                required: true,
+                hint:
+                  'Введіть альтернативну назву для фото галереї (на мові
+                  колекції)',
+              },
+            ],
         }
       - {
           label: 'Reporting',
@@ -234,8 +263,9 @@ collections:
                 label: 'Units of dimension',
                 name: 'units',
                 widget: 'string',
-                required: true,
-                hint: 'Введіть одиниці вимірювання для даної категорії',
+                required: false,
+                hint:
+                  'Введіть одиниці вимірювання для даної категорії, якщо такі є',
               },
             ],
         }
