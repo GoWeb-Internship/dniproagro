@@ -16,35 +16,35 @@ module.exports = {
     `gatsby-plugin-netlify-cms`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-postcss`,
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     path: `${__dirname}/locales`,
-    //     name: `locale`,
-    //   },
-    // },
-    // {
-    //   resolve: `gatsby-plugin-react-i18next`,
-    //   options: {
-    //     localeJsonSourceName: `locale`,
-    //     languages: [`uk`, `en`, `pl`, `de`],
-    //     defaultLanguage: `uk`,
-    //     generateDefaultLanguagePage: '/uk',
-    //     siteUrl: ``,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/locales`,
+        name: `locale`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-react-i18next`,
+      options: {
+        localeJsonSourceName: `locale`,
+        languages: [`uk`, `en`, `pl`, `de`],
+        defaultLanguage: `uk`,
+        generateDefaultLanguagePage: '/uk',
+        siteUrl: ``,
 
-    //     i18nextOptions: {
-    //       lng: 'uk',
-    //       load: 'currentOnly',
+        i18nextOptions: {
+          lng: 'uk',
+          load: 'currentOnly',
 
-    //       interpolation: {
-    //         escapeValue: false,
-    //       },
+          interpolation: {
+            escapeValue: false,
+          },
 
-    //       keySeparator: false,
-    //       nsSeparator: false,
-    //     },
-    //   },
-    // },
+          keySeparator: false,
+          nsSeparator: false,
+        },
+      },
+    },
     {
       resolve: 'gatsby-plugin-root-import',
       options: {
