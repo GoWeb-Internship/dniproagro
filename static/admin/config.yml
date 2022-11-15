@@ -234,8 +234,9 @@ collections:
                 label: 'Units of dimension',
                 name: 'units',
                 widget: 'string',
-                required: true,
-                hint: 'Введіть одиниці вимірювання для даної категорії',
+                required: false,
+                hint:
+                  'Введіть одиниці вимірювання для даної категорії, якщо такі є',
               },
             ],
         }

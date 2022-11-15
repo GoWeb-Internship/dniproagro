@@ -1,17 +1,44 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
-import { Form, Statistics } from '../components';
-import Map from '../components/Map/Map';
+import { Section, Form, Statistics, Map } from '../components';
 
 const IndexPage = ({ data }) => {
-  console.log(data);
+  const chapters = data.allMarkdownRemark.nodes;
 
   return (
-    <main>
-      <Statistics />
-      <Form />
-      <Map />
-    </main>
+    <>
+      <header></header>
+
+      <main>
+        {/* слоган */}
+        <Section></Section>
+
+        {/* про компанію */}
+        <Section>
+          <Statistics />
+        </Section>
+
+        {/* культури */}
+        <Section></Section>
+
+        {/* персонал */}
+        <Section></Section>
+
+        {/* техзасоби */}
+        <Section></Section>
+
+        {/* галерея */}
+        <Section></Section>
+
+        {/* контакти */}
+        <Section>
+          <Form />
+          <Map />
+        </Section>
+      </main>
+
+      <footer></footer>
+    </>
   );
 };
 
@@ -21,7 +48,9 @@ export const Head = () => <title>Home Page</title>;
 
 export const query = graphql`
   query ($language: String!) {
-    allMarkdownRemark(filter: { frontmatter: { language: { eq: "uk" } } }) {
+    allMarkdownRemark(
+      filter: { frontmatter: { language: { eq: $language } } }
+    ) {
       nodes {
         frontmatter {
           chapter
