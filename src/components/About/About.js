@@ -5,16 +5,14 @@ import Statistics from 'components/Statistics';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 
 const About = ({ aboutCompany }) => {
-  const title = aboutCompany && aboutCompany.title;
-  const description = aboutCompany && aboutCompany.content;
-  const buttonText =
-    aboutCompany && aboutCompany.reporting && aboutCompany.reporting.title;
-  const buttonLink =
-    aboutCompany && aboutCompany.reporting && aboutCompany.reporting.path;
+  const title = aboutCompany?.title;
+  const description = aboutCompany?.content;
+  const buttonText = aboutCompany?.reporting?.title;
+  const buttonLink = aboutCompany?.reporting?.path;
   // const image = getImage(
   //   aboutCompany && aboutCompany.bg_img && aboutCompany.bg_img.photo,
   // );
-  const statistics = aboutCompany && aboutCompany.statistics;
+  const statistics = aboutCompany?.statistics;
   console.log(aboutCompany);
   return (
     <div className="">
@@ -24,11 +22,9 @@ const About = ({ aboutCompany }) => {
       <div className="flex h-full w-full">
         <div className="relative mr-6">
           <StaticImage
-            src={
-              aboutCompany && aboutCompany.bg_img && aboutCompany.bg_img.photo
-            }
+            src={aboutCompany?.bg_img?.photo}
             // src="../../../public/img/image-20.jpg"
-            alt={aboutCompany && aboutCompany.bg_img && aboutCompany.bg_img.alt}
+            alt={aboutCompany?.bg_img?.alt}
             placeholder="blurred"
             layout="fixed"
             width={416}
