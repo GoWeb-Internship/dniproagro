@@ -4,17 +4,15 @@ import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import { Statistics } from 'components';
 
-export const About = ({ aboutCompany }) => {
-  const title = aboutCompany && aboutCompany.title;
-  const description = aboutCompany && aboutCompany.content;
-  const buttonText =
-    aboutCompany && aboutCompany.reporting && aboutCompany.reporting.title;
-  const buttonLink =
-    aboutCompany && aboutCompany.reporting && aboutCompany.reporting.path;
+const About = ({ aboutCompany }) => {
+  const title = aboutCompany?.title;
+  const description = aboutCompany?.content;
+  const buttonText = aboutCompany?.reporting?.title;
+  const buttonLink = aboutCompany?.reporting?.path;
   // const image = getImage(
   //   aboutCompany && aboutCompany.bg_img && aboutCompany.bg_img.photo,
   // );
-  const statistics = aboutCompany && aboutCompany.statistics;
+  const statistics = aboutCompany?.statistics;
   console.log(aboutCompany);
   return (
     <div className="">
@@ -23,18 +21,16 @@ export const About = ({ aboutCompany }) => {
       </h1>
       <div className="flex h-full w-full">
         <div className="relative mr-6">
-          {/* <StaticImage
-            src={
-              aboutCompany && aboutCompany.bg_img && aboutCompany.bg_img.photo
-            }
+          <StaticImage
+            src={aboutCompany?.bg_img?.photo}
             // src="../../../public/img/image-20.jpg"
-            alt={aboutCompany && aboutCompany.bg_img && aboutCompany.bg_img.alt}
+            alt={aboutCompany?.bg_img?.alt}
             placeholder="blurred"
             layout="fixed"
             width={416}
             height={402}
             formats={['auto', 'webp', 'avif']}
-          /> */}
+          />
           <button
             type="button"
             className="absolute top-[85%] box-content w-[123px] p-4 font-mulish text-[20px] font-normal leading-[27px] text-body"

@@ -4,14 +4,10 @@ import Map from 'components/Map/Map';
 import { About, Form, Logo, Section, SwitchLang } from 'components';
 
 const IndexPage = ({ data }) => {
-  const chapters = data.allMarkdownRemark.nodes;
-  const aboutCompany =
-    chapters &&
-    chapters.find(
-      ({ frontmatter: { chapter } }) => chapter === 'about_company',
-    ) &&
-    chapters.find(({ frontmatter: { chapter } }) => chapter === 'about_company')
-      .frontmatter;
+  const chapters = data?.allMarkdownRemark?.nodes;
+  const aboutCompany = chapters.find(
+    ({ frontmatter: { chapter } }) => chapter === 'about_company',
+  )?.frontmatter;
 
   return (
     <>
