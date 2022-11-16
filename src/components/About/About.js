@@ -24,8 +24,10 @@ const About = ({ aboutCompany }) => {
       <div className="flex h-full w-full">
         <div className="relative mr-6">
           <StaticImage
-            // src={aboutCompany && aboutCompany.bg_img && aboutCompany.bg_img.photo}
-            src="../../../public/img/image-20.jpg"
+            src={
+              aboutCompany && aboutCompany.bg_img && aboutCompany.bg_img.photo
+            }
+            // src="../../../public/img/image-20.jpg"
             alt={aboutCompany && aboutCompany.bg_img && aboutCompany.bg_img.alt}
             placeholder="blurred"
             layout="fixed"
