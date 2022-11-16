@@ -13,7 +13,7 @@ import * as s from './Form.module.css';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 
-const Form = () => {
+export const Form = () => {
   const [error, setError] = useState(null);
   const { t } = useTranslation();
   const { title } = t('form', {
@@ -173,5 +173,3 @@ const Form = () => {
     </div>
   );
 };
-
-export default Form;

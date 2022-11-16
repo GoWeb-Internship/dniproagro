@@ -2,7 +2,7 @@ import React from 'react';
 import CountUp from 'react-countup';
 import ProgressBar from 'react-customizable-progressbar';
 
-const Statistics = ({ statistics }) => {
+export const Statistics = ({ statistics }) => {
   return (
     <ul className="mx-auto my-24 flex">
       {statistics &&
@@ -45,5 +45,3 @@ const Statistics = ({ statistics }) => {
     </ul>
   );
 };
-
-export default Statistics;

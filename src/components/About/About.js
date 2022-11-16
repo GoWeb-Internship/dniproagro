@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
-import Statistics from 'components/Statistics';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import { Statistics } from 'components';
 
-const About = ({ aboutCompany }) => {
+export const About = ({ aboutCompany }) => {
   const title = aboutCompany?.title;
   const description = aboutCompany?.content;
   const buttonText = aboutCompany?.reporting?.title;
@@ -53,5 +53,3 @@ const About = ({ aboutCompany }) => {
     </div>
   );
 };
-
-export default About;
