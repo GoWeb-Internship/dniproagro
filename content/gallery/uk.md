@@ -9,4 +9,14 @@ photos_list:
     alt: працівник
   - photo: /img/honngt-t45ftjj3bl6rmmrybzls2uei5iowd6qa.jpg
     alt: аграрій
+  - photo: /img/ba8d-gallery.jpg
+    alt: зрошування
+  - photo: /img/sowing.jpg
+    alt: посів
+  - photo: /img/corn-2.jpg
+    alt: кукурузда
+  - photo: /img/corn.jpg
+    alt: директор у полі
+  - photo: /img/wheat.jpg
+    alt: пшениця
 ---
