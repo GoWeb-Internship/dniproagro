@@ -1,11 +1,7 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
-import Section from 'components/Section';
-import About from 'components/About';
-import Form from 'components/Form';
 import Map from 'components/Map/Map';
-import Logo from 'components/Logo';
-import SwitchLang from 'components/SwitchLang';
+import { About, Form, Logo, Section, SwitchLang } from 'components';
 
 const IndexPage = ({ data }) => {
   const chapters = data.allMarkdownRemark.nodes;
@@ -29,9 +25,9 @@ const IndexPage = ({ data }) => {
         {/* <Section></Section> */}
 
         {/* про компанію */}
-        {/* <Section> */}
-        <About aboutCompany={aboutCompany} />
-        {/* </Section> */}
+        <Section>
+          <About aboutCompany={aboutCompany} />
+        </Section>
 
         {/* культури */}
         {/* <Section></Section> */}

@@ -14,7 +14,7 @@ import {
 export const normalizeLang = language =>
   language === 'uk' ? 'UA' : language.toUpperCase();
 
-const SwitchLang = () => {
+export const SwitchLang = () => {
   const { language } = useI18next();
   const [dropdown, setDropdown] = useState(false);
 
@@ -38,5 +38,3 @@ const SwitchLang = () => {
     </div>
   );
 };
-
-export default SwitchLang;

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
-import Statistics from 'components/Statistics';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import { Statistics } from 'components';
 
-const About = ({ aboutCompany }) => {
+export const About = ({ aboutCompany }) => {
   const title = aboutCompany && aboutCompany.title;
   const description = aboutCompany && aboutCompany.content;
   const buttonText =
@@ -23,7 +23,7 @@ const About = ({ aboutCompany }) => {
       </h1>
       <div className="flex h-full w-full">
         <div className="relative mr-6">
-          <StaticImage
+          {/* <StaticImage
             src={
               aboutCompany && aboutCompany.bg_img && aboutCompany.bg_img.photo
             }
@@ -34,7 +34,7 @@ const About = ({ aboutCompany }) => {
             width={416}
             height={402}
             formats={['auto', 'webp', 'avif']}
-          />
+          /> */}
           <button
             type="button"
             className="absolute top-[85%] box-content w-[123px] p-4 font-mulish text-[20px] font-normal leading-[27px] text-body"
@@ -57,5 +57,3 @@ const About = ({ aboutCompany }) => {
     </div>
   );
 };
-
-export default About;
