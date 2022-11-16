@@ -18,6 +18,7 @@ module.exports = {
     fontFamily: {
       montserrat: ['Montserrat', 'sans-serif'], // class="font-montserrat"
       inter: ['Inter', 'sans-serif'], // class="font-inter"
+      mulish: ['Mulish', 'sans-serif'],
     },
     // SHADOW
     boxShadow: {
@@ -33,11 +34,13 @@ module.exports = {
         body: {
           DEFAULT: '#FCFCFC', // class="bg-body"
           dark: '#1D1C4B', // class="bg-body-dark"
+          darkGreen: '#064E3B', // class="bg-body-darkGreen, text-body-darkGreen"
+          green: '#02931C',
         },
         accent: {
           DEFAULT: '#3B82F6', // class="bg-accent text-accent border-accent"
           dark: '#0F0E39', // class="bg-accent-dark text-accent-dark border-accent-dark"
-        }, 
+        },
       },
       // CONTAINER
       container: {
