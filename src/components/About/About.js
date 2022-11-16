@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+// import { Link } from 'gatsby';
 import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import { Statistics } from 'components';
@@ -21,7 +21,7 @@ export const About = ({ aboutCompany }) => {
       </h1>
       <div className="flex h-full w-full">
         <div className="relative mr-6">
-          <StaticImage
+          <img
             src={aboutCompany?.bg_img?.photo}
             // src="../../../public/img/image-20.jpg"
             alt={aboutCompany?.bg_img?.alt}
@@ -35,10 +35,15 @@ export const About = ({ aboutCompany }) => {
             type="button"
             className="absolute top-[85%] box-content w-[123px] p-4 font-mulish text-[20px] font-normal leading-[27px] text-body"
           >
-            <Link className="flex items-center" to={buttonLink}>
+            <a
+              className="flex items-center"
+              href={buttonLink}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+            >
               {buttonText}
               <ArrowRightIcon className="ml-[19px] w-6 stroke-2" />
-            </Link>
+            </a>
           </button>
         </div>
         {/* <GatsbyImage
