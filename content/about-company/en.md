@@ -1,7 +1,7 @@
 ---
 chapter: about_company
-language: uk
-title: Про компанію
+language: en
+title: About the company
 content: Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed vel
   mauris massa velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum
   dolor sit amet consectetur. Placerat et at aenean sed vel mauris massa velit.
@@ -17,21 +17,21 @@ content: Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed vel
   Placerat et at aenean sed vel mauris sapien
 bg-img:
   photo: /img/image-20.jpg
-  alt: Комбайн висипає зерно на машину
+  alt: The combine dumps the grain on the machine
 reporting:
-  title: Звітність
+  title: Reporting
   path: https://www.figma.com/file/eBol4oibsMJjCcUEvBDxhG/DniproAgro?node-id=0%3A1&t=vu7KqWZhmPt4LzVI-0
 statistics:
-  - category: На ринку
+  - category: On the market
+    units: years
     value: "10"
-    units: років
-  - category: Землі
+  - category: Land area
     value: "860"
-    units: га
-  - category: Врожай
+    units: ha
+  - category: Harvest
     value: "32000"
-    units: т
-  - category: Партнерів
+    units: t
+  - category: Partners
     value: "150"
     units: ""
 ---

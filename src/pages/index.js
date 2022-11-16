@@ -1,14 +1,21 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
 import Section from 'components/Section';
-import Statistics from 'components/Statistics';
+import About from 'components/About';
 import Form from 'components/Form';
 import Map from 'components/Map/Map';
 import Logo from 'components/Logo';
 import SwitchLang from 'components/SwitchLang';
 
 const IndexPage = ({ data }) => {
-  // const chapters = data.allMarkdownRemark.nodes;
+  const chapters = data.allMarkdownRemark.nodes;
+  const aboutCompany =
+    chapters &&
+    chapters.find(
+      ({ frontmatter: { chapter } }) => chapter === 'about_company',
+    ) &&
+    chapters.find(({ frontmatter: { chapter } }) => chapter === 'about_company')
+      .frontmatter;
 
   return (
     <>
@@ -23,7 +30,7 @@ const IndexPage = ({ data }) => {
 
         {/* про компанію */}
         {/* <Section> */}
-        <Statistics />
+        <About aboutCompany={aboutCompany} />
         {/* </Section> */}
 
         {/* культури */}
@@ -106,6 +113,10 @@ export const query = graphql`
           }
           email
           photos_list {
+            alt
+            photo
+          }
+          bg_img {
             alt
             photo
           }
