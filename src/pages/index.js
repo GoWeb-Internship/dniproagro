@@ -4,6 +4,7 @@ import Section from 'components/Section';
 import Statistics from 'components/Statistics';
 import Form from 'components/Form';
 import Map from 'components/Map/Map';
+import Logo from 'components/Logo';
 import SwitchLang from 'components/SwitchLang';
 
 const IndexPage = ({ data }) => {
@@ -12,6 +13,7 @@ const IndexPage = ({ data }) => {
   return (
     <>
       <header>
+        <Logo />
         <SwitchLang />
       </header>
 
