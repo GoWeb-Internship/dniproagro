@@ -1,5 +1,5 @@
 import { yupResolver } from '@hookform/resolvers/yup';
-// import { useTranslation } from 'gatsby-plugin-react-i18next'
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 import React, { useState } from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import {
@@ -13,10 +13,12 @@ import * as s from './Form.module.css';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 
-export const Form = () => {
+const Form = () => {
   const [error, setError] = useState(null);
-  // const { t } = useTranslation()
-
+  const { t } = useTranslation();
+  const { title } = t('form', {
+    returnObjects: true,
+  });
   // const { required, name, email, message, success } = t('formValidation', {
   //   returnObjects: true,
   // })
@@ -180,7 +182,7 @@ export const Form = () => {
   return (
     <div className={s.mainWrapper}>
       <div className={s.wrapper}>
-        <h2 className={s.title}>Написати нам </h2>
+        <h2 className={s.title}>{title} </h2>
         <p className={s.subTitle}>Заповнити дані</p>
         <form method="POST" name="contact" onSubmit={handleSubmit(onSubmit)}>
           <div className={s.wrapperInputs}>
@@ -262,3 +264,5 @@ export const Form = () => {
     </div>
   );
 };
+
+export default Form;

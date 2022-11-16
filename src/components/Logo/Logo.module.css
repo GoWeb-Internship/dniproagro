@@ -1,0 +1,7 @@
+.logoLink {
+  @apply block h-[90px] w-[150px];
+}
+
+.logoIcon {
+  @apply h-[90px] w-[150px];
+}

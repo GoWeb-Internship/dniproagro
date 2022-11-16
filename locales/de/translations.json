@@ -1,4 +1,6 @@
 {
   "logoAlt": "Logo",
-  "writeUs": "Schreib uns"
+  "form": {
+    "title": "Schreib uns"
+  }
 }
