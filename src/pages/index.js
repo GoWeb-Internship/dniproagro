@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
 import Map from 'components/Map/Map';
-import { About, Form, Logo, Section, SwitchLang } from 'components';
+import { About, Form, Logo, NavBar, Section, SwitchLang } from 'components';
 
 const IndexPage = ({ data }) => {
   const chapters = data?.allMarkdownRemark?.nodes;
@@ -13,6 +13,7 @@ const IndexPage = ({ data }) => {
     <>
       <header>
         <Logo />
+        <NavBar />
         <SwitchLang />
       </header>
 
