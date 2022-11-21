@@ -16,7 +16,7 @@ export const About = ({ aboutCompany }) => {
   console.log(aboutCompany);
   return (
     <div className="">
-      <h1 className="mt-[54px] mb-[72px] font-mulish text-[36px] font-bold leading-[45px] text-body-darkGreen">
+      <h1 className="text-body-darkGreen mt-[54px] mb-[72px] font-mulish text-[36px] font-bold leading-[45px]">
         {title}
       </h1>
       <div className="flex h-full w-full">
@@ -33,7 +33,7 @@ export const About = ({ aboutCompany }) => {
           />
           <button
             type="button"
-            className="absolute top-[85%] box-content w-[123px] p-4 font-mulish text-[20px] font-normal leading-[27px] text-body"
+            className="text-body absolute top-[85%] box-content w-[123px]  p-4 font-mulish text-[20px] font-normal leading-[27px]"
           >
             <a
               className="flex items-center"
@@ -50,7 +50,7 @@ export const About = ({ aboutCompany }) => {
           image={image}
           alt={aboutCompany && aboutCompany.bg_img && aboutCompany.bg_img.alt}
         /> */}
-        <p className="h-[402px] max-w-[724px] overflow-y-scroll rounded border border-body-darkGreen py-6 pr-[108px] pl-6 font-mulish text-[20px] font-normal leading-[27px] text-body-darkGreen">
+        <p className="border-body-darkGreen text-body-darkGreen h-[402px] max-w-[724px] overflow-y-scroll rounded border py-6 pr-[108px] pl-6 font-mulish text-[20px] font-normal leading-[27px]">
           {description}
         </p>
       </div>

@@ -24,23 +24,38 @@ module.exports = {
     boxShadow: {
       main: '0px 2px 2px rgba(125, 198, 252, 0.24), 0px -2px 2px rgba(125, 198, 252, 0.24)', // class="shadow-main"
     },
+
     // THEME
     extend: {
       backgroundColor: theme => ({
         ...theme('colors'),
       }),
-      // ALL COLORS
+      // COLORS
       colors: {
-        body: {
-          DEFAULT: '#FCFCFC', // class="bg-body"
-          dark: '#1D1C4B', // class="bg-body-dark"
-          darkGreen: '#064E3B', // class="bg-body-darkGreen, text-body-darkGreen"
-          green: '#02931C',
+        white: '#FCFCFC', // class="bg-white text-white border-white"
+        'light-green': '#0F0E39',
+        green: '#064E3B', // class="bg-green text-green border-green"
+        yellow: '#a16207',
+        red: '#ef4444',
+        gray: '#374151',
+        transparent: {
+          DEFAULT: 'rgba(2, 147, 28, 0.2)', // class="bg-transparent"
         },
         accent: {
-          DEFAULT: '#3B82F6', // class="bg-accent text-accent border-accent"
-          dark: '#0F0E39', // class="bg-accent-dark text-accent-dark border-accent-dark"
+          DEFAULT: '#064E3B', // class="bg-accent text-accent border-accent"
+          light: '#0F0E39', // class="bg-accent-light text-accent-light border-accent-light"
         },
+      },
+      // GRADIENT
+      backgroundImage: {
+        'gradient-green':
+          'linear-gradient(180deg, rgba(24, 55, 55, 0) 0%, #183737 100%);', // class="bg-gradient-green"
+        'gradient-gray':
+          'linear-gradient(89.63deg, rgba(116, 115, 115, 0.53) 36.38%, rgba(116, 115, 115, 0.01) 99.73%);', // class="bg-gradient-gray"
+      },
+      // BUTTON RADIUS
+      borderRadius: {
+        main: '4px', // class="rounded-main"
       },
       // CONTAINER
       container: {

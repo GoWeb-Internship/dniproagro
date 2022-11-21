@@ -11,7 +11,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <>
-      <header>
+      <header class="bg-gradient">
         <Logo />
         <NavBar />
         <SwitchLang />
