@@ -13,7 +13,7 @@ export const About = ({ aboutCompany }) => {
   //   aboutCompany && aboutCompany.bg_img && aboutCompany.bg_img.photo,
   // );
   const statistics = aboutCompany?.statistics;
-  console.log(aboutCompany);
+  // console.log(aboutCompany);
   return (
     <div className="">
       <h1 className="text-body-darkGreen mt-[54px] mb-[72px] font-mulish text-[36px] font-bold leading-[45px]">
