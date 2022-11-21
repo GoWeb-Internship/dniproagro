@@ -1,5 +1,5 @@
 .mainWrapper {
-  @apply w-full bg-[#D9D9D9];
+  @apply w-full bg-accent-bright;
 }
 .wrapper {
   @apply max-w-[527px] px-3 pt-[44px] pb-4;

@@ -8,10 +8,17 @@ const IndexPage = ({ data }) => {
   const aboutCompany = chapters.find(
     ({ frontmatter: { chapter } }) => chapter === 'about_company',
   )?.frontmatter;
+  // console.log(chapters);
+
+  // console.log([
+  //   ...chapters
+  //     .sort((a, b) => a.frontmatter.chapter_range - b.frontmatter.chapter_range)
+  //     .map(({ frontmatter: { title } }) => title),
+  // ]);
 
   return (
     <>
-      <header class="bg-gradient">
+      <header>
         <Logo />
         <NavBar />
         <SwitchLang />
@@ -62,6 +69,7 @@ export const query = graphql`
       nodes {
         frontmatter {
           chapter
+          chapter_range
           content
           language
           phone

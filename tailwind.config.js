@@ -24,7 +24,6 @@ module.exports = {
     boxShadow: {
       main: '0px 2px 2px rgba(125, 198, 252, 0.24), 0px -2px 2px rgba(125, 198, 252, 0.24)', // class="shadow-main"
     },
-
     // THEME
     extend: {
       backgroundColor: theme => ({
@@ -33,17 +32,15 @@ module.exports = {
       // COLORS
       colors: {
         white: '#FCFCFC', // class="bg-white text-white border-white"
-        'light-green': '#0F0E39',
+        'light-green': '#02931C', // class="bg-light-green text-light-green border-light-green"
         green: '#064E3B', // class="bg-green text-green border-green"
-        yellow: '#a16207',
-        red: '#ef4444',
-        gray: '#374151',
-        transparent: {
-          DEFAULT: 'rgba(2, 147, 28, 0.2)', // class="bg-transparent"
-        },
+        yellow: '#A16207', // class="bg-yellow text-yellow border-yellow"
+        red: '#EF4444', // class="bg-red text-red border-red"
+        gray: '#374151', // class="bg-gray text-gray border-gray"
+        mint: 'rgba(2, 147, 28, 0.2)', // class="bg-mint text-mint border-mint"
         accent: {
           DEFAULT: '#064E3B', // class="bg-accent text-accent border-accent"
-          light: '#0F0E39', // class="bg-accent-light text-accent-light border-accent-light"
+          bright: '#02931C', // class="bg-accent-bright text-accent-bright border-accent-bright"
         },
       },
       // GRADIENT
