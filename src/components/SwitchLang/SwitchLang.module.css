@@ -23,7 +23,7 @@
 }
 
 .langListItem {
-  @apply flex  h-11 cursor-pointer items-center  justify-center border-b-2 bg-slate-200  py-1 text-sm leading-4 shadow-main transition-all last:border-transparent hover:bg-emerald-800 hover:text-slate-300;
+  @apply flex  h-11 cursor-pointer items-center  justify-center border-b-2 bg-slate-200  py-1 text-sm leading-4 shadow-main transition-all  hover:bg-emerald-800 hover:text-slate-300;
 }
 
 .langItemLink {
@@ -31,9 +31,9 @@
 }
 
 .langItemLinkActive {
-  @apply text-green-900 underline decoration-green-900 underline-offset-4 hover:text-slate-300  hover:decoration-slate-300;
+  @apply underline underline-offset-4 hover:text-slate-300  hover:decoration-slate-300;
 }
 
-.langItemLinkMain {
+/* .langItemLinkMain {
   @apply text-gray-900;
-}
+} */
