@@ -1,0 +1,7 @@
+.navList {
+  @apply flex;
+}
+
+.navItem {
+  @apply mr-4 w-max;
+}

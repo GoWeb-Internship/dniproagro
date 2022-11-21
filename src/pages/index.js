@@ -1,27 +1,38 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
 import Map from 'components/Map/Map';
-import { About, Form, Logo, NavBar, Section, SwitchLang } from 'components';
+import {
+  About,
+  Container,
+  Form,
+  Logo,
+  NavBar,
+  Section,
+  SwitchLang,
+} from 'components';
 
 const IndexPage = ({ data }) => {
   const chapters = data?.allMarkdownRemark?.nodes;
   const aboutCompany = chapters.find(
     ({ frontmatter: { chapter } }) => chapter === 'about_company',
   )?.frontmatter;
-  // console.log(chapters);
 
-  // console.log([
-  //   ...chapters
-  //     .sort((a, b) => a.frontmatter.chapter_range - b.frontmatter.chapter_range)
-  //     .map(({ frontmatter: { title } }) => title),
-  // ]);
+  const sections = [
+    ...chapters
+      .sort((a, b) => a.frontmatter.chapter_range - b.frontmatter.chapter_range)
+      .map(({ frontmatter: { title, chapter } }) => {
+        return { title: title, chapter: chapter };
+      }),
+  ];
 
   return (
     <>
-      <header>
-        <Logo />
-        <NavBar />
-        <SwitchLang />
+      <header className="header">
+        <Container>
+          <Logo />
+          <NavBar sections={sections} />
+          <SwitchLang />
+        </Container>
       </header>
 
       <main>
@@ -29,9 +40,9 @@ const IndexPage = ({ data }) => {
         {/* <Section></Section> */}
 
         {/* про компанію */}
-        <Section>
-          <About aboutCompany={aboutCompany} />
-        </Section>
+        {/* <Section> */}
+        <About aboutCompany={aboutCompany} />
+        {/* </Section> */}
 
         {/* культури */}
         {/* <Section></Section> */}
