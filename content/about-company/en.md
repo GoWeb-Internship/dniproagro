@@ -14,7 +14,7 @@ content: Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed vel
   dolor sit amet consectetur. Placerat et at aenean sed vel mauris dolor sit
   amet consectetur. Placerat et at aenean sed vel mauris massa velit. Nisl donec
   ut cras netus risus sapien vel Lorem ipsum dolor sit amet consectetur.
-  Placerat et at aenean sed vel mauris sapien
+  Placerat et at aenean sed vel mauris sapien.
 bg-img:
   photo: /img/image-20.jpg
   alt: The combine dumps the grain on the machine
