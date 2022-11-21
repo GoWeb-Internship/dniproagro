@@ -1,6 +1,24 @@
 {
   "logoAlt": "Logo",
   "form": {
-    "title": "Write to us"
+    "title": "Write to us",
+    "subTitle": "Fill in the data",
+    "nameInput": "Name",
+    "emailInput": "Email",
+    "messageInput": "Write to us",
+    "submit": "Send"
+  },
+  "formValidation": {
+    "required": "This field is required",
+    "name": "Should be only letters",
+    "nameMin": "The name must consist of at least 2 characters",
+    "nameMax": "The name must consist of a maximum of 100 characters",
+    "phoneMin": "The phone number must consist of at least 7 characters",
+    "phoneMax": "The phone number must be a maximum of 17 characters",
+    "email": "Must be only Latin letters and at least 3 letters before @",
+    "emailMax": "Email should be a maximum of 63-x characters",
+    "messageMin": "The comment must contain a minimum of 20 characters",
+    "messageMax": "The comment must contain a minimum of 2000 characters",
+    "success": "Message sent"
   }
 }
