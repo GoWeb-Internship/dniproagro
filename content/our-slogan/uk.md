@@ -8,6 +8,6 @@ phone: "+380990000000"
 video url: asryj
 video_file: /static/video/production-id_50986777-.mp4
 images_list:
-  - image: image-18.jpg
+  - image: /img/image-18.jpg
     alt: Пшеничне поле
 ---
