@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* slider */
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  display: none;
+}
+
+.prev-slider,
+.next-slider {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: opacity 200ms linear;
+  z-index: 1000;
+  color: #4d2107;
+}
+
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  max-width: 400px;
+}
