@@ -6,8 +6,16 @@ import { useTranslation } from 'gatsby-plugin-react-i18next';
 import Tab from 'components/Tab';
 // const { CULTURES } = anchors;
 
+import {
+  tabWrapper,
+  modalBtn,
+  selectedImg,
+  selectedImgWrapper,
+} from './Cultures.module.css';
+
 export const Cultures = () => {
   const [item, setItem] = useState(null);
+  const [selectedCulture, setSelectedCulture] = useState(null);
   const { i18n } = useTranslation();
 
   const {
@@ -50,17 +58,46 @@ export const Cultures = () => {
     setItem(newSortedList);
   }, [i18n, i18n.language, nodes]);
 
+  useEffect(() => {
+    if (!item) return;
+
+    setSelectedCulture(item.cultures_list[0]);
+  }, [item]);
+
   return (
     <>
       {item && (
         <Section id={item.chapter}>
           <h1>{item.title}</h1>
 
-          {item
-            ? item.cultures_list.map((culture, index) => {
-                return <Tab cultureItem={culture} key={index} />;
-              })
-            : null}
+          <div className={tabWrapper}>
+            <ul>
+              {item
+                ? item.cultures_list.map((culture, index) => {
+                    return (
+                      <li key={index}>
+                        <Tab cultureItem={culture} />
+                      </li>
+                    );
+                  })
+                : null}
+            </ul>
+
+            {selectedCulture && (
+              <>
+                <div className={selectedImgWrapper}>
+                  <img
+                    src={selectedCulture.image}
+                    alt={selectedCulture.alt}
+                    className={selectedImg}
+                  />
+                  <button className={modalBtn}>
+                    {selectedCulture.culture}
+                  </button>
+                </div>
+              </>
+            )}
+          </div>
         </Section>
       )}
     </>

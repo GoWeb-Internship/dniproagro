@@ -1,0 +1,15 @@
+.tabWrapper {
+  @apply flex;
+}
+
+.selectedImgWrapper {
+  @apply relative h-[300px] w-[700px];
+}
+
+.selectedImg {
+  @apply h-full w-full object-cover;
+}
+
+.modalBtn {
+  @apply absolute bottom-0 left-0 flex h-[105px] w-full items-center bg-gradient-green text-white;
+}

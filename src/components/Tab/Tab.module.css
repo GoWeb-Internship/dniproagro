@@ -1,7 +1,11 @@
 .tabBtn {
-  @apply mb-[18px] block h-[104px] w-[306px] overflow-hidden rounded-main last:mb-0;
+  @apply relative mb-[18px] block h-[104px] w-[306px] overflow-hidden rounded-main last:mb-0;
 }
 
 .tabImg {
   @apply h-full w-full object-cover object-center;
+}
+
+.tabTitleBox {
+  @apply absolute bottom-0 left-0 flex h-[54px] w-full items-center justify-center bg-gradient-green text-white;
 }
