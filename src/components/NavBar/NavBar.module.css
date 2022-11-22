@@ -1,0 +1,15 @@
+.navList {
+  @apply flex;
+}
+
+.navItem {
+  @apply mr-4 w-max;
+}
+
+.baseLink {
+  @apply cursor-pointer text-yellow;
+}
+
+.activeLink {
+  @apply text-light-green;
+}
