@@ -12,6 +12,7 @@ import {
   SwitchLang,
 } from 'components';
 import { withLayout } from 'layout';
+import { Gallery } from 'components/Gallery/Gallery';
 
 const { SLOGAN, COMPANY, CULTURES, PERSONNEL, EQUIPMENTS, GALLERY, CONTACTS } =
   anchors;
@@ -22,15 +23,21 @@ const IndexPage = ({ data }) => {
     ({ frontmatter: { chapter } }) => chapter === 'about_company',
   )?.frontmatter;
 
-  const sections = [
-    ...chapters
-      .sort((a, b) => a.frontmatter.chapter_range - b.frontmatter.chapter_range)
-      .map(({ frontmatter: { title, chapter } }) => ({ title, chapter })),
+  const slide_img = [
+    'https://swiperjs.com/demos/images/nature-1.jpg',
+    'https://swiperjs.com/demos/images/nature-2.jpg',
+    'https://swiperjs.com/demos/images/nature-3.jpg',
+    'https://swiperjs.com/demos/images/nature-4.jpg',
+    'https://swiperjs.com/demos/images/nature-5.jpg',
+    'https://swiperjs.com/demos/images/nature-6.jpg',
+    'https://swiperjs.com/demos/images/nature-7.jpg',
+    'https://swiperjs.com/demos/images/nature-8.jpg',
   ];
 
   return (
     <>
       <h1>Hello</h1>
+      <Gallery images={slide_img} />
       {/* слоган */}
       {/* <Section id={SLOGAN}></Section> */}
       {/* про компанію */}
