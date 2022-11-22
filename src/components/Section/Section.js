@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Container } from 'components';
 
-export const Section = ({ children, className }) => {
+export const Section = ({ children, className, id }) => {
   return (
-    <section className={className}>
+    <section className={className} id={id}>
       <Container>{children}</Container>
     </section>
   );
@@ -12,4 +12,5 @@ export const Section = ({ children, className }) => {
 
 Section.propTypes = {
   className: PropTypes.string,
+  id: PropTypes.string.isRequired,
 };

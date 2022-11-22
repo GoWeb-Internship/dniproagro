@@ -71,12 +71,8 @@ collections:
     path: '{{language}}'
     sortable_fields: ['commit_date', 'title', 'language']
     fields:
-      - {
-          label: 'Chapter',
-          name: 'chapter',
-          widget: 'hidden',
-          default: 'our_slogan',
-        }
+      - { name: 'chapter', widget: 'hidden', default: 'our_slogan' }
+      - { name: 'chapter_range', widget: 'hidden', default: '1' }
       - {
           label: 'Language',
           name: 'language',
@@ -154,12 +150,8 @@ collections:
     path: '{{language}}'
     sortable_fields: ['commit_date', 'title', 'language']
     fields:
-      - {
-          label: 'Chapter',
-          name: 'chapter',
-          widget: 'hidden',
-          default: 'about_company',
-        }
+      - { name: 'chapter', widget: 'hidden', default: 'about_company' }
+      - { name: 'chapter_range', widget: 'hidden', default: '2' }
       - {
           label: 'Language',
           name: 'language',
@@ -281,12 +273,8 @@ collections:
     path: '{{language}}'
     sortable_fields: ['commit_date', 'title', 'language']
     fields:
-      - {
-          label: 'Chapter',
-          name: 'chapter',
-          widget: 'hidden',
-          default: 'cultures',
-        }
+      - { name: 'chapter', widget: 'hidden', default: 'cultures' }
+      - { name: 'chapter_range', widget: 'hidden', default: '3' }
       - {
           label: 'Language',
           name: 'language',
@@ -313,8 +301,7 @@ collections:
           name: 'cultures_list',
           widget: 'list',
           required: true,
-          fields:
-            [
+          fields: [
               {
                 label: 'Culture',
                 name: 'culture',
@@ -346,6 +333,15 @@ collections:
                 hint:
                   'Введіть альтернативну назву для зображення (на мові колекції)',
               },
+              # {
+              #   label: 'Culture range',
+              #   name: 'culture_range',
+              #   widget: 'string',
+              #   required: true,
+              #   hint:
+              #     'Введіть цифру, що відповідає порядковому номеру розміщення
+              #     культури у списку на сторінці',
+              # },
             ],
         }
   - label: 'Персонал'
@@ -360,12 +356,8 @@ collections:
     path: '{{language}}'
     sortable_fields: ['commit_date', 'title', 'language']
     fields:
-      - {
-          label: 'Chapter',
-          name: 'chapter',
-          widget: 'hidden',
-          default: 'personnel',
-        }
+      - { name: 'chapter', widget: 'hidden', default: 'personnel' }
+      - { name: 'chapter_range', widget: 'hidden', default: '4' }
       - {
           label: 'Language',
           name: 'language',
@@ -454,12 +446,8 @@ collections:
     path: '{{language}}'
     sortable_fields: ['commit_date', 'title', 'language']
     fields:
-      - {
-          label: 'Chapter',
-          name: 'chapter',
-          widget: 'hidden',
-          default: 'technical_equipments',
-        }
+      - { name: 'chapter', widget: 'hidden', default: 'technical_equipments' }
+      - { name: 'chapter_range', widget: 'hidden', default: '5' }
       - {
           label: 'Language',
           name: 'language',
@@ -534,12 +522,8 @@ collections:
     path: '{{language}}'
     sortable_fields: ['commit_date', 'title', 'language']
     fields:
-      - {
-          label: 'Chapter',
-          name: 'chapter',
-          widget: 'hidden',
-          default: 'gallery',
-        }
+      - { name: 'chapter', widget: 'hidden', default: 'gallery' }
+      - { name: 'chapter_range', widget: 'hidden', default: '6' }
       - {
           label: 'Language',
           name: 'language',
@@ -596,12 +580,8 @@ collections:
     path: '{{language}}'
     sortable_fields: ['commit_date', 'title', 'language']
     fields:
-      - {
-          label: 'Chapter',
-          name: 'chapter',
-          widget: 'hidden',
-          default: 'contacts',
-        }
+      - { name: 'chapter', widget: 'hidden', default: 'contacts' }
+      - { name: 'chapter_range', widget: 'hidden', default: '7' }
       - {
           label: 'Language',
           name: 'language',

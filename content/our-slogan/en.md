@@ -1,11 +1,11 @@
 ---
 chapter: our_slogan
 chapter_range: "1"
-language: uk
-title: Наш слоган
-content: Пшеничне поле
+language: en
+title: Our slogan
+content: Our slogan
 phone: "+380990000000"
 images_list:
   - image: /img/image-18.jpg
-    alt: Пшеничне поле
+    alt: wheat
 ---

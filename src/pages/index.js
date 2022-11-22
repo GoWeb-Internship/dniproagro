@@ -1,8 +1,10 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
 import Map from 'components/Map/Map';
+import { anchors } from 'utils/constants';
 import {
   About,
+  Container,
   Form,
   Logo,
   NavBar,
@@ -11,51 +13,69 @@ import {
   Gallery,
 } from 'components';
 
+const { SLOGAN, COMPANY, CULTURES, PERSONNEL, EQUIPMENTS, GALLERY, CONTACTS } =
+  anchors;
+
 const IndexPage = ({ data }) => {
   const chapters = data?.allMarkdownRemark?.nodes;
   const aboutCompany = chapters.find(
     ({ frontmatter: { chapter } }) => chapter === 'about_company',
   )?.frontmatter;
 
+  const sections = [
+    ...chapters
+      .sort((a, b) => a.frontmatter.chapter_range - b.frontmatter.chapter_range)
+      .map(({ frontmatter: { title, chapter } }) => {
+        return { title: title, chapter: chapter };
+      }),
+  ];
+
   return (
     <>
-      <header>
-        <Logo />
-        <NavBar />
-        <SwitchLang />
+      <header className="header">
+        <Container>
+          <Logo />
+          <NavBar sections={sections} />
+          <SwitchLang />
+        </Container>
       </header>
 
       <main>
         {/* слоган */}
-        {/* <Section></Section> */}
+        {/* <Section id={SLOGAN}></Section> */}
 
         {/* про компанію */}
-        <Section>
+        <Section id={COMPANY}>
           <About aboutCompany={aboutCompany} />
         </Section>
 
         {/* культури */}
-        {/* <Section></Section> */}
+        {/* <Section id={CULTURES}></Section> */}
 
         {/* персонал */}
-        {/* <Section></Section> */}
+        {/* <Section id={PERSONNEL}></Section> */}
 
         {/* техзасоби */}
-        {/* <Section></Section> */}
+        {/* <Section id={EQUIPMENTS}></Section> */}
 
         {/* галерея */}
-        <Section>
+
+        <Section id={GALLERY}>
           <Gallery />
         </Section>
 
         {/* контакти */}
-        {/* <Section> */}
-        <Form />
-        <Map />
-        {/* </Section> */}
+        <Section id={CONTACTS}>
+          <Form />
+          <Map />
+        </Section>
       </main>
 
-      <footer></footer>
+      <footer>
+        <Container>
+          <Logo />
+        </Container>
+      </footer>
     </>
   );
 };
@@ -72,6 +92,7 @@ export const query = graphql`
       nodes {
         frontmatter {
           chapter
+          chapter_range
           content
           language
           phone

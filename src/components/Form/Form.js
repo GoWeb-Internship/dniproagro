@@ -16,39 +16,64 @@ import 'react-phone-input-2/lib/style.css';
 export const Form = () => {
   const [error, setError] = useState(null);
   const { t } = useTranslation();
-  const { title } = t('form', {
+  const {
+    required,
+    name,
+    nameMin,
+    nameMax,
+    phoneMax,
+    phoneMin,
+    email,
+    emailMax,
+    messageMin,
+    messageMax,
+    success,
+  } = t('formValidation', {
     returnObjects: true,
   });
-  // const { required, name, email, message, success } = t('formValidation', {
-  //   returnObjects: true,
-  // })
-  // const { title, nameInput, emailInput, messageInput, submit } = t('form', {
-  //   returnObjects: true,
-  // })
+  const { title, subTitle, nameInput, emailInput, messageInput, submit } = t(
+    'form',
+    {
+      returnObjects: true,
+    },
+  );
 
   const schema = yup
     .object({
       name: yup
         .string()
         .trim()
-        .required()
-        .min(2)
-        .max(100)
-        .matches(/^[а-яА-ЯёЁa-zA-ZіІїЇґҐєЄ]{1}[а-яА-ЯёЁa-zA-ZіІїЇґҐєЄ' ]+$/),
-      phone: yup.string().trim().required().min(7),
+        .required(t(required))
+        .min(2, t(nameMin))
+        .max(100, t(nameMax))
+        .matches(
+          /^[а-яА-ЯёЁa-zA-ZіІїЇґҐєЄ]{1}[а-яА-ЯёЁa-zA-ZіІїЇґҐєЄ' ]+$/,
+          t(name),
+        ),
+      phone: yup
+        .string()
+        .trim()
+        .required(t(required))
+        .min(7, t(phoneMin))
+        .max(17, t(phoneMax)),
       email: yup
         .string()
         .email()
-        .required()
-        .max(63)
+        .required(t(required))
+        .max(63, t(emailMax))
         .matches(
-          /(?!-)^(?:[aA-zZ0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[aA-zZ0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*"){3}@(?:(?:[aA-zZ0-9](?:[aA-zZ0-9-]*[aA-zZ0-9])?\.)+[aA-zZ0-9](?:[aA-zZ0-9-]*[aA-zZ0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[aA-zZ0-9-]*[aA-zZ0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])$/g,
+          /(?!-)^(?:[aA-zZ0-9_-]+(?:\.[aA-zZ0-9_-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*"){3}@(?:(?:[aA-zZ0-9](?:[aA-zZ0-9-]*[aA-zZ0-9])?\.)+[aA-zZ0-9](?:[aA-zZ0-9-]*[aA-zZ0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[aA-zZ0-9-]*[aA-zZ0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])$/g,
+          t(email),
         ),
-      message: yup.string().required().min(20).max(2000),
+      message: yup
+        .string()
+        .required(t(required))
+        .min(20, t(messageMin))
+        .max(2000, t(messageMax)),
     })
     .required();
 
-  const createNotification = () => NotificationManager.success('Відправлено');
+  const createNotification = () => NotificationManager.success(t(success));
   const createNotificationError = () =>
     NotificationManager.error('error in API');
 
@@ -91,15 +116,15 @@ export const Form = () => {
   return (
     <div className={s.mainWrapper}>
       <div className={s.wrapper}>
-        <h2 className={s.title}>{title} </h2>
-        <p className={s.subTitle}>Заповнити дані</p>
+        <h2 className={s.title}>{title}</h2>
+        <p className={s.subTitle}>{subTitle}</p>
         <form method="POST" name="contact" onSubmit={handleSubmit(onSubmit)}>
           <div className={s.wrapperInputs}>
             <div className={s.inputWrapper}>
               <input
                 className={errors.name === undefined ? s.input : s.inputRed}
                 {...register('name')}
-                placeholder="Ім’я"
+                placeholder={t(nameInput)}
               />
               <p className={s.errorMsg}>{errors.name?.message}</p>
             </div>
@@ -147,7 +172,7 @@ export const Form = () => {
               <input
                 className={errors.email === undefined ? s.input : s.inputRed}
                 {...register('email')}
-                placeholder="Email"
+                placeholder={t(emailInput)}
               />
               <p className={s.errorMsg}>{errors.email?.message}</p>
             </div>
@@ -158,14 +183,14 @@ export const Form = () => {
                   errors.message === undefined ? s.textarea : s.textareaRed
                 }
                 {...register('message')}
-                placeholder="Написати нам"
+                placeholder={t(messageInput)}
               />
               <p className={s.errorMsgTextarea}>{errors.message?.message}</p>
             </div>
           </div>
 
           <button aria-label="submit form" className={s.button} type="submit">
-            Відправити
+            {t(submit)}
           </button>
         </form>
         <NotificationContainer />

@@ -1,23 +1,25 @@
 ---
 chapter: about_company
+chapter_range: "2"
 language: uk
 title: Про компанію
-content: Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed vel
-  mauris massa velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum
-  dolor sit amet consectetur. Placerat et at aenean sed vel mauris massa velit.
-  Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor sit amet
-  consectetur. Placerat et at aenean sed vel mauris massa velit. Nisl donec ut
-  cras netus risus sapien vel Lorem ipsum dolor sit amet consectetur. Placerat
-  et at aenean sed vel mauris massa velit. Nisl donec ut cras netus risus sapien
-  vel Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed vel
-  mauris massa velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum
-  dolor sit amet consectetur. Placerat et at aenean sed vel mauris dolor sit
-  amet consectetur. Placerat et at aenean sed vel mauris massa velit. Nisl donec
-  ut cras netus risus sapien vel Lorem ipsum dolor sit amet consectetur.
-  Placerat et at aenean sed vel mauris sapien
+content: >-
+  Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed vel
+    mauris massa velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum
+    dolor sit amet consectetur. Placerat et at aenean sed vel mauris massa velit.
+    Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor sit amet
+    consectetur. Placerat et at aenean sed vel mauris massa velit. Nisl donec ut
+    cras netus risus sapien vel Lorem ipsum dolor sit amet consectetur. Placerat
+    et at aenean sed vel mauris massa velit. Nisl donec ut cras netus risus sapien
+    vel Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed vel
+    mauris massa velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum
+    dolor sit amet consectetur. Placerat et at aenean sed vel mauris dolor sit
+    amet consectetur. Placerat et at aenean sed vel mauris massa velit. Nisl donec
+    ut cras netus risus sapien vel Lorem ipsum dolor sit amet consectetur.
+    Placerat et at aenean sed vel mauris sapien
 bg-img:
-  photo: /img/image-20.jpg
   alt: Комбайн висипає зерно на машину
+  photo: /img/image-20.jpg
 reporting:
   title: Звітність
   path: https://www.figma.com/file/eBol4oibsMJjCcUEvBDxhG/DniproAgro?node-id=0%3A1&t=vu7KqWZhmPt4LzVI-0
@@ -33,5 +35,4 @@ statistics:
     units: т
   - category: Партнерів
     value: "150"
-    units: ""
 ---

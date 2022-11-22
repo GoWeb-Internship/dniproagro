@@ -1,5 +1,6 @@
 ---
 chapter: gallery
+chapter_range: "6"
 language: uk
 title: Галерея
 photos_list:
@@ -11,12 +12,12 @@ photos_list:
     alt: аграрій
   - photo: /img/ba8d-gallery.jpg
     alt: зрошування
-  - photo: /img/sowing.jpg
-    alt: посів
-  - photo: /img/corn-2.jpg
-    alt: кукурузда
-  - photo: /img/corn.jpg
-    alt: директор у полі
+  - alt: посів
+    photo: /img/sowing.jpg
+  - alt: кукурузда
+    photo: /img/corn-2.jpg
+  - alt: директор у полі
+    photo: /img/corn.jpg
   - photo: /img/wheat.jpg
     alt: пшениця
 ---
