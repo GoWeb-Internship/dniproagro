@@ -2,10 +2,7 @@ import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, EffectFade, Scrollbar, A11y } from 'swiper';
 import { useStaticQuery, graphql } from 'gatsby';
-import {
-  ArrowLeftIcon,
-  ArrowRightCircleIcon,
-} from '@heroicons/react/24/outline';
+import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
 
 export const Slider = ({ children, className = '' }) => {
   return (
@@ -20,7 +17,7 @@ export const Slider = ({ children, className = '' }) => {
         slidesPerView={1}
         breakpoints={{
           320: {
-            slidesPerView: 1,
+            slidesPerView: 3,
             spaceBetween: 10,
           },
           768: {
@@ -31,10 +28,6 @@ export const Slider = ({ children, className = '' }) => {
             slidesPerView: 3,
             spaceBetween: 24,
           },
-          // "@1.50": {
-          //   slidesPerView: 4,
-          //   spaceBetween: 50,
-          // },
         }}
         centeredSlides={true}
         initialSlide={1}
@@ -44,13 +37,13 @@ export const Slider = ({ children, className = '' }) => {
         }}
         modules={[Navigation, EffectFade, Pagination]}
       >
-        <div className="prev-slider swiper-button-disabled  " role={'button'}>
-          <ArrowLeftIcon size={48} />
-        </div>
+        <button className="prev-slider">
+          <ArrowLeftIcon width={24} />
+        </button>
         {children}
-        <div className="next-slider swiper-button-disabled " role={'button'}>
-          <ArrowRightCircleIcon size={48} />
-        </div>
+        <button className="next-slider">
+          <ArrowRightIcon width={24} />
+        </button>
       </Swiper>
     </div>
   );

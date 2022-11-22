@@ -37,7 +37,6 @@ const IndexPage = ({ data }) => {
   return (
     <>
       <h1>Hello</h1>
-      <Gallery images={slide_img} />
       {/* слоган */}
       {/* <Section id={SLOGAN}></Section> */}
       {/* про компанію */}
@@ -57,6 +56,7 @@ const IndexPage = ({ data }) => {
         <Form />
         <Map />
       </Section>
+      <Gallery images={slide_img} />
     </>
   );
 };
