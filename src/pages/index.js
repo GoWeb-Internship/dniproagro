@@ -10,8 +10,9 @@ import {
   NavBar,
   Section,
   SwitchLang,
-  Gallery,
 } from 'components';
+import { withLayout } from 'layout';
+import { Gallery } from 'components/Gallery/Gallery';
 
 const { SLOGAN, COMPANY, CULTURES, PERSONNEL, EQUIPMENTS, GALLERY, CONTACTS } =
   anchors;
@@ -22,65 +23,45 @@ const IndexPage = ({ data }) => {
     ({ frontmatter: { chapter } }) => chapter === 'about_company',
   )?.frontmatter;
 
-  const sections = [
-    ...chapters
-      .sort((a, b) => a.frontmatter.chapter_range - b.frontmatter.chapter_range)
-      .map(({ frontmatter: { title, chapter } }) => {
-        return { title: title, chapter: chapter };
-      }),
+  const slide_img = [
+    'https://swiperjs.com/demos/images/nature-1.jpg',
+    'https://swiperjs.com/demos/images/nature-2.jpg',
+    'https://swiperjs.com/demos/images/nature-3.jpg',
+    'https://swiperjs.com/demos/images/nature-4.jpg',
+    'https://swiperjs.com/demos/images/nature-5.jpg',
+    'https://swiperjs.com/demos/images/nature-6.jpg',
+    'https://swiperjs.com/demos/images/nature-7.jpg',
+    'https://swiperjs.com/demos/images/nature-8.jpg',
   ];
 
   return (
     <>
-      <header className="header">
-        <Container>
-          <Logo />
-          <NavBar sections={sections} />
-          <SwitchLang />
-        </Container>
-      </header>
-
-      <main>
-        {/* слоган */}
-        {/* <Section id={SLOGAN}></Section> */}
-
-        {/* про компанію */}
-        <Section id={COMPANY}>
+      <h1>Hello</h1>
+      <Gallery images={slide_img} />
+      {/* слоган */}
+      {/* <Section id={SLOGAN}></Section> */}
+      {/* про компанію */}
+      {/* <Section id={COMPANY}>
           <About aboutCompany={aboutCompany} />
-        </Section>
-
-        {/* культури */}
-        {/* <Section id={CULTURES}></Section> */}
-
-        {/* персонал */}
-        {/* <Section id={PERSONNEL}></Section> */}
-
-        {/* техзасоби */}
-        {/* <Section id={EQUIPMENTS}></Section> */}
-
-        {/* галерея */}
-
-        <Section id={GALLERY}>
-          <Gallery />
-        </Section>
-
-        {/* контакти */}
-        <Section id={CONTACTS}>
-          <Form />
-          <Map />
-        </Section>
-      </main>
-
-      <footer>
-        <Container>
-          <Logo />
-        </Container>
-      </footer>
+        </Section> */}
+      {/* культури */}
+      {/* <Section id={CULTURES}></Section> */}
+      {/* персонал */}
+      {/* <Section id={PERSONNEL}></Section> */}
+      {/* техзасоби */}
+      {/* <Section id={EQUIPMENTS}></Section> */}
+      {/* галерея */}
+      {/* <Section id={GALLERY}></Section> */}
+      {/* контакти */}
+      <Section id={CONTACTS}>
+        <Form />
+        <Map />
+      </Section>
     </>
   );
 };
 
-export default IndexPage;
+export default withLayout(IndexPage);
 
 export const Head = () => <title>Home Page</title>;
 

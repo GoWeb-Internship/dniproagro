@@ -1,10 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 
 module.exports = {
-  darkMode: 'class',
+  mode: 'jit',
   content: [
     './src/pages/**/*.{js,jsx,ts,tsx}',
     './src/components/**/*.{js,jsx,ts,tsx}',
+    './src/layout/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
     // MEDIA QUERIES
@@ -61,10 +62,10 @@ module.exports = {
           DEFAULT: '1.25rem',
           sm: '1.25rem',
           md: '2rem',
-          xl: '2.5rem',
+          xl: '0',
         },
       },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
 };
