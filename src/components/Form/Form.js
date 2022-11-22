@@ -28,6 +28,7 @@ export const Form = () => {
     messageMin,
     messageMax,
     success,
+    test,
   } = t('formValidation', {
     returnObjects: true,
   });
@@ -58,7 +59,7 @@ export const Form = () => {
         .max(17, t(phoneMax)),
       email: yup
         .string()
-        .email()
+        .email(t(test))
         .required(t(required))
         .max(63, t(emailMax))
         .matches(

@@ -53,10 +53,10 @@ const IndexPage = ({ data }) => {
       {/* галерея */}
       {/* <Section id={GALLERY}></Section> */}
       {/* контакти */}
-      {/* <Section id={CONTACTS}>
-          <Form />
-          <Map />
-        </Section> */}
+      <Section id={CONTACTS}>
+        <Form />
+        <Map />
+      </Section>
       )
     </>
   );
