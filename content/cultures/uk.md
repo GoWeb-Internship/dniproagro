@@ -12,4 +12,8 @@ cultures_list:
     description: Пшениця
     image: /img/wheat.jpg
     alt: Пшениця
+  - culture: Ріпак
+    description: Р﻿іпак
+    alt: Ріпак
+    image: /img/ba8d-gallery.jpg
 ---
