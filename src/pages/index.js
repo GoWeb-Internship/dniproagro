@@ -11,6 +11,7 @@ import {
   Section,
   SwitchLang,
 } from 'components';
+import { withLayout } from 'layout';
 
 const { SLOGAN, COMPANY, CULTURES, PERSONNEL, EQUIPMENTS, GALLERY, CONTACTS } =
   anchors;
@@ -24,59 +25,37 @@ const IndexPage = ({ data }) => {
   const sections = [
     ...chapters
       .sort((a, b) => a.frontmatter.chapter_range - b.frontmatter.chapter_range)
-      .map(({ frontmatter: { title, chapter } }) => {
-        return { title: title, chapter: chapter };
-      }),
+      .map(({ frontmatter: { title, chapter } }) => ({ title, chapter })),
   ];
 
   return (
     <>
-      <header className="header">
-        <Container>
-          <Logo />
-          <NavBar sections={sections} />
-          <SwitchLang />
-        </Container>
-      </header>
-
-      <main>
-        {/* слоган */}
-        {/* <Section id={SLOGAN}></Section> */}
-
-        {/* про компанію */}
-        <Section id={COMPANY}>
+      <h1>Hello</h1>
+      {/* слоган */}
+      {/* <Section id={SLOGAN}></Section> */}
+      {/* про компанію */}
+      {/* <Section id={COMPANY}>
           <About aboutCompany={aboutCompany} />
-        </Section>
-
-        {/* культури */}
-        {/* <Section id={CULTURES}></Section> */}
-
-        {/* персонал */}
-        {/* <Section id={PERSONNEL}></Section> */}
-
-        {/* техзасоби */}
-        {/* <Section id={EQUIPMENTS}></Section> */}
-
-        {/* галерея */}
-        {/* <Section id={GALLERY}></Section> */}
-
-        {/* контакти */}
-        <Section id={CONTACTS}>
+        </Section> */}
+      {/* культури */}
+      {/* <Section id={CULTURES}></Section> */}
+      {/* персонал */}
+      {/* <Section id={PERSONNEL}></Section> */}
+      {/* техзасоби */}
+      {/* <Section id={EQUIPMENTS}></Section> */}
+      {/* галерея */}
+      {/* <Section id={GALLERY}></Section> */}
+      {/* контакти */}
+      {/* <Section id={CONTACTS}>
           <Form />
           <Map />
-        </Section>
-      </main>
-
-      <footer>
-        <Container>
-          <Logo />
-        </Container>
-      </footer>
+        </Section> */}
+      )
     </>
   );
 };
 
-export default IndexPage;
+export default withLayout(IndexPage);
 
 export const Head = () => <title>Home Page</title>;
 
@@ -143,6 +122,7 @@ export const query = graphql`
         }
       }
     }
+
     locales: allLocale(filter: { language: { eq: $language } }) {
       edges {
         node {
