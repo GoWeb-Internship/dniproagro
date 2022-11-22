@@ -29,8 +29,7 @@ export const Gallery = () => {
   const photolist = gallery?.map(({ frontmatter }) => frontmatter.photos_list);
   console.log(photolist);
   return (
-    // <Slider className="w-[1060px] ">
-    <Slider>
+    <Slider className="max-xl:w-[1076px]">
       {data &&
         photolist[0]?.map(({ photo, alt }, index) => {
           return (

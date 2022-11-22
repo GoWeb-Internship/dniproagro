@@ -7,18 +7,9 @@ import {
   ArrowRightCircleIcon,
 } from '@heroicons/react/24/outline';
 
-const img = {
-  widht: '300px',
-  height: '300px',
-};
-const active = {
-  widht: '400px',
-  height: '400px',
-};
-
 export const Slider = ({ children, className = '' }) => {
   return (
-    <div className="relative">
+    <div className="relative ">
       <Swiper
         className={`mx-auto flex ${className}`}
         navigation={{
@@ -26,24 +17,25 @@ export const Slider = ({ children, className = '' }) => {
           prevEl: '.prev-slider',
         }}
         spaceBetween={16}
-        slidesPerView={3}
-        // breakpoints= {
-        //   // when window width is >= 320px
-        //   320 = {
-        //     slidesPerView: {1},
-        //     spaceBetween: 20
-        //   },
-        //   // when window width is >= 480px
-        //   480 =  {
-        //     slidesPerView: {2},
-        //     spaceBetween: 30
-        //   },
-        //   // when window width is >= 640px
-        //   1280 = {
-        //     slidesPerView: {3},
-        //     spaceBetween: 40
-        //   }
-        // }
+        slidesPerView={1}
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 31,
+          },
+          1280: {
+            slidesPerView: 3,
+            spaceBetween: 24,
+          },
+          // "@1.50": {
+          //   slidesPerView: 4,
+          //   spaceBetween: 50,
+          // },
+        }}
         centeredSlides={true}
         initialSlide={1}
         loop={true}
