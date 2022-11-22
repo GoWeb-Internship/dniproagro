@@ -301,7 +301,8 @@ collections:
           name: 'cultures_list',
           widget: 'list',
           required: true,
-          fields: [
+          fields:
+            [
               {
                 label: 'Culture',
                 name: 'culture',
@@ -333,15 +334,20 @@ collections:
                 hint:
                   'Введіть альтернативну назву для зображення (на мові колекції)',
               },
-              # {
-              #   label: 'Culture range',
-              #   name: 'culture_range',
-              #   widget: 'string',
-              #   required: true,
-              #   hint:
-              #     'Введіть цифру, що відповідає порядковому номеру розміщення
-              #     культури у списку на сторінці',
-              # },
+              {
+                label: 'Culture range',
+                name: 'culture_range',
+                widget: 'string',
+                required: true,
+                pattern:
+                  [
+                    '^[+0-9]{1,2}$',
+                    'Введіть, будь ласка, цифру або двоцифрове число',
+                  ],
+                hint:
+                  'Введіть цифру, що відповідає порядковому номеру розміщення
+                  культури у списку на сторінці',
+              },
             ],
         }
   - label: 'Персонал'

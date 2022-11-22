@@ -1,0 +1,7 @@
+.tabBtn {
+  @apply mb-[18px] block h-[104px] w-[306px] overflow-hidden rounded-main last:mb-0;
+}
+
+.tabImg {
+  @apply h-full w-full object-cover object-center;
+}

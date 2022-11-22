@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useEffect, useState } from 'react';
 // import { anchors } from 'utils/constants';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Section } from 'components';
@@ -7,6 +7,9 @@ import Tab from 'components/Tab';
 // const { CULTURES } = anchors;
 
 export const Cultures = () => {
+  const [item, setItem] = useState(null);
+  const { i18n } = useTranslation();
+
   const {
     allMarkdownRemark: { nodes },
   } = useStaticQuery(graphql`
@@ -23,6 +26,7 @@ export const Cultures = () => {
               culture
               description
               image
+              culture_range
             }
             language
           }
@@ -31,18 +35,34 @@ export const Cultures = () => {
     }
   `);
 
-  const cultures = nodes[0].frontmatter;
-  const { chapter, title, cultures_list, language } = cultures;
-  const { i18n } = useTranslation();
-  console.log(cultures);
+  useEffect(() => {
+    if (!nodes || !i18n.language) return;
+
+    const list = nodes.find(
+      ({ frontmatter: { language } }) => language === i18n.language,
+    ).frontmatter;
+
+    const sortedItems = [...list.cultures_list].sort(
+      (a, b) => a.culture_range - b.culture_range,
+    );
+    const newSortedList = { ...list, cultures_list: sortedItems };
+
+    setItem(newSortedList);
+  }, [i18n, i18n.language, nodes]);
 
   return (
-    <Section id={chapter}>
-      <h1>{title}</h1>
+    <>
+      {item && (
+        <Section id={item.chapter}>
+          <h1>{item.title}</h1>
 
-      {cultures_list.map(culture => {
-        return <Tab cultureItem={culture} />;
-      })}
-    </Section>
+          {item
+            ? item.cultures_list.map((culture, index) => {
+                return <Tab cultureItem={culture} key={index} />;
+              })
+            : null}
+        </Section>
+      )}
+    </>
   );
 };
