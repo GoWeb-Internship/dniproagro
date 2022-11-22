@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { AnchorLink } from 'gatsby-plugin-anchor-links';
-import { navList, navItem } from './NavBar.module.css';
+import { Link } from 'react-scroll';
+import { anchorScrollDuration } from 'utils/constants';
+import { navList, navItem, baseLink, activeLink } from './NavBar.module.css';
 
 export const NavBar = ({ sections }) => {
   return (
@@ -8,8 +9,18 @@ export const NavBar = ({ sections }) => {
       <ul className={navList}>
         {sections.map(({ title, chapter }, index) => (
           <li key={index} className={navItem}>
-            <AnchorLink to={`/#${chapter}`} title={`${title}`} />
-            {/* {title} */}
+            <Link
+              className={baseLink}
+              activeClass={activeLink}
+              to={chapter}
+              spy={true}
+              hashSpy={true}
+              smooth={true}
+              offset={-150}
+              duration={anchorScrollDuration}
+            >
+              {title}
+            </Link>
           </li>
         ))}
       </ul>

@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export const Container = ({ children, className }) => {
+export const Container = ({ children, className = '' }) => {
   return (
     <div
-      className={`container ${className ? className : ''}
+      className={`container ${className}
 `}
     >
       {children}

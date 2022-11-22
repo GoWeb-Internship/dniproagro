@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
 import Map from 'components/Map/Map';
+import { anchors } from 'utils/constants';
 import {
   About,
   Container,
@@ -10,6 +11,9 @@ import {
   Section,
   SwitchLang,
 } from 'components';
+
+const { SLOGAN, COMPANY, CULTURES, PERSONNEL, EQUIPMENTS, GALLERY, CONTACTS } =
+  anchors;
 
 const IndexPage = ({ data }) => {
   const chapters = data?.allMarkdownRemark?.nodes;
@@ -37,33 +41,37 @@ const IndexPage = ({ data }) => {
 
       <main>
         {/* слоган */}
-        {/* <Section></Section> */}
+        {/* <Section id={SLOGAN}></Section> */}
 
         {/* про компанію */}
-        {/* <Section> */}
-        <About aboutCompany={aboutCompany} />
-        {/* </Section> */}
+        <Section id={COMPANY}>
+          <About aboutCompany={aboutCompany} />
+        </Section>
 
         {/* культури */}
-        {/* <Section></Section> */}
+        {/* <Section id={CULTURES}></Section> */}
 
         {/* персонал */}
-        {/* <Section></Section> */}
+        {/* <Section id={PERSONNEL}></Section> */}
 
         {/* техзасоби */}
-        {/* <Section></Section> */}
+        {/* <Section id={EQUIPMENTS}></Section> */}
 
         {/* галерея */}
-        {/* <Section></Section> */}
+        {/* <Section id={GALLERY}></Section> */}
 
         {/* контакти */}
-        {/* <Section> */}
-        <Form />
-        <Map />
-        {/* </Section> */}
+        <Section id={CONTACTS}>
+          <Form />
+          <Map />
+        </Section>
       </main>
 
-      <footer></footer>
+      <footer>
+        <Container>
+          <Logo />
+        </Container>
+      </footer>
     </>
   );
 };
