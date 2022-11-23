@@ -42,16 +42,16 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `public`,
-        path: `${__dirname}/public`,
+        name: `cultures`,
+        path: `${__dirname}/content/cultures`,
       },
     },
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
       options: {
+        name: 'img',
         path: `${__dirname}/static/img`,
-        name: 'uploads',
       },
     },
     {

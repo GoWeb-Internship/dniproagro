@@ -19,7 +19,8 @@ const Tabs = ({ list }) => {
                     /* Use the `selected` state to conditionally style the selected tab. */
                     <button className={selected ? tabBtn : tabBtn}>
                       {culture}
-                      <img src={image} alt={alt} className={tabImg} />
+                      {/* <img src={image} alt={alt} className={tabImg} /> */}
+                      <GatsbyImage image={getImage(image)} alt={alt} />
                     </button>
                   )}
                 </Tab>
@@ -33,7 +34,8 @@ const Tabs = ({ list }) => {
               return (
                 <Tab.Panel key={index}>
                   {culture}
-                  <img src={image} alt={alt} className={tabImg} />
+                  {/* <img src={image} alt={alt} className={tabImg} /> */}
+                  <GatsbyImage image={getImage(image)} alt={alt} />
                 </Tab.Panel>
               );
             })}
