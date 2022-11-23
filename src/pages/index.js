@@ -58,7 +58,6 @@ const IndexPage = ({ data }) => {
         <Form />
         <Map />
       </Section>
-      )
     </>
   );
 };

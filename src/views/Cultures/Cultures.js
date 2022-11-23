@@ -3,19 +3,11 @@ import React, { useEffect, useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Section } from 'components';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
-import Tab from 'components/Tab';
+import Tabs from 'components/Tabs';
 // const { CULTURES } = anchors;
 
-import {
-  tabWrapper,
-  modalBtn,
-  selectedImg,
-  selectedImgWrapper,
-} from './Cultures.module.css';
-
 export const Cultures = () => {
-  const [item, setItem] = useState(null);
-  const [selectedCulture, setSelectedCulture] = useState(null);
+  const [chapter, setChapter] = useState(null);
   const { i18n } = useTranslation();
 
   const {
@@ -46,58 +38,25 @@ export const Cultures = () => {
   useEffect(() => {
     if (!nodes || !i18n.language) return;
 
-    const list = nodes.find(
+    const cultureChapter = nodes.find(
       ({ frontmatter: { language } }) => language === i18n.language,
     ).frontmatter;
 
-    const sortedItems = [...list.cultures_list].sort(
+    const sortedList = [...cultureChapter.cultures_list].sort(
       (a, b) => a.culture_range - b.culture_range,
     );
-    const newSortedList = { ...list, cultures_list: sortedItems };
 
-    setItem(newSortedList);
+    const sortedChapter = { ...cultureChapter, cultures_list: sortedList };
+    setChapter(sortedChapter);
   }, [i18n, i18n.language, nodes]);
-
-  useEffect(() => {
-    if (!item) return;
-
-    setSelectedCulture(item.cultures_list[0]);
-  }, [item]);
 
   return (
     <>
-      {item && (
-        <Section id={item.chapter}>
-          <h1>{item.title}</h1>
+      {chapter && (
+        <Section id={chapter.chapter}>
+          <h1>{chapter.title}</h1>
 
-          <div className={tabWrapper}>
-            <ul>
-              {item
-                ? item.cultures_list.map((culture, index) => {
-                    return (
-                      <li key={index}>
-                        <Tab cultureItem={culture} />
-                      </li>
-                    );
-                  })
-                : null}
-            </ul>
-
-            {selectedCulture && (
-              <>
-                <div className={selectedImgWrapper}>
-                  <img
-                    src={selectedCulture.image}
-                    alt={selectedCulture.alt}
-                    className={selectedImg}
-                  />
-                  <button className={modalBtn}>
-                    {selectedCulture.culture}
-                  </button>
-                </div>
-              </>
-            )}
-          </div>
+          <Tabs list={chapter.cultures_list} />
         </Section>
       )}
     </>
