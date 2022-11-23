@@ -10,6 +10,7 @@ import {
   panelsWrapper,
   panel,
   panelImg,
+  panelImgWrapper,
   tabsList,
   tabItem,
   panelTitleBox,
@@ -33,7 +34,7 @@ const Tabs = ({ list, tabsPosition }) => {
             ? `${tabsMainWrapper} flex-row-reverse`
             : `${tabsMainWrapper} flex-row`
         }
-        defaultIndex={1}
+        defaultIndex={0}
       >
         <Tab.List as="ul" className={tabsList}>
           {list &&
@@ -60,12 +61,14 @@ const Tabs = ({ list, tabsPosition }) => {
             list.map((culture, index) => {
               return (
                 <Tab.Panel as="div" key={index} className={panel}>
-                  <img
-                    src={culture.image}
-                    alt={culture.alt}
-                    className={panelImg}
-                  />
-                  {/* <GatsbyImage image={getImage(image)} alt={alt} /> */}
+                  <div className={panelImgWrapper}>
+                    <img
+                      src={culture.image}
+                      alt={culture.alt}
+                      className={panelImg}
+                    />
+                    {/* <GatsbyImage image={getImage(image)} alt={alt} /> */}
+                  </div>
 
                   <button
                     className={panelTitleBox}

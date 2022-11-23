@@ -23,11 +23,15 @@
 }
 
 .panelsWrapper {
-  @apply overflow-hidden rounded-main xl:h-[448px] xl:w-[856px];
+  @apply xl:h-[448px] xl:w-[856px];
 }
 
 .panel {
   @apply relative h-full w-full;
+}
+
+.panelImgWrapper {
+  @apply h-full w-full overflow-hidden rounded-main;
 }
 
 .panelImg {
@@ -43,11 +47,11 @@
 }
 
 .modalHidden {
-  @apply modal -translate-x-full  transition-all duration-300;
+  @apply modal  -translate-x-full opacity-0 transition-all duration-300;
 }
 
 .modalShown {
-  @apply modal translate-x-0  transition-all duration-300;
+  @apply modal translate-x-0 opacity-100 transition-all duration-300;
 }
 
 .closeModalIcon {
