@@ -26,7 +26,7 @@ cultures_list:
     culture_range: '1'
   - culture: Культура
     description: Т﻿ест
-    image: ../..static/img/boats-g7e1dfc3d5_1280.jpg
+    image: ../..static/img/gatsby-astronaut.png
     alt: Тест
     culture_range: '4'
 ---
