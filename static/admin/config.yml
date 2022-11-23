@@ -267,7 +267,7 @@ collections:
     description: 'Розділ "Культури і технології посіву"'
     folder: 'content/cultures'
     media_folder: '/static/img'
-    public_folder: /img
+    public_folder: ../..static/img
     create: true
     delete: true
     path: '{{language}}'
