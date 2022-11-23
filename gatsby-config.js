@@ -13,6 +13,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-root-import`,
@@ -22,6 +23,35 @@ module.exports = {
       options: {
         path: `${__dirname}/locales`,
         name: `locale`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/src`,
+        name: 'src',
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/content`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `public`,
+        path: `${__dirname}/public`,
+      },
+    },
+    {
+      // keep as first gatsby-source-filesystem plugin for gatsby image support
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/static/img`,
+        name: 'uploads',
       },
     },
     {
@@ -44,13 +74,6 @@ module.exports = {
           keySeparator: false,
           nsSeparator: false,
         },
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `content`,
-        path: `${__dirname}/content`,
       },
     },
   ],
