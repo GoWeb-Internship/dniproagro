@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+// import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { tabBtn, tabImg, tabTitleBox } from './Tabs.module.css';
 import { Tab } from '@headlessui/react';
 
@@ -19,8 +19,8 @@ const Tabs = ({ list }) => {
                     /* Use the `selected` state to conditionally style the selected tab. */
                     <button className={selected ? tabBtn : tabBtn}>
                       {culture}
-                      {/* <img src={image} alt={alt} className={tabImg} /> */}
-                      <GatsbyImage image={getImage(image)} alt={alt} />
+                      <img src={image} alt={alt} className={tabImg} />
+                      {/* <GatsbyImage image={getImage(image)} alt={alt} /> */}
                     </button>
                   )}
                 </Tab>
@@ -34,8 +34,8 @@ const Tabs = ({ list }) => {
               return (
                 <Tab.Panel key={index}>
                   {culture}
-                  {/* <img src={image} alt={alt} className={tabImg} /> */}
-                  <GatsbyImage image={getImage(image)} alt={alt} />
+                  <img src={image} alt={alt} className={tabImg} />
+                  {/* <GatsbyImage image={getImage(image)} alt={alt} /> */}
                 </Tab.Panel>
               );
             })}

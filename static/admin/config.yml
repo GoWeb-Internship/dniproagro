@@ -267,7 +267,7 @@ collections:
     description: 'Розділ "Культури і технології посіву"'
     folder: 'content/cultures'
     media_folder: '/static/img'
-    public_folder: ../..static/img
+    public_folder: /img
     create: true
     delete: true
     path: '{{language}}'
@@ -323,9 +323,6 @@ collections:
                 label: 'Image',
                 name: 'image',
                 widget: 'image',
-                media_folder: '/static/img',
-                public_folder: ../..static/img,
-                choose_url: false,
                 required: true,
                 hint: 'Завантажте зображення даної культури',
               },
@@ -341,7 +338,7 @@ collections:
                 label: 'Culture range',
                 name: 'culture_range',
                 widget: 'string',
-                required: true,
+                required: false,
                 pattern:
                   [
                     '^[+0-9]{1,2}$',
