@@ -56,7 +56,7 @@ export const Cultures = () => {
         <Section id={chapter.chapter}>
           <h1>{chapter.title}</h1>
 
-          <Tabs list={chapter.cultures_list} />
+          <Tabs list={chapter.cultures_list} tabsPosition="right" />
         </Section>
       )}
     </>

@@ -13,7 +13,7 @@ module.exports = {
       xs: '375px',
       sm: '480px',
       md: '768px',
-      xl: '1436px',
+      xl: '1336px',
     },
     // BASE FONT
     fontFamily: {
@@ -24,6 +24,8 @@ module.exports = {
     // SHADOW
     boxShadow: {
       main: '0px 2px 2px rgba(125, 198, 252, 0.24), 0px -2px 2px rgba(125, 198, 252, 0.24)', // class="shadow-main"
+      modal:
+        '0px -2px 4px rgba(6, 78, 59, 0.25), 2px 0px 4px rgba(6, 78, 59, 0.25), -2px 0px 4px rgba(6, 78, 59, 0.25), 0px 4px 4px rgba(6, 78, 59, 0.25);', // class="shadow-modal"
     },
     // THEME
     extend: {

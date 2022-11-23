@@ -1,83 +1,89 @@
-import React, { Fragment } from 'react';
+import React, { useState } from 'react';
 // import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { tabBtn, tabImg, tabTitleBox } from './Tabs.module.css';
 import { Tab } from '@headlessui/react';
+import { XMarkIcon } from '@heroicons/react/24/solid';
+import {
+  tabBtn,
+  tabImg,
+  tabTitleBox,
+  tabsMainWrapper,
+  panelsWrapper,
+  panel,
+  panelImg,
+  tabsList,
+  tabItem,
+  panelTitleBox,
+  modalHidden,
+  modalShown,
+  closeModalIcon,
+} from './Tabs.module.css';
+import TabsModal from './TabsModal';
 
-const Tabs = ({ list }) => {
-  // const { alt, culture, description, image } = cultureItem;
+const Tabs = ({ list, tabsPosition }) => {
+  const [isModalShown, setIsModalShown] = useState(false);
   console.log(list);
 
   return (
     <>
-      <Tab.Group vertical>
-        <Tab.List>
+      <Tab.Group
+        as="div"
+        vertical
+        className={
+          tabsPosition === 'right'
+            ? `${tabsMainWrapper} flex-row-reverse`
+            : `${tabsMainWrapper} flex-row`
+        }
+        defaultIndex={1}
+      >
+        <Tab.List as="ul" className={tabsList}>
           {list &&
             list.map(({ culture, image, alt }, index) => {
               return (
-                <Tab as={Fragment} key={index}>
+                <Tab as="li" className={tabItem} key={index}>
                   {({ selected }) => (
-                    /* Use the `selected` state to conditionally style the selected tab. */
-                    <button className={selected ? tabBtn : tabBtn}>
-                      {culture}
+                    <button
+                      type="button"
+                      className={selected ? tabBtn : tabBtn}
+                    >
                       <img src={image} alt={alt} className={tabImg} />
                       {/* <GatsbyImage image={getImage(image)} alt={alt} /> */}
+                      <div className={tabTitleBox}>{culture}</div>
                     </button>
                   )}
                 </Tab>
               );
             })}
         </Tab.List>
-        <Tab.Panels>
+
+        <Tab.Panels as="div" className={panelsWrapper}>
           {list &&
-            list.map(({ culture, image, alt }, index) => {
-              console.log(culture);
+            list.map((culture, index) => {
               return (
-                <Tab.Panel key={index}>
-                  {culture}
-                  <img src={image} alt={alt} className={tabImg} />
+                <Tab.Panel as="div" key={index} className={panel}>
+                  <img
+                    src={culture.image}
+                    alt={culture.alt}
+                    className={panelImg}
+                  />
                   {/* <GatsbyImage image={getImage(image)} alt={alt} /> */}
+
+                  <button
+                    className={panelTitleBox}
+                    onClick={() => setIsModalShown(true)}
+                  >
+                    {culture.culture}
+                  </button>
+
+                  <TabsModal
+                    isModalShown={isModalShown}
+                    cultureData={culture}
+                    setIsModalShown={setIsModalShown}
+                  />
                 </Tab.Panel>
               );
             })}
         </Tab.Panels>
       </Tab.Group>
-
-      {/* <button className={tabBtn}> */}
-      {/* <GatsbyImage image={image} alt={alt} /> */}
-      {/* <img src={image} alt={alt} className={tabImg} /> */}
-      {/* <div className={tabTitleBox}>{culture}</div> */}
-      {/* </button> */}
-
-      {/* <div className={tabWrapper}> */}
-      {/* <ul>
-        {cultureItem
-          ? cultureItem.cultures_list.map(({ culture, alt, image }, index) => {
-              return (
-                <li key={index}>
-                    <button className={tabBtn}>
-                  <GatsbyImage image={image} alt={alt} />
-                      <img src={image} alt={alt} className={tabImg} />
-                  <div className={tabTitleBox}>{culture}</div>
-                     </button>
-                </li>
-              );
-            })
-          : null}
-      </ul> */}
-      {/* </div> */}
-
-      {/* {selectedCulture && (
-        <>
-          <div className={selectedImgWrapper}>
-            <img
-              src={selectedCulture.image}
-              alt={selectedCulture.alt}
-              className={selectedImg}
-            />
-            <button className={modalBtn}>{selectedCulture.culture}</button>
-          </div>
-        </>
-      )} */}
     </>
   );
 };
