@@ -2,6 +2,9 @@ import React from 'react';
 import { Container, Logo, NavBar, SwitchLang } from 'components';
 import { graphql, useStaticQuery } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
+import { anchors } from 'utils/constants';
+
+const { SLOGAN } = anchors;
 
 export const Header = () => {
   const { i18n } = useTranslation();
@@ -23,8 +26,9 @@ export const Header = () => {
     }
   `);
 
-  const sections = nodes.reduce(
-    (acc, { frontmatter: { title, language, chapter } }) => {
+  const sections = nodes
+    .filter(({ frontmatter: { chapter } }) => chapter !== SLOGAN)
+    .reduce((acc, { frontmatter: { title, language, chapter } }) => {
       if (language === i18n.language) {
         acc.push({
           title,
@@ -32,9 +36,7 @@ export const Header = () => {
         });
       }
       return acc;
-    },
-    [],
-  );
+    }, []);
 
   return (
     <header className="header">

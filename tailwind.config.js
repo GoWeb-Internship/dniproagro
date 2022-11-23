@@ -13,7 +13,7 @@ module.exports = {
       xs: '375px',
       sm: '480px',
       md: '768px',
-      xl: '1280px',
+      xl: '1436px',
     },
     // BASE FONT
     fontFamily: {
@@ -61,8 +61,8 @@ module.exports = {
         padding: {
           DEFAULT: '1.25rem',
           sm: '1.25rem',
-          md: '2rem',
-          xl: '0',
+          md: '1.25rem',
+          xl: '1.25rem',
         },
       },
     },
