@@ -22,6 +22,11 @@ cultures_list:
   - culture: Соняшник
     description: Соняшник
     alt: Соняшник
-    image: ../../static/img/sunflower.jpg
+    image: /img/sunflower.jpg
     culture_range: '1'
+  - culture: Культура
+    description: Т﻿ест
+    image: ../..static/img/boats-g7e1dfc3d5_1280.jpg
+    alt: Тест
+    culture_range: '4'
 ---
