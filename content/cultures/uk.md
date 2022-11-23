@@ -24,9 +24,4 @@ cultures_list:
     alt: Соняшник
     image: /img/sunflower.jpg
     culture_range: '1'
-  - culture: Культура
-    description: Т﻿ест
-    image: /img/gatsby-astronaut.png
-    alt: Тест
-    culture_range: '4'
 ---
