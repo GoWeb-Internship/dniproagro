@@ -6,22 +6,22 @@ title: Культури і технології посіву
 cultures_list:
   - culture: Кукурудза
     description: Кукурудза
-    image: image/kukuruza.jpg
+    image: corn.jpg
     alt: Кукурудза
     culture_range: "3"
   - culture: Пшениця
     description: Пшениця
-    image: image/wheat.jpg
+    image: wheat.jpg
     alt: Пшениця
     culture_range: "4"
   - culture: Рапс
     description: Рапс
     alt: Рапс
-    image: image/canola.jpg
+    image: canola.jpg
     culture_range: "2"
   - culture: Соняшник
     description: Соняшник
     alt: Соняшник
-    image: image/sunflower.jpg
+    image: sunflower.jpg
     culture_range: "1"
 ---
