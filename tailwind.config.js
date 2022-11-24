@@ -17,9 +17,7 @@ module.exports = {
     },
     // BASE FONT
     fontFamily: {
-      montserrat: ['Montserrat', 'sans-serif'], // class="font-montserrat"
-      inter: ['Inter', 'sans-serif'], // class="font-inter"
-      mulish: ['Mulish', 'sans-serif'],
+      mulish: ['Mulish', 'sans-serif'], // class="font-mulish"
     },
     // SHADOW
     boxShadow: {
