@@ -37,7 +37,6 @@ const IndexPage = ({ data }) => {
 
   return (
     <>
-      {/* <h1>Hello</h1> */}
       {/* <Gallery images={slide_img} /> */}
       {/* слоган */}
       {/* <Section id={SLOGAN}></Section> */}
@@ -79,12 +78,6 @@ export const query = graphql`
           language
           phone
           title
-          cultures_list {
-            alt
-            culture
-            description
-            image
-          }
           workers_list {
             alt
             description

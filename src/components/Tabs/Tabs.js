@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Tab } from '@headlessui/react';
 import { XMarkIcon } from '@heroicons/react/24/solid';
 import {
@@ -14,9 +14,6 @@ import {
   tabsList,
   tabItem,
   panelTitleBox,
-  modalHidden,
-  modalShown,
-  closeModalIcon,
 } from './Tabs.module.css';
 import TabsModal from './TabsModal';
 
@@ -46,8 +43,8 @@ const Tabs = ({ list, tabsPosition }) => {
                       type="button"
                       className={selected ? tabBtn : tabBtn}
                     >
-                      <img src={image} alt={alt} className={tabImg} />
-                      {/* <GatsbyImage image={getImage(image)} alt={alt} /> */}
+                      {/* <img src={image} alt={alt} className={tabImg} /> */}
+                      <GatsbyImage image={getImage(image)} alt={alt} />
                       <div className={tabTitleBox}>{culture}</div>
                     </button>
                   )}
@@ -62,12 +59,15 @@ const Tabs = ({ list, tabsPosition }) => {
               return (
                 <Tab.Panel as="div" key={index} className={panel}>
                   <div className={panelImgWrapper}>
-                    <img
+                    {/* <img
                       src={culture.image}
                       alt={culture.alt}
                       className={panelImg}
+                    /> */}
+                    <GatsbyImage
+                      image={getImage(culture.image)}
+                      alt={culture.alt}
                     />
-                    {/* <GatsbyImage image={getImage(image)} alt={alt} /> */}
                   </div>
 
                   <button

@@ -24,9 +24,18 @@ export const Cultures = () => {
             cultures_list {
               alt
               culture
-              description
-              image
               culture_range
+              description
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    formats: WEBP
+                    width: 500
+                    placeholder: BLURRED
+                    jpgOptions: { progressive: true }
+                  )
+                }
+              }
             }
             language
           }
@@ -55,7 +64,6 @@ export const Cultures = () => {
       {chapter && (
         <Section id={chapter.chapter}>
           <h1>{chapter.title}</h1>
-
           <Tabs list={chapter.cultures_list} tabsPosition="right" />
         </Section>
       )}
