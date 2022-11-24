@@ -19,7 +19,6 @@ import TabsModal from './TabsModal';
 
 const Tabs = ({ list, tabsPosition }) => {
   const [isModalShown, setIsModalShown] = useState(false);
-  console.log(list);
 
   return (
     <>
