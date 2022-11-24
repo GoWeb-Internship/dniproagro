@@ -6,7 +6,7 @@ title: Культури і технології посіву
 cultures_list:
   - culture: Кукурудза
     description: Кукурудза
-    image: /img/corn.jpg
+    image: boats-g7e1dfc3d5_1280.jpg
     alt: Кукурудза
     culture_range: '3'
   - culture: Пшениця
