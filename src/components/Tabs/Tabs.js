@@ -43,12 +43,12 @@ const Tabs = ({ list, tabsPosition }) => {
                       type="button"
                       className={selected ? tabBtn : tabBtn}
                     >
-                      {/* <img src={image} alt={alt} className={tabImg} /> */}
                       <GatsbyImage
                         image={getImage(image)}
                         alt={alt}
                         className={tabImg}
                       />
+
                       <div className={tabTitleBox}>{culture}</div>
                     </button>
                   )}
@@ -63,11 +63,6 @@ const Tabs = ({ list, tabsPosition }) => {
               return (
                 <Tab.Panel as="div" key={index} className={panel}>
                   <div className={panelImgWrapper}>
-                    {/* <img
-                      src={culture.image}
-                      alt={culture.alt}
-                      className={panelImg}
-                    /> */}
                     <GatsbyImage
                       image={getImage(culture.image)}
                       alt={culture.alt}
