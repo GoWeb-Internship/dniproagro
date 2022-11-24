@@ -8,4 +8,5 @@ cultures_list:
     description: t﻿est
     alt: test
     image: corn.jpg
+    culture_range: "3"
 ---
