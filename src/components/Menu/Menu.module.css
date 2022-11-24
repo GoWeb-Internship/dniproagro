@@ -1,0 +1,11 @@
+.menuBox {
+  @apply fixed left-0 top-0 z-10 h-screen w-screen bg-accent pt-20 transition duration-300 md:hidden;
+}
+
+.menuShown {
+  @apply translate-x-0 opacity-100;
+}
+
+.menuHidden {
+  @apply -translate-x-full opacity-0;
+}

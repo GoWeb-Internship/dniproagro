@@ -1,0 +1,27 @@
+.header {
+  @apply fixed left-0 top-0 w-full py-4;
+}
+
+.headerContainer {
+  @apply relative;
+}
+
+.mobHeaderWrapper {
+  @apply absolute right-[5px] top-0 flex items-center justify-center;
+}
+
+.menuBtn {
+  @apply z-20 flex h-[50px] w-[50px] items-center justify-center;
+}
+
+.menuIcon {
+  @apply h-6 w-6;
+}
+
+.menuIconClose {
+  @apply menuIcon text-white;
+}
+
+.menuIconOpen {
+  @apply menuIcon text-accent;
+}

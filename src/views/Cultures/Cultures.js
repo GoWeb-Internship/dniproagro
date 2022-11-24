@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from 'react';
-// import { anchors } from 'utils/constants';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Section } from 'components';
+import { Section, Tabs } from 'components';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
-import Tabs from 'components/Tabs';
-// const { CULTURES } = anchors;
 
 export const Cultures = () => {
   const [chapter, setChapter] = useState(null);

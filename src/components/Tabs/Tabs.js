@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Tab } from '@headlessui/react';
-import { XMarkIcon } from '@heroicons/react/24/solid';
 import {
   tabBtn,
   tabImg,
@@ -15,9 +14,9 @@ import {
   tabItem,
   panelTitleBox,
 } from './Tabs.module.css';
-import TabsModal from './TabsModal';
+import { TabsModal } from './TabsModal';
 
-const Tabs = ({ list, tabsPosition }) => {
+export const Tabs = ({ list, tabsPosition }) => {
   const [isModalShown, setIsModalShown] = useState(false);
 
   return (
@@ -89,5 +88,3 @@ const Tabs = ({ list, tabsPosition }) => {
     </>
   );
 };
-
-export default Tabs;

@@ -9,7 +9,7 @@ import {
   descriptionBox,
 } from './Tabs.module.css';
 
-const TabsModal = ({ isModalShown, cultureData, setIsModalShown }) => {
+export const TabsModal = ({ isModalShown, cultureData, setIsModalShown }) => {
   const { culture, description } = cultureData;
 
   return (
@@ -30,5 +30,3 @@ const TabsModal = ({ isModalShown, cultureData, setIsModalShown }) => {
     </div>
   );
 };
-
-export default TabsModal;

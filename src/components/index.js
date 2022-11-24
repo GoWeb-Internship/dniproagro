@@ -5,3 +5,5 @@ export * from './SwitchLang/SwitchLang';
 export * from './Statistics/Statistics';
 export * from './Form/Form';
 export * from './NavBar/NavBar';
+export * from './Tabs/Tabs';
+export * from './Menu/Menu';
