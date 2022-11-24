@@ -14,6 +14,7 @@ import {
 import { withLayout } from 'layout';
 import { Gallery } from 'views/Gallery/Gallery';
 import { Cultures } from 'views/Cultures/Cultures';
+import { Personnel } from 'views/Personnel/Personnel';
 
 const { SLOGAN, COMPANY, CULTURES, PERSONNEL, EQUIPMENTS, GALLERY, CONTACTS } =
   anchors;
@@ -47,6 +48,7 @@ const IndexPage = ({ data }) => {
       </Section>
       {/* культури */}
       <Cultures />
+      <Personnel />
       <Gallery />
       {/* персонал */}
       {/* <Section id={PERSONNEL}></Section> */}
