@@ -6,6 +6,7 @@ module.exports = {
     './src/pages/**/*.{js,jsx,ts,tsx}',
     './src/components/**/*.{js,jsx,ts,tsx}',
     './src/layout/**/*.{js,jsx,ts,tsx}',
+    './src/views/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
     // MEDIA QUERIES
