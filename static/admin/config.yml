@@ -64,8 +64,6 @@ collections:
     identifier_field: language
     description: 'Розділ "Наш слоган"'
     folder: 'content/our-slogan'
-    media_folder: '/static/img'
-    public_folder: /img
     create: true
     delete: true
     path: '{{language}}'
@@ -143,8 +141,6 @@ collections:
     identifier_field: language
     description: 'Розділ "Про компанію"'
     folder: 'content/about-company'
-    media_folder: '/static/img'
-    public_folder: /img
     create: true
     delete: true
     path: '{{language}}'
@@ -266,8 +262,6 @@ collections:
     identifier_field: language
     description: 'Розділ "Культури і технології посіву"'
     folder: 'content/cultures'
-    media_folder: '/static/img'
-    public_folder: /img
     create: true
     delete: true
     path: '{{language}}'
@@ -338,7 +332,7 @@ collections:
                 label: 'Culture range',
                 name: 'culture_range',
                 widget: 'string',
-                required: true,
+                required: false,
                 pattern:
                   [
                     '^[+0-9]{1,2}$',
@@ -355,8 +349,6 @@ collections:
     identifier_field: language
     description: 'Розділ "Персонал"'
     folder: 'content/personnel'
-    media_folder: '/static/img'
-    public_folder: /img
     create: true
     delete: true
     path: '{{language}}'
@@ -445,8 +437,6 @@ collections:
     identifier_field: language
     description: 'Розділ "Технічні засоби"'
     folder: 'content/technical_equipments'
-    media_folder: '/static/img'
-    public_folder: /img
     create: true
     delete: true
     path: '{{language}}'
@@ -521,8 +511,6 @@ collections:
     identifier_field: language
     description: 'Розділ "Галерея"'
     folder: 'content/gallery'
-    media_folder: '/static/img'
-    public_folder: /img
     create: true
     delete: true
     path: '{{language}}'
