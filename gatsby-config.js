@@ -11,6 +11,24 @@ module.exports = {
     //TODO розмістити метадані сайту та кастомний хук useSiteMetadata
   },
   plugins: [
+    {
+      resolve: 'gatsby-remark-relative-images',
+      options: {
+        staticFolderName: 'img',
+      },
+    },
+    {
+      resolve: 'gatsby-remark-images',
+      options: {
+        maxWidth: 2048,
+
+        linkImagesToOriginal: true,
+        loading: 'lazy',
+        showCaptions: true,
+        disableBgImage: true,
+        withWebp: true,
+      },
+    },
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
@@ -32,6 +50,13 @@ module.exports = {
         name: 'src',
       },
     },
+    // {
+    //   resolve: 'gatsby-source-filesystem',
+    //   options: {
+    //     path: `${__dirname}/src/image`,
+    //     name: 'image',
+    //   },
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {

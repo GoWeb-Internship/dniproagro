@@ -6,6 +6,7 @@ module.exports = {
     './src/pages/**/*.{js,jsx,ts,tsx}',
     './src/components/**/*.{js,jsx,ts,tsx}',
     './src/layout/**/*.{js,jsx,ts,tsx}',
+    './src/views/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
     // MEDIA QUERIES
@@ -13,7 +14,7 @@ module.exports = {
       xs: '375px',
       sm: '480px',
       md: '768px',
-      xl: '1436px',
+      xl: '1336px',
     },
     // BASE FONT
     fontFamily: {

@@ -12,7 +12,7 @@ import {
   SwitchLang,
 } from 'components';
 import { withLayout } from 'layout';
-import { Gallery } from 'components/Gallery/Gallery';
+import { Gallery } from 'views/Gallery/Gallery';
 import { Cultures } from 'views/Cultures/Cultures';
 
 const { SLOGAN, COMPANY, CULTURES, PERSONNEL, EQUIPMENTS, GALLERY, CONTACTS } =
