@@ -30,7 +30,7 @@ export const Cultures = () => {
                 childImageSharp {
                   gatsbyImageData(
                     formats: WEBP
-                    width: 500
+                    width: 900
                     placeholder: BLURRED
                     jpgOptions: { progressive: true }
                   )

@@ -44,7 +44,11 @@ const Tabs = ({ list, tabsPosition }) => {
                       className={selected ? tabBtn : tabBtn}
                     >
                       {/* <img src={image} alt={alt} className={tabImg} /> */}
-                      <GatsbyImage image={getImage(image)} alt={alt} />
+                      <GatsbyImage
+                        image={getImage(image)}
+                        alt={alt}
+                        className={tabImg}
+                      />
                       <div className={tabTitleBox}>{culture}</div>
                     </button>
                   )}
@@ -67,6 +71,7 @@ const Tabs = ({ list, tabsPosition }) => {
                     <GatsbyImage
                       image={getImage(culture.image)}
                       alt={culture.alt}
+                      className={panelImg}
                     />
                   </div>
 
