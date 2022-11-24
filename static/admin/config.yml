@@ -325,6 +325,7 @@ collections:
                 widget: 'image',
                 required: true,
                 hint: 'Завантажте зображення даної культури',
+                media_folder: 'image',
               },
               {
                 label: 'Alt title of image',
