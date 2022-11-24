@@ -1,22 +1,22 @@
 import * as React from 'react';
-import { graphql } from 'gatsby';
-import Map from 'components/Map/Map';
-import { anchors } from 'utils/constants';
-import {
-  About,
-  Container,
-  Form,
-  Logo,
-  NavBar,
-  Section,
-  SwitchLang,
-} from 'components';
+// import { graphql } from 'gatsby';
+// import Map from 'components/Map/Map';
+// import { anchors } from 'utils/constants';
+// import {
+//   About,
+//   Container,
+//   Form,
+//   Logo,
+//   NavBar,
+//   Section,
+//   SwitchLang,
+// } from 'components';
 import { withLayout } from 'layout';
-import { Gallery } from 'components/Gallery/Gallery';
-import { Cultures } from 'views/Cultures/Cultures';
+// import { Gallery } from 'components/Gallery/Gallery';
+import { About, Cultures } from 'views';
 
-const { SLOGAN, COMPANY, CULTURES, PERSONNEL, EQUIPMENTS, GALLERY, CONTACTS } =
-  anchors;
+// const { SLOGAN, COMPANY, CULTURES, PERSONNEL, EQUIPMENTS, GALLERY, CONTACTS } =
+//   anchors;
 
 const IndexPage = () => {
   // const chapters = data?.allMarkdownRemark?.nodes;
@@ -41,9 +41,7 @@ const IndexPage = () => {
       {/* слоган */}
       {/* <Section id={SLOGAN}></Section> */}
       {/* про компанію */}
-      <Section id={COMPANY}>
-        {/* <About aboutCompany={aboutCompany} /> */}
-      </Section>
+      <About />
       {/* культури */}
       <Cultures />
       {/* персонал */}
@@ -53,10 +51,10 @@ const IndexPage = () => {
       {/* галерея */}
       {/* <Section id={GALLERY}></Section> */}
       {/* контакти */}
-      <Section id={CONTACTS}>
+      {/* <Section id={CONTACTS}>
         <Form />
         <Map />
-      </Section>
+      </Section> */}
     </>
   );
 };
