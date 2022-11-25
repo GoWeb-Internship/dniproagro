@@ -1,5 +1,5 @@
 .langSwitch {
-  @apply relative box-border py-4 max-md:mr-[21px];
+  @apply relative box-border py-4 max-md:mr-[21px] xl:ml-4;
 }
 
 .buttonSwitch {

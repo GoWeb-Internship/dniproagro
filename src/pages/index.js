@@ -20,10 +20,10 @@ const IndexPage = () => {
       {/* <Section id={SLOGAN}></Section> */}
 
       {/* про компанію */}
-      {/* <About /> */}
+      <About />
 
       {/* культури */}
-      {/* <Cultures /> */}
+      <Cultures />
       {/* персонал */}
 
       {/* <Section id={PERSONNEL}></Section> */}
@@ -33,6 +33,7 @@ const IndexPage = () => {
 
       {/* галерея */}
       {/* <Section id={GALLERY}></Section> */}
+
       {/* контакти */}
       <Contacts />
     </>

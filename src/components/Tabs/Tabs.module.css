@@ -38,8 +38,8 @@
   @apply h-full w-full object-cover;
 }
 
-.panelTitleBox {
-  @apply absolute bottom-0 left-0 flex w-full items-center justify-center bg-gradient-green text-white xl:h-[100px];
+.modalOpenBtn {
+  @apply absolute bottom-0 left-0 flex w-full items-end justify-start bg-gradient-green p-4 text-white xl:h-[100px] xl:p-6;
 }
 
 .modal {
@@ -60,6 +60,10 @@
 
 .closeModalIcon {
   @apply text-accent xl:h-6 xl:w-6;
+}
+
+.modalOpenIcon {
+  @apply ml-4 h-6 w-6 xl:ml-6;
 }
 
 .modalTitle {
