@@ -7,5 +7,7 @@ export * from './Form/Form';
 export * from './NavBar/NavBar';
 export * from './Tabs/Tabs';
 export * from './Menu/Menu';
+export * from './Slider/Slider';
+export * from './Gallery/Gallery';
 export * from './Address/Address';
 export * from './Contact/Contact';

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { withLayout } from 'layout';
-import { About, Contacts, Cultures } from 'views';
+import { graphql } from 'gatsby';
+import { About, Contacts, Cultures, Personnel, Gallery } from 'views';
 
 const IndexPage = () => {
   // const slide_img = [
@@ -25,15 +26,12 @@ const IndexPage = () => {
       {/* культури */}
       <Cultures />
       {/* персонал */}
-
-      {/* <Section id={PERSONNEL}></Section> */}
-
+      <Personnel />
       {/* техзасоби */}
       {/* <Section id={EQUIPMENTS}></Section> */}
 
       {/* галерея */}
-      {/* <Section id={GALLERY}></Section> */}
-
+      <Gallery />
       {/* контакти */}
       {/* <Contacts /> */}
     </>
@@ -43,3 +41,17 @@ const IndexPage = () => {
 export default withLayout(IndexPage);
 
 export const Head = () => <title>Home Page</title>;
+
+export const query = graphql`
+  query ($language: String!) {
+    locales: allLocale(filter: { language: { eq: $language } }) {
+      edges {
+        node {
+          ns
+          data
+          language
+        }
+      }
+    }
+  }
+`;

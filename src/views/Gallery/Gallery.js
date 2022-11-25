@@ -1,10 +1,14 @@
 import React from 'react';
-import { SwiperSlide } from 'swiper/react';
 import { useStaticQuery, graphql } from 'gatsby';
+import { SwiperSlide } from 'swiper/react';
+import { Section } from 'components';
 import { Slider } from 'components/Slider/Slider';
-import { Section } from 'components/Section/Section';
+import { anchors } from 'utils/constants';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 
 export const Gallery = () => {
+  const { i18n } = useTranslation();
+
   const data = useStaticQuery(
     graphql`
       query {
@@ -13,25 +17,38 @@ export const Gallery = () => {
         ) {
           nodes {
             frontmatter {
+              chapter
+              title
               photos_list {
                 alt
                 photo
               }
+              language
             }
           }
         }
       }
     `,
   );
-
+  const { GALLERY } = anchors;
   const gallery = data?.allMarkdownRemark?.nodes;
+  //   console.log(gallery);
   const photolist = gallery?.map(({ frontmatter }) => frontmatter.photos_list);
+  //   console.log(photolist);
+  const galleryChapter = gallery?.find(
+    ({ frontmatter: { language } }) => language === i18n.language,
+  )?.frontmatter;
+
+  //   console.log(galleryChapter);
 
   return (
-    <Section>
+    <Section className=" py-5 " id={GALLERY}>
+      <h2 className="text-4xl mb-[72px] font-bold leading-[45px]">
+        {galleryChapter?.title}
+      </h2>
       <Slider
         slidesPerGroup={3}
-        className="items-end   md:w-[704px] xl:w-[1076px]"
+        className="items-end md:w-[704px] xl:w-[1076px]"
       >
         {data &&
           photolist[0]?.map(({ photo, alt }, index) => {
@@ -46,7 +63,6 @@ export const Gallery = () => {
                     alt={alt}
                   />
                 )}
-                {/* <div className=" h-[300px] w-[300px] bg-red-700">{alt}</div> */}
               </SwiperSlide>
             );
           })}
@@ -54,16 +70,3 @@ export const Gallery = () => {
     </Section>
   );
 };
-
-// export const Gallery = ({ images }) => {
-//   return (
-//     <ul className="grid grid-cols-1 gap-2 md:grid-cols-2 xl:grid-cols-3">
-//       {images &&
-//         images.map(image => (
-//           <li key={image}>
-//             <img src={image} alt="" />
-//           </li>
-//         ))}
-//     </ul>
-//   );
-// };
