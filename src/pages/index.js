@@ -1,7 +1,14 @@
 import * as React from 'react';
 import { withLayout } from 'layout';
 import { graphql } from 'gatsby';
-import { About, Contacts, Cultures, Personnel, Gallery } from 'views';
+import {
+  About,
+  Contacts,
+  Cultures,
+  Personnel,
+  Gallery,
+  TechnicalEquipments,
+} from 'views';
 
 const IndexPage = () => {
   // const slide_img = [
@@ -19,16 +26,17 @@ const IndexPage = () => {
     <>
       {/* слоган */}
       {/* <Section id={SLOGAN}></Section> */}
-
       {/* про компанію */}
       <About />
 
       {/* культури */}
       <Cultures />
+
       {/* персонал */}
       <Personnel />
+
       {/* техзасоби */}
-      {/* <Section id={EQUIPMENTS}></Section> */}
+      {/* <TechnicalEquipments /> */}
 
       {/* галерея */}
       {/* <Gallery /> */}
