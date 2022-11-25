@@ -57,7 +57,7 @@ export const TechnicalEquipments = () => {
         <Section id={chapter.chapter}>
           <SectionTitle title={chapter.title} />
 
-          {/* <Tabs list={chapter.cultures_list} tabsPosition="right" /> */}
+          <Tabs list={chapter.equipments_list} tabsPosition="left" />
         </Section>
       )}
     </>
