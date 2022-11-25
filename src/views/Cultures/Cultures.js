@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Section, Tabs } from 'components';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
+import { SectionTitle } from 'components/SectionTitle/SectionTitle';
+// import { sectTitle } from './Cultures.module.css';
 
 export const Cultures = () => {
   const [chapter, setChapter] = useState(null);
@@ -59,7 +61,8 @@ export const Cultures = () => {
     <>
       {chapter && (
         <Section id={chapter.chapter}>
-          <h1>{chapter.title}</h1>
+          <SectionTitle title={chapter.title} />
+
           <Tabs list={chapter.cultures_list} tabsPosition="right" />
         </Section>
       )}

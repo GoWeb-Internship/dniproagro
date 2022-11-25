@@ -1,0 +1,3 @@
+.sectionTitle {
+  @apply mb-[36px] text-big font-bold md:mb-[46px] xl:text-large;
+}

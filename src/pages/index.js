@@ -35,7 +35,7 @@ const IndexPage = () => {
       {/* <Section id={GALLERY}></Section> */}
 
       {/* контакти */}
-      <Contacts />
+      {/* <Contacts /> */}
     </>
   );
 };
