@@ -43,9 +43,10 @@ export const Contacts = () => {
   const email = contacts?.email;
   const address = contacts?.address;
   const contactsArr = contacts?.contacts;
+  const chapter = contacts?.chapter;
 
   return (
-    <Section className="" id={contacts.chapter}>
+    <Section className="" id={chapter}>
       <h2>{title}</h2>
       <a href={`mailto:${email}`}>{email}</a>
       <Contact contactsArr={contactsArr} />
