@@ -16,7 +16,7 @@ let center = {
 function MyComponent() {
   const data = useStaticQuery(
     graphql`
-      query MyQuery {
+      query {
         allMarkdownRemark(
           filter: { frontmatter: { chapter: { eq: "contacts" } } }
         ) {
