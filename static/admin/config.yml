@@ -292,14 +292,14 @@ collections:
         }
       - {
           label: 'Cultures',
-          name: 'cultures_list',
+          name: 'list',
           widget: 'list',
           required: true,
           fields:
             [
               {
                 label: 'Culture',
-                name: 'culture',
+                name: 'item',
                 widget: 'string',
                 required: true,
                 hint: 'Введіть назву культури',
@@ -330,7 +330,7 @@ collections:
               },
               {
                 label: 'Culture range',
-                name: 'culture_range',
+                name: 'range',
                 widget: 'string',
                 required: false,
                 pattern:
@@ -467,14 +467,14 @@ collections:
         }
       - {
           label: 'Equipments',
-          name: 'equipments_list',
+          name: 'list',
           widget: 'list',
           required: true,
           fields:
             [
               {
                 label: 'Equipment',
-                name: 'equipment',
+                name: 'item',
                 widget: 'string',
                 required: true,
                 hint: 'Введіть назву технічного засобу',
@@ -503,6 +503,20 @@ collections:
                 hint:
                   'Введіть альтернативну назву для зображення технічного засобу
                   (на мові колекції)',
+              },
+              {
+                label: 'Equipment range',
+                name: 'range',
+                widget: 'string',
+                required: false,
+                pattern:
+                  [
+                    '^[+0-9]{1,2}$',
+                    'Введіть, будь ласка, цифру або двоцифрове число',
+                  ],
+                hint:
+                  'Введіть цифру, що відповідає порядковому номеру розміщення
+                  технічного засобу у списку на сторінці',
               },
             ],
         }

@@ -35,13 +35,16 @@ export const Tabs = ({ list, tabsPosition }) => {
       >
         <Tab.List as="ul" className={tabsList}>
           {list &&
-            list.map(({ culture, image, alt }, index) => {
+            list.map(({ item, image, alt }, index) => {
               return (
                 <Tab as="li" className={tabItem} key={index}>
                   {({ selected }) => (
                     <button
                       type="button"
                       className={selected ? tabBtn : tabBtn}
+                      onClick={() => {
+                        isModalShown && setIsModalShown(false);
+                      }}
                     >
                       <GatsbyImage
                         image={getImage(image)}
@@ -49,7 +52,7 @@ export const Tabs = ({ list, tabsPosition }) => {
                         className={tabImg}
                       />
 
-                      <div className={tabTitleBox}>{culture}</div>
+                      <div className={tabTitleBox}>{item}</div>
                     </button>
                   )}
                 </Tab>
@@ -59,13 +62,13 @@ export const Tabs = ({ list, tabsPosition }) => {
 
         <Tab.Panels as="div" className={panelsWrapper}>
           {list &&
-            list.map((culture, index) => {
+            list.map((item, index) => {
               return (
                 <Tab.Panel as="div" key={index} className={panel}>
                   <div className={panelImgWrapper}>
                     <GatsbyImage
-                      image={getImage(culture.image)}
-                      alt={culture.alt}
+                      image={getImage(item.image)}
+                      alt={item.alt}
                       className={panelImg}
                     />
                   </div>
@@ -74,13 +77,13 @@ export const Tabs = ({ list, tabsPosition }) => {
                     className={modalOpenBtn}
                     onClick={() => setIsModalShown(true)}
                   >
-                    {culture.culture}
+                    {item.item}
                     <ChevronRightIcon className={modalOpenIcon} />
                   </button>
 
                   <TabsModal
                     isModalShown={isModalShown}
-                    cultureData={culture}
+                    itemData={item}
                     setIsModalShown={setIsModalShown}
                   />
                 </Tab.Panel>
