@@ -1,29 +1,27 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
-import Map from 'components/Map/Map';
-import { anchors } from 'utils/constants';
-import {
-  About,
-  Container,
-  Form,
-  Logo,
-  NavBar,
-  Section,
-  SwitchLang,
-} from 'components';
+// import Map from 'components/Map/Map';
+// import { anchors } from 'utils/constants';
+// import {
+//   About,
+//   Container,
+//   Form,
+//   Logo,
+//   NavBar,
+//   Section,
+//   SwitchLang,
+// } from 'components';
 import { withLayout } from 'layout';
-import { Gallery } from 'views/Gallery/Gallery';
-import { Cultures } from 'views/Cultures/Cultures';
-import { Personnel } from 'views/Personnel/Personnel';
+import { About, Contacts, Cultures, Personnel, Gallery } from 'views';
 
-const { SLOGAN, COMPANY, CULTURES, PERSONNEL, EQUIPMENTS, GALLERY, CONTACTS } =
-  anchors;
+// const { SLOGAN, COMPANY, CULTURES, PERSONNEL, EQUIPMENTS, GALLERY, CONTACTS } =
+//   anchors;
 
-const IndexPage = ({ data }) => {
-  const chapters = data?.allMarkdownRemark?.nodes;
-  const aboutCompany = chapters.find(
-    ({ frontmatter: { chapter } }) => chapter === 'about_company',
-  )?.frontmatter;
+const IndexPage = () => {
+  // const chapters = data?.allMarkdownRemark?.nodes;
+  // const aboutCompany = chapters.find(
+  //   ({ frontmatter: { chapter } }) => chapter === 'about_company',
+  // )?.frontmatter;
 
   // const slide_img = [
   //   'https://swiperjs.com/demos/images/nature-1.jpg',
@@ -38,29 +36,21 @@ const IndexPage = ({ data }) => {
 
   return (
     <>
-      {/* <h1>Hello</h1> */}
       {/* <Gallery images={slide_img} /> */}
       {/* слоган */}
       {/* <Section id={SLOGAN}></Section> */}
       {/* про компанію */}
-      <Section id={COMPANY}>
-        <About aboutCompany={aboutCompany} />
-      </Section>
+      <About />
       {/* культури */}
       <Cultures />
-      <Personnel />
-      <Gallery />
       {/* персонал */}
-      {/* <Section id={PERSONNEL}></Section> */}
+      <Personnel />
       {/* техзасоби */}
       {/* <Section id={EQUIPMENTS}></Section> */}
       {/* галерея */}
-      {/* <Section id={GALLERY}></Section> */}
+      <Gallery />
       {/* контакти */}
-      <Section id={CONTACTS}>
-        <Form />
-        <Map />
-      </Section>
+      <Contacts />
     </>
   );
 };
@@ -71,67 +61,6 @@ export const Head = () => <title>Home Page</title>;
 
 export const query = graphql`
   query ($language: String!) {
-    allMarkdownRemark(
-      filter: { frontmatter: { language: { eq: $language } } }
-    ) {
-      nodes {
-        frontmatter {
-          chapter
-          chapter_range
-          content
-          language
-          phone
-          title
-          cultures_list {
-            alt
-            culture
-            description
-            image
-          }
-          workers_list {
-            alt
-            description
-            length_of_service
-            photo
-            position
-            worker
-          }
-          location
-          statistics {
-            category
-            units
-            value
-          }
-          reporting {
-            path
-            title
-          }
-          Equipments_list {
-            alt
-            description
-            equipment
-            image
-          }
-          address
-          contacts {
-            department
-            phone
-            telegram
-            viber
-            whatsapp
-          }
-          email
-          photos_list {
-            alt
-            photo
-          }
-          bg_img {
-            alt
-            photo
-          }
-        }
-      }
-    }
     locales: allLocale(filter: { language: { eq: $language } }) {
       edges {
         node {

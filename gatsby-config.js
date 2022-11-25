@@ -3,40 +3,14 @@
  *
  */
 
-const path = require('path');
-
-module.exports = {
+ module.exports = {
   siteMetadata: {
     siteUrl: `https://www.yourdomain.tld`,
     //TODO розмістити метадані сайту та кастомний хук useSiteMetadata
   },
   plugins: [
     {
-      resolve: 'gatsby-remark-relative-images',
-      options: {
-        staticFolderName: 'img',
-      },
-    },
-    {
-      resolve: 'gatsby-remark-images',
-      options: {
-        maxWidth: 2048,
-
-        linkImagesToOriginal: true,
-        loading: 'lazy',
-        showCaptions: true,
-        disableBgImage: true,
-        withWebp: true,
-      },
-    },
-    `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-netlify-cms`,
-    `gatsby-transformer-remark`,
-    `gatsby-plugin-root-import`,
-    `gatsby-plugin-postcss`,
-    {
+      // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/locales`,
@@ -44,39 +18,61 @@ module.exports = {
       },
     },
     {
+      // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src`,
-        name: 'src',
+        name: 'images',
+        path: `${__dirname}/static/img`,
       },
     },
-    // {
-    //   resolve: 'gatsby-source-filesystem',
-    //   options: {
-    //     path: `${__dirname}/src/image`,
-    //     name: 'image',
-    //   },
-    // },
     {
+      // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `content`,
         path: `${__dirname}/content`,
       },
     },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-netlify-cms`,
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-transformer-remark`,
       options: {
-        name: `public`,
-        path: `${__dirname}/public`,
+        plugins: [
+          `gatsby-remark-relative-images`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {},
+          },
+        ],
+      },
+    },
+    `gatsby-plugin-root-import`,
+    `gatsby-plugin-postcss`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Mulish`,
+          `source sans pro:400,700`, // you can also specify font weights and styles
+        ],
+        display: 'swap',
       },
     },
     {
-      // keep as first gatsby-source-filesystem plugin for gatsby image support
-      resolve: 'gatsby-source-filesystem',
+      resolve: `gatsby-remark-relative-images`,
       options: {
-        path: `${__dirname}/static/img`,
-        name: 'uploads',
+        // [Optional] The root of "media_folder" in your config.yml
+        // Defaults to "static"
+        staticFolderName: 'static',
+        // [Optional] Include the following fields, use dot notation for nested fields
+        // All fields are included by default
+        include: ['featured'],
+        // [Optional] Exclude the following fields, use dot notation for nested fields
+        // No fields are excluded by default
+        exclude: ['featured.skip'],
       },
     },
     {

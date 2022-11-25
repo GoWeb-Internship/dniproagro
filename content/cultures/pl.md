@@ -7,5 +7,6 @@ cultures_list:
   - culture: Kukurudza
     description: t﻿est
     alt: test
-    image: /img/zoom_background.jpeg
+    image: corn.jpg
+    culture_range: "3"
 ---

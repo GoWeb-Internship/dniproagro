@@ -1,11 +1,71 @@
+.tabsMainWrapper {
+  @apply flex items-center justify-center;
+}
+
+.tabsList {
+  @apply xl:h-[448px] xl:w-[306px];
+}
+
+.tabItem {
+  @apply last:mb-0 xl:mb-4 xl:h-[100px] xl:w-full;
+}
+
 .tabBtn {
-  @apply relative mb-[18px] block h-[104px] w-[306px] overflow-hidden rounded-main last:mb-0;
+  @apply relative block h-full w-full overflow-hidden rounded-main last:mb-0;
 }
 
 .tabImg {
-  @apply h-full w-full object-cover object-center;
+  @apply block h-full w-full object-cover object-center;
 }
 
 .tabTitleBox {
-  @apply absolute bottom-0 left-0 flex h-[54px] w-full items-center justify-center bg-gradient-green text-white;
+  @apply absolute bottom-0 left-0 flex w-full items-center justify-center bg-gradient-green text-white xl:h-[54px];
+}
+
+.panelsWrapper {
+  @apply xl:h-[448px] xl:w-[856px];
+}
+
+.panel {
+  @apply relative h-full w-full;
+}
+
+.panelImgWrapper {
+  @apply h-full w-full overflow-hidden rounded-main;
+}
+
+.panelImg {
+  @apply h-full w-full object-cover;
+}
+
+.panelTitleBox {
+  @apply absolute bottom-0 left-0 flex w-full items-center justify-center bg-gradient-green text-white xl:h-[100px];
+}
+
+.modal {
+  @apply absolute bottom-0  h-full w-full rounded-main bg-white shadow-modal xl:py-[38px] xl:px-6;
+}
+
+.modalHidden {
+  @apply modal  pointer-events-none scale-[120%] opacity-0 transition-all duration-300;
+}
+
+.modalShown {
+  @apply modal pointer-events-auto scale-100 opacity-100 transition-all duration-300;
+}
+
+.closeModalBtn {
+  @apply absolute top-[11px] right-[11px] flex h-[50px] w-[50px] items-center justify-center;
+}
+
+.closeModalIcon {
+  @apply text-accent xl:h-6 xl:w-6;
+}
+
+.modalTitle {
+  @apply xl:mb-8;
+}
+
+.descriptionBox {
+  @apply h-[318px] w-full overflow-y-auto rounded-main border-[1px] border-accent xl:p-6;
 }

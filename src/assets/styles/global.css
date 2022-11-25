@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-white text-accent;
+  @apply bg-white pt-24 font-mulish font-normal text-accent;
 }
 
 .header {

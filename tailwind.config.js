@@ -18,13 +18,13 @@ module.exports = {
     },
     // BASE FONT
     fontFamily: {
-      montserrat: ['Montserrat', 'sans-serif'], // class="font-montserrat"
-      inter: ['Inter', 'sans-serif'], // class="font-inter"
-      mulish: ['Mulish', 'sans-serif'],
+      mulish: ['Mulish', 'sans-serif'], // class="font-mulish"
     },
     // SHADOW
     boxShadow: {
       main: '0px 2px 2px rgba(125, 198, 252, 0.24), 0px -2px 2px rgba(125, 198, 252, 0.24)', // class="shadow-main"
+      modal:
+        '0px -2px 4px rgba(6, 78, 59, 0.25), 2px 0px 4px rgba(6, 78, 59, 0.25), -2px 0px 4px rgba(6, 78, 59, 0.25), 0px 4px 4px rgba(6, 78, 59, 0.25);', // class="shadow-modal"
     },
     // THEME
     extend: {
