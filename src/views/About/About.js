@@ -20,6 +20,7 @@ export const About = () => {
           frontmatter {
             language
             title
+            chapter
             content
             reporting {
               title
@@ -49,14 +50,16 @@ export const About = () => {
   const buttonLink = aboutCompany?.reporting?.path;
   const statistics = aboutCompany?.statistics;
   const bgImg = aboutCompany?.bg_img;
+  const chapter = aboutCompany?.chapter;
   // const image = getImage(
   //   aboutCompany && aboutCompany.bg_img && aboutCompany.bg_img.photo,
   // );
+  // console.log(aboutCompany.chapter);
   return (
-    <Section className="">
-      <h1 className="mt-[64px] mb-[36px] font-mulish text-[20px] font-bold leading-[27px] text-green">
+    <Section className="" id={chapter}>
+      <h2 className="mt-[64px] mb-[36px] font-mulish text-[20px] font-bold leading-[27px] text-green">
         {title}
-      </h1>
+      </h2>
       <div className="">
         <div className="relative">
           <img

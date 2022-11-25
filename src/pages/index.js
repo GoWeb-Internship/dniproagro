@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { About, Cultures } from 'views';
 import { withLayout } from 'layout';
+import { About, Contacts, Cultures } from 'views';
 
 const IndexPage = () => {
   // const slide_img = [
@@ -34,10 +34,7 @@ const IndexPage = () => {
       {/* галерея */}
       {/* <Section id={GALLERY}></Section> */}
       {/* контакти */}
-      {/* <Section id={CONTACTS}>
-        <Form />
-        <Map />
-      </Section> */}
+      <Contacts />
     </>
   );
 };
