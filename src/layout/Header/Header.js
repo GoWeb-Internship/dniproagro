@@ -19,7 +19,7 @@ const { SLOGAN } = anchors;
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+  const isDesktop = useMediaQuery({ query: '(min-width: 1280px)' });
   const { i18n } = useTranslation();
 
   const {
@@ -60,7 +60,7 @@ export const Header = () => {
       <Container className={headerContainer}>
         <Logo />
 
-        {isMobile && (
+        {!isDesktop && (
           <div className={mobHeaderWrapper}>
             <SwitchLang />
 
@@ -79,14 +79,14 @@ export const Header = () => {
           </div>
         )}
 
-        {!isMobile && (
+        {isDesktop && (
           <div className="flex items-center">
             <NavBar sections={sections} />
             <SwitchLang />
           </div>
         )}
 
-        {isMobile && (
+        {!isDesktop && (
           <Menu
             toggleMenu={toggleMenu}
             isMenuOpen={isMenuOpen}
