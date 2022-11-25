@@ -62,7 +62,7 @@ export const Personnel = () => {
         className="items-end md:w-[704px] xl:w-[1076px]"
       >
         {nodes &&
-          workerlist.map(({ photo, alt }, index) => {
+          workerlist?.map(({ photo, alt }, index) => {
             return (
               <SwiperSlide key={index}>
                 {({ isActive }) => (
