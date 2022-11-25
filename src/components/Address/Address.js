@@ -2,11 +2,12 @@ import React from 'react';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 
 export const Address = ({ address }) => {
-  const { i18n } = useTranslation();
+  const { t } = useTranslation();
+  const ourAddress = t('ourAddress');
 
   return (
     <div>
-      <h3>Наша адреса</h3>
+      <h3>{ourAddress}</h3>
       <p>{address}</p>
     </div>
   );
