@@ -50,12 +50,13 @@ export const About = () => {
   const buttonLink = aboutCompany?.reporting?.path;
   const statistics = aboutCompany?.statistics;
   const bgImg = aboutCompany?.bg_img;
+  const chapter = aboutCompany?.chapter;
   // const image = getImage(
   //   aboutCompany && aboutCompany.bg_img && aboutCompany.bg_img.photo,
   // );
-  // console.log(aboutCompany);
+  // console.log(aboutCompany.chapter);
   return (
-    <Section className="" id={aboutCompany.chapter}>
+    <Section className="" id={chapter}>
       <h2 className="mt-[64px] mb-[36px] font-mulish text-[20px] font-bold leading-[27px] text-green">
         {title}
       </h2>
