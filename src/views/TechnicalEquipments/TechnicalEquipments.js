@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { Section, Tabs, SectionTitle } from 'components';
 
-export const Cultures = () => {
+export const TechnicalEquipments = () => {
   const [chapter, setChapter] = useState(null);
   const { i18n } = useTranslation();
 
@@ -12,27 +12,23 @@ export const Cultures = () => {
   } = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
-        filter: { frontmatter: { chapter: { eq: "cultures" } } }
+        filter: { frontmatter: { chapter: { eq: "technical_equipments" } } }
       ) {
         nodes {
           frontmatter {
-            chapter
-            title
-            cultures_list {
+            equipments_list {
               alt
-              culture
-              culture_range
               description
+              equipment
               image {
                 childImageSharp {
-                  gatsbyImageData(
-                    width: 900
-                    placeholder: BLURRED
-                    jpgOptions: { progressive: true }
-                  )
+                  gatsbyImageData(width: 900, placeholder: BLURRED)
                 }
               }
             }
+            chapter
+            title
+            chapter_range
             language
           }
         }
@@ -43,15 +39,15 @@ export const Cultures = () => {
   useEffect(() => {
     if (!nodes || !i18n.language) return;
 
-    const cultureChapter = nodes.find(
+    const equipmentsChapter = nodes.find(
       ({ frontmatter: { language } }) => language === i18n.language,
     ).frontmatter;
 
-    const sortedList = [...cultureChapter.cultures_list].sort(
+    const sortedList = [...equipmentsChapter.equipments_list].sort(
       (a, b) => a.culture_range - b.culture_range,
     );
 
-    const sortedChapter = { ...cultureChapter, cultures_list: sortedList };
+    const sortedChapter = { ...equipmentsChapter, equipments_list: sortedList };
     setChapter(sortedChapter);
   }, [i18n, i18n.language, nodes]);
 
@@ -61,7 +57,7 @@ export const Cultures = () => {
         <Section id={chapter.chapter}>
           <SectionTitle title={chapter.title} />
 
-          <Tabs list={chapter.cultures_list} tabsPosition="right" />
+          <Tabs list={chapter.equipments_list} tabsPosition="left" />
         </Section>
       )}
     </>

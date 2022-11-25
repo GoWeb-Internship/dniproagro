@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
+// import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import { Statistics, Section } from 'components';
 import { useTranslation } from 'gatsby-plugin-react-i18next';

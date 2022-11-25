@@ -57,13 +57,42 @@
 
 // export const Gallery = ({ images }) => {
 //   return (
-//     <ul className="grid grid-cols-1 gap-2 md:grid-cols-2 xl:grid-cols-3">
-//       {images &&
-//         images.map(image => (
-//           <li key={image}>
-//             <img src={image} alt="" />
-//           </li>
-//         ))}
-//     </ul>
+//     <Section>
+//       <Slider
+//         slidesPerGroup={3}
+//         className="items-end   md:w-[704px] xl:w-[1076px]"
+//       >
+//         {data &&
+//           photolist[0]?.map(({ photo, alt }, index) => {
+//             return (
+//               <SwiperSlide key={index}>
+//                 {({ isActive }) => (
+//                   <img
+//                     className={
+//                       isActive ? 'h-[495px] w-[417px]' : 'h-[442px] w-[306px]'
+//                     }
+//                     src={photo}
+//                     alt={alt}
+//                   />
+//                 )}
+//                 {/* <div className=" h-[300px] w-[300px] bg-red-700">{alt}</div> */}
+//               </SwiperSlide>
+//             );
+//           })}
+//       </Slider>
+//     </Section>
 //   );
 // };
+
+// // export const Gallery = ({ images }) => {
+// //   return (
+// //     <ul className="grid grid-cols-1 gap-2 md:grid-cols-2 xl:grid-cols-3">
+// //       {images &&
+// //         images.map(image => (
+// //           <li key={image}>
+// //             <img src={image} alt="" />
+// //           </li>
+// //         ))}
+// //     </ul>
+// //   );
+// // };

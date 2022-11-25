@@ -50,7 +50,7 @@ export const Gallery = () => {
 
   return (
     <Section className=" py-5 " id={gallery?.chapter}>
-      <h2 className="mb-[72px] text-4xl font-bold leading-[45px]">
+      <h2 className="text-4xl mb-[72px] font-bold leading-[45px]">
         {gallery?.title}
       </h2>
       <Slider

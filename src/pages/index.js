@@ -1,28 +1,16 @@
 import * as React from 'react';
-import { graphql } from 'gatsby';
-// import Map from 'components/Map/Map';
-// import { anchors } from 'utils/constants';
-// import {
-//   About,
-//   Container,
-//   Form,
-//   Logo,
-//   NavBar,
-//   Section,
-//   SwitchLang,
-// } from 'components';
 import { withLayout } from 'layout';
-import { About, Contacts, Cultures, Personnel, Gallery } from 'views';
-
-// const { SLOGAN, COMPANY, CULTURES, PERSONNEL, EQUIPMENTS, GALLERY, CONTACTS } =
-//   anchors;
+import { graphql } from 'gatsby';
+import {
+  About,
+  Contacts,
+  Cultures,
+  Personnel,
+  Gallery,
+  TechnicalEquipments,
+} from 'views';
 
 const IndexPage = () => {
-  // const chapters = data?.allMarkdownRemark?.nodes;
-  // const aboutCompany = chapters.find(
-  //   ({ frontmatter: { chapter } }) => chapter === 'about_company',
-  // )?.frontmatter;
-
   // const slide_img = [
   //   'https://swiperjs.com/demos/images/nature-1.jpg',
   //   'https://swiperjs.com/demos/images/nature-2.jpg',
@@ -36,21 +24,24 @@ const IndexPage = () => {
 
   return (
     <>
-      {/* <Gallery images={slide_img} /> */}
       {/* слоган */}
       {/* <Section id={SLOGAN}></Section> */}
       {/* про компанію */}
       <About />
+
       {/* культури */}
       <Cultures />
+
       {/* персонал */}
       <Personnel />
+
       {/* техзасоби */}
-      {/* <Section id={EQUIPMENTS}></Section> */}
+      {/* <TechnicalEquipments /> */}
+
       {/* галерея */}
-      <Gallery />
+      {/* <Gallery /> */}
       {/* контакти */}
-      <Contacts />
+      {/* <Contacts /> */}
     </>
   );
 };

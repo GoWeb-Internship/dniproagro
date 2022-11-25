@@ -1,15 +1,15 @@
 .navList {
-  @apply flex;
+  @apply xl:flex;
 }
 
 .navItem {
-  @apply mr-4 w-max;
+  @apply w-max cursor-pointer last:m-0 max-xl:mb-2 max-xl:w-full max-xl:rounded-main max-xl:p-[10px] max-xl:focus-within:bg-white xl:mr-4;
 }
 
 .baseLink {
-  @apply cursor-pointer text-yellow;
+  @apply cursor-pointer max-xl:text-white max-xl:focus:text-accent xl:text-yellow;
 }
 
 .activeLink {
-  @apply text-light-green;
+  @apply cursor-pointer;
 }

@@ -11,14 +11,18 @@ module.exports = {
   theme: {
     // MEDIA QUERIES
     screens: {
-      xs: '375px',
       sm: '480px',
       md: '768px',
-      xl: '1336px',
+      xl: '1280px',
     },
     // BASE FONT
     fontFamily: {
       mulish: ['Mulish', 'sans-serif'], // class="font-mulish"
+    },
+    //FONT SIZE
+    fontSize: {
+      small: ['16px', '20px'], // class="font-small"
+      middle: ['20px', '27px'], // class="font-middle"
     },
     // SHADOW
     boxShadow: {
@@ -44,6 +48,13 @@ module.exports = {
           DEFAULT: '#064E3B', // class="bg-accent text-accent border-accent"
           bright: '#02931C', // class="bg-accent-bright text-accent-bright border-accent-bright"
         },
+      },
+      //
+      fontSize: {
+        small: ['16px', '20px'], // class="font-small"
+        middle: ['18px', '23px'], // class='font-middle'
+        big: ['20px', '27px'], // class="font-big"
+        large: ['36px', '45px'], // class="font-large"
       },
       // GRADIENT
       backgroundImage: {

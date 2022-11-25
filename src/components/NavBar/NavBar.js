@@ -8,11 +8,12 @@ export const NavBar = ({ sections }) => {
     <nav>
       <ul className={navList}>
         {sections.map(({ title, chapter }, index) => (
-          <li key={index} className={navItem}>
+          <li key={index} className={`${navItem} `}>
             <Link
-              className={baseLink}
-              activeClass={activeLink}
+              className={`${baseLink}`}
+              activeClass={`${activeLink}`}
               to={chapter}
+              href="/"
               spy={true}
               hashSpy={true}
               smooth={true}

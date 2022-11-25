@@ -1,5 +1,5 @@
 .langSwitch {
-  @apply relative box-border w-full max-md:p-4;
+  @apply relative box-border py-4 max-md:mr-[21px] xl:ml-4;
 }
 
 .buttonSwitch {
@@ -7,11 +7,11 @@
 }
 
 .langLabel {
-  @apply text-emerald-800;
+  @apply text-accent;
 }
 
 .globeIcon {
-  @apply h-6 w-6 text-emerald-800;
+  @apply h-6 w-6 text-accent;
 }
 
 .langBackdrop {
@@ -19,21 +19,21 @@
 }
 
 .langList {
-  @apply absolute left-0 z-20 mt-6 box-border max-h-60  overflow-auto rounded-md bg-slate-200 shadow-main ring-1 ring-black ring-opacity-5;
+  @apply absolute left-0 z-20 mt-6 box-border max-h-60  overflow-auto rounded-md text-white shadow-main ring-1 ring-black ring-opacity-5;
 }
 
 .langListItem {
-  @apply flex  h-11 cursor-pointer items-center  justify-center border-b-2 bg-slate-200  py-1 text-sm leading-4 shadow-main transition-all  hover:bg-emerald-800 hover:text-slate-300;
+  @apply flex h-11 cursor-pointer items-center justify-center border-b-2 bg-slate-200 py-1 text-accent shadow-main transition-all hover:bg-accent hover:text-white;
 }
 
 .langItemLink {
-  @apply flex h-full w-full items-center  justify-center px-[38px] hover:text-slate-300;
+  @apply flex h-full w-full items-center  justify-center px-[38px] hover:text-white;
 }
 
 .langItemLinkActive {
-  @apply underline underline-offset-4 hover:text-slate-300  hover:decoration-slate-300;
+  @apply underline underline-offset-4 hover:text-white  hover:decoration-white;
 }
 
-/* .langItemLinkMain {
-  @apply text-gray-900;
-} */
+.langItemLinkMain {
+  @apply text-gray;
+}

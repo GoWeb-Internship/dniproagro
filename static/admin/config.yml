@@ -467,7 +467,7 @@ collections:
         }
       - {
           label: 'Equipments',
-          name: 'Equipments_list',
+          name: 'equipments_list',
           widget: 'list',
           required: true,
           fields:

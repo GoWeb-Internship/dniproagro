@@ -11,5 +11,5 @@
 }
 
 .modalBtn {
-  @apply absolute bottom-0 left-0 flex h-[105px] w-full items-center bg-gradient-green text-white;
+  @apply text-title absolute bottom-0 left-0 flex h-[105px] w-full items-center bg-gradient-green text-white;
 }

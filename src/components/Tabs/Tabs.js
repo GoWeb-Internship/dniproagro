@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Tab } from '@headlessui/react';
-import { XMarkIcon } from '@heroicons/react/24/solid';
+import { ChevronRightIcon } from '@heroicons/react/24/solid';
+import { TabsModal } from './TabsModal';
 import {
   tabBtn,
   tabImg,
@@ -13,11 +14,11 @@ import {
   panelImgWrapper,
   tabsList,
   tabItem,
-  panelTitleBox,
+  modalOpenBtn,
+  modalOpenIcon,
 } from './Tabs.module.css';
-import TabsModal from './TabsModal';
 
-const Tabs = ({ list, tabsPosition }) => {
+export const Tabs = ({ list, tabsPosition }) => {
   const [isModalShown, setIsModalShown] = useState(false);
 
   return (
@@ -70,10 +71,11 @@ const Tabs = ({ list, tabsPosition }) => {
                   </div>
 
                   <button
-                    className={panelTitleBox}
+                    className={modalOpenBtn}
                     onClick={() => setIsModalShown(true)}
                   >
                     {culture.culture}
+                    <ChevronRightIcon className={modalOpenIcon} />
                   </button>
 
                   <TabsModal
@@ -89,5 +91,3 @@ const Tabs = ({ list, tabsPosition }) => {
     </>
   );
 };
-
-export default Tabs;
