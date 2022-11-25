@@ -31,7 +31,7 @@ const IndexPage = () => {
       {/* <Section id={EQUIPMENTS}></Section> */}
 
       {/* галерея */}
-      <Gallery />
+      {/* <Gallery /> */}
       {/* контакти */}
       {/* <Contacts /> */}
     </>

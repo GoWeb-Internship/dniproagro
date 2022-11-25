@@ -13,6 +13,7 @@ export const NavBar = ({ sections }) => {
               className={`${baseLink}`}
               activeClass={`${activeLink}`}
               to={chapter}
+              href="/"
               spy={true}
               hashSpy={true}
               smooth={true}
