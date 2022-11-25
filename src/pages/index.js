@@ -13,7 +13,7 @@ import * as React from 'react';
 // } from 'components';
 import { withLayout } from 'layout';
 // import { Gallery } from 'components/Gallery/Gallery';
-import { About, Cultures } from 'views';
+import { About, Contacts, Cultures } from 'views';
 
 // const { SLOGAN, COMPANY, CULTURES, PERSONNEL, EQUIPMENTS, GALLERY, CONTACTS } =
 //   anchors;
@@ -51,10 +51,7 @@ const IndexPage = () => {
       {/* галерея */}
       {/* <Section id={GALLERY}></Section> */}
       {/* контакти */}
-      {/* <Section id={CONTACTS}>
-        <Form />
-        <Map />
-      </Section> */}
+      <Contacts />
     </>
   );
 };
