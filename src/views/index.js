@@ -1,2 +1,3 @@
 export * from './Cultures/Cultures';
 export * from './About/About';
+export * from './Contacts/Contacts';
