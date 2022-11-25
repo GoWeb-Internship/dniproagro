@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { SwiperSlide } from 'swiper/react';
-import { Section } from 'components';
+import { Section, SectionTitle } from 'components';
 import { Slider } from 'components/Slider/Slider';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
@@ -54,9 +54,7 @@ export const Personnel = () => {
 
   return (
     <Section className=" py-5 " id={personnel?.chapter}>
-      <h2 className="text-4xl mb-[72px] font-bold leading-[45px]">
-        {personnel?.title}
-      </h2>
+      <SectionTitle title={personnel?.title} />
       <Slider
         slidesPerGroup={1}
         className="items-end md:w-[704px] xl:w-[1076px]"
