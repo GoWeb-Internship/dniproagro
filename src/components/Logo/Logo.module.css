@@ -1,7 +1,7 @@
-.logoLink {
-  @apply block h-[60px] w-[100px] flex-shrink-0 md:h-[90px] md:w-[150px];
-}
+/* .logoLink {
+  @apply block h-[60px] w-[100px] flex-shrink-0 xl:h-[90px] xl:w-[150px];
+} */
 
 .logoIcon {
-  @apply h-[60px] w-[100px] md:h-[90px] md:w-[150px];
+  @apply h-[60px] w-[100px] xl:h-[90px] xl:w-[150px];
 }

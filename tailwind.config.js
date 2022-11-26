@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin');
 
 module.exports = {
   mode: 'jit',
@@ -8,6 +9,10 @@ module.exports = {
     './src/layout/**/*.{js,jsx,ts,tsx}',
     './src/views/**/*.{js,jsx,ts,tsx}',
   ],
+  variants: {
+    backgroundColor: ['group-focus'],
+    textColor: ['group-focus'],
+  },
   theme: {
     // MEDIA QUERIES
     screens: {
@@ -18,11 +23,6 @@ module.exports = {
     // BASE FONT
     fontFamily: {
       mulish: ['Mulish', 'sans-serif'], // class="font-mulish"
-    },
-    //FONT SIZE
-    fontSize: {
-      small: ['16px', '20px'], // class="font-small"
-      middle: ['20px', '27px'], // class="font-middle"
     },
     // SHADOW
     boxShadow: {
@@ -67,6 +67,10 @@ module.exports = {
       borderRadius: {
         main: '4px', // class="rounded-main"
       },
+      // TRANSITION
+      transitionTimingFunction: {
+        'in-expo': 'cubic-bezier(0.25, 1, 0.5, 1)', // class='ease-in-expo'
+      },
       // CONTAINER
       container: {
         center: true,
@@ -79,5 +83,17 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
+    plugin(function ({ addUtilities }) {
+      const newUtilities = {
+        // ...
+      };
+
+      addUtilities(newUtilities, {
+        variants: ['hover', 'group-hover'],
+      });
+    }),
+  ],
 };

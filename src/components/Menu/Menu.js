@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { NavBar, Container } from 'components';
 import { menuBox, menuShown, menuHidden } from './Menu.module.css';
 
-export const Menu = ({ toggleMenu, isMenuOpen, sections }) => {
+export const Menu = ({ setIsMenuOpen, toggleMenu, isMenuOpen, sections }) => {
   useEffect(() => {
     const handleEscape = e => {
       if (e.code !== 'Escape') return;
@@ -36,7 +36,7 @@ export const Menu = ({ toggleMenu, isMenuOpen, sections }) => {
           ${isMenuOpen ? menuShown : menuHidden}`}
     >
       <Container>
-        <NavBar sections={sections} />
+        <NavBar sections={sections} setIsMenuOpen={setIsMenuOpen} />
       </Container>
     </div>
   );

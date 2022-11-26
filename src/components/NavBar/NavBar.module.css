@@ -3,13 +3,17 @@
 }
 
 .navItem {
-  @apply w-max cursor-pointer last:m-0 max-xl:mb-2 max-xl:w-full max-xl:rounded-main max-xl:p-[10px] max-xl:focus-within:bg-white xl:mr-4;
+  @apply w-max cursor-pointer last:m-0 max-xl:mb-2 max-xl:w-full max-xl:rounded-main max-xl:p-[10px] xl:mr-4;
+}
+
+.navItem:hover .baseLink {
+  @apply block scale-[105%] transition-all duration-500 ease-in-expo  after:absolute after:bottom-[-6px] after:left-0 after:h-[2px] after:w-full after:bg-yellow after:transition-all after:duration-300 after:content-['']  xl:after:bg-accent;
 }
 
 .baseLink {
-  @apply cursor-pointer max-xl:text-white max-xl:focus:text-accent xl:text-yellow;
+  @apply relative block w-max scale-100 cursor-pointer transition-all duration-300 ease-in-expo after:absolute after:bottom-[-6px] after:left-1/2 after:h-[2px] after:w-0 after:bg-yellow after:content-[''] max-xl:text-white xl:text-yellow xl:after:bg-accent;
 }
 
 .activeLink {
-  @apply cursor-pointer;
+  @apply relative cursor-pointer transition-all duration-300 after:absolute after:bottom-[-6px] after:left-0 after:h-[2px] after:w-full after:scale-100 after:bg-yellow after:content-[''] xl:after:bg-accent;
 }

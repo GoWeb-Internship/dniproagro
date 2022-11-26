@@ -16,13 +16,18 @@ export const TechnicalEquipments = () => {
       ) {
         nodes {
           frontmatter {
-            equipments_list {
+            list {
               alt
               description
-              equipment
+              item
+              range
               image {
                 childImageSharp {
-                  gatsbyImageData(width: 900, placeholder: BLURRED)
+                  gatsbyImageData(
+                    width: 900
+                    placeholder: BLURRED
+                    jpgOptions: { progressive: true }
+                  )
                 }
               }
             }
@@ -43,11 +48,11 @@ export const TechnicalEquipments = () => {
       ({ frontmatter: { language } }) => language === i18n.language,
     ).frontmatter;
 
-    const sortedList = [...equipmentsChapter.equipments_list].sort(
-      (a, b) => a.culture_range - b.culture_range,
+    const sortedList = [...equipmentsChapter.list].sort(
+      (a, b) => a.range - b.range,
     );
 
-    const sortedChapter = { ...equipmentsChapter, equipments_list: sortedList };
+    const sortedChapter = { ...equipmentsChapter, list: sortedList };
     setChapter(sortedChapter);
   }, [i18n, i18n.language, nodes]);
 
@@ -57,7 +62,7 @@ export const TechnicalEquipments = () => {
         <Section id={chapter.chapter}>
           <SectionTitle title={chapter.title} />
 
-          <Tabs list={chapter.equipments_list} tabsPosition="left" />
+          <Tabs list={chapter.list} tabsPosition="left" />
         </Section>
       )}
     </>

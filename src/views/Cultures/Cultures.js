@@ -18,10 +18,10 @@ export const Cultures = () => {
           frontmatter {
             chapter
             title
-            cultures_list {
+            list {
               alt
-              culture
-              culture_range
+              item
+              range
               description
               image {
                 childImageSharp {
@@ -47,11 +47,11 @@ export const Cultures = () => {
       ({ frontmatter: { language } }) => language === i18n.language,
     ).frontmatter;
 
-    const sortedList = [...cultureChapter.cultures_list].sort(
-      (a, b) => a.culture_range - b.culture_range,
+    const sortedList = [...cultureChapter.list].sort(
+      (a, b) => a.range - b.range,
     );
 
-    const sortedChapter = { ...cultureChapter, cultures_list: sortedList };
+    const sortedChapter = { ...cultureChapter, list: sortedList };
     setChapter(sortedChapter);
   }, [i18n, i18n.language, nodes]);
 
@@ -61,7 +61,7 @@ export const Cultures = () => {
         <Section id={chapter.chapter}>
           <SectionTitle title={chapter.title} />
 
-          <Tabs list={chapter.cultures_list} tabsPosition="right" />
+          <Tabs list={chapter.list} tabsPosition="right" />
         </Section>
       )}
     </>

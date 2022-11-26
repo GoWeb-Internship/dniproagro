@@ -27,7 +27,7 @@ const IndexPage = () => {
       {/* слоган */}
       {/* <Section id={SLOGAN}></Section> */}
       {/* про компанію */}
-      <About />
+      {/* <About /> */}
 
       {/* культури */}
       <Cultures />
@@ -36,7 +36,7 @@ const IndexPage = () => {
       <Personnel />
 
       {/* техзасоби */}
-      {/* <TechnicalEquipments /> */}
+      <TechnicalEquipments />
 
       {/* галерея */}
       {/* <Gallery /> */}
