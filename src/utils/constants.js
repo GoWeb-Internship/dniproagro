@@ -8,4 +8,4 @@ export const anchors = {
   CONTACTS: 'contacts',
 };
 
-export const anchorScrollDuration = 500;
+export const anchorScrollDuration = 700;
