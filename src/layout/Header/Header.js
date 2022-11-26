@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { graphql, useStaticQuery } from 'gatsby';
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { XMarkIcon, Bars3Icon } from '@heroicons/react/24/solid';
 import { Container, Logo, NavBar, SwitchLang, Menu } from 'components';
@@ -18,8 +19,9 @@ const { SLOGAN } = anchors;
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [target, setTarget] = useState(null);
 
-  const isMobile = useMediaQuery({ query: '(max-width: 767px)' });
+  const isDesktop = useMediaQuery({ query: '(min-width: 1280px)' });
   const { i18n } = useTranslation();
 
   const {
@@ -55,12 +57,29 @@ export const Header = () => {
     isMenuOpen ? setIsMenuOpen(false) : setIsMenuOpen(true);
   };
 
+  useEffect(() => {
+    const menuRef = document.getElementById('menu');
+    setTarget(menuRef);
+  }, []);
+
+  useEffect(() => {
+    if (!target) return;
+
+    if (isMenuOpen) {
+      document.body.style.overflowY = 'hidden';
+      disableBodyScroll(target);
+    } else {
+      document.body.style.overflowY = 'auto';
+      enableBodyScroll(target);
+    }
+  }, [isMenuOpen, target]);
+
   return (
     <header className={header}>
       <Container className={headerContainer}>
         <Logo />
 
-        {isMobile && (
+        {!isDesktop && (
           <div className={mobHeaderWrapper}>
             <SwitchLang />
 
@@ -79,16 +98,20 @@ export const Header = () => {
           </div>
         )}
 
-        {!isMobile && (
+        {isDesktop && (
           <div className="flex items-center">
-            <NavBar sections={sections} />
+            <NavBar
+              sections={sections}
+              isDesktop={isDesktop}
+              setIsMenuOpen={setIsMenuOpen}
+            />
             <SwitchLang />
           </div>
         )}
 
-        {isMobile && (
+        {!isDesktop && (
           <Menu
-            toggleMenu={toggleMenu}
+            setIsMenuOpen={setIsMenuOpen}
             isMenuOpen={isMenuOpen}
             sections={sections}
           />

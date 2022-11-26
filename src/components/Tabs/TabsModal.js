@@ -9,12 +9,12 @@ import {
   descriptionBox,
 } from './Tabs.module.css';
 
-export const TabsModal = ({ isModalShown, cultureData, setIsModalShown }) => {
-  const { culture, description } = cultureData;
+export const TabsModal = ({ isModalShown, itemData, setIsModalShown }) => {
+  const { item, description } = itemData;
 
   return (
     <div className={isModalShown ? modalShown : modalHidden}>
-      <h2 className={modalTitle}>{culture}</h2>
+      <h2 className={modalTitle}>{item}</h2>
 
       <div className={descriptionBox}>
         <p>{description}</p>
