@@ -9,6 +9,7 @@ body {
 .header {
   @apply fixed left-0 top-0 z-10 flex w-full justify-between bg-white;
 }
+
 /* slider */
 .swiper-button-next:after,
 .swiper-button-prev:after {
@@ -48,7 +49,7 @@ body {
 
 .swiper-wrapper {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
 }
 
 .swiper-slide {
