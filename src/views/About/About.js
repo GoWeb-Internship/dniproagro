@@ -4,11 +4,10 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { ChevronRightIcon } from '@heroicons/react/24/outline';
 import { Statistics, Section, SectionTitle } from 'components';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
-// import { Scrollbars } from 'react-custom-scrollbars-2';
+import { Scrollbars } from 'react-custom-scrollbars-2';
 
 export const About = () => {
   const { i18n } = useTranslation();
-
   const {
     allMarkdownRemark: { nodes },
   } = useStaticQuery(graphql`

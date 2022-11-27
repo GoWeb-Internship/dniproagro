@@ -35,6 +35,7 @@ export const Personnel = () => {
                       jpgOptions: { progressive: true }
                       width: 400
                       height: 496
+                      formats: [AUTO, WEBP, AVIF]
                     )
                   }
                 }
@@ -54,7 +55,7 @@ export const Personnel = () => {
 
   return (
     <Section className=" py-5 " id={personnel?.chapter}>
-      <h2 className="text-4xl mb-[72px] font-bold leading-[45px]">
+      <h2 className="mb-[72px] text-4xl font-bold leading-[45px]">
         {personnel?.title}
       </h2>
       <Slider

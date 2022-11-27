@@ -8,6 +8,7 @@ import {
   Personnel,
   Gallery,
   TechnicalEquipments,
+  Slogan,
 } from 'views';
 
 const IndexPage = () => {
@@ -25,7 +26,8 @@ const IndexPage = () => {
   return (
     <>
       {/* слоган */}
-      {/* <Section id={SLOGAN}></Section> */}
+      <Slogan />
+
       {/* про компанію */}
       <About />
 

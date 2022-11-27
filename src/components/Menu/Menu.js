@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { NavBar, Container } from 'components';
-import { menuBox, menuShown, menuHidden } from './Menu.module.css';
+import * as s from './Menu.module.css';
 
 export const Menu = ({ setIsMenuOpen, toggleMenu, isMenuOpen, sections }) => {
   useEffect(() => {
@@ -32,8 +32,8 @@ export const Menu = ({ setIsMenuOpen, toggleMenu, isMenuOpen, sections }) => {
   return (
     <div
       id="menu"
-      className={`${menuBox}
-          ${isMenuOpen ? menuShown : menuHidden}`}
+      className={`${s.menuBox}
+          ${isMenuOpen ? s.menuShown : s.menuHidden}`}
     >
       <Container>
         <NavBar sections={sections} setIsMenuOpen={setIsMenuOpen} />

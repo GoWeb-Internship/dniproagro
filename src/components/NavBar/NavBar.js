@@ -1,17 +1,17 @@
 import * as React from 'react';
 import { Link } from 'react-scroll';
 import { anchorScrollDuration } from 'utils/constants';
-import { navList, navItem, baseLink, activeLink } from './NavBar.module.css';
+import * as s from './NavBar.module.css';
 
 export const NavBar = ({ sections, isDesktop, setIsMenuOpen }) => {
   return (
     <nav>
-      <ul className={navList}>
+      <ul className={s.navList}>
         {sections.map(({ title, chapter }, index) => (
-          <li key={index} className={`${navItem} group`}>
+          <li key={index} className={`${s.navItem} group`}>
             <Link
-              className={baseLink}
-              activeClass={activeLink}
+              className={s.baseLink}
+              activeClass={s.activeLink}
               to={chapter}
               href="/"
               spy={true}

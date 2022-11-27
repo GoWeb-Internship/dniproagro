@@ -27,6 +27,7 @@ export const TechnicalEquipments = () => {
                     width: 900
                     placeholder: BLURRED
                     jpgOptions: { progressive: true }
+                    formats: [AUTO, WEBP, AVIF]
                   )
                 }
               }

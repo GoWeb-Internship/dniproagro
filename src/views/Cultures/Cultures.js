@@ -29,6 +29,7 @@ export const Cultures = () => {
                     width: 900
                     placeholder: BLURRED
                     jpgOptions: { progressive: true }
+                    formats: [AUTO, WEBP, AVIF]
                   )
                 }
               }

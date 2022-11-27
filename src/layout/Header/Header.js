@@ -6,14 +6,7 @@ import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { XMarkIcon, Bars3Icon } from '@heroicons/react/24/solid';
 import { Container, Logo, NavBar, SwitchLang, Menu } from 'components';
 import { anchors } from 'utils/constants';
-import {
-  header,
-  headerContainer,
-  mobHeaderWrapper,
-  menuBtn,
-  menuIconClose,
-  menuIconOpen,
-} from './Header.module.css';
+import * as s from './Header.module.css';
 
 const { SLOGAN } = anchors;
 
@@ -75,31 +68,31 @@ export const Header = () => {
   }, [isMenuOpen, target]);
 
   return (
-    <header className={header}>
-      <Container className={headerContainer}>
+    <header className={s.header}>
+      <Container className={s.headerContainer}>
         <Logo />
 
         {!isDesktop && (
-          <div className={mobHeaderWrapper}>
+          <div className={s.mobHeaderWrapper}>
             <SwitchLang />
 
             <button
               type="button"
               aria-expanded={isMenuOpen ? true : false}
-              className={menuBtn}
+              className={s.menuBtn}
               onClick={toggleMenu}
             >
               {isMenuOpen ? (
-                <XMarkIcon className={menuIconClose} />
+                <XMarkIcon className={s.menuIconClose} />
               ) : (
-                <Bars3Icon className={menuIconOpen} />
+                <Bars3Icon className={s.menuIconOpen} />
               )}
             </button>
           </div>
         )}
 
         {isDesktop && (
-          <div className="flex items-center">
+          <div className={s.desktopHeaderWrapper}>
             <NavBar
               sections={sections}
               isDesktop={isDesktop}
