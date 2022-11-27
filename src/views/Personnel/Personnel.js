@@ -56,7 +56,9 @@ export const Personnel = () => {
       id={personnel?.chapter}
       styleContainer="  px-0 sm:max-w-full sm:overflow-hidden"
     >
-      <SectionTitle title={personnel?.title} />
+      <div className="container">
+        <SectionTitle title={personnel?.title} />
+      </div>
       <Slider className="w-full sl:w-[627px]  md:w-[704px] xl:w-[1028px]">
         {nodes &&
           workerlist?.map(({ photo, alt }, index) => {

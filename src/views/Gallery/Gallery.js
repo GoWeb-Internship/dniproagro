@@ -52,7 +52,9 @@ export const Gallery = () => {
       id={gallery?.chapter}
       styleContainer="  px-0 sm:max-w-full sm:overflow-hidden"
     >
-      <SectionTitle title={gallery?.title} />
+      <div className="container">
+        <SectionTitle title={gallery?.title} />
+      </div>
       <Slider
         slidesPerGroup={3}
         className="w-full sl:w-[627px] md:w-[704px] xl:w-[1028px]"
