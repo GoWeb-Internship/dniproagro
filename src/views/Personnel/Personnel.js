@@ -33,8 +33,6 @@ export const Personnel = () => {
                     gatsbyImageData(
                       placeholder: BLURRED
                       jpgOptions: { progressive: true }
-                      width: 400
-                      height: 496
                     )
                   }
                 }
@@ -53,22 +51,25 @@ export const Personnel = () => {
   const workerlist = personnel?.workers_list;
 
   return (
-    <Section className=" py-5 " id={personnel?.chapter}>
+    <Section
+      className=" py-5"
+      id={personnel?.chapter}
+      styleContainer="  px-0 sm:max-w-full sm:overflow-hidden"
+    >
       <SectionTitle title={personnel?.title} />
-      <Slider
-        slidesPerGroup={1}
-        className="items-end md:w-[704px] xl:w-[1076px]"
-      >
+      <Slider className="w-full sl:w-[627px]  md:w-[704px] xl:w-[1028px]">
         {nodes &&
           workerlist?.map(({ photo, alt }, index) => {
             return (
-              <SwiperSlide key={index}>
+              <SwiperSlide key={index} className="slide">
                 {({ isActive }) => (
                   <GatsbyImage
                     image={getImage(photo)}
                     alt={alt}
                     className={
-                      isActive ? 'h-[495px] w-[417px]' : 'h-[442px] w-[306px]'
+                      isActive
+                        ? '  h-[295px] w-[218px] md:h-[402px] md:w-[336px] xl:h-[495px] xl:w-[400px]'
+                        : 'h-[266px] w-[184px] md:h-[218px] md:w-[152px] xl:h-[442px] xl:w-[294px]'
                     }
                   />
                 )}

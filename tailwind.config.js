@@ -17,6 +17,7 @@ module.exports = {
     // MEDIA QUERIES
     screens: {
       sm: '480px',
+      sl: '627px',
       md: '768px',
       xl: '1280px',
     },
