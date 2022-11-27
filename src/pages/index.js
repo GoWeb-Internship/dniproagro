@@ -27,7 +27,7 @@ const IndexPage = () => {
       {/* слоган */}
       {/* <Section id={SLOGAN}></Section> */}
       {/* про компанію */}
-      {/* <About /> */}
+      <About />
 
       {/* культури */}
       <Cultures />
@@ -41,7 +41,7 @@ const IndexPage = () => {
       {/* галерея */}
       {/* <Gallery /> */}
       {/* контакти */}
-      {/* <Contacts /> */}
+      <Contacts />
     </>
   );
 };
