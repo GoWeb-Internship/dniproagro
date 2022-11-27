@@ -1,10 +1,10 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-// import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
-import { ArrowRightIcon } from '@heroicons/react/24/outline';
-import { Statistics, Section } from 'components';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { ChevronRightIcon } from '@heroicons/react/24/outline';
+import { Statistics, Section, SectionTitle } from 'components';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
-import { Scrollbars } from 'react-custom-scrollbars-2';
+// import { Scrollbars } from 'react-custom-scrollbars-2';
 
 export const About = () => {
   const { i18n } = useTranslation();
@@ -32,8 +32,16 @@ export const About = () => {
               value
             }
             bg_img {
+              photo {
+                childImageSharp {
+                  gatsbyImageData(
+                    placeholder: BLURRED
+                    jpgOptions: { progressive: true }
+                    formats: [AUTO, WEBP, AVIF]
+                  )
+                }
+              }
               alt
-              photo
             }
           }
         }
@@ -51,28 +59,20 @@ export const About = () => {
   const statistics = aboutCompany?.statistics;
   const bgImg = aboutCompany?.bg_img;
   const chapter = aboutCompany?.chapter;
-  // const image = getImage(
-  //   aboutCompany && aboutCompany.bg_img && aboutCompany.bg_img.photo,
-  // );
-  // console.log(aboutCompany.chapter);
+
   return (
-    <Section className="" id={chapter}>
-      <h2 className="mt-[64px] mb-[36px] font-mulish text-[20px] font-bold leading-[27px] text-green">
-        {title}
-      </h2>
-      <div className="">
+    <Section className="py-5 md:py-[31px] xl:py-[50px]" id={chapter}>
+      <SectionTitle title={title} />
+      <div className="md:flex md:justify-between">
         <div className="relative">
-          <img
-            src={bgImg?.photo}
-            // src="../../../public/img/image-20.jpg"
+          <GatsbyImage
+            className="h-[252px] w-full rounded-main md:w-[336px] xl:h-[396px] xl:w-[400px]"
+            image={getImage(bgImg?.photo)}
             alt={bgImg?.alt}
-            placeholder="blurred"
-            layout="fixed"
-            formats={['auto', 'webp', 'avif']}
           />
           <button
             type="button"
-            className="text-body absolute top-[85%] box-content w-[123px]  p-4 font-mulish text-[20px] font-normal leading-[27px]"
+            className="absolute bottom-0 left-0 px-2 py-4 text-white"
           >
             <a
               className="flex items-center"
@@ -81,18 +81,19 @@ export const About = () => {
               rel="noopener noreferrer nofollow"
             >
               {buttonText}
-              <ArrowRightIcon className="ml-[19px] w-6 stroke-2" />
+              <ChevronRightIcon className="ml-4 w-6 stroke-2" />
             </a>
           </button>
         </div>
-        {/* <GatsbyImage
-          image={image}
-          alt={aboutCompany && aboutCompany.bg_img && aboutCompany.bg_img.alt}
-        /> */}
-        <Scrollbars style={{ width: 500, height: 300 }}>
-          {/* <p className="h-[402px] max-w-[724px] overflow-y-scroll rounded border border-green py-6 pr-[108px] pl-6 font-mulish text-[20px] font-normal leading-[27px] text-green"> */}
-          <p>{description}</p>
-        </Scrollbars>
+        {/* <Scrollbars style={{ width: 500, height: 300 }}> */}
+        <div className="mt-9 max-w-full rounded border border-green md:mt-0 md:w-[336px] xl:w-[820px]">
+          <div className="p-4 xl:p-6">
+            <p className="h-[220px] overflow-y-scroll pr-4 md:pr-11 xl:h-[351px] xl:pr-[83px]">
+              {description}
+            </p>
+          </div>
+        </div>
+        {/* </Scrollbars> */}
       </div>
       <Statistics statistics={statistics} />
     </Section>

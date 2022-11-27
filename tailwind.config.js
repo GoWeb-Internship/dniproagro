@@ -44,6 +44,7 @@ module.exports = {
         yellow: '#A16207', // class="bg-yellow text-yellow border-yellow"
         red: '#EF4444', // class="bg-red text-red border-red"
         gray: '#374151', // class="bg-gray text-gray border-gray"
+        'dark-grey': '#CDCDCD', // class="bg-dark-grey text-dark-grey border-dark-grey"
         mint: 'rgba(2, 147, 28, 0.2)', // class="bg-mint text-mint border-mint"
         accent: {
           DEFAULT: '#064E3B', // class="bg-accent text-accent border-accent"
@@ -52,10 +53,10 @@ module.exports = {
       },
       //
       fontSize: {
-        small: ['16px', '20px'], // class="font-small"
-        middle: ['18px', '23px'], // class='font-middle'
-        big: ['20px', '27px'], // class="font-big"
-        large: ['36px', '45px'], // class="font-large"
+        small: ['16px', '20px'], // class="text-small"
+        middle: ['18px', '23px'], // class='text-middle'
+        big: ['20px', '27px'], // class="text-big"
+        large: ['36px', '45px'], // class="text-large"
       },
       // GRADIENT
       backgroundImage: {
@@ -78,7 +79,7 @@ module.exports = {
         padding: {
           DEFAULT: '1.25rem',
           sm: '1.25rem',
-          md: '1.25rem',
+          md: '2rem',
           xl: '1.25rem',
         },
       },

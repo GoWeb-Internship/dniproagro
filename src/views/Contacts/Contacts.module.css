@@ -1,0 +1,7 @@
+.section {
+  @apply bg-green py-9 text-white;
+}
+
+.section h2 {
+  @apply mb-4;
+}

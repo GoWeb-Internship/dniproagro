@@ -7,8 +7,8 @@ export const Address = ({ address }) => {
 
   return (
     <div>
-      <h3>{ourAddress}</h3>
-      <p>{address}</p>
+      <h3 className="mb-4 text-big font-bold">{ourAddress}</h3>
+      <p className="text-[14px]">{address}</p>
     </div>
   );
 };
