@@ -6,6 +6,14 @@ title: Наш слоган
 content: Пшеничне поле
 phone: "+380990000000"
 images_list:
-  - image: /img/image-18.jpg
+  - image: slogan-1.jpg
     alt: Пшеничне поле
+  - image: slogan-7.jpg
+    alt: Ростки
+  - image: slogan-5.jpg
+    alt: Полив
+  - image: slogan-11.jpg
+    alt: Зерно
+  - image: slogan-4.jpeg
+    alt: Поле
 ---
