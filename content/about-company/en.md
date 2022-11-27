@@ -19,7 +19,7 @@ content: >-
     Placerat et at aenean sed vel mauris sapien
 bg-img:
   alt: The combine dumps the grain on the machine
-  photo: /img/image-20.jpg
+  photo: image-20.jpg
 reporting:
   title: Reporting
   path: https://www.figma.com/file/eBol4oibsMJjCcUEvBDxhG/DniproAgro?node-id=0%3A1&t=vu7KqWZhmPt4LzVI-0
