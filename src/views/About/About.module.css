@@ -1,0 +1,39 @@
+.section {
+  @apply py-5 md:py-[31px] xl:py-[50px];
+}
+
+.wrapper {
+  @apply md:flex md:justify-between;
+}
+
+.imgWrapper {
+  @apply relative;
+}
+
+.img {
+  @apply h-[252px] w-full rounded-main md:w-[336px] xl:h-[396px] xl:w-[400px];
+}
+
+.button {
+  @apply absolute bottom-0 left-0 px-2 py-4 text-white;
+}
+
+.link {
+  @apply flex items-center;
+}
+
+.icon {
+  @apply ml-4 w-6 stroke-2;
+}
+
+.contentWrapper {
+  @apply mt-9 max-w-full rounded border border-green md:mt-0 md:w-[336px] xl:w-[820px];
+}
+
+.contentInnerWrapper {
+  @apply p-4 xl:p-6;
+}
+
+.content {
+  @apply h-[220px] overflow-y-scroll pr-4 md:pr-11 xl:h-[351px] xl:pr-[83px];
+}

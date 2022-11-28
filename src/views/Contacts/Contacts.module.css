@@ -1,7 +1,18 @@
 .section {
   @apply bg-green py-9 text-white;
 }
-
 .section h2 {
   @apply mb-4;
+}
+.wrapper {
+  @apply md:grid md:grid-cols-2 md:gap-[32px] xl:gap-[125px];
+}
+.link {
+  @apply cursor-pointer font-light lowercase;
+}
+.mapWrapper {
+  @apply -mx-5 my-9 h-[164px] w-[calc(100%_+_40px)] md:mx-0 md:h-[98px] md:w-full xl:h-[232px];
+}
+.formWrapper {
+  @apply justify-self-end;
 }
