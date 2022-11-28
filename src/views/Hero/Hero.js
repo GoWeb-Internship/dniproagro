@@ -1,40 +1,42 @@
 import React, { useEffect, useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
-import { Section, Tabs, SectionTitle } from 'components';
+import { Section, SectionTitle, SlideShow } from 'components';
+import * as s from './Hero.module.css';
 
-export const Cultures = () => {
+export const Hero = () => {
   const [chapter, setChapter] = useState(null);
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const {
     allMarkdownRemark: { nodes },
   } = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
-        filter: { frontmatter: { chapter: { eq: "cultures" } } }
+        filter: { frontmatter: { chapter: { eq: "our_slogan" } } }
       ) {
         nodes {
           frontmatter {
             chapter
             title
-            list {
+            chapter_range
+            language
+            content
+            phone
+            images_list {
               alt
-              item
-              range
-              description
               image {
                 childImageSharp {
                   gatsbyImageData(
-                    width: 900
+                    width: 1280
+                    height: 580
+                    jpgOptions: { progressive: false }
                     placeholder: BLURRED
-                    jpgOptions: { progressive: true }
                     formats: [AUTO, WEBP, AVIF]
                   )
                 }
               }
             }
-            language
           }
         }
       }
@@ -44,25 +46,28 @@ export const Cultures = () => {
   useEffect(() => {
     if (nodes?.frontmatter === null || !i18n.language) return;
 
-    const cultureChapter = nodes?.find(
+    const sloganChapter = nodes?.find(
       ({ frontmatter: { language } }) => language === i18n.language,
     )?.frontmatter;
 
-    const sortedList = [...cultureChapter?.list].sort(
-      (a, b) => a.range - b.range,
-    );
-
-    const sortedChapter = { ...cultureChapter, list: sortedList };
-    setChapter(sortedChapter);
+    setChapter(sloganChapter);
   }, [i18n, i18n.language, nodes]);
+
+  console.log(chapter);
 
   return (
     <>
       {chapter && (
-        <Section id={chapter.chapter}>
-          <SectionTitle title={chapter.title} />
+        <Section id={chapter?.chapter} className={s.heroSection}>
+          <SectionTitle title={chapter?.title} level="h1" />
+          <p className={s.sloganDesc}>{chapter.content}</p>
+          <a href={`tel:${chapter?.phone}`}>{t('sloganBtn')}</a>
 
-          <Tabs list={chapter.list} tabsPosition="right" />
+          <div className={s.wrapper}>
+            <div className={s.sliderMainWrapper}>
+              <SlideShow images={chapter?.images_list} />
+            </div>
+          </div>
         </Section>
       )}
     </>

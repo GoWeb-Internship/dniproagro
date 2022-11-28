@@ -9,7 +9,6 @@ import * as s from './About.module.css';
 
 export const About = () => {
   const { i18n } = useTranslation();
-
   const {
     allMarkdownRemark: { nodes },
   } = useStaticQuery(graphql`

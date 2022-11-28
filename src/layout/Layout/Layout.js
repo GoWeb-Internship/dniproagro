@@ -1,4 +1,4 @@
-import { Container, Logo } from 'components';
+import { Footer } from 'layout/Footer/Footer';
 import { Header } from 'layout/Header/Header';
 import React from 'react';
 
@@ -9,11 +9,7 @@ const Layout = ({ children }) => {
 
       <main className="flex-grow">{children}</main>
 
-      <footer>
-        <Container className="flex justify-center">
-          <Logo />
-        </Container>
-      </footer>
+      <Footer />
     </div>
   );
 };

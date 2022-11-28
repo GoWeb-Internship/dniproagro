@@ -29,6 +29,8 @@ export const Gallery = () => {
                     gatsbyImageData(
                       placeholder: BLURRED
                       jpgOptions: { progressive: true }
+                      width: 400
+                      height: 496
                     )
                   }
                 }

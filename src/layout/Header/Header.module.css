@@ -7,11 +7,15 @@
 }
 
 .mobHeaderWrapper {
-  @apply absolute right-[15px] top-[3px] flex items-center justify-center;
+  @apply absolute right-[15px] top-[3px] flex items-center justify-center xl:hidden;
+}
+
+.desktopHeaderWrapper {
+  @apply flex items-center max-xl:hidden;
 }
 
 .menuBtn {
-  @apply z-20 flex h-[50px] w-[50px] items-center justify-center rounded-full;
+  @apply z-20 flex h-[50px] w-[50px] items-center justify-center rounded-full xl:hidden;
 }
 
 .menuIcon {
