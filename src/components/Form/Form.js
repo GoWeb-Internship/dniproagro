@@ -91,7 +91,6 @@ export const Form = () => {
   const onSubmit = (data, e) => {
     try {
       e.preventDefault();
-      //   let sendMessage = () => {};
       // --- TELEGRAM ---
       let text = `<b>Повідомлення з сайту!</b>\n`;
       text += `<b>Відправник: </b> ${data.name}\n`;
@@ -141,6 +140,7 @@ export const Form = () => {
                   }
                   buttonClass={s.dropdown}
                   country={'ua'}
+                  preferredCountries={['ua', 'pl', 'us', 'de', 'gb']}
                   {...field}
                 />
               )}

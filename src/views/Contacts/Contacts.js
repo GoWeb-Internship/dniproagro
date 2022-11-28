@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { Section, SectionTitle, Address, Form, Contact } from 'components';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import Map from 'components/Map/Map';
-import { section } from './Contacts.module.css';
+import * as s from './Contacts.module.css';
 
 export const Contacts = () => {
   const { i18n } = useTranslation();
@@ -47,23 +47,20 @@ export const Contacts = () => {
   const chapter = contacts?.chapter;
 
   return (
-    <Section className={section} id={chapter}>
-      <div className="md:grid md:grid-cols-2 md:gap-[32px] xl:gap-[125px]">
+    <Section className={s.section} id={chapter}>
+      <div className={s.wrapper}>
         <div>
           <SectionTitle title={title} />
-          <a
-            className="cursor-pointer font-light lowercase"
-            href={`mailto:${email}`}
-          >
+          <a className={s.link} href={`mailto:${email}`}>
             {email}
           </a>
           <Contact contactsArr={contactsArr} />
           <Address address={address} />
-          <div className="w-[calc(100% + 40px)] -mx-5 my-9 h-[164px] md:mx-0 md:h-[98px] xl:h-[232px]">
+          <div className={s.mapWrapper}>
             <Map />
           </div>
         </div>
-        <div className="justify-self-end">
+        <div className={s.formWrapper}>
           <Form />
         </div>
       </div>

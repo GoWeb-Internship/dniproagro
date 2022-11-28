@@ -1,32 +1,35 @@
 import React from 'react';
-import { SiTelegram, SiViber, SiWhatsapp } from 'react-icons/si';
+import * as s from './Contact.module.css';
+import telegramImg from 'assets/images/telegram.svg';
+import viberImg from 'assets/images/viber.svg';
+import whatsappImg from 'assets/images/whatsapp.svg';
 
 export const Contact = ({ contactsArr }) => (
-  <ul className="my-9 grid grid-cols-2 gap-x-[18px] gap-y-9 xl:grid-cols-3">
+  <ul className={s.contactsList}>
     {contactsArr?.map(
       ({ department, phone, telegram, viber, whatsapp }, index) => (
         <li className="" key={index}>
-          <ul className="mb-2 flex gap-4">
-            <li className="cursor-pointer">
+          <ul className={s.messengerList}>
+            <li className={s.messengerListItem}>
               <a href={telegram}>
-                <SiTelegram />
+                <img src={telegramImg} className={s.icon} alt="telegram" />
               </a>
             </li>
-            <li className="cursor-pointer">
+            <li className={s.messengerListItem}>
               <a href={viber}>
-                <SiViber />
+                <img src={viberImg} className={s.icon} alt="viber" />
               </a>
             </li>
-            <li className="cursor-pointer">
+            <li className={s.messengerListItem}>
               <a href={whatsapp}>
-                <SiWhatsapp />
+                <img src={whatsappImg} className={s.icon} alt="whatsapp" />
               </a>
             </li>
           </ul>
-          <a className="cursor-pointer font-light" href={`tel:${phone}`}>
+          <a className={s.link} href={`tel:${phone}`}>
             {phone}
           </a>
-          <p className="pt-2 text-[14px]">{department}</p>
+          <p className={s.text}>{department}</p>
         </li>
       ),
     )}
