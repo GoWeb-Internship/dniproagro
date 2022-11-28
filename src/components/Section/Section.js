@@ -2,10 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Container } from 'components';
 
-export const Section = ({ children, className, id }) => {
+export const Section = ({ children, className, id, styleContainer }) => {
   return (
     <section className={className} id={id}>
-      <Container>{children}</Container>
+      <Container className={styleContainer}>{children}</Container>
     </section>
   );
 };

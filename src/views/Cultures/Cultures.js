@@ -43,11 +43,11 @@ export const Cultures = () => {
   useEffect(() => {
     if (!nodes || !i18n.language) return;
 
-    const cultureChapter = nodes.find(
+    const cultureChapter = nodes?.find(
       ({ frontmatter: { language } }) => language === i18n.language,
-    ).frontmatter;
+    )?.frontmatter;
 
-    const sortedList = [...cultureChapter.list].sort(
+    const sortedList = [...cultureChapter?.list].sort(
       (a, b) => a.range - b.range,
     );
 
