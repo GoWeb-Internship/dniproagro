@@ -23,11 +23,11 @@
 }
 
 .panelsWrapper {
-  @apply xl:h-[448px] xl:w-[856px];
+  @apply xl:h-[448px] xl:w-[820px];
 }
 
 .panel {
-  @apply relative h-[254px] w-full md:h-full;
+  @apply relative h-[254px] w-full md:h-[216px] md:w-[336px] xl:h-full xl:w-[820px];
 }
 
 .panelImgWrapper {
@@ -43,15 +43,15 @@
 }
 
 .modal {
-  @apply absolute bottom-0 h-[254px] w-full rounded-main bg-white shadow-modal md:h-full xl:py-[38px] xl:px-6;
+  @apply absolute bottom-0 h-[254px] w-full rounded-main bg-white p-5 shadow-modal md:h-full xl:py-[38px] xl:px-6;
 }
 
 .modalHidden {
-  @apply modal pointer-events-none  scale-[120%] opacity-0 transition-all duration-300;
+  @apply modal pointer-events-none opacity-0 transition-all duration-300 max-md:scale-105 md:scale-[120%];
 }
 
 .modalShown {
-  @apply modal pointer-events-auto scale-100 p-5 opacity-100 transition-all duration-300;
+  @apply modal pointer-events-auto scale-100  opacity-100 transition-all duration-300 max-md:scale-100;
 }
 
 .closeModalBtn {
@@ -71,5 +71,9 @@
 }
 
 .descriptionBox {
-  @apply h-[172px] w-full overflow-y-auto rounded-main border-[1px] border-accent p-2 md:h-[318px] xl:p-6;
+  @apply h-[172px] w-full overflow-y-auto rounded-main border-[1px] border-accent bg-white p-2 md:h-[140px] xl:h-[318px] xl:p-6;
+}
+
+.modalDescription {
+  @apply text-small font-normal;
 }

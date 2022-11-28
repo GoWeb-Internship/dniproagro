@@ -51,7 +51,15 @@ export const Tabs = ({ list, tabsPosition }) => {
           {list &&
             list?.map((item, index) => {
               return (
-                <Tab.Panel as="div" key={index} className={s.panel}>
+                <Tab.Panel
+                  as="div"
+                  key={index}
+                  className={
+                    tabsPosition === 'right'
+                      ? `${s.panel} md:mr-8 xl:mr-[58px]`
+                      : `${s.panel} md:ml-8 xl:ml-[58px]`
+                  }
+                >
                   <div className={s.panelImgWrapper}>
                     <GatsbyImage
                       image={getImage(item?.image)}
