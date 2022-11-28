@@ -48,7 +48,7 @@ export const Gallery = () => {
 
   return (
     <Section
-      className=" py-5 "
+      className="relative h-[382px] overflow-hidden py-5 md:h-[475px] md:py-8 xl:h-[606px] xl:py-[50px]"
       id={gallery?.chapter}
       styleContainer="  px-0 sm:max-w-full sm:overflow-hidden"
     >
@@ -57,7 +57,7 @@ export const Gallery = () => {
       </div>
       <Slider
         slidesPerGroup={3}
-        className="w-full sl:w-[627px] md:w-[704px] xl:w-[1028px]"
+        className="w-[627px]  md:w-[704px] xl:w-[1028px]"
       >
         {nodes &&
           gallerylist?.map(({ photo, alt }, index) => {

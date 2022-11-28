@@ -12,7 +12,7 @@ import 'assets/styles/slider.css';
 
 export const Slider = ({ children, className = '', slidesPerGroup }) => {
   return (
-    <div>
+    <div className="absolute left-1/2 w-[627px] -translate-x-1/2  md:w-[704px] xl:w-[1028px]">
       <Swiper
         className={`${className}`}
         navigation={{
@@ -20,28 +20,28 @@ export const Slider = ({ children, className = '', slidesPerGroup }) => {
           prevEl: '.prev-slider',
         }}
         // spaceBetween={16}
-        slidesPerView={'auto'}
+        // slidesPerView={'auto'}
         // loopedSlides={1}
+        loop={true}
         slidesPerGroup={slidesPerGroup}
         // loopFillGroupWithBlank={true}
         // slidesPerGroupAuto={true}
         breakpoints={{
           320: {
-            // slidesPerView: 2,
+            slidesPerView: 3,
             spaceBetween: 20,
           },
           768: {
-            // slidesPerView: 3,
+            slidesPerView: 3,
             spaceBetween: 32,
           },
           1280: {
-            // slidesPerView: 3,
+            slidesPerView: 3,
             spaceBetween: 20,
           },
         }}
         centeredSlides={true}
         initialSlide={1}
-        loop={true}
         pagination={{
           dynamicBullets: true,
         }}

@@ -36,10 +36,10 @@
 
 .swiper-wrapper .swiper-slide {
   height: 266px;
-  width: 184px;
+  width: auto !important;
 }
 .swiper-wrapper .swiper-slide-active {
-  width: 218px;
+  /* width: 218px; */
   flex-grow: 1;
   height: 295px;
 }
@@ -65,11 +65,11 @@
 
   .swiper-wrapper .swiper-slide {
     height: 218px;
-    width: 152px;
+    /* width: 152px; */
   }
 
   .swiper-wrapper .swiper-slide-active {
-    width: 336px;
+    /* width: 336px; */
     height: 402px;
   }
 }
@@ -80,10 +80,12 @@
   }
   .swiper-wrapper .swiper-slide {
     height: 442px;
-    width: calc((100% - 440px) / 2);
+    /* width: calc((100% - 440px) / 2); */
+    /* width: 294px !important; */
+    /* width: auto !important; */
   }
   .swiper-wrapper .swiper-slide-active {
-    width: 400px;
+    /* width: 400px !important; */
     height: 495px;
   }
 }

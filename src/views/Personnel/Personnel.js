@@ -52,14 +52,15 @@ export const Personnel = () => {
 
   return (
     <Section
-      className=" py-5"
+      className="relative h-[382px] overflow-hidden py-5 md:h-[475px] md:py-8 xl:h-[606px] xl:py-[50px]"
       id={personnel?.chapter}
-      styleContainer="  px-0 sm:max-w-full sm:overflow-hidden"
+      styleContainer="overflow-hidden"
     >
-      <div className="container">
-        <SectionTitle title={personnel?.title} />
-      </div>
-      <Slider className="w-full sl:w-[627px]  md:w-[704px] xl:w-[1028px]">
+      <SectionTitle title={personnel?.title} />
+      <Slider
+        slidesPerGroup={1}
+        className="w-[627px]  md:w-[704px] xl:w-[1028px]"
+      >
         {nodes &&
           workerlist?.map(({ photo, alt }, index) => {
             return (
