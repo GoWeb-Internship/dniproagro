@@ -12,5 +12,9 @@
 }
 
 .sloganDesc {
-  @apply mb-[40px] md:mb-[36px] xl:mb-[38px];
+  @apply mb-[40px] w-[217px] text-small font-normal md:mb-[36px] xl:mb-[38px] xl:w-[417px] xl:text-big;
+}
+
+.actionBtn {
+  @apply flex h-[52px] w-[195px] items-center justify-center rounded-main bg-accent text-small font-normal;
 }
