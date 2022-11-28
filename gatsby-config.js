@@ -3,7 +3,7 @@
  *
  */
 
- module.exports = {
+module.exports = {
   siteMetadata: {
     siteUrl: `https://www.yourdomain.tld`,
     //TODO розмістити метадані сайту та кастомний хук useSiteMetadata
@@ -93,7 +93,7 @@
           },
 
           keySeparator: false,
-          nsSeparator: false,
+          nsSeparator: true,
         },
       },
     },
