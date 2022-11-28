@@ -28,8 +28,8 @@ export const Hero = () => {
               image {
                 childImageSharp {
                   gatsbyImageData(
-                    width: 1280
-                    height: 580
+                    width: 1440
+                    height: 865
                     jpgOptions: { progressive: false }
                     placeholder: BLURRED
                     formats: [AUTO, WEBP, AVIF]
@@ -58,7 +58,7 @@ export const Hero = () => {
   return (
     <>
       {chapter && (
-        <Section id={chapter?.chapter} className={s.heroSection}>
+        <Section id={chapter?.chapter}>
           <SectionTitle title={chapter?.title} level="h1" />
           <p className={s.sloganDesc}>{chapter.content}</p>
           <a href={`tel:${chapter?.phone}`}>{t('sloganBtn')}</a>

@@ -1,16 +1,10 @@
-.heroSection > div {
-  overflow-x: hidden;
-}
-
 .wrapper {
-  @apply -mx-5 grid;
-  /* @apply   box-border h-[286px] w-full max-w-[480px] md:w-[768px] md:max-w-[768px]; */
+  @apply -mx-5 grid overflow-x-hidden md:mx-[-32px] xl:mx-[-100px];
 }
 
 .sliderMainWrapper {
-  @apply relative  h-[286px] max-w-[480px] md:h-[318px] md:w-[768px] md:max-w-[768px] xl:h-[575px] xl:w-[1280px] xl:max-w-[1280px];
-  width: calc(100% + 40px);
-  overflow-x: hidden;
+  @apply relative h-[286px] w-[calc(100%+40px)] max-w-[480px] overflow-x-hidden md:h-[318px] md:w-[768px]
+  md:max-w-[768px] xl:h-[575px] xl:w-full xl:max-w-[1440px];
 }
 
 .sloganDesc {

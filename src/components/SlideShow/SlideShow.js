@@ -12,13 +12,10 @@ export const SlideShow = ({ images }) => {
     <Swiper
       centeredSlides={true}
       loop={true}
-      // height={575}
-      // width={1280}
       slidesPerView={1}
       autoplay={true}
       lazy={false}
       // onSlideChange={() => console.log('slide change')}
-      createElements={false}
       onSwiper={heroSlideShow => console.log(heroSlideShow)}
       className="heroSwiper"
     >

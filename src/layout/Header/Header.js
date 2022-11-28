@@ -16,8 +16,9 @@ export const Header = () => {
 
   const { i18n } = useTranslation();
   const isDesktop = useMediaQuery({ query: '(min-width: 1280px)' });
+  const isMobOrTablet = useMediaQuery({ query: '(max-width: 1279px)' });
 
-  console.log(isDesktop, 'isDesktop');
+  console.log('isDesktop: ', isDesktop, 'isMobOrTablet: ', isMobOrTablet);
 
   const {
     allMarkdownRemark: { nodes },
@@ -74,7 +75,7 @@ export const Header = () => {
       <Container className={s.headerContainer}>
         <Logo />
 
-        {!isDesktop && (
+        {isMobOrTablet && (
           <div className={s.mobHeaderWrapper}>
             <SwitchLang />
 
@@ -104,7 +105,7 @@ export const Header = () => {
           </div>
         )}
 
-        {!isDesktop && (
+        {isMobOrTablet && (
           <Menu
             setIsMenuOpen={setIsMenuOpen}
             isMenuOpen={isMenuOpen}
