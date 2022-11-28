@@ -1,5 +1,9 @@
-.wrapper {
-  @apply -mx-5 grid overflow-x-hidden md:mx-[-32px] xl:mx-[-100px];
+.heroContentBox {
+  @apply absolute left-0 z-10 h-full w-[237px]  bg-gradient-gray px-5 pt-[54px] text-white md:w-[368px] md:px-[32px] md:pt-[60px] xl:left-[-80px] xl:w-[598px] xl:px-[100px] xl:pt-[152px];
+}
+
+.heroSliderWrapper {
+  @apply relative -mx-5 grid overflow-x-hidden md:mx-[-32px] xl:mx-[-100px];
 }
 
 .sliderMainWrapper {

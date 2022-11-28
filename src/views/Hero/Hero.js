@@ -29,9 +29,8 @@ export const Hero = () => {
                 childImageSharp {
                   gatsbyImageData(
                     width: 1440
-                    height: 865
+                    height: 580
                     jpgOptions: { progressive: false }
-                    placeholder: BLURRED
                     formats: [AUTO, WEBP, AVIF]
                   )
                 }
@@ -58,12 +57,15 @@ export const Hero = () => {
   return (
     <>
       {chapter && (
-        <Section id={chapter?.chapter}>
-          <SectionTitle title={chapter?.title} level="h1" />
-          <p className={s.sloganDesc}>{chapter.content}</p>
-          <a href={`tel:${chapter?.phone}`}>{t('sloganBtn')}</a>
+        <Section id={chapter?.chapter} styleContainer="relative">
+          <div className={s.heroContentBox}>
+            <SectionTitle title={chapter?.title} level="h1" />
 
-          <div className={s.wrapper}>
+            <p className={s.sloganDesc}>{chapter.content}</p>
+            <a href={`tel:${chapter?.phone}`}>{t('sloganBtn')}</a>
+          </div>
+
+          <div className={s.heroSliderWrapper}>
             <div className={s.sliderMainWrapper}>
               <SlideShow images={chapter?.images_list} />
             </div>

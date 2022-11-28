@@ -21,7 +21,7 @@
   height: 100% !important;
   width: 100% !important;
   object-fit: cover !important;
-  object-position: bottom right !important;
+  object-position: bottom center !important;
 }
 
 .swiper.heroSwiper .gatsby-image-wrapper {
