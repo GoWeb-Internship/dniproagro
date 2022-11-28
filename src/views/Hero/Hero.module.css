@@ -1,4 +1,5 @@
 .heroSection > div {
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -7,7 +8,7 @@
 }
 
 .sliderMainWrapper {
-  @apply relative  h-[286px] w-full max-w-[480px];
+  @apply relative  h-[286px] max-w-[480px];
   width: calc(100% + 40px);
   overflow-x: hidden;
 }

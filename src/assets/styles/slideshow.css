@@ -1,15 +1,18 @@
 .swiper.heroSwiper {
-  width: 480px !important;
+  width: 100% !important;
+  max-width: 480px !important;
   height: 286px !important;
 }
 
 .swiper.heroSwiper .swiper-wrapper {
-  width: 480px !important;
+  width: 100% !important;
+  max-width: 480px !important;
   height: 286px !important;
 }
 
 .swiper.heroSwiper .swiper-slide {
-  width: 480px !important;
+  width: 100% !important;
+  max-width: 480px !important;
   height: 286px !important;
 }
 
