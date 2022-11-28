@@ -1,5 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Autoplay } from 'swiper';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import 'swiper/css';
@@ -12,14 +13,15 @@ export const SlideShow = ({ images }) => {
     <Swiper
       centeredSlides={true}
       loop={true}
-      // height={575}
-      // width={1280}
       slidesPerView={1}
-      autoplay={true}
       lazy={false}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
       // onSlideChange={() => console.log('slide change')}
-      createElements={false}
-      onSwiper={heroSlideShow => console.log(heroSlideShow)}
+      // onSwiper={heroSlideShow => console.log(heroSlideShow)}
+      modules={[Autoplay]}
       className="heroSwiper"
     >
       {images &&

@@ -1,5 +1,5 @@
 .header {
-  @apply fixed left-0 top-0 z-10 w-full bg-white py-4;
+  @apply fixed left-0 top-0 z-20 w-full bg-white py-4;
 }
 
 .headerContainer {
