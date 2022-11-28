@@ -2,12 +2,14 @@
 }
 
 .wrapper {
-  @apply -mx-5  h-[286px] w-full max-w-[480px] md:w-[768px] md:max-w-[768px];
+  @apply -mx-5 grid;
+  /* @apply   box-border h-[286px] w-full max-w-[480px] md:w-[768px] md:max-w-[768px]; */
 }
 
 .sliderMainWrapper {
   @apply relative  h-[286px] w-full max-w-[480px];
   width: calc(100% + 40px);
+  overflow-x: hidden;
 }
 
 .sloganDesc {

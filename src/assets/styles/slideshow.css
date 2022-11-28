@@ -1,17 +1,15 @@
 .swiper.heroSwiper {
-  width: 375px !important;
+  width: 480px !important;
   height: 286px !important;
-  position: relative;
-  left: -20px;
 }
 
 .swiper.heroSwiper .swiper-wrapper {
-  width: 375px !important;
+  width: 480px !important;
   height: 286px !important;
 }
 
 .swiper.heroSwiper .swiper-slide {
-  width: 375px !important;
+  width: 480px !important;
   height: 286px !important;
 }
 
