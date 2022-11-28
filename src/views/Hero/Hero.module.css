@@ -8,7 +8,7 @@
 }
 
 .sliderMainWrapper {
-  @apply relative  h-[286px] max-w-[480px];
+  @apply relative  h-[286px] max-w-[480px] md:h-[318px] md:w-[768px] md:max-w-[768px] xl:h-[575px] xl:w-[1280px] xl:max-w-[1280px];
   width: calc(100% + 40px);
   overflow-x: hidden;
 }

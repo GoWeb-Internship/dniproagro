@@ -19,7 +19,7 @@
 .swiper.heroSwiper img {
   display: block;
   height: 100% !important;
-  width: 100%;
+  width: 100% !important;
   object-fit: cover !important;
   object-position: bottom left !important;
 }
@@ -27,16 +27,19 @@
 @media screen and (min-width: 768px) {
   .swiper.heroSwiper {
     height: 318px !important;
+    max-width: 768px !important;
     width: 768px !important;
   }
 
   .swiper.heroSwiper .swiper-wrapper {
     height: 318px !important;
+    max-width: 768px !important;
     width: 768px !important;
   }
 
   .swiper.heroSwiper .swiper-slide {
     width: 768px !important;
+    max-width: 768px !important;
     height: 318px !important;
   }
 }
@@ -44,16 +47,19 @@
 @media screen and (min-width: 1280px) {
   .swiper.heroSwiper {
     height: 575px !important;
+    max-width: 1280px !important;
     width: 1280px !important;
   }
 
   .swiper.heroSwiper .swiper-wrapper {
     height: 575px !important;
+    max-width: 1280px !important;
     width: 1280px !important;
   }
 
   .swiper.heroSwiper .swiper-slide {
     width: 1280px !important;
+    max-width: 1280px !important;
     height: 575px !important;
   }
 }
