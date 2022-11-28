@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Section, SectionTitle } from 'components';
-import * as s from './Slogan.module.css';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { Section, SectionTitle, SlideShow } from 'components';
+import * as s from './Hero.module.css';
 
-export const Slogan = () => {
+export const Hero = () => {
   const [chapter, setChapter] = useState(null);
   const { t, i18n } = useTranslation();
 
@@ -30,7 +28,8 @@ export const Slogan = () => {
               image {
                 childImageSharp {
                   gatsbyImageData(
-                    width: 1440
+                    width: 1280
+                    height: 580
                     jpgOptions: { progressive: false }
                     placeholder: BLURRED
                     formats: [AUTO, WEBP, AVIF]
@@ -45,11 +44,11 @@ export const Slogan = () => {
   `);
 
   useEffect(() => {
-    if (!nodes || !i18n.language) return;
+    if (nodes?.frontmatter === null || !i18n.language) return;
 
-    const sloganChapter = nodes.find(
+    const sloganChapter = nodes?.find(
       ({ frontmatter: { language } }) => language === i18n.language,
-    ).frontmatter;
+    )?.frontmatter;
 
     setChapter(sloganChapter);
   }, [i18n, i18n.language, nodes]);
@@ -59,28 +58,16 @@ export const Slogan = () => {
   return (
     <>
       {chapter && (
-        <Section id={chapter.chapter}>
-          <SectionTitle title={chapter.title} level="h1" />
-
+        <Section id={chapter?.chapter} className={s.heroSection}>
+          <SectionTitle title={chapter?.title} level="h1" />
           <p className={s.sloganDesc}>{chapter.content}</p>
+          <a href={`tel:${chapter?.phone}`}>{t('sloganBtn')}</a>
 
-          <a href={`tel:${chapter.phone}`}>{t('sloganBtn')}</a>
-
-          <Swiper
-            // spaceBetween={50}
-            slidesPerView={1}
-            onSlideChange={() => console.log('slide change')}
-            onSwiper={swiper => console.log(swiper)}
-          >
-            {chapter.images_list &&
-              chapter.images_list.map(({ alt, image }, index) => {
-                return (
-                  <SwiperSlide key={index}>
-                    <GatsbyImage image={getImage(image)} alt={alt} />
-                  </SwiperSlide>
-                );
-              })}
-          </Swiper>
+          <div className={s.wrapper}>
+            <div className={s.sliderMainWrapper}>
+              <SlideShow images={chapter?.images_list} />
+            </div>
+          </div>
         </Section>
       )}
     </>

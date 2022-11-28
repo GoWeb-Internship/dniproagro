@@ -14,8 +14,10 @@ export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [target, setTarget] = useState(null);
 
-  const isDesktop = useMediaQuery({ query: '(min-width: 1280px)' });
   const { i18n } = useTranslation();
+  const isDesktop = useMediaQuery({ query: '(min-width: 1280px)' });
+
+  console.log(isDesktop, 'isDesktop');
 
   const {
     allMarkdownRemark: { nodes },
@@ -35,7 +37,7 @@ export const Header = () => {
   `);
 
   const sections = nodes
-    .filter(({ frontmatter: { chapter } }) => chapter !== SLOGAN)
+    ?.filter(({ frontmatter: { chapter } }) => chapter !== SLOGAN)
     .reduce((acc, { frontmatter: { title, language, chapter } }) => {
       if (language === i18n.language) {
         acc.push({

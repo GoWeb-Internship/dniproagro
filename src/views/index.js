@@ -4,4 +4,4 @@ export * from './Contacts/Contacts';
 export * from './Gallery/Gallery';
 export * from './Personnel/Personnel';
 export * from './TechnicalEquipments/TechnicalEquipments';
-export * from './Slogan/Slogan';
+export * from './Hero/Hero';

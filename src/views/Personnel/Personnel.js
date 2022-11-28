@@ -53,10 +53,12 @@ export const Personnel = () => {
   const workerlist = personnel?.workers_list;
 
   return (
-    <Section className=" py-5 " id={personnel?.chapter}>
-      <h2 className="mb-[72px] text-4xl font-bold leading-[45px]">
-        {personnel?.title}
-      </h2>
+    <Section
+      className="relative h-[382px] overflow-hidden py-5 md:h-[475px] md:py-8 xl:h-[606px] xl:py-[50px]"
+      id={personnel?.chapter}
+      styleContainer="overflow-hidden"
+    >
+      <SectionTitle title={personnel?.title} />
       <Slider
         slidesPerGroup={1}
         className="w-[627px]  md:w-[704px] xl:w-[1028px]"

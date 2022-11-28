@@ -49,10 +49,14 @@ export const Gallery = () => {
   const gallerylist = gallery?.photos_list;
 
   return (
-    <Section className=" py-5 " id={gallery?.chapter}>
-      <h2 className="mb-[72px] text-4xl font-bold leading-[45px]">
-        {gallery?.title}
-      </h2>
+    <Section
+      className="relative h-[382px] overflow-hidden py-5 md:h-[475px] md:py-8 xl:h-[606px] xl:py-[50px]"
+      id={gallery?.chapter}
+      styleContainer="  px-0 sm:max-w-full sm:overflow-hidden"
+    >
+      <div className="container">
+        <SectionTitle title={gallery?.title} />
+      </div>
       <Slider
         slidesPerGroup={3}
         className="w-[627px]  md:w-[704px] xl:w-[1028px]"
