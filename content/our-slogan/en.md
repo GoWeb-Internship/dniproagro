@@ -14,6 +14,6 @@ images_list:
     alt: technics at field
   - image: slogan-11.jpg
     alt: grain
-  - image: slogan-4.jpeg
+  - image: slogan-12.jpg
     alt: field
 ---

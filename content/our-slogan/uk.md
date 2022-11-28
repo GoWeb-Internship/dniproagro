@@ -14,6 +14,6 @@ images_list:
     alt: Полив
   - image: slogan-11.jpg
     alt: Зерно
-  - image: slogan-4.jpeg
+  - image: slogan-12.jpg
     alt: Поле
 ---
