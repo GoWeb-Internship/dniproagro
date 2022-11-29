@@ -29,8 +29,6 @@ export const Gallery = () => {
                     gatsbyImageData(
                       placeholder: BLURRED
                       jpgOptions: { progressive: true }
-                      width: 400
-                      height: 496
                     )
                   }
                 }
@@ -50,7 +48,7 @@ export const Gallery = () => {
 
   return (
     <Section
-      className="relative h-[382px] overflow-hidden py-5 md:h-[473px] md:py-8 xl:h-[606px] xl:py-[50px]"
+      className="relative h-[382px] overflow-hidden py-5 md:h-[473px] md:py-8 xl:h-[636px] xl:py-[50px]"
       id={gallery?.chapter}
       styleContainer="overflow-x-hidden"
     >
