@@ -29,7 +29,7 @@ export const Hero = () => {
                 childImageSharp {
                   gatsbyImageData(
                     width: 1440
-                    height: 580
+
                     jpgOptions: { progressive: false }
                     formats: [AUTO, WEBP, AVIF]
                   )
@@ -55,22 +55,32 @@ export const Hero = () => {
   return (
     <>
       {chapter && (
-        <Section id={chapter?.chapter} styleContainer="relative">
-          <div className={s.heroContentBox}>
-            <SectionTitle title={chapter?.title} level="h1" />
+        <Section
+          className="relative z-10 pt-[130px] pb-[130px]"
+          id={chapter?.chapter}
+          styleContainer=""
+        >
+          {/* <div className={s.heroContentBox}> */}
+          <SectionTitle title={chapter?.title} level="h1" />
 
-            <p className={s.sloganDesc}>{chapter?.content}</p>
+          <p className={s.sloganDesc}>{chapter?.content}</p>
 
-            <a href={`tel:${chapter?.phone}`} className={s.actionBtn}>
-              {t('sloganBtn')}
-            </a>
-          </div>
+          <a href={`tel:${chapter?.phone}`} className={s.actionBtn}>
+            {t('sloganBtn')}
+          </a>
+          {/* </div> */}
 
-          <div className={s.heroSliderWrapper}>
+          <div className="absolute !top-1/2 !left-1/2 -z-[1] w-full max-w-[1440px] !-translate-y-1/2 !-translate-x-1/2">
             <div className={s.sliderMainWrapper}>
               <SlideShow images={chapter?.images_list} />
             </div>
           </div>
+
+          {/* <div className={s.heroSliderWrapper}>
+            <div className={s.sliderMainWrapper}>
+              <SlideShow images={chapter?.images_list} />
+            </div>
+          </div> */}
         </Section>
       )}
     </>
