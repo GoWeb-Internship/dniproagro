@@ -6,6 +6,7 @@ import { Statistics, Section, SectionTitle } from 'components';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 // import { Scrollbars } from 'react-custom-scrollbars-2';
 import * as s from './About.module.css';
+import { Scroll } from 'components';
 
 export const About = () => {
   const { i18n } = useTranslation();
@@ -82,13 +83,18 @@ export const About = () => {
             </a>
           </button>
         </div>
-        {/* <Scrollbars style={{ width: 500, height: 300 }}> */}
+
         <div className={s.contentWrapper}>
           <div className={s.contentInnerWrapper}>
-            <p className={s.content}>{description}</p>
+            <Scroll
+              heigth={220}
+              trackVerticalStyles="top-0 right-0 h-full rounded-main border border-green"
+              thumbVerticalStyles="rounded-main bg-green"
+            >
+              <p className={s.content}>{description}</p>
+            </Scroll>
           </div>
         </div>
-        {/* </Scrollbars> */}
       </div>
       <Statistics statistics={statistics} />
     </Section>
