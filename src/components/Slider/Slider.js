@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, EffectFade, Scrollbar } from 'swiper';
 import { useStaticQuery, graphql } from 'gatsby';
 import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
+import { useSwiper } from 'swiper/react';
 
 import 'swiper/css';
 import 'swiper/css/bundle';
@@ -11,9 +12,13 @@ import 'assets/styles/slider.css';
 // import 'swiper/css/pagination';
 
 export const Slider = ({ children, className = '', slidesPerGroup }) => {
+  // const swiper = useSwiper();
+
   return (
     <div className="absolute left-1/2 w-[627px] -translate-x-1/2  md:w-[704px] xl:w-[1028px]">
       <Swiper
+        // onSwiper={swiper => console.log(swiper)}
+        // onSlideChange={() => console.log('slide change')}
         className={`${className}`}
         navigation={{
           nextEl: '.next-slider',
@@ -22,6 +27,9 @@ export const Slider = ({ children, className = '', slidesPerGroup }) => {
         // spaceBetween={16}
         // slidesPerView={'auto'}
         // loopedSlides={1}
+        pagination={{
+          dynamicBullets: true,
+        }}
         loop={true}
         slidesPerGroup={slidesPerGroup}
         // loopFillGroupWithBlank={true}
@@ -29,22 +37,22 @@ export const Slider = ({ children, className = '', slidesPerGroup }) => {
         breakpoints={{
           320: {
             slidesPerView: 3,
-            spaceBetween: 20,
+            pagination: { el: '.swiper-pagination', type: 'bullets' },
+            spaceBetween: 38,
+
+            navigation: false,
           },
           768: {
             slidesPerView: 3,
-            spaceBetween: 32,
+            spaceBetween: 124,
           },
           1280: {
             slidesPerView: 3,
-            spaceBetween: 20,
+            spaceBetween: 73,
           },
         }}
         centeredSlides={true}
         initialSlide={1}
-        pagination={{
-          dynamicBullets: true,
-        }}
         modules={[Navigation, Pagination]}
       >
         <button className="prev-slider">

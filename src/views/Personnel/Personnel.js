@@ -52,11 +52,11 @@ export const Personnel = () => {
 
   return (
     <Section
-      className="relative h-[382px] overflow-hidden py-5 md:h-[475px] md:py-8 xl:h-[606px] xl:py-[50px]"
+      className="relative h-[382px] overflow-hidden py-5 md:h-[473px] md:py-8 xl:h-[636px] xl:py-[50px]"
       id={personnel?.chapter}
-      styleContainer="overflow-hidden"
+      styleContainer="overflow-x-hidden"
     >
-      <SectionTitle title={personnel?.title} />
+      <SectionTitle className="" title={personnel?.title} />
       <Slider
         slidesPerGroup={1}
         className="w-[627px]  md:w-[704px] xl:w-[1028px]"
@@ -69,11 +69,11 @@ export const Personnel = () => {
                   <GatsbyImage
                     image={getImage(photo)}
                     alt={alt}
-                    className={
-                      isActive
-                        ? '  h-[295px] w-[218px] md:h-[402px] md:w-[336px] xl:h-[495px] xl:w-[400px]'
-                        : 'h-[266px] w-[184px] md:h-[218px] md:w-[152px] xl:h-[442px] xl:w-[294px]'
-                    }
+                    // className={
+                    //   isActive
+                    //     ? '  h-[295px] w-[218px] md:h-[402px] md:w-[336px] xl:h-[495px] xl:w-[400px]'
+                    //     : 'h-[266px] w-[184px] md:h-[218px] md:w-[152px] xl:h-[442px] xl:w-[294px]'
+                    // }
                   />
                 )}
               </SwiperSlide>
