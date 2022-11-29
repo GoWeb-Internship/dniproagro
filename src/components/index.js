@@ -12,3 +12,4 @@ export * from './Slider/Slider';
 export * from './Address/Address';
 export * from './Contact/Contact';
 export * from './SlideShow/SlideShow';
+export * from './Scroll/Scroll';
