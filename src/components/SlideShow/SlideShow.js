@@ -23,25 +23,6 @@ export const SlideShow = ({ images }) => {
       speed={2000}
       modules={[Autoplay]}
       className="heroSwiper"
-      breakpoints={{
-        // 320: {
-        //   width: 320,
-        // },
-        480: {
-          width: 480,
-        },
-        768: {
-          width: 768,
-        },
-        // 1280: {
-        //   width: 1280,
-        //   height: 575,
-        // },
-        // 1440: {
-        //   maxWidth: 1440,
-        //   height: 575,
-        // },
-      }}
     >
       {images &&
         images.map(({ alt, image }, index) => {
