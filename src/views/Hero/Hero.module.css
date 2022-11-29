@@ -1,5 +1,5 @@
 .heroContainer {
-  @apply h-[284px] py-[40px] md:h-[318px] md:py-[57px] xl:h-[575px] xl:py-[130px];
+  @apply flex h-[284px] flex-col justify-between py-[40px] md:h-[318px] md:py-[57px] xl:h-[575px] xl:py-[130px];
 }
 
 .heroSliderWrapper {
@@ -12,9 +12,9 @@
 }
 
 .sloganDesc {
-  @apply mb-[40px] w-[217px] text-small font-normal text-white md:mb-[36px] xl:mb-[38px] xl:w-[417px] xl:text-big;
+  @apply mb-[40px] w-[276px] text-small font-normal text-white md:mb-[36px] md:w-[276px] xl:mb-[38px] xl:w-[340px] xl:text-big;
 }
 
 .actionBtn {
-  @apply flex h-[52px] w-[195px] items-center justify-center rounded-main bg-accent text-small font-normal text-white;
+  @apply mt-auto flex h-[52px] w-[195px] items-center justify-center rounded-main bg-accent text-small font-normal text-white;
 }

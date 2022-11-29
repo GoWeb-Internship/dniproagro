@@ -69,7 +69,7 @@ export const Hero = () => {
           </a>
 
           <div className="absolute !top-1/2 !left-1/2 -z-20 !-translate-y-1/2 !-translate-x-1/2 xl:w-full xl:max-w-[1440px]">
-            <div className="absolute top-0 left-0 z-20 w-[237px] bg-gradient-gray md:h-[318px] md:w-[368px] xl:h-[575px] xl:w-[598px]"></div>
+            <div className="absolute top-0 left-0 z-20 h-[284px] w-[237px] bg-gradient-gray md:h-[318px] md:w-[368px] xl:h-[575px] xl:w-[598px]"></div>
             <div className={s.sliderMainWrapper}>
               <SlideShow images={chapter?.images_list} />
             </div>

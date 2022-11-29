@@ -1,6 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Autoplay } from 'swiper';
+import { Autoplay } from 'swiper';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
 import 'swiper/css';
