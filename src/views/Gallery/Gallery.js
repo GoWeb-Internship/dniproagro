@@ -29,8 +29,6 @@ export const Gallery = () => {
                     gatsbyImageData(
                       placeholder: BLURRED
                       jpgOptions: { progressive: true }
-                      width: 400
-                      height: 496
                     )
                   }
                 }
@@ -50,15 +48,14 @@ export const Gallery = () => {
 
   return (
     <Section
-      className="relative h-[382px] overflow-hidden py-5 md:h-[475px] md:py-8 xl:h-[606px] xl:py-[50px]"
+      className="relative h-[382px] overflow-hidden py-5 md:h-[473px] md:py-8 xl:h-[636px] xl:py-[50px]"
       id={gallery?.chapter}
-      styleContainer="  px-0 sm:max-w-full sm:overflow-hidden"
+      styleContainer="overflow-x-hidden"
     >
-      <div className="container">
-        <SectionTitle title={gallery?.title} />
-      </div>
+      <SectionTitle className="xl:mb-[95px]" title={gallery?.title} />
+
       <Slider
-        slidesPerGroup={3}
+        slidesPerGroup={1}
         className="w-[627px]  md:w-[704px] xl:w-[1028px]"
       >
         {nodes &&
@@ -69,11 +66,11 @@ export const Gallery = () => {
                   <GatsbyImage
                     image={getImage(photo)}
                     alt={alt}
-                    className={
-                      isActive
-                        ? 'h-[295px] w-[218px] md:h-[402px] md:w-[336px] xl:h-[495px] xl:w-[400px]'
-                        : 'h-[266px] w-[184px] md:h-[218px] md:w-[152px] xl:h-[442px] xl:w-[294px]'
-                    }
+                    // className={
+                    //   isActive
+                    //     ? 'h-[295px] w-[218px] md:h-[402px] md:w-[336px] xl:h-[495px] xl:w-[400px]'
+                    //     : 'h-[266px] w-[184px] md:h-[218px] md:w-[152px] xl:h-[442px] xl:w-[294px]'
+                    // }
                   />
                 )}
               </SwiperSlide>
