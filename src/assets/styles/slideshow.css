@@ -18,8 +18,8 @@
 
 .swiper.heroSwiper img {
   display: block;
-  max-height: 100% !important;
-  width: auto !important;
+  height: auto;
+  max-width: 100% !important;
   max-width: 1440px !important;
   object-fit: cover !important;
   object-position: bottom center !important;
@@ -27,6 +27,7 @@
 
 .swiper.heroSwiper .gatsby-image-wrapper {
   height: 286px !important;
+  overflow: hidden !important;
 }
 
 @media screen and (min-width: 768px) {
@@ -58,12 +59,14 @@
     height: 575px !important;
     width: 100% !important;
     max-width: 1440px !important;
+    overflow: hidden !important;
   }
 
   .swiper.heroSwiper {
     height: 575px !important;
     max-width: 1440px !important;
     width: 100% !important;
+    overflow: hidden !important;
   }
 
   .swiper.heroSwiper .swiper-wrapper {
@@ -76,5 +79,6 @@
     width: 100% !important;
     max-width: 1440px !important;
     height: 575px !important;
+    overflow: hidden !important;
   }
 }

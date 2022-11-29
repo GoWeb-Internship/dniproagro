@@ -1,10 +1,15 @@
+.heroContainer {
+  @apply absolute h-[284px] md:h-[318px] xl:h-[575px];
+}
+
 .heroContentBox {
-  @apply absolute left-0 z-10 h-full w-[237px]  bg-gradient-gray px-5 pt-[54px] text-white md:w-[368px] md:px-[32px] md:pt-[60px] xl:left-[-80px] xl:w-[598px] xl:px-[100px] xl:pt-[152px];
+  @apply absolute top-0 left-0 z-10 h-full w-[237px]  bg-gradient-gray px-5 pt-[54px] text-white md:w-[368px] md:px-[32px] md:pt-[60px] xl:left-[-80px] xl:w-[598px] xl:px-[100px] xl:pt-[152px];
 }
 
 /* .heroSliderWrapper {
   @apply relative mx-auto w-full max-w-[480px] overflow-x-hidden md:w-[768px] md:max-w-[768px] xl:mx-auto xl:w-full xl:max-w-[1440px];
 } */
+
 .heroSliderWrapper {
   @apply relative mx-auto w-full max-w-[480px] overflow-x-hidden md:w-[768px] md:max-w-[768px] xl:mx-auto xl:w-full xl:max-w-[1440px];
 }

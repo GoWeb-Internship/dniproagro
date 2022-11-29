@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
-import { Section, SectionTitle, SlideShow } from 'components';
+import { Container, Section, SectionTitle, SlideShow } from 'components';
 import * as s from './Hero.module.css';
 
 export const Hero = () => {
@@ -56,7 +56,7 @@ export const Hero = () => {
     <>
       {chapter && (
         <Section id={chapter?.chapter} isContainer="false">
-          <div className={s.heroSliderWrapper}>
+          <Container className={s.heroContainer}>
             <div className={s.heroContentBox}>
               <SectionTitle title={chapter?.title} level="h1" />
 
@@ -66,7 +66,9 @@ export const Hero = () => {
                 {t('sloganBtn')}
               </a>
             </div>
+          </Container>
 
+          <div className={s.heroSliderWrapper}>
             <div className={s.sliderMainWrapper}>
               <SlideShow images={chapter?.images_list} />
             </div>
