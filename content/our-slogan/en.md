@@ -3,7 +3,7 @@ chapter: our_slogan
 chapter_range: "1"
 language: en
 title: Our slogan
-content: Lorem ipsum dolor sit amet consectetur.
+content: Lorem ipsum dolor sit amet consectetur dolor amet ipsum.
 phone: "+380990000000"
 images_list:
   - image: slogan-1.jpg

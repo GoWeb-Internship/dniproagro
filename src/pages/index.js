@@ -38,7 +38,7 @@ const IndexPage = () => {
       <Personnel />
 
       {/* техзасоби */}
-      <TechnicalEquipments />
+      {/* <TechnicalEquipments /> */}
 
       {/* галерея */}
       <Gallery />
