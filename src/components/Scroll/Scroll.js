@@ -11,6 +11,7 @@ export const Scroll = ({
     <Scrollbars
       style={{ height: heigth }}
       universal
+      hideTracksWhenNotNeeded="true"
       renderTrackVertical={props => (
         <div {...props} className={trackVerticalStyles} />
       )}
