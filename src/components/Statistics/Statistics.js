@@ -1,16 +1,22 @@
 import React from 'react';
 import CountUp from 'react-countup';
 import ProgressBar from 'react-customizable-progressbar';
+import * as s from './Statistics.module.css';
+import { useInView } from 'react-intersection-observer';
 
 export const Statistics = ({ statistics }) => {
+  const { ref, inView } = useInView({
+    threshold: 0,
+    triggerOnce: true,
+  });
   return (
-    <ul className="grid grid-cols-2 md:grid-cols-4">
+    <ul ref={ref} className={s.list}>
       {statistics &&
         statistics.map((el, index) => (
           <li key={index}>
-            <div className="relative mx-auto w-[150px]">
+            <div className={s.mainWrapper}>
               <ProgressBar
-                progress={100}
+                progress={inView && 100}
                 radius={55}
                 strokeColor={'#02931C'}
                 strokeWidth={8}
@@ -22,15 +28,17 @@ export const Statistics = ({ statistics }) => {
               />
               <CountUp
                 start={0}
-                end={el.value && el.value}
+                end={inView && el?.value}
                 delay={0}
                 duration={2.75}
               >
                 {({ countUpRef }) => (
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold text-green">
-                    <div className="flex justify-center">
+                  <div className={s.wrapper}>
+                    <div className={s.textWrapper}>
                       <span className="" ref={countUpRef} />
-                      <span className="ml-2">{el.units && el.units}</span>
+                      <span className={s.unitsText}>
+                        {el.units && el.units}
+                      </span>
                     </div>
                     <p className="">{el.category && el.category}</p>
                   </div>

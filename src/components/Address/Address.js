@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
+import * as s from './Address.module.css';
 
 export const Address = ({ address }) => {
   const { t } = useTranslation();
@@ -7,8 +8,8 @@ export const Address = ({ address }) => {
 
   return (
     <div>
-      <h3 className="mb-4 text-big font-bold">{ourAddress}</h3>
-      <p className="text-[14px]">{address}</p>
+      <h3 className={s.title}>{ourAddress}</h3>
+      <p className={s.description}>{address}</p>
     </div>
   );
 };

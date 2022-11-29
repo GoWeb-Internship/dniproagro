@@ -1,0 +1,18 @@
+.contactsList {
+  @apply my-9 grid grid-cols-2 gap-x-[18px] gap-y-9 xl:grid-cols-3;
+}
+.messengerList {
+  @apply mb-2 flex gap-4;
+}
+.messengerListItem {
+  @apply cursor-pointer;
+}
+.link {
+  @apply cursor-pointer font-light;
+}
+.text {
+  @apply pt-2 text-[14px];
+}
+.icon {
+  @apply h-3 w-3;
+}

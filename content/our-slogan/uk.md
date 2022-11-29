@@ -3,7 +3,7 @@ chapter: our_slogan
 chapter_range: "1"
 language: uk
 title: Наш слоган
-content: Пшеничне поле
+content: Lorem ipsum dolor sit amet consectetur.
 phone: "+380990000000"
 images_list:
   - image: slogan-1.jpg
@@ -14,6 +14,6 @@ images_list:
     alt: Полив
   - image: slogan-11.jpg
     alt: Зерно
-  - image: slogan-4.jpeg
+  - image: slogan-12.jpg
     alt: Поле
 ---

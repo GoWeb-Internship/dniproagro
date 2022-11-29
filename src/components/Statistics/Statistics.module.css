@@ -1,0 +1,15 @@
+.list {
+  @apply grid grid-cols-2 md:grid-cols-4;
+}
+.mainWrapper {
+  @apply relative mx-auto w-[150px];
+}
+.wrapper {
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold text-green;
+}
+.textWrapper {
+  @apply flex justify-center;
+}
+.unitsText {
+  @apply ml-2;
+}

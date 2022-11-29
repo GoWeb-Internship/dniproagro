@@ -29,6 +29,7 @@ export const Cultures = () => {
                     width: 900
                     placeholder: BLURRED
                     jpgOptions: { progressive: true }
+                    formats: [AUTO, WEBP, AVIF]
                   )
                 }
               }
@@ -41,7 +42,7 @@ export const Cultures = () => {
   `);
 
   useEffect(() => {
-    if (!nodes || !i18n.language) return;
+    if (nodes?.frontmatter === null || !i18n.language) return;
 
     const cultureChapter = nodes?.find(
       ({ frontmatter: { language } }) => language === i18n.language,

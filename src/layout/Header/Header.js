@@ -6,14 +6,7 @@ import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { XMarkIcon, Bars3Icon } from '@heroicons/react/24/solid';
 import { Container, Logo, NavBar, SwitchLang, Menu } from 'components';
 import { anchors } from 'utils/constants';
-import {
-  header,
-  headerContainer,
-  mobHeaderWrapper,
-  menuBtn,
-  menuIconClose,
-  menuIconOpen,
-} from './Header.module.css';
+import * as s from './Header.module.css';
 
 const { SLOGAN } = anchors;
 
@@ -21,8 +14,11 @@ export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [target, setTarget] = useState(null);
 
-  const isDesktop = useMediaQuery({ query: '(min-width: 1280px)' });
   const { i18n } = useTranslation();
+  const isDesktop = useMediaQuery({ query: '(min-width: 1280px)' });
+  const isMobOrTablet = useMediaQuery({ query: '(max-width: 1279px)' });
+
+  console.log('isDesktop: ', isDesktop, 'isMobOrTablet: ', isMobOrTablet);
 
   const {
     allMarkdownRemark: { nodes },
@@ -42,7 +38,7 @@ export const Header = () => {
   `);
 
   const sections = nodes
-    .filter(({ frontmatter: { chapter } }) => chapter !== SLOGAN)
+    ?.filter(({ frontmatter: { chapter } }) => chapter !== SLOGAN)
     .reduce((acc, { frontmatter: { title, language, chapter } }) => {
       if (language === i18n.language) {
         acc.push({
@@ -75,31 +71,31 @@ export const Header = () => {
   }, [isMenuOpen, target]);
 
   return (
-    <header className={header}>
-      <Container className={headerContainer}>
+    <header className={s.header}>
+      <Container className={s.headerContainer}>
         <Logo />
 
-        {!isDesktop && (
-          <div className={mobHeaderWrapper}>
+        {isMobOrTablet && (
+          <div className={s.mobHeaderWrapper}>
             <SwitchLang />
 
             <button
               type="button"
               aria-expanded={isMenuOpen ? true : false}
-              className={menuBtn}
+              className={s.menuBtn}
               onClick={toggleMenu}
             >
               {isMenuOpen ? (
-                <XMarkIcon className={menuIconClose} />
+                <XMarkIcon className={s.menuIconClose} />
               ) : (
-                <Bars3Icon className={menuIconOpen} />
+                <Bars3Icon className={s.menuIconOpen} />
               )}
             </button>
           </div>
         )}
 
         {isDesktop && (
-          <div className="flex items-center">
+          <div className={s.desktopHeaderWrapper}>
             <NavBar
               sections={sections}
               isDesktop={isDesktop}
@@ -109,7 +105,7 @@ export const Header = () => {
           </div>
         )}
 
-        {!isDesktop && (
+        {isMobOrTablet && (
           <Menu
             setIsMenuOpen={setIsMenuOpen}
             isMenuOpen={isMenuOpen}

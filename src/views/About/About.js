@@ -5,10 +5,10 @@ import { ChevronRightIcon } from '@heroicons/react/24/outline';
 import { Statistics, Section, SectionTitle } from 'components';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 // import { Scrollbars } from 'react-custom-scrollbars-2';
+import * as s from './About.module.css';
 
 export const About = () => {
   const { i18n } = useTranslation();
-
   const {
     allMarkdownRemark: { nodes },
   } = useStaticQuery(graphql`
@@ -61,36 +61,31 @@ export const About = () => {
   const chapter = aboutCompany?.chapter;
 
   return (
-    <Section className="py-5 md:py-[31px] xl:py-[50px]" id={chapter}>
+    <Section className={s.section} id={chapter}>
       <SectionTitle title={title} />
-      <div className="md:flex md:justify-between">
-        <div className="relative">
+      <div className={s.wrapper}>
+        <div className={s.imgWrapper}>
           <GatsbyImage
-            className="h-[252px] w-full rounded-main md:w-[336px] xl:h-[396px] xl:w-[400px]"
+            className={s.img}
             image={getImage(bgImg?.photo)}
             alt={bgImg?.alt}
           />
-          <button
-            type="button"
-            className="absolute bottom-0 left-0 px-2 py-4 text-white"
-          >
+          <button type="button" className={s.button}>
             <a
-              className="flex items-center"
+              className={s.link}
               href={buttonLink}
               target="_blank"
               rel="noopener noreferrer nofollow"
             >
               {buttonText}
-              <ChevronRightIcon className="ml-4 w-6 stroke-2" />
+              <ChevronRightIcon className={s.icon} />
             </a>
           </button>
         </div>
         {/* <Scrollbars style={{ width: 500, height: 300 }}> */}
-        <div className="mt-9 max-w-full rounded border border-green md:mt-0 md:w-[336px] xl:w-[820px]">
-          <div className="p-4 xl:p-6">
-            <p className="h-[220px] overflow-y-scroll pr-4 md:pr-11 xl:h-[351px] xl:pr-[83px]">
-              {description}
-            </p>
+        <div className={s.contentWrapper}>
+          <div className={s.contentInnerWrapper}>
+            <p className={s.content}>{description}</p>
           </div>
         </div>
         {/* </Scrollbars> */}

@@ -33,6 +33,8 @@ export const Personnel = () => {
                     gatsbyImageData(
                       placeholder: BLURRED
                       jpgOptions: { progressive: true }
+                      width: 400
+                      height: 496
                     )
                   }
                 }
