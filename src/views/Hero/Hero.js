@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
-import { Container, Section, SectionTitle, SlideShow } from 'components';
+import { Section, SectionTitle, SlideShow } from 'components';
 import * as s from './Hero.module.css';
+import Markdown from 'markdown-to-jsx';
 
 export const Hero = () => {
   const [chapter, setChapter] = useState(null);
@@ -56,20 +57,25 @@ export const Hero = () => {
     <>
       {chapter && (
         <Section
-          className="relative -z-20"
+          className={s.heroSection}
           id={chapter?.chapter}
           styleContainer={s.heroContainer}
         >
-          <SectionTitle title={chapter?.title} level="h1" />
+          <SectionTitle
+            title={<Markdown>{chapter?.title}</Markdown>}
+            level="h1"
+          />
 
-          <p className={s.sloganDesc}>{chapter?.content}</p>
+          <p className={s.sloganDesc}>
+            <Markdown>{chapter?.content}</Markdown>
+          </p>
 
           <a href={`tel:${chapter?.phone}`} className={s.actionBtn}>
             {t('sloganBtn')}
           </a>
 
-          <div className="absolute !top-1/2 !left-1/2 -z-20 !-translate-y-1/2 !-translate-x-1/2 xl:w-full xl:max-w-[1440px]">
-            <div className="absolute top-0 left-0 z-20 h-[284px] w-[237px] bg-gradient-gray md:h-[318px] md:w-[368px] xl:h-[575px] xl:w-[598px]"></div>
+          <div className={s.sliderWrapper}>
+            <div className={s.overlay}></div>
             <div className={s.sliderMainWrapper}>
               <SlideShow images={chapter?.images_list} />
             </div>

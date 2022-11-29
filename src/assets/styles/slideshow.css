@@ -1,17 +1,17 @@
 .swiper.heroSwiper {
-  width: 100% !important;
+  width: 100vw !important;
   max-width: 480px !important;
   height: 286px !important;
 }
 
 .swiper.heroSwiper .swiper-wrapper {
-  width: 100% !important;
+  width: 100vw !important;
   max-width: 480px !important;
   height: 286px !important;
 }
 
 .swiper.heroSwiper .swiper-slide {
-  width: 100% !important;
+  width: 100vw !important;
   max-width: 480px !important;
   height: 286px !important;
 }
@@ -19,7 +19,7 @@
 .swiper.heroSwiper img {
   display: block;
   height: 100%;
-  width: auto;
+  width: 100vw;
   max-width: 1440px !important;
   object-fit: cover !important;
   object-position: center !important;
@@ -57,7 +57,7 @@
     height: 318px;
     width: auto;
     max-width: 768px !important;
-    object-fit: contain !important;
+    object-fit: cover !important;
     object-position: center !important;
   }
 }
@@ -82,16 +82,20 @@
     width: 100% !important;
   }
 
-  .swiper.heroSwiper .swiper-slide {
+  .swiper.heroSwiper .swiper-slide,
+  .swiper.heroSwiper .swiper-slide-prev,
+  .swiper.heroSwiper .swiper-slide-next,
+  .swiper.heroSwiper .swiper-slide-active {
     width: 100% !important;
     max-width: 1440px !important;
     height: 575px !important;
   }
 
   .swiper.heroSwiper img {
+    height: 575px;
     max-height: 100%;
     width: 100% !important;
-    max-width: 14400px !important;
+    max-width: 1440px !important;
     object-fit: cover !important;
     object-position: center !important;
   }
