@@ -19,8 +19,6 @@ export const SlideShow = ({ images }) => {
         delay: 2500,
         disableOnInteraction: false,
       }}
-      // onSlideChange={() => console.log('slide change')}
-      // onSwiper={heroSlideShow => console.log(heroSlideShow)}
       modules={[Autoplay]}
       className="heroSwiper"
     >

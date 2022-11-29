@@ -1,10 +1,6 @@
 .heroContainer {
-  @apply relative h-[284px] py-[40px] md:h-[318px] md:py-[57px] xl:h-[575px] xl:py-[130px];
+  @apply h-[284px] py-[40px] md:h-[318px] md:py-[57px] xl:h-[575px] xl:py-[130px];
 }
-
-/* .heroContentBox {
-  @apply absolute top-0 left-0 z-10 h-full w-[237px] bg-gradient-gray py-10 text-white md:w-[368px] md:py-[57px] xl:w-[598px] xl:py-[130px];
-} */
 
 .heroSliderWrapper {
   @apply relative mx-auto w-full max-w-[480px] overflow-x-hidden md:w-[768px] md:max-w-[768px] xl:mx-auto xl:w-full xl:max-w-[1440px];
