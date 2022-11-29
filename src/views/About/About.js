@@ -4,12 +4,13 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { ChevronRightIcon } from '@heroicons/react/24/outline';
 import { Statistics, Section, SectionTitle } from 'components';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
-// import { Scrollbars } from 'react-custom-scrollbars-2';
+import { useMediaQuery } from 'react-responsive';
 import * as s from './About.module.css';
 import { Scroll } from 'components';
 
 export const About = () => {
   const { i18n } = useTranslation();
+  const isDesktop = useMediaQuery({ query: '(min-width: 1280px)' });
   const {
     allMarkdownRemark: { nodes },
   } = useStaticQuery(graphql`
@@ -87,9 +88,9 @@ export const About = () => {
         <div className={s.contentWrapper}>
           <div className={s.contentInnerWrapper}>
             <Scroll
-              heigth={220}
-              trackVerticalStyles="top-0 right-0 h-full rounded-main border border-green"
-              thumbVerticalStyles="rounded-main bg-green"
+              heigth={isDesktop ? 351 : 220}
+              trackVerticalStyles={s.trackVertical}
+              thumbVerticalStyles={s.thumbVertical}
             >
               <p className={s.content}>{description}</p>
             </Scroll>
