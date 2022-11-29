@@ -18,11 +18,11 @@
 
 .swiper.heroSwiper img {
   display: block;
-  height: auto;
-  max-width: 100% !important;
+  height: 100%;
+  width: auto;
   max-width: 1440px !important;
   object-fit: cover !important;
-  object-position: bottom center !important;
+  object-position: center !important;
 }
 
 .swiper.heroSwiper .gatsby-image-wrapper {
@@ -52,33 +52,47 @@
     max-width: 768px !important;
     height: 318px !important;
   }
+
+  .swiper.heroSwiper img {
+    height: 318px;
+    width: auto;
+    max-width: 768px !important;
+    object-fit: contain !important;
+    object-position: center !important;
+  }
 }
 
 @media screen and (min-width: 1280px) {
   .swiper.heroSwiper .gatsby-image-wrapper {
     height: 575px !important;
     width: 100% !important;
-    max-width: 1440px !important;
+    max-width: 1280px !important;
     overflow: hidden !important;
   }
 
   .swiper.heroSwiper {
     height: 575px !important;
-    max-width: 1440px !important;
+    max-width: 1280px !important;
     width: 100% !important;
-    overflow: hidden !important;
   }
 
   .swiper.heroSwiper .swiper-wrapper {
     height: 575px !important;
-    max-width: 1440px !important;
+    max-width: 1280px !important;
     width: 100% !important;
   }
 
   .swiper.heroSwiper .swiper-slide {
     width: 100% !important;
-    max-width: 1440px !important;
+    max-width: 1280px !important;
     height: 575px !important;
-    overflow: hidden !important;
+  }
+
+  .swiper.heroSwiper img {
+    max-height: 100%;
+    width: 100% !important;
+    max-width: 1280px !important;
+    object-fit: cover !important;
+    object-position: center !important;
   }
 }

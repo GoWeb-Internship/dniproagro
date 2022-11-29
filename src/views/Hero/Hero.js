@@ -28,8 +28,6 @@ export const Hero = () => {
               image {
                 childImageSharp {
                   gatsbyImageData(
-                    width: 1440
-                    height: 580
                     jpgOptions: { progressive: false }
                     formats: [AUTO, WEBP, AVIF]
                   )
@@ -56,7 +54,9 @@ export const Hero = () => {
     <>
       {chapter && (
         <Section id={chapter?.chapter} isContainer="false">
-          <Container className={s.heroContainer}>
+          {/* <Container className={s.heroContainer}></Container> */}
+
+          <div className={s.heroSliderWrapper}>
             <div className={s.heroContentBox}>
               <SectionTitle title={chapter?.title} level="h1" />
 
@@ -66,9 +66,7 @@ export const Hero = () => {
                 {t('sloganBtn')}
               </a>
             </div>
-          </Container>
 
-          <div className={s.heroSliderWrapper}>
             <div className={s.sliderMainWrapper}>
               <SlideShow images={chapter?.images_list} />
             </div>
