@@ -19,10 +19,6 @@ export const Slider = ({ children, className = '', slidesPerGroup }) => {
       <div className=" -mx-[180px]  w-[calc(100%+360px)] overflow-x-hidden  ">
         <Swiper
           className={`${className}`}
-          navigation={{
-            nextEl: '.next-slider',
-            prevEl: '.prev-slider',
-          }}
           pagination={{
             dynamicBullets: true,
           }}
@@ -31,8 +27,7 @@ export const Slider = ({ children, className = '', slidesPerGroup }) => {
           breakpoints={{
             320: {
               slidesPerView: 3,
-              pagination: { el: '.swiper-pagination', type: 'bullets' },
-              spaceBetween: 38,
+              spaceBetween: 36,
               navigation: false,
             },
             // 768: {
@@ -40,6 +35,10 @@ export const Slider = ({ children, className = '', slidesPerGroup }) => {
             //   spaceBetween: 124,
             // },
             1280: {
+              navigation: {
+                nextEl: '.next-slider',
+                prevEl: '.prev-slider',
+              },
               slidesPerView: 3,
               spaceBetween: 73,
             },

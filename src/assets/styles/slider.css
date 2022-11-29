@@ -4,24 +4,6 @@
   display: none;
 }
 
-/* .prev-slider,
-.next-slider {
-  position: absolute;
-  top: 21px;
-  transform: translateY(-50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  background-color: rgba(2, 147, 28, 0.1);
-  cursor: pointer;
-  transition: opacity 200ms linear;
-  z-index: 2;
-  color: #064e3b;
-} */
-
 .prev-slider {
   right: 56px;
 }
@@ -31,37 +13,63 @@
 }
 
 .swiper-horizontal > .swiper-pagination-bullets {
-  bottom: -36px;
-  /* z-index: 5; */
+  bottom: 5px;
+  height: 10px;
 }
 
 .swiper-wrapper {
   align-items: center;
-  /* padding-bottom: 16px; */
+  /* margin-bottom: 50px; */
 }
 
 .swiper-slide-active {
-  /* scale: 1.19; */
+  scale: 1.19;
   /* max-height: 295px; */
 }
 
 .swiper-slide img {
   display: block;
   height: auto;
-  /* max-width: 100%; */
+  max-width: 100%;
   object-fit: cover;
 }
 
 .swiper-slide-active img {
-  /* height: 295px !important; */
-  /* scale: 1.19; */
-  object-fit: contain !important;
+  /* object-fit: contain !important; */
+}
+
+.prev-slider,
+.next-slider {
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
   .swiper-slide-active {
     /* scale: 2.2; */
-    scale: 1.19;
+    /* scale: 1.19; */
+  }
+
+  /* .swiper-slide-active img {
+    max-height: 402px !important;
+  } */
+}
+
+@media screen and (min-width: 1280px) {
+  /* .swiper-wrapper {
+    margin-bottom: 0;
+  } */
+
+  .swiper-slide-active {
+    scale: 1.36;
+    /* transform: scale(1.36); */
+  }
+
+  /* .swiper-slide-active img {
+    height: 496px !important;
+  } */
+
+  .swiper-pagination {
+    display: none;
   }
 
   .prev-slider,
@@ -89,22 +97,14 @@
     background-color: rgba(2, 147, 28, 0.1);
     outline: none;
   }
-
-  .swiper-slide-active img {
-    max-height: 402px !important;
-  }
 }
 
-@media screen and (min-width: 1280px) {
-  .swiper-slide-active {
-    scale: 1.36;
-  }
-
-  .swiper-slide-active img {
-    height: 496px !important;
-  }
-
-  /* .swiper-pagination {
-    display: none;
-  } */
+/* green bullets */
+/* span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #064e3b;
 }
+
+.swiper-pagination-bullet {
+  border: 1px solid #064e3b;
+  background: transparent;
+} */
