@@ -1,24 +1,24 @@
 .heroContainer {
-  @apply absolute h-[284px] md:h-[318px] xl:h-[575px];
+  @apply relative h-[284px] py-[40px] md:h-[318px] md:py-[57px] xl:h-[575px] xl:py-[130px];
 }
 
-.heroContentBox {
-  @apply absolute top-0 left-0 z-10 h-full w-[237px] bg-gradient-gray px-5 pt-[54px] text-white md:w-[368px] md:px-[32px] md:pt-[60px] xl:w-[598px] xl:px-[100px] xl:pt-[152px];
-}
+/* .heroContentBox {
+  @apply absolute top-0 left-0 z-10 h-full w-[237px] bg-gradient-gray py-10 text-white md:w-[368px] md:py-[57px] xl:w-[598px] xl:py-[130px];
+} */
 
 .heroSliderWrapper {
-  @apply relative mx-auto w-full max-w-[480px] overflow-x-hidden md:w-[768px] md:max-w-[768px] xl:mx-auto xl:w-full xl:max-w-[1280px];
+  @apply relative mx-auto w-full max-w-[480px] overflow-x-hidden md:w-[768px] md:max-w-[768px] xl:mx-auto xl:w-full xl:max-w-[1440px];
 }
 
 .sliderMainWrapper {
   @apply relative mx-auto h-[286px] w-[calc(100%+40px)] max-w-[480px] overflow-x-hidden md:h-[318px] md:w-[768px]
-  md:max-w-[768px] xl:h-[575px] xl:w-full xl:max-w-[1280px];
+  md:max-w-[768px] xl:h-[575px] xl:w-full xl:max-w-[1440px];
 }
 
 .sloganDesc {
-  @apply mb-[40px] w-[217px] text-small font-normal md:mb-[36px] xl:mb-[38px] xl:w-[417px] xl:text-big;
+  @apply mb-[40px] w-[217px] text-small font-normal text-white md:mb-[36px] xl:mb-[38px] xl:w-[417px] xl:text-big;
 }
 
 .actionBtn {
-  @apply flex h-[52px] w-[195px] items-center justify-center rounded-main bg-accent text-small font-normal;
+  @apply flex h-[52px] w-[195px] items-center justify-center rounded-main bg-accent text-small font-normal text-white;
 }
