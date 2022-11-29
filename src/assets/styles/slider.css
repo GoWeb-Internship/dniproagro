@@ -17,6 +17,10 @@
   height: 10px;
 }
 
+.slide {
+  position: relative;
+}
+
 .swiper-wrapper {
   align-items: center;
   /* margin-bottom: 50px; */

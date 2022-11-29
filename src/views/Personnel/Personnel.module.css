@@ -1,0 +1,23 @@
+.thumb {
+  @apply absolute bottom-0 hidden w-full rounded-main bg-gradient-green font-normal text-white xl:block  xl:p-4;
+}
+
+.thumbActive {
+  @apply absolute bottom-0 w-full rounded-main bg-gradient-green px-2 py-4 text-white md:px-[15px] md:pt-[22px] md:pb-[17px] xl:p-6;
+}
+
+.nameActiv {
+  @apply mb-[6px] text-sm md:mb-1 md:text-middle md:font-normal xl:mb-[6px] xl:text-2xl  xl:font-bold xl:leading-[30px];
+}
+
+.name {
+  @apply text-middle xl:mb-1;
+}
+
+.positionActiv {
+  @apply text-sm md:text-small xl:text-middle xl:font-normal;
+}
+
+.position {
+  @apply text-small;
+}
