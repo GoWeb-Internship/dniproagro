@@ -55,18 +55,18 @@ export const Hero = () => {
   return (
     <>
       {chapter && (
-        <Section id={chapter?.chapter} styleContainer="relative">
-          <div className={s.heroContentBox}>
-            <SectionTitle title={chapter?.title} level="h1" />
-
-            <p className={s.sloganDesc}>{chapter?.content}</p>
-
-            <a href={`tel:${chapter?.phone}`} className={s.actionBtn}>
-              {t('sloganBtn')}
-            </a>
-          </div>
-
+        <Section id={chapter?.chapter} isContainer="false">
           <div className={s.heroSliderWrapper}>
+            <div className={s.heroContentBox}>
+              <SectionTitle title={chapter?.title} level="h1" />
+
+              <p className={s.sloganDesc}>{chapter?.content}</p>
+
+              <a href={`tel:${chapter?.phone}`} className={s.actionBtn}>
+                {t('sloganBtn')}
+              </a>
+            </div>
+
             <div className={s.sliderMainWrapper}>
               <SlideShow images={chapter?.images_list} />
             </div>

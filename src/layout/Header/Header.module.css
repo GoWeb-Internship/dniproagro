@@ -1,5 +1,5 @@
 .header {
-  @apply fixed left-0 top-0 z-20 w-full bg-white py-4 xl:py-[24px];
+  @apply fixed left-0 top-0 right-0 z-20 bg-white py-4 xl:py-[24px];
 }
 
 .headerContainer {
@@ -7,15 +7,15 @@
 }
 
 .mobHeaderWrapper {
-  @apply absolute right-[15px] top-[3px] flex items-center justify-center xl:hidden;
+  @apply absolute right-[15px] top-[3px] flex items-center justify-center;
 }
 
 .desktopHeaderWrapper {
-  @apply flex items-center max-xl:hidden;
+  @apply flex items-center;
 }
 
 .menuBtn {
-  @apply z-20 flex h-[50px] w-[50px] items-center justify-center rounded-full xl:hidden;
+  @apply z-20 flex h-[50px] w-[50px] items-center justify-center rounded-full;
 }
 
 .menuIcon {

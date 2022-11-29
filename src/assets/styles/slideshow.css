@@ -18,8 +18,9 @@
 
 .swiper.heroSwiper img {
   display: block;
-  height: 100% !important;
-  width: 100% !important;
+  max-height: 100% !important;
+  width: auto !important;
+  max-width: 1440px !important;
   object-fit: cover !important;
   object-position: bottom center !important;
 }
@@ -55,22 +56,24 @@
 @media screen and (min-width: 1280px) {
   .swiper.heroSwiper .gatsby-image-wrapper {
     height: 575px !important;
+    width: 100% !important;
+    max-width: 1440px !important;
   }
 
   .swiper.heroSwiper {
     height: 575px !important;
     max-width: 1440px !important;
-    width: 1440px !important;
+    width: 100% !important;
   }
 
   .swiper.heroSwiper .swiper-wrapper {
     height: 575px !important;
     max-width: 1440px !important;
-    width: 1440px !important;
+    width: 100% !important;
   }
 
   .swiper.heroSwiper .swiper-slide {
-    width: 1440px !important;
+    width: 100% !important;
     max-width: 1440px !important;
     height: 575px !important;
   }

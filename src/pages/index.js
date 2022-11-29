@@ -24,15 +24,15 @@ const IndexPage = () => {
       <Cultures />
 
       {/* персонал */}
-      {/* <Personnel /> */}
+      <Personnel />
 
       {/* техзасоби */}
-      {/* <TechnicalEquipments /> */}
+      <TechnicalEquipments />
 
       {/* галерея */}
-      {/* <Gallery /> */}
+      <Gallery />
       {/* контакти */}
-      {/* <Contacts /> */}
+      <Contacts />
     </>
   );
 };
