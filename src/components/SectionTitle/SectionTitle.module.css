@@ -1,5 +1,5 @@
 .sectionTitle {
-  @apply mb-[36px] text-big font-bold md:mb-[46px] xl:mb-[72px] xl:text-large;
+  @apply mb-9 text-big font-bold md:mb-11 xl:mb-[72px] xl:text-large;
 }
 
 .mainPageTitle {
