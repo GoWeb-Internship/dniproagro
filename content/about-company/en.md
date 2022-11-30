@@ -29,9 +29,9 @@ statistics:
   - category: Land area
     value: "860"
     units: ha
+  - category: Partners
+    value: "150"
   - category: Harvest
     value: "32000"
     units: t
-  - category: Partners
-    value: "150"
 ---

@@ -29,9 +29,9 @@ statistics:
   - category: Землі
     value: "860"
     units: га
+  - category: Партнерів
+    value: "150"
   - category: Врожай
     value: "32000"
     units: т
-  - category: Партнерів
-    value: "150"
 ---

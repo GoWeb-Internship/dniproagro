@@ -10,8 +10,7 @@ import { Scroll } from 'components';
 
 export const About = () => {
   const { i18n } = useTranslation();
-  const isDesktop = useMediaQuery({ query: '(min-width: 1280px)' });
-
+  const isDesktop = useMediaQuery({ minWidth: 1280 });
   const {
     allMarkdownRemark: { nodes },
   } = useStaticQuery(graphql`
@@ -92,8 +91,9 @@ export const About = () => {
               heigth={isDesktop ? 351 : 220}
               trackVerticalStyles={s.trackVertical}
               thumbVerticalStyles={s.thumbVertical}
+              renderViewStyles={s.content}
             >
-              <p className={s.content}>{description}</p>
+              <p>{description}</p>
             </Scroll>
           </div>
         </div>
