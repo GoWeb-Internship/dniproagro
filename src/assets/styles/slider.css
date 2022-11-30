@@ -1,7 +1,7 @@
 /* slider */
 
 .swiperContainer {
-  @apply mx-auto max-w-[627px] md:max-w-[704px] xl:max-w-[1200px];
+  @apply mx-auto max-w-[627px] md:max-w-[756px] xl:max-w-[1200px];
 }
 
 .swiper-button-next:after,
