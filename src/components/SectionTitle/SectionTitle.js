@@ -13,6 +13,6 @@ export const SectionTitle = ({ title, level = 'h2' }) => {
 };
 
 SectionTitle.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   level: PropTypes.oneOf(['h2', 'h1']),
 };

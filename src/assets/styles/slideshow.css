@@ -1,35 +1,41 @@
 .swiper.heroSwiper {
-  width: 100% !important;
+  width: 100vw !important;
   max-width: 480px !important;
   height: 286px !important;
 }
 
 .swiper.heroSwiper .swiper-wrapper {
-  width: 100% !important;
+  width: 100vw !important;
   max-width: 480px !important;
   height: 286px !important;
 }
 
 .swiper.heroSwiper .swiper-slide {
-  width: 100% !important;
+  width: 100vw !important;
   max-width: 480px !important;
   height: 286px !important;
 }
 
 .swiper.heroSwiper img {
   display: block;
-  height: 100% !important;
-  width: 100% !important;
+  height: 100%;
+  width: 100vw;
+  max-width: 480px !important;
   object-fit: cover !important;
-  object-position: bottom center !important;
+  object-position: center !important;
 }
 
 .swiper.heroSwiper .gatsby-image-wrapper {
   height: 286px !important;
+  width: 100vw;
+  max-width: 480px;
+  overflow: hidden !important;
 }
 
 @media screen and (min-width: 768px) {
   .swiper.heroSwiper .gatsby-image-wrapper {
+    width: 768px;
+    max-width: 768px;
     height: 318px !important;
   }
 
@@ -49,29 +55,50 @@
     width: 768px !important;
     max-width: 768px !important;
     height: 318px !important;
+  }
+
+  .swiper.heroSwiper img {
+    height: 318px;
+    width: 768px;
+    max-width: 768px !important;
+    object-fit: cover !important;
+    object-position: center !important;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .swiper.heroSwiper .gatsby-image-wrapper {
     height: 575px !important;
+    width: 100vw !important;
+    max-width: 1440px !important;
   }
 
   .swiper.heroSwiper {
     height: 575px !important;
     max-width: 1440px !important;
-    width: 1440px !important;
+    width: 100vw !important;
   }
 
   .swiper.heroSwiper .swiper-wrapper {
-    height: 575px !important;
+    width: 100vw !important;
     max-width: 1440px !important;
-    width: 1440px !important;
+    height: 575px !important;
   }
 
-  .swiper.heroSwiper .swiper-slide {
-    width: 1440px !important;
+  .swiper.heroSwiper .swiper-slide,
+  .swiper.heroSwiper .swiper-slide-prev,
+  .swiper.heroSwiper .swiper-slide-next,
+  .swiper.heroSwiper .swiper-slide-active {
+    width: 100vw !important;
     max-width: 1440px !important;
     height: 575px !important;
+  }
+
+  .swiper.heroSwiper img {
+    height: 575px;
+    width: 100vw !important;
+    max-width: 1440px !important;
+    object-fit: cover !important;
+    object-position: center !important;
   }
 }
