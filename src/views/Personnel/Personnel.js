@@ -54,21 +54,17 @@ export const Personnel = () => {
   console.log(workerlist);
 
   return (
-    <Section
-      isContainer="false"
-      className="relative  overflow-x-hidden py-5 md:py-8  xl:py-[50px]"
-      id={personnel?.chapter}
-    >
+    <Section isContainer="false" className={s.section} id={personnel?.chapter}>
       <Container>
         <SectionTitle title={personnel?.title} />
       </Container>
 
-      <div className="mx-auto max-w-[627px] md:max-w-[704px] xl:max-w-[1028px]">
+      <div className="swiperContainer">
         <Slider slidesPerGroup={1}>
           {nodes &&
             workerlist?.map(({ photo, alt, worker, position }, index) => {
               return (
-                <SwiperSlide key={index} className="slide">
+                <SwiperSlide key={index}>
                   {({ isActive }) => (
                     <>
                       <GatsbyImage

@@ -1,27 +1,32 @@
 /* slider */
+
+.swiperContainer {
+  @apply mx-auto max-w-[627px] md:max-w-[704px] xl:max-w-[1200px];
+}
+
 .swiper-button-next:after,
 .swiper-button-prev:after {
   display: none;
 }
 
-.prev-slider {
-  right: 56px;
+.swiperContainer .prev-slider {
+  right: 86px;
 }
 
-.next-slider {
-  right: 0;
+.swiperContainer .next-slider {
+  right: 30px;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets {
-  bottom: 5px;
+  bottom: 0px;
   height: 10px;
 }
 
-.slide {
-  position: relative;
+.swiperContainer .swiper {
+  padding-bottom: 20px;
 }
 
-.swiper-wrapper {
+.swiperContainer .swiper-wrapper {
   align-items: center;
 }
 
@@ -31,29 +36,55 @@
   max-width: 100%;
 }
 
-.swiper-slide {
+.sliderSwiper .swiper-slide {
   transition: all 200ms linear;
   scale: 0.9;
 }
 
-.swiper-slide-active {
+.sliderSwiper .swiper-slide-active {
   scale: 1;
 }
 
-.prev-slider,
-.next-slider {
+.swiperContainer .prev-slider,
+.swiperContainer .next-slider {
   display: none;
 }
 
+@media screen and (min-width: 768px) {
+  .sliderSwiper .swiper-slide {
+    scale: 0.8;
+  }
+
+  .sliderSwiper .swiper-slide-active {
+    scale: 1;
+  }
+
+  .swiperContainer .swiper {
+    padding-bottom: 25px;
+  }
+}
+
 @media screen and (min-width: 1280px) {
-  .swiper-pagination {
+  .sliderSwiper .swiper-slide {
+    scale: 0.8;
+  }
+
+  .sliderSwiper .swiper-slide-active {
+    scale: 1;
+  }
+
+  .swiperContainer .swiper {
+    padding-bottom: 0px;
+  }
+
+  .swiperContainer .swiper-pagination {
     display: none;
   }
 
-  .prev-slider,
-  .next-slider {
+  .swiperContainer .prev-slider,
+  .swiperContainer .next-slider {
     position: absolute;
-    top: 21px;
+    top: 20px;
     transform: translateY(-50%);
     display: flex;
     align-items: center;
@@ -68,21 +99,21 @@
     color: #064e3b;
   }
 
-  .prev-slider:hover,
-  .prev-slider:focus,
-  .next-slider:hover,
-  .next-slider:focus {
+  .swiperContainer .prev-slider:hover,
+  .swiperContainer .prev-slider:focus,
+  .swiperContainer .next-slider:hover,
+  .swiperContainer .next-slider:focus {
     background-color: rgba(2, 147, 28, 0.1);
     outline: none;
   }
 }
 
 /* green bullets */
-/* span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: #064e3b;
 }
 
-.swiper-pagination-bullet {
+.swiperContainer .swiper-pagination-bullet {
   border: 1px solid #064e3b;
   background: transparent;
-} */
+}

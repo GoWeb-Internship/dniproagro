@@ -5,11 +5,11 @@ import React from 'react';
 const Layout = ({ children }) => {
   return (
     <div className="flex h-screen flex-col">
-      {/* <Header /> */}
+      <Header />
 
       <main className="flex-grow">{children}</main>
 
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
