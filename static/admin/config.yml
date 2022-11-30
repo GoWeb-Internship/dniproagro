@@ -86,7 +86,7 @@ collections:
       - {
           label: 'Title at page',
           name: 'title',
-          widget: 'string',
+          widget: 'markdown',
           required: true,
           hint: 'Введіть слоган компанії, який буде відображатися на сторінці',
         }

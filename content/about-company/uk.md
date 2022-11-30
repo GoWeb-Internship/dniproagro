@@ -21,7 +21,7 @@ bg-img:
   photo: image-20.jpg
 reporting:
   title: Звітність
-  path: https://www.figma.com/file/eBol4oibsMJjCcUEvBDxhG/DniproAgro?node-id=0%3A1&t=vu7KqWZhmPt4LzVI-0
+  path: https://drive.google.com/file/d/1Xe9oA1X7RAG-SjtxkumbL1_z3J19kK0c/view?usp=share_link
 statistics:
   - category: На ринку
     value: "10"

@@ -3,20 +3,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Tab } from '@headlessui/react';
 import { ChevronRightIcon } from '@heroicons/react/24/solid';
 import { TabsModal } from './TabsModal';
-import {
-  tabBtn,
-  tabImg,
-  tabTitleBox,
-  tabsMainWrapper,
-  panelsWrapper,
-  panel,
-  panelImg,
-  panelImgWrapper,
-  tabsList,
-  tabItem,
-  modalOpenBtn,
-  modalOpenIcon,
-} from './Tabs.module.css';
+import * as s from './Tabs.module.css';
 
 export const Tabs = ({ list, tabsPosition }) => {
   const [isModalShown, setIsModalShown] = useState(false);
@@ -28,20 +15,20 @@ export const Tabs = ({ list, tabsPosition }) => {
         vertical
         className={
           tabsPosition === 'right'
-            ? `${tabsMainWrapper} flex-row-reverse`
-            : `${tabsMainWrapper} flex-row`
+            ? `${s.tabsMainWrapper} md:flex-row-reverse`
+            : `${s.tabsMainWrapper} md:flex-row`
         }
         defaultIndex={0}
       >
-        <Tab.List as="ul" className={tabsList}>
+        <Tab.List as="ul" className={s.tabsList}>
           {list &&
-            list.map(({ item, image, alt }, index) => {
+            list?.map(({ item, image, alt }, index) => {
               return (
-                <Tab as="li" className={tabItem} key={index}>
+                <Tab as="li" className={s.tabItem} key={index}>
                   {({ selected }) => (
                     <button
                       type="button"
-                      className={selected ? tabBtn : tabBtn}
+                      className={selected ? s.tabBtn : s.tabBtn}
                       onClick={() => {
                         isModalShown && setIsModalShown(false);
                       }}
@@ -49,10 +36,10 @@ export const Tabs = ({ list, tabsPosition }) => {
                       <GatsbyImage
                         image={getImage(image)}
                         alt={alt}
-                        className={tabImg}
+                        className={s.tabImg}
                       />
 
-                      <div className={tabTitleBox}>{item}</div>
+                      <div className={s.tabTitleBox}>{item}</div>
                     </button>
                   )}
                 </Tab>
@@ -60,25 +47,33 @@ export const Tabs = ({ list, tabsPosition }) => {
             })}
         </Tab.List>
 
-        <Tab.Panels as="div" className={panelsWrapper}>
+        <Tab.Panels as="div" className={s.panelsWrapper}>
           {list &&
-            list.map((item, index) => {
+            list?.map((item, index) => {
               return (
-                <Tab.Panel as="div" key={index} className={panel}>
-                  <div className={panelImgWrapper}>
+                <Tab.Panel
+                  as="div"
+                  key={index}
+                  className={
+                    tabsPosition === 'right'
+                      ? `${s.panel} md:mr-8 xl:mr-[58px]`
+                      : `${s.panel} md:ml-8 xl:ml-[58px]`
+                  }
+                >
+                  <div className={s.panelImgWrapper}>
                     <GatsbyImage
-                      image={getImage(item.image)}
-                      alt={item.alt}
-                      className={panelImg}
+                      image={getImage(item?.image)}
+                      alt={item?.alt}
+                      className={s.panelImg}
                     />
                   </div>
 
                   <button
-                    className={modalOpenBtn}
+                    className={s.modalOpenBtn}
                     onClick={() => setIsModalShown(true)}
                   >
                     {item.item}
-                    <ChevronRightIcon className={modalOpenIcon} />
+                    <ChevronRightIcon className={s.modalOpenIcon} />
                   </button>
 
                   <TabsModal

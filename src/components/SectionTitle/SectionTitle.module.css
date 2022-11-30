@@ -1,7 +1,7 @@
 .sectionTitle {
-  @apply mb-[36px] text-big font-bold md:mb-[46px] xl:mb-[72px] xl:text-large;
+  @apply mb-9 text-big font-bold md:mb-11 xl:mb-[72px] xl:text-large;
 }
 
 .mainPageTitle {
-  @apply mb-3 text-[24px] font-bold leading-[30px] md:mb-4  xl:mb-[38px] xl:text-[48px] xl:leading-[60px];
+  @apply mb-4 w-[222px] text-[24px] font-bold leading-[30px] text-white xl:mb-[24px] xl:w-[398px] xl:text-[48px] xl:leading-[60px];
 }
