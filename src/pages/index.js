@@ -31,6 +31,7 @@ const IndexPage = () => {
 
       {/* галерея */}
       <Gallery />
+
       {/* контакти */}
       <Contacts />
     </>

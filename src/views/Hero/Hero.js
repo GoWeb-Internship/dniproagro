@@ -76,9 +76,8 @@ export const Hero = () => {
 
           <div className={s.sliderWrapper}>
             <div className={s.overlay}></div>
-            <div className={s.sliderMainWrapper}>
-              <SlideShow images={chapter?.images_list} />
-            </div>
+
+            <SlideShow images={chapter?.images_list} />
           </div>
         </Section>
       )}

@@ -7,7 +7,7 @@
 }
 
 .sliderWrapper {
-  @apply absolute !top-1/2 !left-1/2 -z-20 !-translate-y-1/2 !-translate-x-1/2 xl:w-full xl:max-w-[1440px];
+  @apply absolute !top-1/2 !left-1/2 -z-20 !-translate-y-1/2 !-translate-x-1/2  xl:w-full xl:max-w-[1440px];
 }
 
 .overlay {
@@ -18,13 +18,8 @@
   @apply relative mx-auto w-full max-w-[480px] overflow-x-hidden md:w-[768px] md:max-w-[768px] xl:mx-auto xl:w-full xl:max-w-[1440px];
 }
 
-/* .sliderMainWrapper {
-  @apply relative mx-auto h-[286px] w-[calc(100%+40px)] max-w-[480px] overflow-x-hidden md:h-[318px] md:w-[768px]
-  md:max-w-[768px] xl:h-[575px] xl:w-full xl:max-w-[1440px];
-} */
-
 .sloganDesc {
-  @apply mb-[40px] w-[276px] text-small font-normal text-white md:mb-[36px] md:w-[276px] xl:mb-[38px] xl:w-[340px] xl:text-big;
+  @apply w-[276px] text-small font-normal text-white  md:w-[276px] xl:w-[340px] xl:text-big;
 }
 
 .actionBtn {
