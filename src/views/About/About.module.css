@@ -2,7 +2,7 @@
   @apply py-5 md:py-8 xl:py-[50px];
 }
 .wrapper {
-  @apply md:flex md:justify-between;
+  @apply mb-9 md:flex md:justify-between xl:mb-16;
 }
 .imgWrapper {
   @apply relative;
@@ -26,7 +26,7 @@
   @apply p-4 pr-2 md:pr-4 xl:p-6 xl:pr-[38px];
 }
 .content {
-  @apply pr-6 md:pr-11 xl:pr-[70px] xl:text-big;
+  @apply !overflow-auto py-1 pr-6 md:pr-11 xl:pr-[70px] xl:text-big;
 }
 .trackVertical {
   @apply top-0 right-0 h-full !w-[8px] rounded-main border border-green;
