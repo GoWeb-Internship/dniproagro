@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Container } from 'components';
+import * as s from './Section.module.css';
 
 export const Section = ({
   children,
@@ -12,10 +13,11 @@ export const Section = ({
   return (
     <>
       {isContainer === 'true' && (
-        <section className={className} id={id}>
+        <section className={`${className} ${s.section}`} id={id}>
           <Container className={styleContainer}>{children}</Container>
         </section>
       )}
+
       {isContainer === 'false' && (
         <section className={className} id={id}>
           {children}

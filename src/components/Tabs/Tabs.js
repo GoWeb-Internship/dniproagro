@@ -21,7 +21,7 @@ export const Tabs = ({ list, tabsPosition }) => {
         defaultIndex={0}
       >
         <div
-          class={
+          className={
             tabsPosition === 'right'
               ? `${s.scrollboxLeft} scrollbar`
               : `${s.scrollboxRight} scrollbar`

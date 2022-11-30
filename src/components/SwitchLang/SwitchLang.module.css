@@ -19,21 +19,22 @@
 }
 
 .langList {
-  @apply absolute left-0 z-20 mt-6 box-border max-h-60  overflow-auto rounded-md text-white shadow-main ring-1 ring-black ring-opacity-5;
+  @apply absolute right-1/2 z-20 mt-5 box-content h-[230px] w-[72px] translate-x-1/2 overflow-hidden rounded-main md:right-1/2  md:translate-x-1/2 xl:right-0 xl:translate-x-0;
 }
 
 .langListItem {
-  @apply flex h-11 cursor-pointer items-center justify-center border-b-2 bg-slate-200 py-1 text-accent shadow-main transition-all hover:bg-accent hover:text-white;
+  @apply mb-[2px] flex h-[56px] cursor-pointer items-center justify-center bg-accent px-6 pt-4 pb-[20px] transition-all first:rounded-tr-main first:rounded-tl-main last:rounded-bl-main last:rounded-br-main hover:bg-white hover:text-accent xl:py-[24px];
 }
 
 .langItemLink {
-  @apply flex h-full w-full items-center  justify-center px-[38px] hover:text-white;
+  @apply flex h-full w-full items-center justify-center px-[38px] text-white;
 }
 
 .langItemLinkActive {
-  @apply underline underline-offset-4 hover:text-white  hover:decoration-white;
+  @apply relative text-white after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-10 after:translate-x-[-8px] after:bg-current after:content-[''];
 }
 
-.langItemLinkMain {
-  @apply text-gray;
+.langListItem:hover > .langItemLink,
+.langListItem:hover > .langItemLinkActive {
+  @apply !text-accent;
 }

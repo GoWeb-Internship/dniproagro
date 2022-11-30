@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { Section, Tabs, SectionTitle } from 'components';
+import * as s from './TechnicalEquipments.module.css';
 
 export const TechnicalEquipments = () => {
   const [chapter, setChapter] = useState(null);
@@ -42,8 +43,6 @@ export const TechnicalEquipments = () => {
     }
   `);
 
-  console.log(nodes);
-
   useEffect(() => {
     if (nodes?.frontmatter === null || !i18n.language) return;
 
@@ -62,7 +61,7 @@ export const TechnicalEquipments = () => {
   return (
     <>
       {chapter && (
-        <Section id={chapter?.chapter}>
+        <Section id={chapter?.chapter} className={s.technicalSection}>
           <SectionTitle title={chapter?.title} />
 
           <Tabs list={chapter?.list} tabsPosition="left" />
