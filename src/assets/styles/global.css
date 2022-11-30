@@ -9,3 +9,8 @@ body {
 .header {
   @apply fixed left-0 top-0 z-10 flex w-full justify-between bg-white;
 }
+
+img {
+  display: block;
+  max-width: 100%;
+}

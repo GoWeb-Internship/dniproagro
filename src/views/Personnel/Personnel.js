@@ -1,10 +1,11 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { SwiperSlide } from 'swiper/react';
-import { Section, SectionTitle } from 'components';
+import { Section, SectionTitle, Container } from 'components';
 import { Slider } from 'components/Slider/Slider';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import * as s from './Personnel.module.css';
 
 export const Personnel = () => {
   const { i18n } = useTranslation();
@@ -33,6 +34,7 @@ export const Personnel = () => {
                     gatsbyImageData(
                       placeholder: BLURRED
                       jpgOptions: { progressive: true }
+                      width: 416
                     )
                   }
                 }
@@ -49,37 +51,46 @@ export const Personnel = () => {
   )?.frontmatter;
 
   const workerlist = personnel?.workers_list;
+  console.log(workerlist);
 
   return (
-    <Section
-      className="relative h-[382px] overflow-hidden py-5 md:h-[473px] md:py-8 xl:h-[636px] xl:py-[50px]"
-      id={personnel?.chapter}
-      styleContainer="overflow-x-hidden"
-    >
-      <SectionTitle className="" title={personnel?.title} />
-      <Slider
-        slidesPerGroup={1}
-        className="w-[627px]  md:w-[704px] xl:w-[1028px]"
-      >
-        {nodes &&
-          workerlist?.map(({ photo, alt }, index) => {
-            return (
-              <SwiperSlide key={index} className="slide">
-                {({ isActive }) => (
-                  <GatsbyImage
-                    image={getImage(photo)}
-                    alt={alt}
-                    // className={
-                    //   isActive
-                    //     ? '  h-[295px] w-[218px] md:h-[402px] md:w-[336px] xl:h-[495px] xl:w-[400px]'
-                    //     : 'h-[266px] w-[184px] md:h-[218px] md:w-[152px] xl:h-[442px] xl:w-[294px]'
-                    // }
-                  />
-                )}
-              </SwiperSlide>
-            );
-          })}
-      </Slider>
+    <Section isContainer="false" className={s.section} id={personnel?.chapter}>
+      <Container>
+        <SectionTitle title={personnel?.title} />
+      </Container>
+
+      <div className="swiperContainer">
+        <Slider slidesPerGroup={1}>
+          {nodes &&
+            workerlist?.map(({ photo, alt, worker, position }, index) => {
+              return (
+                <SwiperSlide key={index}>
+                  {({ isActive }) => (
+                    <>
+                      <GatsbyImage
+                        image={getImage(photo)}
+                        alt={alt}
+                        // className={
+                        //   isActive
+                        //     ? '  h-[295px] w-[218px] md:h-[402px] md:w-[336px] xl:h-[495px] xl:w-[400px]'
+                        //     : 'h-[266px] w-[184px] md:h-[218px] md:w-[152px] xl:h-[442px] xl:w-[294px]'
+                        // }
+                      />
+                      <div className={isActive ? s.thumbActive : s.thumb}>
+                        <p className={isActive ? s.nameActiv : s.name}>
+                          {worker}
+                        </p>
+                        <p className={isActive ? s.positionActiv : s.position}>
+                          {position}
+                        </p>
+                      </div>
+                    </>
+                  )}
+                </SwiperSlide>
+              );
+            })}
+        </Slider>
+      </div>
     </Section>
   );
 };

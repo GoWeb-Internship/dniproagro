@@ -13,42 +13,38 @@ import 'assets/styles/slider.css';
 
 export const Slider = ({ children, className = '', slidesPerGroup }) => {
   // const swiper = useSwiper();
-
+  // md:w-[704px] xl:w-[1028px]
   return (
-    <div className="absolute left-1/2 w-[627px] -translate-x-1/2  md:w-[704px] xl:w-[1028px]">
+    <div className="mx-auto">
       <Swiper
-        // onSwiper={swiper => console.log(swiper)}
-        // onSlideChange={() => console.log('slide change')}
-        className={`${className}`}
-        navigation={{
-          nextEl: '.next-slider',
-          prevEl: '.prev-slider',
-        }}
-        // spaceBetween={16}
-        // slidesPerView={'auto'}
-        // loopedSlides={1}
+        // className="sliderSwiper"
+        className={`${className} sliderSwiper`}
         pagination={{
           dynamicBullets: true,
         }}
         loop={true}
         slidesPerGroup={slidesPerGroup}
-        // loopFillGroupWithBlank={true}
-        // slidesPerGroupAuto={true}
         breakpoints={{
-          320: {
-            slidesPerView: 3,
-            pagination: { el: '.swiper-pagination', type: 'bullets' },
-            spaceBetween: 38,
-
+          375: {
+            slidesPerView: 1.7,
             navigation: false,
+            // spaceBetween: 30,
+          },
+
+          480: {
+            slidesPerView: 2,
           },
           768: {
             slidesPerView: 3,
-            spaceBetween: 124,
+            // spaceBetween: 20,
           },
           1280: {
             slidesPerView: 3,
-            spaceBetween: 73,
+            // spaceBetween: 30,
+            navigation: {
+              nextEl: '.next-slider',
+              prevEl: '.prev-slider',
+            },
           },
         }}
         centeredSlides={true}
