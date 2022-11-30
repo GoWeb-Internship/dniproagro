@@ -1,5 +1,5 @@
 .heroSection {
-  @apply relative -z-20;
+  @apply relative -z-20 pt-0;
 }
 
 .heroContainer {
