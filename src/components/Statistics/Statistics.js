@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import CountUp from 'react-countup';
 import ProgressBar from 'react-customizable-progressbar';
 import * as s from './Statistics.module.css';
@@ -9,6 +9,20 @@ export const Statistics = ({ statistics }) => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1279 });
   const isDesktop = useMediaQuery({ minWidth: 1280 });
+  const [mobile, setMobile] = useState(false);
+  const [tablet, setTablet] = useState(false);
+  const [desktop, setDesktop] = useState(false);
+  useEffect(() => {
+    if (isMobile) {
+      setMobile(isMobile);
+    }
+    if (isTablet) {
+      setTablet(isTablet);
+    }
+    if (isDesktop) {
+      setDesktop(isDesktop);
+    }
+  }, [isMobile, isTablet, isDesktop]);
 
   const getClass = index => {
     if (index === 0) {
@@ -26,43 +40,43 @@ export const Statistics = ({ statistics }) => {
   };
 
   const getRadius = index => {
-    if (isMobile && (index === 0 || index === 3)) {
+    if (mobile && (index === 0 || index === 3)) {
       return 78;
     }
-    if (isMobile && (index === 1 || index === 2)) {
+    if (mobile && (index === 1 || index === 2)) {
       return 56;
     }
-    if (isTablet && (index === 0 || index === 2)) {
+    if (tablet && (index === 0 || index === 2)) {
       return 56;
     }
-    if (isTablet && (index === 1 || index === 3)) {
+    if (tablet && (index === 1 || index === 3)) {
       return 78;
     }
-    if (isDesktop && (index === 0 || index === 2)) {
+    if (desktop && (index === 0 || index === 2)) {
       return 100;
     }
-    if (isDesktop && (index === 1 || index === 3)) {
+    if (desktop && (index === 1 || index === 3)) {
       return 109;
     }
   };
 
   const getStrokeWidth = index => {
-    if (isMobile && (index === 0 || index === 3)) {
+    if (mobile && (index === 0 || index === 3)) {
       return 10;
     }
-    if (isMobile && (index === 1 || index === 2)) {
+    if (mobile && (index === 1 || index === 2)) {
       return 8;
     }
-    if (isTablet && (index === 0 || index === 2)) {
+    if (tablet && (index === 0 || index === 2)) {
       return 8;
     }
-    if (isTablet && (index === 1 || index === 3)) {
+    if (tablet && (index === 1 || index === 3)) {
       return 10;
     }
-    if (isDesktop && (index === 0 || index === 2)) {
+    if (desktop && (index === 0 || index === 2)) {
       return 12;
     }
-    if (isDesktop && (index === 1 || index === 3)) {
+    if (desktop && (index === 1 || index === 3)) {
       return 14;
     }
   };

@@ -1,3 +1,6 @@
+.footer {
+  @apply py-4 xl:py-6;
+}
 .wrapper {
-  @apply flex justify-center py-4 xl:py-6;
+  @apply flex justify-center;
 }
