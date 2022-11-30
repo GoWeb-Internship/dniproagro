@@ -70,15 +70,20 @@ export const Hero = () => {
             <Markdown>{chapter?.content}</Markdown>
           </h2>
 
-          <a href={`tel:${chapter?.phone}`} className={s.actionBtn}>
+          <a
+            href={`tel:${chapter?.phone}`}
+            className={s.actionBtn}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
             {t('sloganBtn')}
           </a>
 
-          <div className={s.sliderWrapper}>
-            <div className={s.overlay}></div>
+          {/* <div className={s.sliderWrapper}> */}
+          {/* <div className={s.overlay}></div> */}
 
-            <SlideShow images={chapter?.images_list} />
-          </div>
+          {/* <SlideShow images={chapter?.images_list} /> */}
+          {/* </div> */}
         </Section>
       )}
     </>

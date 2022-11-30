@@ -6,7 +6,7 @@ import {
   langListItem,
   langItemLinkActive,
   langItemLink,
-  langItemLinkMain,
+  // langItemLinkMain,
 } from './SwitchLang.module.css';
 
 const LangList = ({ active }) => {
@@ -34,10 +34,7 @@ const LangList = ({ active }) => {
           <Link
             to={originalPath}
             language={lng}
-            className={`${
-              active === lng ? langItemLinkActive : langItemLinkMain
-            }
-            }  ${langItemLink} `}
+            className={active === lng ? langItemLinkActive : langItemLink}
           >
             {normalizedLang(lng)}
           </Link>
