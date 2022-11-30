@@ -34,6 +34,7 @@ export const Personnel = () => {
                     gatsbyImageData(
                       placeholder: BLURRED
                       jpgOptions: { progressive: true }
+                      width: 416
                     )
                   }
                 }
@@ -61,39 +62,39 @@ export const Personnel = () => {
       <Container>
         <SectionTitle title={personnel?.title} />
       </Container>
-      <Slider
-        slidesPerGroup={1}
-        className="w-[627px]  md:w-[704px] xl:w-[1028px]"
-      >
-        {nodes &&
-          workerlist?.map(({ photo, alt, worker, position }, index) => {
-            return (
-              <SwiperSlide key={index} className="slide">
-                {({ isActive }) => (
-                  <>
-                    <GatsbyImage
-                      image={getImage(photo)}
-                      alt={alt}
-                      // className={
-                      //   isActive
-                      //     ? '  h-[295px] w-[218px] md:h-[402px] md:w-[336px] xl:h-[495px] xl:w-[400px]'
-                      //     : 'h-[266px] w-[184px] md:h-[218px] md:w-[152px] xl:h-[442px] xl:w-[294px]'
-                      // }
-                    />
-                    <div className={isActive ? s.thumbActive : s.thumb}>
-                      <p className={isActive ? s.nameActiv : s.name}>
-                        {worker}
-                      </p>
-                      <p className={isActive ? s.positionActiv : s.position}>
-                        {position}
-                      </p>
-                    </div>
-                  </>
-                )}
-              </SwiperSlide>
-            );
-          })}
-      </Slider>
+
+      <div className="mx-auto max-w-[627px] md:max-w-[704px] xl:max-w-[1028px]">
+        <Slider slidesPerGroup={1}>
+          {nodes &&
+            workerlist?.map(({ photo, alt, worker, position }, index) => {
+              return (
+                <SwiperSlide key={index} className="slide">
+                  {({ isActive }) => (
+                    <>
+                      <GatsbyImage
+                        image={getImage(photo)}
+                        alt={alt}
+                        // className={
+                        //   isActive
+                        //     ? '  h-[295px] w-[218px] md:h-[402px] md:w-[336px] xl:h-[495px] xl:w-[400px]'
+                        //     : 'h-[266px] w-[184px] md:h-[218px] md:w-[152px] xl:h-[442px] xl:w-[294px]'
+                        // }
+                      />
+                      <div className={isActive ? s.thumbActive : s.thumb}>
+                        <p className={isActive ? s.nameActiv : s.name}>
+                          {worker}
+                        </p>
+                        <p className={isActive ? s.positionActiv : s.position}>
+                          {position}
+                        </p>
+                      </div>
+                    </>
+                  )}
+                </SwiperSlide>
+              );
+            })}
+        </Slider>
+      </div>
     </Section>
   );
 };

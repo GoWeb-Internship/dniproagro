@@ -26,13 +26,13 @@ const IndexPage = () => {
   return (
     <>
       {/* герой */}
-      <Hero />
+      {/* <Hero /> */}
 
       {/* про компанію */}
-      <About />
+      {/* <About /> */}
 
       {/* культури */}
-      <Cultures />
+      {/* <Cultures /> */}
 
       {/* персонал */}
       <Personnel />
@@ -41,9 +41,9 @@ const IndexPage = () => {
       {/* <TechnicalEquipments /> */}
 
       {/* галерея */}
-      <Gallery />
+      {/* <Gallery /> */}
       {/* контакти */}
-      <Contacts />
+      {/* <Contacts /> */}
     </>
   );
 };

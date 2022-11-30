@@ -15,47 +15,45 @@ export const Slider = ({ children, className = '', slidesPerGroup }) => {
   // const swiper = useSwiper();
   // md:w-[704px] xl:w-[1028px]
   return (
-    <div className="mx-auto grid">
-      <div className=" -mx-[180px]  w-[calc(100%+360px)] overflow-x-hidden  ">
-        <Swiper
-          className={`${className}`}
-          pagination={{
-            dynamicBullets: true,
-          }}
-          loop={true}
-          slidesPerGroup={slidesPerGroup}
-          breakpoints={{
-            320: {
-              slidesPerView: 3,
-              spaceBetween: 36,
-              navigation: false,
+    <div className="mx-auto">
+      <Swiper
+        className={`${className}`}
+        pagination={{
+          dynamicBullets: true,
+        }}
+        loop={true}
+        slidesPerGroup={slidesPerGroup}
+        breakpoints={{
+          375: {
+            slidesPerView: 2,
+            navigation: false,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          1280: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+            navigation: {
+              nextEl: '.next-slider',
+              prevEl: '.prev-slider',
             },
-            // 768: {
-            //   slidesPerView: 3,
-            //   spaceBetween: 124,
-            // },
-            1280: {
-              navigation: {
-                nextEl: '.next-slider',
-                prevEl: '.prev-slider',
-              },
-              slidesPerView: 3,
-              spaceBetween: 73,
-            },
-          }}
-          centeredSlides={true}
-          initialSlide={1}
-          modules={[Navigation, Pagination]}
-        >
-          <button className="prev-slider">
-            <ArrowLeftIcon width={24} />
-          </button>
-          {children}
-          <button className="next-slider">
-            <ArrowRightIcon width={24} />
-          </button>
-        </Swiper>
-      </div>
+          },
+        }}
+        centeredSlides={true}
+        initialSlide={1}
+        modules={[Navigation, Pagination]}
+      >
+        <button className="prev-slider">
+          <ArrowLeftIcon width={24} />
+        </button>
+        {children}
+        <button className="next-slider">
+          <ArrowRightIcon width={24} />
+        </button>
+      </Swiper>
     </div>
   );
 };
