@@ -1,6 +1,6 @@
-.section {
+/* .section {
   @apply py-5 md:py-8 xl:py-[50px];
-}
+} */
 .wrapper {
   @apply mb-9 md:flex md:justify-between xl:mb-16;
 }
