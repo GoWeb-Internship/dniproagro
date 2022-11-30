@@ -20,46 +20,58 @@ export const Tabs = ({ list, tabsPosition }) => {
         }
         defaultIndex={0}
       >
-        <Tab.List as="ul" className={s.tabsList}>
-          {list &&
-            list?.map(({ item, image, alt }, index) => {
-              return (
-                <Tab as="li" className={s.tabItem} key={index}>
-                  {({ selected }) => (
-                    <button
-                      type="button"
-                      className={selected ? s.tabBtn : s.tabBtn}
-                      onClick={() => {
-                        isModalShown && setIsModalShown(false);
-                      }}
-                    >
-                      <GatsbyImage
-                        image={getImage(image)}
-                        alt={alt}
-                        className={s.tabImg}
-                      />
+        <div
+          class={
+            tabsPosition === 'right'
+              ? `${s.scrollboxLeft} scrollbar`
+              : `${s.scrollboxRight} scrollbar`
+          }
+        >
+          <Tab.List
+            as="ul"
+            className={
+              tabsPosition === 'right' ? s.tabsListRight : s.tabsListLeft
+            }
+          >
+            {list &&
+              list?.map(({ item, image, alt }, index) => {
+                return (
+                  <Tab as="li" className={s.tabItem} key={index}>
+                    {({ selected }) => (
+                      <button
+                        type="button"
+                        className={selected ? s.tabBtn : s.tabBtn}
+                        onClick={() => {
+                          isModalShown && setIsModalShown(false);
+                        }}
+                      >
+                        <GatsbyImage
+                          image={getImage(image)}
+                          alt={alt}
+                          className={s.tabImg}
+                        />
 
-                      <div className={s.tabTitleBox}>{item}</div>
-                    </button>
-                  )}
-                </Tab>
-              );
-            })}
-        </Tab.List>
+                        <p className={s.tabTitleBox}>{item}</p>
+                      </button>
+                    )}
+                  </Tab>
+                );
+              })}
+          </Tab.List>
+        </div>
 
-        <Tab.Panels as="div" className={s.panelsWrapper}>
+        <Tab.Panels
+          as="div"
+          className={
+            tabsPosition === 'right'
+              ? `${s.panelsWrapper} md:mr-8 xl:mr-[58px]`
+              : `${s.panelsWrapper} md:ml-8 xl:ml-[58px]`
+          }
+        >
           {list &&
             list?.map((item, index) => {
               return (
-                <Tab.Panel
-                  as="div"
-                  key={index}
-                  className={
-                    tabsPosition === 'right'
-                      ? `${s.panel} md:mr-8 xl:mr-[58px]`
-                      : `${s.panel} md:ml-8 xl:ml-[58px]`
-                  }
-                >
+                <Tab.Panel as="div" key={index} className={s.panel}>
                   <div className={s.panelImgWrapper}>
                     <GatsbyImage
                       image={getImage(item?.image)}
@@ -72,7 +84,7 @@ export const Tabs = ({ list, tabsPosition }) => {
                     className={s.modalOpenBtn}
                     onClick={() => setIsModalShown(true)}
                   >
-                    {item.item}
+                    {item?.item}
                     <ChevronRightIcon className={s.modalOpenIcon} />
                   </button>
 

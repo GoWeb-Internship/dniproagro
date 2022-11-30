@@ -87,17 +87,24 @@ collections:
           label: 'Title at page',
           name: 'title',
           widget: 'markdown',
+          editor_components: [],
+          buttons: [],
           required: true,
-          hint: 'Введіть слоган компанії, який буде відображатися на сторінці',
+          hint:
+            'Введіть слоган компанії, який буде відображатися на сторінці. Для
+            відображення його на сторінці у два рядки потрібно розбити його на
+            два рядки тут',
         }
       - {
           label: 'Content',
           name: 'content',
           widget: 'markdown',
           editor_components: [],
-          buttons: ['bold', 'code', 'link', 'bulleted-list'],
+          buttons: [],
           required: true,
-          hint: 'Введіть контент розділу "Наш слоган"',
+          hint:
+            'Введіть контент розділу "Наш слоган".Для відображення його на
+            сторінці у два рядки потрібно розбити його на два рядки тут',
         }
       - {
           label: 'Company phone number',
@@ -123,7 +130,9 @@ collections:
                 name: 'image',
                 widget: 'image',
                 required: true,
-                hint: 'Завантажте фото для галереї',
+                hint:
+                  'Завантажте фото для галереї (орієнтація landscape, мінімальні
+                  розміри: 1440x580 px)',
               },
               {
                 label: 'Alternative title of image',
@@ -253,7 +262,8 @@ collections:
                 widget: 'string',
                 required: false,
                 hint:
-                  'Введіть одиниці вимірювання для даної категорії, якщо такі є',
+                  "Введіть одиниці вимірювання для даної категорії, якщо такі є.
+                  *Необов'язкове поле",
               },
             ],
         }
@@ -309,7 +319,7 @@ collections:
                 name: 'description',
                 widget: 'markdown',
                 editor_components: [],
-                buttons: ['bold', 'code', 'link', 'bulleted-list'],
+                buttons: [],
                 required: true,
                 hint: 'Введіть опис технології посіву для даної культури',
               },
@@ -318,7 +328,9 @@ collections:
                 name: 'image',
                 widget: 'image',
                 required: true,
-                hint: 'Завантажте зображення даної культури',
+                hint:
+                  'Завантажте зображення даної культури (орієнтація landscape,
+                  мінімальні розміри: 820x450 px)',
               },
               {
                 label: 'Alt title of image',
@@ -340,7 +352,7 @@ collections:
                   ],
                 hint:
                   'Введіть цифру, що відповідає порядковому номеру розміщення
-                  культури у списку на сторінці',
+                  культури у списку на сторінці. *Необов"язкове число',
               },
             ],
         }
@@ -484,7 +496,7 @@ collections:
                 name: 'description',
                 widget: 'markdown',
                 editor_components: [],
-                buttons: ['bold', 'code', 'link', 'bulleted-list'],
+                buttons: [],
                 required: true,
                 hint: 'Введіть опис для даного технічного засобу',
               },
