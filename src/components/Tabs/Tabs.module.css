@@ -2,8 +2,12 @@
   @apply flex items-center justify-center max-md:block;
 }
 
-.tabsList {
-  @apply h-[216px] overflow-y-auto max-md:mb-[36px] xl:h-[448px] xl:w-[306px];
+.tabsListRight {
+  @apply h-[216px] overflow-y-auto pl-[30px] max-md:mb-[36px] xl:h-[448px] xl:w-[306px];
+}
+
+.tabsListLeft {
+  @apply h-[216px] overflow-y-auto pr-[30px] max-md:mb-[36px] xl:h-[448px] xl:w-[306px];
 }
 
 .tabItem {
@@ -23,7 +27,7 @@
 }
 
 .panelsWrapper {
-  @apply xl:h-[448px] xl:w-[820px];
+  @apply xl:mr-[58px] xl:h-[448px] xl:w-[820px];
 }
 
 .panel {
@@ -39,7 +43,7 @@
 }
 
 .modalOpenBtn {
-  @apply absolute bottom-0 left-0 flex w-full items-end justify-start rounded-main bg-gradient-green p-4 text-white xl:h-[100px] xl:p-6;
+  @apply absolute bottom-0 left-0 flex w-full  justify-start rounded-main bg-gradient-green p-4 text-middle text-white xl:h-[100px] xl:p-6;
 }
 
 .modal {
@@ -76,4 +80,14 @@
 
 .modalDescription {
   @apply text-small font-normal;
+}
+
+.scrollboxLeft {
+  @apply scrollbar;
+  direction: rtl;
+}
+
+.scrollboxRight {
+  @apply scrollbar;
+  direction: ltr;
 }

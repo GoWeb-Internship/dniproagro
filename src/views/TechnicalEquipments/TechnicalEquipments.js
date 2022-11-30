@@ -62,10 +62,10 @@ export const TechnicalEquipments = () => {
   return (
     <>
       {chapter && (
-        <Section id={chapter.chapter}>
-          <SectionTitle title={chapter.title} />
+        <Section id={chapter?.chapter}>
+          <SectionTitle title={chapter?.title} />
 
-          <Tabs list={chapter.list} tabsPosition="left" />
+          <Tabs list={chapter?.list} tabsPosition="left" />
         </Section>
       )}
     </>

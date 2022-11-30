@@ -11,6 +11,7 @@ import { Scroll } from 'components';
 export const About = () => {
   const { i18n } = useTranslation();
   const isDesktop = useMediaQuery({ query: '(min-width: 1280px)' });
+
   const {
     allMarkdownRemark: { nodes },
   } = useStaticQuery(graphql`
