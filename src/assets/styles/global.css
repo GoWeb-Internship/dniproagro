@@ -10,7 +10,6 @@
   ::-webkit-scrollbar-thumb {
     @apply !w-[6px] rounded-main border border-accent bg-accent; /*color trackbar*/
   }
-
   ::-webkit-scrollbar-track {
     @apply rounded-main border-[1px] border-solid border-accent;
   }

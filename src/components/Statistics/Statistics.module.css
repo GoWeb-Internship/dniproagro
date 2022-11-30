@@ -1,15 +1,33 @@
 .list {
-  @apply grid grid-cols-2 md:grid-cols-4;
+  @apply -mx-5 grid h-[423px] w-[calc(100%_+_40px)] grid-cols-2 py-[15px] md:h-[237px] md:grid-cols-4 md:gap-x-[15px] md:py-1 xl:h-[361px] xl:gap-x-[77px] xl:py-[20px];
 }
-.mainWrapper {
-  @apply relative mx-auto w-[150px];
+.listItem {
+  @apply relative;
+}
+.mainWrapperFirst {
+  @apply absolute top-0 left-0 h-[196px] w-[196px] md:h-[152px] md:w-[152px] xl:h-[240px] xl:w-[240px];
+}
+.mainWrapperSecond {
+  @apply absolute right-0 bottom-0 h-[152px] w-[152px] md:h-[196px] md:w-[196px] xl:h-[258px] xl:w-[258px];
+}
+.mainWrapperThird {
+  @apply absolute left-0 top-0 h-[152px] w-[152px] xl:h-[240px] xl:w-[240px];
+}
+.mainWrapperFourth {
+  @apply absolute right-0 bottom-0 h-[196px] w-[196px] xl:h-[258px] xl:w-[258px];
 }
 .wrapper {
   @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold text-green;
 }
 .textWrapper {
-  @apply flex justify-center;
+  @apply mb-1 flex items-baseline justify-center;
+}
+.textCount {
+  @apply text-big xl:text-large;
 }
 .unitsText {
-  @apply ml-2;
+  @apply ml-2 xl:text-big;
+}
+.category {
+  @apply text-center xl:text-[24px] xl:leading-[30px];
 }
