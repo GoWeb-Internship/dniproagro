@@ -496,7 +496,7 @@ collections:
                 name: 'description',
                 widget: 'markdown',
                 editor_components: [],
-                buttons: ['bold', 'code', 'link', 'bulleted-list'],
+                buttons: [],
                 required: true,
                 hint: 'Введіть опис для даного технічного засобу',
               },

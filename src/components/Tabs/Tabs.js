@@ -3,7 +3,6 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Tab } from '@headlessui/react';
 import { ChevronRightIcon } from '@heroicons/react/24/solid';
 import { TabsModal } from './TabsModal';
-import { Scroll } from 'components';
 import * as s from './Tabs.module.css';
 
 export const Tabs = ({ list, tabsPosition }) => {
@@ -22,7 +21,11 @@ export const Tabs = ({ list, tabsPosition }) => {
         defaultIndex={0}
       >
         <div
-          class={tabsPosition === 'right' ? s.scrollboxLeft : s.scrollboxRight}
+          class={
+            tabsPosition === 'right'
+              ? `${s.scrollboxLeft} scrollbar`
+              : `${s.scrollboxRight} scrollbar`
+          }
         >
           <Tab.List
             as="ul"
@@ -57,19 +60,18 @@ export const Tabs = ({ list, tabsPosition }) => {
           </Tab.List>
         </div>
 
-        <Tab.Panels as="div" className={s.panelsWrapper}>
+        <Tab.Panels
+          as="div"
+          className={
+            tabsPosition === 'right'
+              ? `${s.panelsWrapper} md:mr-8 xl:mr-[58px]`
+              : `${s.panelsWrapper} md:ml-8 xl:ml-[58px]`
+          }
+        >
           {list &&
             list?.map((item, index) => {
               return (
-                <Tab.Panel
-                  as="div"
-                  key={index}
-                  className={
-                    tabsPosition === 'right'
-                      ? `${s.panel} md:mr-8 xl:mr-[58px]`
-                      : `${s.panel} md:ml-8 xl:ml-[58px]`
-                  }
-                >
+                <Tab.Panel as="div" key={index} className={s.panel}>
                   <div className={s.panelImgWrapper}>
                     <GatsbyImage
                       image={getImage(item?.image)}

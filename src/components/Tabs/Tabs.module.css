@@ -1,13 +1,19 @@
 .tabsMainWrapper {
-  @apply flex items-center justify-center max-md:block;
+  @apply flex items-center justify-between max-md:block;
 }
 
 .tabsListRight {
-  @apply h-[216px] overflow-y-auto pl-[30px] max-md:mb-[36px] xl:h-[448px] xl:w-[306px];
+  @apply h-[216px] overflow-y-auto pr-[30px] max-md:mb-[36px] xl:h-[448px] xl:w-[306px];
 }
 
 .tabsListLeft {
   @apply h-[216px] overflow-y-auto pr-[30px] max-md:mb-[36px] xl:h-[448px] xl:w-[306px];
+}
+
+@media screen and (min-width: 768px) {
+  .tabsListRight {
+    @apply pl-[30px] pr-0;
+  }
 }
 
 .tabItem {
@@ -27,7 +33,7 @@
 }
 
 .panelsWrapper {
-  @apply xl:mr-[58px] xl:h-[448px] xl:w-[820px];
+  @apply xl:h-[448px] xl:w-[820px];
 }
 
 .panel {
@@ -83,11 +89,15 @@
 }
 
 .scrollboxLeft {
-  @apply scrollbar;
-  direction: rtl;
+  direction: ltr;
 }
 
 .scrollboxRight {
-  @apply scrollbar;
   direction: ltr;
+}
+
+@media screen and (min-width: 768px) {
+  .scrollboxLeft {
+    direction: rtl;
+  }
 }
