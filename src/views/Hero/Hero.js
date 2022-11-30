@@ -79,11 +79,11 @@ export const Hero = () => {
             {t('sloganBtn')}
           </a>
 
-          {/* <div className={s.sliderWrapper}> */}
-          {/* <div className={s.overlay}></div> */}
+          <div className={s.sliderWrapper}>
+            <div className={s.overlay}></div>
 
-          {/* <SlideShow images={chapter?.images_list} /> */}
-          {/* </div> */}
+            <SlideShow images={chapter?.images_list} />
+          </div>
         </Section>
       )}
     </>
