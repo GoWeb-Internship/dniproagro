@@ -9,7 +9,7 @@ backend:
     deleteMedia: '[skip ci] Delete “{{path}}” {{commit_date}}'
 
 local_backend: true
-media_folder: /static/img
+media_folder: /static/default_media
 public_folder: /img
 
 collections:
@@ -103,7 +103,7 @@ collections:
           buttons: [],
           required: true,
           hint:
-            'Введіть контент розділу "Наш слоган".Для відображення його на
+            'Введіть контент розділу "Наш слоган". Для відображення його на
             сторінці у два рядки потрібно розбити його на два рядки тут',
         }
       - {
@@ -113,10 +113,12 @@ collections:
           required: true,
           pattern:
             [
-              '^[+0-9 ]{12,19}$',
-              'Номер телефону може містити тільки цифри, знак + та пробіл',
+              '^[+0-9]{12,19}$',
+              'Номер телефону може містити тільки цифри та знак +',
             ],
-          hint: "Введіть телефон компанії для зворотнього зв'язку",
+          hint:
+            "Введіть телефон компанії для зворотнього зв'язку (у міжнародному
+            форматі)",
         }
       - {
           label: 'Images for slider',
@@ -131,8 +133,8 @@ collections:
                 widget: 'image',
                 required: true,
                 hint:
-                  'Завантажте фото для галереї (орієнтація landscape, мінімальні
-                  розміри: 1440x580 px)',
+                  'Завантажте фото для слайдера (орієнтація - "Пейзаж",
+                  мінімальні та оптимальні розміри: 1440 x 580 px)',
               },
               {
                 label: 'Alternative title of image',
@@ -183,7 +185,7 @@ collections:
           name: 'content',
           widget: 'markdown',
           editor_components: [],
-          buttons: ['bold', 'code', 'link', 'bulleted-list'],
+          buttons: ['link', 'bulleted-list'],
           required: true,
           hint: "Введіть контент розділу 'Про компанію'",
         }
@@ -199,7 +201,11 @@ collections:
                 name: 'photo',
                 widget: 'image',
                 required: true,
-                hint: 'Завантажте фото для галереї',
+                choose_url: false,
+                hint:
+                  'Завантажте фото для розділу "Про компанію" (мінімальні та
+                  оптимальні розміри: 400 х 400 px, бажана пропорція: близько
+                  1х1)',
               },
               {
                 label: 'Alt title of photo',
@@ -227,11 +233,13 @@ collections:
                 hint: 'Введіть назву для кнопки звітності',
               },
               {
-                label: 'Absolute path to report file',
-                name: 'path',
-                widget: 'string',
-                required: true,
-                hint: 'Введіть абсолютний шлях до файлу звітності',
+                label: 'File with report',
+                name: 'report_file',
+                widget: 'file',
+                choose_url: false,
+                default: '/static/default_media/report_default.pdf',
+                required: false,
+                hint: 'Завантажте файл звітності у форматі pdf',
               },
             ],
         }
@@ -319,7 +327,7 @@ collections:
                 name: 'description',
                 widget: 'markdown',
                 editor_components: [],
-                buttons: [],
+                buttons: ['link', 'bulleted-list'],
                 required: true,
                 hint: 'Введіть опис технології посіву для даної культури',
               },
@@ -328,9 +336,10 @@ collections:
                 name: 'image',
                 widget: 'image',
                 required: true,
+                choose_url: false,
                 hint:
-                  'Завантажте зображення даної культури (орієнтація landscape,
-                  мінімальні розміри: 820x450 px)',
+                  'Завантажте зображення даної культури (орієнтація "Пейзаж",
+                  мінімальні розміри: 820 x 450 px)',
               },
               {
                 label: 'Alt title of image',
@@ -352,7 +361,7 @@ collections:
                   ],
                 hint:
                   'Введіть цифру, що відповідає порядковому номеру розміщення
-                  культури у списку на сторінці. *Необов"язкове число',
+                  культури у списку на сторінці. *Необов"язкове поле',
               },
             ],
         }
@@ -422,7 +431,7 @@ collections:
                 name: 'description',
                 widget: 'markdown',
                 editor_components: [],
-                buttons: ['bold', 'code', 'link', 'bulleted-list'],
+                buttons: ['link', 'bulleted-list'],
                 required: true,
                 hint: 'Введіть інформацію про працівника',
               },
@@ -431,7 +440,11 @@ collections:
                 name: 'photo',
                 widget: 'image',
                 required: true,
-                hint: 'Завантажте фото працівника',
+                choose_url: false,
+                hint:
+                  'Завантажте фото працівника (орієнтація - "Портрет",
+                  мінімальні та оптимальні розміри - 400 х 500 px, бажана
+                  пропорція: близько 3х4)',
               },
               {
                 label: 'Alt title of photo',
@@ -505,7 +518,10 @@ collections:
                 name: 'image',
                 widget: 'image',
                 required: true,
-                hint: 'Завантажте зображення даного технічного засобу',
+                choose_url: false,
+                hint:
+                  'Завантажте зображення даного технічного засобу (орієнтація
+                  "Пейзаж", мінімальний розмір - 820 х 448px)',
               },
               {
                 label: 'Alt title of image',
@@ -577,7 +593,10 @@ collections:
                 name: 'photo',
                 widget: 'image',
                 required: true,
-                hint: 'Завантажте фото для галереї',
+                choose_url: false,
+                hint:
+                  'Завантажте фото для галереї (мінімальні розміри: 400 х 500
+                  px)',
               },
               {
                 label: 'Alt title of photo',
@@ -660,10 +679,11 @@ collections:
                 required: true,
                 pattern:
                   [
-                    '^[+0-9 ]{12,19}$',
-                    'Номер телефону може містити тільки цифри, знак + та пробіл',
+                    '^[+0-9]{12,19}$',
+                    'Номер телефону може містити тільки цифри та знак +',
                   ],
-                hint: 'Введіть номер телефону даного відділу',
+                hint:
+                  'Введіть номер телефону даного відділу у міжнародному форматі',
               },
               {
                 label: 'Telegram',

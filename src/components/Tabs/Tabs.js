@@ -3,6 +3,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Tab } from '@headlessui/react';
 import { ChevronRightIcon } from '@heroicons/react/24/solid';
 import { TabsModal } from './TabsModal';
+import { Scroll } from 'components';
 import * as s from './Tabs.module.css';
 
 export const Tabs = ({ list, tabsPosition }) => {
@@ -20,12 +21,17 @@ export const Tabs = ({ list, tabsPosition }) => {
         }
         defaultIndex={0}
       >
-        <div
+        {/* <div
           className={
             tabsPosition === 'right'
               ? `${s.scrollboxLeft} scrollbar`
               : `${s.scrollboxRight} scrollbar`
           }
+        > */}
+        <Scroll
+          heigth={400}
+          trackVerticalStyles="op-0 right-0 h-full !w-[8px] rounded-main border border-green"
+          thumbVerticalStyles="rounded-main bg-green"
         >
           <Tab.List
             as="ul"
@@ -58,7 +64,8 @@ export const Tabs = ({ list, tabsPosition }) => {
                 );
               })}
           </Tab.List>
-        </div>
+        </Scroll>
+        {/* </div> */}
 
         <Tab.Panels
           as="div"

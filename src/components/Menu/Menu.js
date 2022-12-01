@@ -35,7 +35,7 @@ export const Menu = ({ setIsMenuOpen, toggleMenu, isMenuOpen, sections }) => {
       className={`${s.menuBox}
           ${isMenuOpen ? s.menuShown : s.menuHidden}`}
     >
-      <Container>
+      <Container className="px-[30px]">
         <NavBar sections={sections} setIsMenuOpen={setIsMenuOpen} />
       </Container>
     </div>
