@@ -9,7 +9,7 @@ backend:
     deleteMedia: '[skip ci] Delete “{{path}}” {{commit_date}}'
 
 local_backend: true
-media_folder: /static/img
+media_folder: /static/default_media
 public_folder: /img
 
 collections:
@@ -201,6 +201,7 @@ collections:
                 name: 'photo',
                 widget: 'image',
                 required: true,
+                choose_url: false,
                 hint:
                   'Завантажте фото для розділу "Про компанію" (мінімальні та
                   оптимальні розміри: 400 х 400 px, бажана пропорція: близько
@@ -232,11 +233,13 @@ collections:
                 hint: 'Введіть назву для кнопки звітності',
               },
               {
-                label: 'Absolute path to report file',
-                name: 'path',
-                widget: 'string',
-                required: true,
-                hint: 'Введіть абсолютний шлях до файлу звітності',
+                label: 'File with report',
+                name: 'report_file',
+                widget: 'file',
+                choose_url: false,
+                default: '/static/default_media/report_default.pdf',
+                required: false,
+                hint: 'Завантажте файл звітності у форматі pdf',
               },
             ],
         }
@@ -333,6 +336,7 @@ collections:
                 name: 'image',
                 widget: 'image',
                 required: true,
+                choose_url: false,
                 hint:
                   'Завантажте зображення даної культури (орієнтація "Пейзаж",
                   мінімальні розміри: 820 x 450 px)',
@@ -436,6 +440,7 @@ collections:
                 name: 'photo',
                 widget: 'image',
                 required: true,
+                choose_url: false,
                 hint:
                   'Завантажте фото працівника (орієнтація - "Портрет",
                   мінімальні та оптимальні розміри - 400 х 500 px, бажана
@@ -513,6 +518,7 @@ collections:
                 name: 'image',
                 widget: 'image',
                 required: true,
+                choose_url: false,
                 hint:
                   'Завантажте зображення даного технічного засобу (орієнтація
                   "Пейзаж", мінімальний розмір - 820 х 448px)',
@@ -587,6 +593,7 @@ collections:
                 name: 'photo',
                 widget: 'image',
                 required: true,
+                choose_url: false,
                 hint:
                   'Завантажте фото для галереї (мінімальні розміри: 400 х 500
                   px)',
