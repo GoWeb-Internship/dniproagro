@@ -1,38 +1,36 @@
 import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, EffectFade, Scrollbar } from 'swiper';
-import { useStaticQuery, graphql } from 'gatsby';
+import { Swiper } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper';
 import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
-import { useSwiper } from 'swiper/react';
 
 import 'swiper/css';
 import 'swiper/css/bundle';
 import 'assets/styles/slider.css';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
 
-export const Slider = ({ children, className = '', slidesPerGroup }) => {
-  // const swiper = useSwiper();
-  // md:w-[704px] xl:w-[1028px]
+export const Slider = ({ children, className = '' }) => {
   return (
     <div className="mx-auto">
       <Swiper
-        // className="sliderSwiper"
         className={`${className} sliderSwiper`}
         pagination={{
           dynamicBullets: true,
         }}
         loop={true}
-        slidesPerGroup={slidesPerGroup}
+        slidesPerGroup={1}
         breakpoints={{
+          320: {
+            slidesPerView: 1.5,
+          },
           375: {
             slidesPerView: 1.7,
             navigation: false,
             // spaceBetween: 30,
           },
-
           480: {
             slidesPerView: 2,
+          },
+          627: {
+            slidesPerView: 3,
           },
           768: {
             slidesPerView: 3,

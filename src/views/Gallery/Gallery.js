@@ -29,6 +29,7 @@ export const Gallery = () => {
                     gatsbyImageData(
                       placeholder: BLURRED
                       jpgOptions: { progressive: true }
+                      width: 416
                     )
                   }
                 }
@@ -49,21 +50,19 @@ export const Gallery = () => {
   return (
     <Section
       isContainer="false"
-      className="relative h-[382px] overflow-hidden py-5 md:h-[473px] md:py-8 xl:h-[636px] xl:py-[50px]"
+      className="relative  overflow-x-hidden pb-[40px] md:pb-[64px] xl:pb-[100px]"
       id={gallery?.chapter}
     >
       <Container>
         <SectionTitle title={gallery?.title} />
       </Container>
+
       <div className="swiperContainer">
-        <Slider
-          slidesPerGroup={1}
-          // className="w-[627px]  md:w-[704px] xl:w-[1028px]"
-        >
+        <Slider>
           {nodes &&
             gallerylist?.map(({ photo, alt }, index) => {
               return (
-                <SwiperSlide key={index} className="slide">
+                <SwiperSlide key={index}>
                   {({ isActive }) => (
                     <GatsbyImage
                       image={getImage(photo)}
