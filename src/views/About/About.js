@@ -1,16 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { ChevronRightIcon } from '@heroicons/react/24/outline';
 import { Statistics, Section, SectionTitle } from 'components';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
-import { useMediaQuery } from 'react-responsive';
+// import { useMediaQuery } from 'react-responsive';
 import * as s from './About.module.css';
 import { Scroll } from 'components';
+import { useBreakpoint } from 'gatsby-plugin-breakpoints';
 
 export const About = () => {
   const { i18n } = useTranslation();
-  const isDesktop = useMediaQuery({ minWidth: 1280 });
+  const brakepoints = useBreakpoint();
+  const isDesktop = brakepoints.lg;
+  // const isDesktop = useMediaQuery({ minWidth: 1280 });
+  // const [desktop, setDesktop] = useState(false);
+  // useEffect(() => {
+  //   if (isDesktop) {
+  //     setDesktop(isDesktop);
+  //   }
+  // }, [isDesktop]);
   const {
     allMarkdownRemark: { nodes },
   } = useStaticQuery(graphql`

@@ -3,26 +3,90 @@ import CountUp from 'react-countup';
 import ProgressBar from 'react-customizable-progressbar';
 import * as s from './Statistics.module.css';
 import { useInView } from 'react-intersection-observer';
-import { useMediaQuery } from 'react-responsive';
+// import { useMediaQuery } from 'react-responsive';
+import { useBreakpoint } from 'gatsby-plugin-breakpoints';
 
 export const Statistics = ({ statistics }) => {
-  const isMobile = useMediaQuery({ maxWidth: 767 });
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1279 });
-  const isDesktop = useMediaQuery({ minWidth: 1280 });
-  const [mobile, setMobile] = useState(false);
-  const [tablet, setTablet] = useState(false);
-  const [desktop, setDesktop] = useState(false);
-  useEffect(() => {
-    if (isMobile) {
-      setMobile(isMobile);
-    }
-    if (isTablet) {
-      setTablet(isTablet);
-    }
-    if (isDesktop) {
-      setDesktop(isDesktop);
-    }
-  }, [isMobile, isTablet, isDesktop]);
+  const brakepoints = useBreakpoint();
+  // const isMobile = useMediaQuery({ maxWidth: 767 });
+  // const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1279 });
+  // const isDesktop = useMediaQuery({ minWidth: 1280 });
+  // const [mobile, setMobile] = useState(false);
+  // const [tablet, setTablet] = useState(false);
+  // const [desktop, setDesktop] = useState(false);
+
+  // useEffect(() => {
+  //   if (isMobile) {
+  //     setMobile(isMobile);
+  //   }
+  //   if (isTablet) {
+  //     setTablet(isTablet);
+  //   }
+  //   if (isDesktop) {
+  //     setDesktop(isDesktop);
+  //   }
+  // }, [isMobile, isTablet, isDesktop]);
+
+  // const getClass = index => {
+  //   if (index === 0) {
+  //     return s.mainWrapperFirst;
+  //   }
+  //   if (index === 1) {
+  //     return s.mainWrapperSecond;
+  //   }
+  //   if (index === 2) {
+  //     return s.mainWrapperThird;
+  //   }
+  //   if (index === 3) {
+  //     return s.mainWrapperFourth;
+  //   }
+  // };
+
+  // const getRadius = index => {
+  //   if (mobile && (index === 0 || index === 3)) {
+  //     return 78;
+  //   }
+  //   if (mobile && (index === 1 || index === 2)) {
+  //     return 56;
+  //   }
+  //   if (tablet && (index === 0 || index === 2)) {
+  //     return 56;
+  //   }
+  //   if (tablet && (index === 1 || index === 3)) {
+  //     return 78;
+  //   }
+  //   if (desktop && (index === 0 || index === 2)) {
+  //     return 100;
+  //   }
+  //   if (desktop && (index === 1 || index === 3)) {
+  //     return 109;
+  //   }
+  // };
+
+  // const getStrokeWidth = index => {
+  //   if (mobile && (index === 0 || index === 3)) {
+  //     return 10;
+  //   }
+  //   if (mobile && (index === 1 || index === 2)) {
+  //     return 8;
+  //   }
+  //   if (tablet && (index === 0 || index === 2)) {
+  //     return 8;
+  //   }
+  //   if (tablet && (index === 1 || index === 3)) {
+  //     return 10;
+  //   }
+  //   if (desktop && (index === 0 || index === 2)) {
+  //     return 12;
+  //   }
+  //   if (desktop && (index === 1 || index === 3)) {
+  //     return 14;
+  //   }
+  // };
+
+  const isMobile = brakepoints.sm;
+  const isTablet = brakepoints.md && brakepoints.mdt;
+  const isDesktop = brakepoints.lg;
 
   const getClass = index => {
     if (index === 0) {
@@ -40,43 +104,43 @@ export const Statistics = ({ statistics }) => {
   };
 
   const getRadius = index => {
-    if (mobile && (index === 0 || index === 3)) {
+    if (isMobile && (index === 0 || index === 3)) {
       return 78;
     }
-    if (mobile && (index === 1 || index === 2)) {
+    if (isMobile && (index === 1 || index === 2)) {
       return 56;
     }
-    if (tablet && (index === 0 || index === 2)) {
+    if (isTablet && (index === 0 || index === 2)) {
       return 56;
     }
-    if (tablet && (index === 1 || index === 3)) {
+    if (isTablet && (index === 1 || index === 3)) {
       return 78;
     }
-    if (desktop && (index === 0 || index === 2)) {
+    if (isDesktop && (index === 0 || index === 2)) {
       return 100;
     }
-    if (desktop && (index === 1 || index === 3)) {
+    if (isDesktop && (index === 1 || index === 3)) {
       return 109;
     }
   };
 
   const getStrokeWidth = index => {
-    if (mobile && (index === 0 || index === 3)) {
+    if (isMobile && (index === 0 || index === 3)) {
       return 10;
     }
-    if (mobile && (index === 1 || index === 2)) {
+    if (isMobile && (index === 1 || index === 2)) {
       return 8;
     }
-    if (tablet && (index === 0 || index === 2)) {
+    if (isTablet && (index === 0 || index === 2)) {
       return 8;
     }
-    if (tablet && (index === 1 || index === 3)) {
+    if (isTablet && (index === 1 || index === 3)) {
       return 10;
     }
-    if (desktop && (index === 0 || index === 2)) {
+    if (isDesktop && (index === 0 || index === 2)) {
       return 12;
     }
-    if (desktop && (index === 1 || index === 3)) {
+    if (isDesktop && (index === 1 || index === 3)) {
       return 14;
     }
   };
