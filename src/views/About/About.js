@@ -13,6 +13,7 @@ export const About = () => {
   const { i18n } = useTranslation();
   const brakepoints = useBreakpoint();
   const isDesktop = brakepoints.lg;
+
   const {
     allMarkdownRemark: { nodes },
   } = useStaticQuery(graphql`
