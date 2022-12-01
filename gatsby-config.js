@@ -49,8 +49,8 @@ module.exports = {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'images',
-        path: `${__dirname}/static/img`,
+        name: 'default_files',
+        path: `${__dirname}/static/default_media`,
       },
     },
     {

@@ -27,7 +27,7 @@ export const About = () => {
             content
             reporting {
               title
-              path
+              report_file
             }
             statistics {
               category
@@ -58,7 +58,7 @@ export const About = () => {
   const title = aboutCompany?.title;
   const description = aboutCompany?.content;
   const buttonText = aboutCompany?.reporting?.title;
-  const buttonLink = aboutCompany?.reporting?.path;
+  const buttonLink = aboutCompany?.reporting?.report_file;
   const statistics = aboutCompany?.statistics;
   const bgImg = aboutCompany?.bg_img;
   const chapter = aboutCompany?.chapter;
