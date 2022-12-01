@@ -1,17 +1,25 @@
 .contactsList {
-  @apply my-9 grid grid-cols-2 gap-x-[18px] gap-y-9 xl:grid-cols-3;
+  @apply mt-9 mb-16 grid grid-cols-2 gap-x-[18px] gap-y-9 md:gap-y-[46px] xl:mt-[38px] xl:mb-[162px] xl:grid-cols-3;
 }
 .messengerList {
   @apply mb-2 flex gap-4;
 }
 .messengerListItem {
-  @apply cursor-pointer;
+  @apply cursor-pointer rounded-full border border-transparent p-[6px] transition-all;
+}
+.messengerListItem:hover,
+.messengerListItem:focus {
+  @apply border border-white;
 }
 .link {
-  @apply cursor-pointer font-light;
+  @apply cursor-pointer font-light transition-all;
+}
+.link:hover,
+.link:focus {
+  @apply text-yellow;
 }
 .text {
-  @apply pt-2 text-[14px];
+  @apply mt-2 text-[14px];
 }
 .icon {
   @apply h-3 w-3;
