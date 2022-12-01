@@ -17,7 +17,7 @@ content: Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed vel
   et at aenean sed vel mauris massa velit. Placerat et at aenean sed vel mauris
   massa velit.
 bg-img:
-  alt: Комбайн висипає зерно на машину
+  alt: Комбайн висипає зерно
   photo: image-20.jpg
 reporting:
   title: Звітність
