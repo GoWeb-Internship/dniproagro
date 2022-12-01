@@ -3,12 +3,25 @@
  *
  */
 
+// const path = require('path');
+
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     siteUrl: `https://www.yourdomain.tld`,
     //TODO розмістити метадані сайту та кастомний хук useSiteMetadata
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-google-tagmanager',
+      options: {
+        id: process.env.GOOGLE_TAGMANAGER_ID,
+        includeInDevelopment: false,
+      },
+    },
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: `gatsby-source-filesystem`,
@@ -99,7 +112,3 @@ module.exports = {
     },
   ],
 };
-
-require('dotenv').config({
-  path: `.env`,
-});
