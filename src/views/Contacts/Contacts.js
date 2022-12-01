@@ -60,9 +60,7 @@ export const Contacts = () => {
             <Map />
           </div>
         </div>
-        <div className={s.formWrapper}>
-          <Form />
-        </div>
+        <Form />
       </div>
     </Section>
   );

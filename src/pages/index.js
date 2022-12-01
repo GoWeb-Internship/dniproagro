@@ -15,22 +15,22 @@ const IndexPage = () => {
   return (
     <>
       {/* герой */}
-      <Hero />
+      {/* <Hero /> */}
 
       {/* про компанію */}
       <About />
 
       {/* культури */}
-      <Cultures />
+      {/* <Cultures /> */}
 
       {/* персонал */}
-      <Personnel />
+      {/* <Personnel /> */}
 
       {/* техзасоби */}
-      <TechnicalEquipments />
+      {/* <TechnicalEquipments /> */}
 
       {/* галерея */}
-      <Gallery />
+      {/* <Gallery /> */}
 
       {/* контакти */}
       <Contacts />
