@@ -12,7 +12,7 @@ export const Scroll = ({
     <Scrollbars
       style={{ height: heigth }}
       universal
-      thumbSize={28}
+      // thumbSize={28}
       hideTracksWhenNotNeeded={true}
       renderTrackVertical={props => (
         <div {...props} className={trackVerticalStyles} />

@@ -3,17 +3,18 @@
 }
 
 .navItem {
-  @apply w-max cursor-pointer last:m-0 max-xl:mb-2 max-xl:w-full max-xl:rounded-main max-xl:p-[10px] xl:mr-4;
+  @apply w-max cursor-pointer last:m-0 max-xl:mb-2 max-xl:w-full max-xl:rounded-main xl:mr-4;
 }
 
-.navItem:hover .baseLink {
-  @apply block transition-all duration-500 ease-in-expo  after:absolute after:bottom-[-6px] after:left-0 after:h-[2px] after:w-full after:bg-yellow after:transition-all after:duration-300 after:content-[''] xl:after:bg-accent;
+.navItem:hover .baseLink,
+.baseLink:focus {
+  @apply block transition-all duration-500 ease-in-expo  after:absolute  after:left-0 after:bottom-[10px] after:h-[2px] after:w-full after:bg-yellow after:transition-all after:duration-300 after:content-[''] max-xl:after:bottom-[4px] xl:after:bg-accent;
 }
 
 .baseLink {
-  @apply relative block w-max cursor-pointer transition-all duration-300 ease-in-expo after:absolute after:bottom-[-6px] after:left-1/2 after:h-[2px] after:w-0 after:bg-yellow after:content-[''] max-xl:text-white xl:text-yellow xl:after:bg-accent;
+  @apply relative block w-max cursor-pointer transition-all duration-300 ease-in-expo after:absolute after:bottom-[10px] after:left-1/2 after:h-[2px] after:w-0 after:bg-yellow after:content-[''] max-xl:py-[10px] max-xl:text-white max-xl:after:bottom-[4px] xl:py-4 xl:text-yellow xl:after:bg-accent;
 }
 
 .activeLink {
-  @apply relative cursor-pointer transition-all duration-300 after:absolute after:bottom-[-6px] after:left-0 after:h-[2px] after:w-full after:scale-100 after:bg-yellow after:content-[''] xl:after:bg-accent;
+  @apply relative cursor-pointer transition-all duration-300 after:absolute after:bottom-[4px] after:left-0 after:h-[2px] after:w-full after:scale-100 after:bg-yellow after:content-[''] max-xl:py-[10px] xl:after:bottom-[10px] xl:after:bg-accent;
 }

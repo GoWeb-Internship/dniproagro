@@ -1,5 +1,5 @@
 .menuBox {
-  @apply fixed left-0 top-0 z-20 h-screen w-screen bg-accent pt-20 transition duration-300 xl:hidden;
+  @apply fixed left-0 top-0 z-20 h-screen w-screen bg-accent pt-[70px] transition duration-300 xl:hidden;
 }
 
 .menuShown {

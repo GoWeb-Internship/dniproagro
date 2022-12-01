@@ -64,7 +64,7 @@ export const About = () => {
   const chapter = aboutCompany?.chapter;
 
   return (
-    <Section className={s.section} id={chapter}>
+    <Section id={chapter}>
       <SectionTitle title={title} />
       <div className={s.wrapper}>
         <div className={s.imgWrapper}>
