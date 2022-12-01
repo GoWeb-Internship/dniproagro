@@ -22,6 +22,7 @@ bg-img:
 reporting:
   title: Звітність
   path: https://drive.google.com/file/d/1Xe9oA1X7RAG-SjtxkumbL1_z3J19kK0c/view?usp=share_link
+  report_file: report_default.pdf
 statistics:
   - category: На ринку
     value: "10"
