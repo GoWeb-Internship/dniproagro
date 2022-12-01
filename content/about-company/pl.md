@@ -18,6 +18,6 @@ bg-img:
   photo: image-20.jpg
   alt: połączyć
 reporting:
-  report_file: /static/default_media/report_default.pdf
+  report_file: report_default.pdf
   title: Raportowanie
 ---
