@@ -19,7 +19,7 @@ export const Section = ({
       )}
 
       {isContainer === 'false' && (
-        <section className={className} id={id}>
+        <section className={`${className} ${s.section}`} id={id}>
           {children}
         </section>
       )}

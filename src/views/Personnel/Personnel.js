@@ -51,7 +51,6 @@ export const Personnel = () => {
   )?.frontmatter;
 
   const workerlist = personnel?.workers_list;
-  console.log(workerlist);
 
   return (
     <Section isContainer="false" className={s.section} id={personnel?.chapter}>
@@ -60,7 +59,7 @@ export const Personnel = () => {
       </Container>
 
       <div className="swiperContainer">
-        <Slider slidesPerGroup={1}>
+        <Slider>
           {nodes &&
             workerlist?.map(({ photo, alt, worker, position }, index) => {
               return (

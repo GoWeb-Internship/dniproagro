@@ -10,6 +10,10 @@ const myCustomQueries = {
   lg: '(min-width: 1280px)',
 };
 
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     siteUrl: `https://www.yourdomain.tld`,
@@ -20,6 +24,13 @@ module.exports = {
       resolve: 'gatsby-plugin-breakpoints',
       options: {
         queries: myCustomQueries,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-google-tagmanager',
+      options: {
+        id: process.env.GOOGLE_TAGMANAGER_ID,
+        includeInDevelopment: false,
       },
     },
     {
@@ -118,7 +129,3 @@ module.exports = {
     },
   ],
 };
-
-require('dotenv').config({
-  path: `.env`,
-});
