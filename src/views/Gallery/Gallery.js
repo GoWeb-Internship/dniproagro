@@ -50,7 +50,7 @@ export const Gallery = () => {
   return (
     <Section
       isContainer="false"
-      className="relative  overflow-x-hidden py-5 md:py-8  xl:py-[50px]"
+      className="relative  overflow-x-hidden pb-[40px] md:pb-[64px] xl:pb-[100px]"
       id={gallery?.chapter}
     >
       <Container>
@@ -62,7 +62,7 @@ export const Gallery = () => {
           {nodes &&
             gallerylist?.map(({ photo, alt }, index) => {
               return (
-                <SwiperSlide key={index} className="slide">
+                <SwiperSlide key={index}>
                   {({ isActive }) => (
                     <GatsbyImage
                       image={getImage(photo)}

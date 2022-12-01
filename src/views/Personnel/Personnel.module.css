@@ -2,7 +2,7 @@
   @apply mx-auto max-w-[627px] md:max-w-[704px] xl:max-w-[1200px];
 } */
 .section {
-  @apply relative  overflow-x-hidden py-5 md:py-8  xl:py-[50px];
+  @apply relative  overflow-x-hidden;
 }
 .thumb {
   @apply absolute bottom-0 hidden w-full rounded-main bg-gradient-green font-normal text-white xl:block  xl:p-4;

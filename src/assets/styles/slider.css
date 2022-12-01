@@ -104,7 +104,6 @@
   .swiperContainer .next-slider:hover,
   .swiperContainer .next-slider:focus {
     background-color: rgba(2, 147, 28, 0.1);
-    outline: none;
   }
 }
 
