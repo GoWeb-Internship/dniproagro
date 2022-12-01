@@ -4,19 +4,27 @@
 .messengerList {
   @apply mb-2 flex gap-4;
 }
-.messengerListItem {
-  @apply cursor-pointer rounded-full border border-transparent p-[6px] transition-all;
-}
-.messengerListItem:hover,
-.messengerListItem:focus {
-  @apply border border-white;
-}
 .link {
   @apply cursor-pointer font-light transition-all;
 }
 .link:hover,
 .link:focus {
   @apply text-yellow;
+}
+.imgWpapper {
+  @apply cursor-pointer rounded-full border border-transparent p-[6px] transition-all;
+}
+.imgWpapper:hover,
+.imgWpapper:focus {
+  @apply border border-white;
+}
+.messengerLink:hover,
+.messengerLink:focus {
+  @apply outline-0;
+}
+.messengerLink:hover .imgWpapper,
+.messengerLink:focus .imgWpapper {
+  @apply border border-white;
 }
 .text {
   @apply mt-2 text-[14px];
