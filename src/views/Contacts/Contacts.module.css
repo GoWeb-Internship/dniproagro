@@ -1,17 +1,21 @@
 .section {
-  @apply bg-green py-9 text-white;
+  @apply bg-green pt-9 pb-10 text-white md:pb-9 xl:py-16;
 }
 .section h2 {
-  @apply mb-4;
+  @apply mb-4 after:hidden md:mb-2 xl:mb-4;
 }
 .wrapper {
   @apply md:grid md:grid-cols-2 md:gap-[32px] xl:gap-[125px];
 }
 .link {
-  @apply cursor-pointer font-light lowercase;
+  @apply cursor-pointer font-light lowercase transition-all;
+}
+.link:hover,
+.link:focus {
+  @apply text-yellow;
 }
 .mapWrapper {
-  @apply -mx-5 my-9 h-[164px] w-[calc(100%_+_40px)] md:mx-0 md:h-[98px] md:w-full xl:h-[232px];
+  @apply -mx-5 mt-9 h-[164px] w-[calc(100%_+_40px)] md:mx-0 md:h-[168px] md:w-full xl:mt-[38px] xl:h-[232px];
 }
 .formWrapper {
   @apply justify-self-end;
