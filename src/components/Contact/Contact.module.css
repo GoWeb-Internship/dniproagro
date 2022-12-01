@@ -14,17 +14,13 @@
 .imgWpapper {
   @apply cursor-pointer rounded-full border border-transparent p-[6px] transition-all;
 }
-.imgWpapper:hover,
-.imgWpapper:focus {
-  @apply border border-white;
-}
 .messengerLink:hover,
 .messengerLink:focus {
   @apply outline-0;
 }
 .messengerLink:hover .imgWpapper,
 .messengerLink:focus .imgWpapper {
-  @apply border border-white;
+  @apply border border-white outline-0;
 }
 .text {
   @apply mt-2 text-[14px];
