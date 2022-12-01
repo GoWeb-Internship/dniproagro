@@ -1,19 +1,19 @@
 .swiper.heroSwiper {
   width: 100vw !important;
   max-width: 480px !important;
-  height: 286px !important;
+  height: 284px !important;
 }
 
 .swiper.heroSwiper .swiper-wrapper {
   width: 100vw !important;
   max-width: 480px !important;
-  height: 286px !important;
+  height: 284px !important;
 }
 
 .swiper.heroSwiper .swiper-slide {
   width: 100vw !important;
   max-width: 480px !important;
-  height: 286px !important;
+  height: 284px !important;
 }
 
 .swiper.heroSwiper img {
@@ -26,7 +26,7 @@
 }
 
 .swiper.heroSwiper .gatsby-image-wrapper {
-  height: 286px !important;
+  height: 284px !important;
   width: 100vw;
   max-width: 480px;
   overflow: hidden !important;

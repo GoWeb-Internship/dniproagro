@@ -70,7 +70,12 @@ export const Hero = () => {
             <Markdown>{chapter?.content}</Markdown>
           </h2>
 
-          <a href={`tel:${chapter?.phone}`} className={s.actionBtn}>
+          <a
+            href={`tel:${chapter?.phone}`}
+            className={s.actionBtn}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
             {t('sloganBtn')}
           </a>
 

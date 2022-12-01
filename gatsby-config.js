@@ -3,12 +3,25 @@
  *
  */
 
+const myCustomQueries = {
+  sm: '(max-width: 767.98px)',
+  md: '(min-width: 768px)',
+  mdt: '(max-width: 1279.99px)',
+  lg: '(min-width: 1280px)',
+};
+
 module.exports = {
   siteMetadata: {
     siteUrl: `https://www.yourdomain.tld`,
     //TODO розмістити метадані сайту та кастомний хук useSiteMetadata
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-breakpoints',
+      options: {
+        queries: myCustomQueries,
+      },
+    },
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: `gatsby-source-filesystem`,

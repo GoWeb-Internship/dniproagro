@@ -4,7 +4,7 @@ import * as s from './Footer.module.css';
 
 export const Footer = () => {
   return (
-    <footer>
+    <footer className={s.footer}>
       <Container className={s.wrapper}>
         <Logo />
       </Container>
