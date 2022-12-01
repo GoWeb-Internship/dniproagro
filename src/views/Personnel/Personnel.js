@@ -6,6 +6,7 @@ import { Slider } from 'components/Slider/Slider';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import * as s from './Personnel.module.css';
+import Markdown from 'markdown-to-jsx';
 
 export const Personnel = () => {
   const { i18n } = useTranslation();
@@ -61,33 +62,65 @@ export const Personnel = () => {
       <div className="swiperContainer">
         <Slider>
           {nodes &&
-            workerlist?.map(({ photo, alt, worker, position }, index) => {
-              return (
-                <SwiperSlide key={index}>
-                  {({ isActive }) => (
-                    <>
-                      <GatsbyImage
-                        image={getImage(photo)}
-                        alt={alt}
-                        // className={
-                        //   isActive
-                        //     ? '  h-[295px] w-[218px] md:h-[402px] md:w-[336px] xl:h-[495px] xl:w-[400px]'
-                        //     : 'h-[266px] w-[184px] md:h-[218px] md:w-[152px] xl:h-[442px] xl:w-[294px]'
-                        // }
-                      />
-                      <div className={isActive ? s.thumbActive : s.thumb}>
-                        <p className={isActive ? s.nameActiv : s.name}>
-                          {worker}
-                        </p>
-                        <p className={isActive ? s.positionActiv : s.position}>
-                          {position}
-                        </p>
-                      </div>
-                    </>
-                  )}
-                </SwiperSlide>
-              );
-            })}
+            workerlist?.map(
+              (
+                {
+                  photo,
+                  alt,
+                  worker,
+                  position,
+                  length_of_service,
+                  description,
+                },
+                index,
+              ) => {
+                return (
+                  <SwiperSlide key={index}>
+                    {({ isActive }) => (
+                      <>
+                        <GatsbyImage
+                          image={getImage(photo)}
+                          alt={alt}
+                          // className={
+                          //   isActive
+                          //     ? '  h-[295px] w-[218px] md:h-[402px] md:w-[336px] xl:h-[495px] xl:w-[400px]'
+                          //     : 'h-[266px] w-[184px] md:h-[218px] md:w-[152px] xl:h-[442px] xl:w-[294px]'
+                          // }
+                        />
+                        <div className={isActive ? s.thumbActive : s.thumb}>
+                          <p className={isActive ? s.nameActiv : s.name}>
+                            {worker}
+                          </p>
+                          <p
+                            className={isActive ? s.positionActiv : s.position}
+                          >
+                            {position}
+                          </p>
+                        </div>
+                        {isActive && (
+                          <div className="absolute top-0 flex h-full w-full flex-col justify-between rounded-main bg-white p-4 shadow-modal md:p-5  ">
+                            <div>
+                              <p className="mb-2 text-xs font-bold leading-5 md:text-small xl:mb-1 xl:text-big">
+                                {worker}
+                              </p>
+                              <p className="mb-4 text-xs font-bold leading-5 md:text-small xl:mb-[14px] ">
+                                {position}
+                              </p>
+                              <div className="text-xs leading-5 md:text-small ">
+                                <Markdown>{description}</Markdown>
+                              </div>
+                            </div>
+                            <p className="text-xs leading-5 md:text-small">
+                              {length_of_service}
+                            </p>
+                          </div>
+                        )}
+                      </>
+                    )}
+                  </SwiperSlide>
+                );
+              },
+            )}
         </Slider>
       </div>
     </Section>

@@ -33,7 +33,7 @@ export const Slider = ({ children, className = '' }) => {
             slidesPerView: 3,
           },
           768: {
-            slidesPerView: 3,
+            slidesPerView: 2.23,
             // spaceBetween: 20,
           },
           1280: {
