@@ -7,11 +7,13 @@ import { useTranslation } from 'gatsby-plugin-react-i18next';
 import * as s from './About.module.css';
 import { Scroll } from 'components';
 import { useBreakpoint } from 'gatsby-plugin-breakpoints';
+import Markdown from 'markdown-to-jsx';
 
 export const About = () => {
   const { i18n } = useTranslation();
   const brakepoints = useBreakpoint();
   const isDesktop = brakepoints.lg;
+
   const {
     allMarkdownRemark: { nodes },
   } = useStaticQuery(graphql`
@@ -27,7 +29,9 @@ export const About = () => {
             content
             reporting {
               title
-              report_file
+              report_file {
+                publicURL
+              }
             }
             statistics {
               category
@@ -58,7 +62,7 @@ export const About = () => {
   const title = aboutCompany?.title;
   const description = aboutCompany?.content;
   const buttonText = aboutCompany?.reporting?.title;
-  const buttonLink = aboutCompany?.reporting?.report_file;
+  const buttonLink = aboutCompany?.reporting?.report_file?.publicURL;
   const statistics = aboutCompany?.statistics;
   const bgImg = aboutCompany?.bg_img;
   const chapter = aboutCompany?.chapter;
@@ -73,19 +77,16 @@ export const About = () => {
             image={getImage(bgImg?.photo)}
             alt={bgImg?.alt}
           />
-          <button type="button" className={s.button}>
-            <a
-              className={s.link}
-              href={buttonLink}
-              target="_blank"
-              rel="noopener noreferrer nofollow"
-            >
-              {buttonText}
-              <ChevronRightIcon className={s.icon} />
-            </a>
-          </button>
+          <a
+            className={s.link}
+            href={buttonLink}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
+            {buttonText}
+            <ChevronRightIcon className={s.icon} />
+          </a>
         </div>
-
         <div className={s.contentWrapper}>
           <div className={s.contentInnerWrapper}>
             <Scroll
@@ -94,7 +95,7 @@ export const About = () => {
               thumbVerticalStyles={s.thumbVertical}
               renderViewStyles={s.content}
             >
-              <p>{description}</p>
+              <Markdown>{description}</Markdown>
             </Scroll>
           </div>
         </div>

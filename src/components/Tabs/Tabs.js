@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Tab } from '@headlessui/react';
+import { useBreakpoint } from 'gatsby-plugin-breakpoints';
 import { ChevronRightIcon } from '@heroicons/react/24/solid';
 import { TabsModal } from './TabsModal';
 import { Scroll } from 'components';
@@ -8,6 +9,8 @@ import * as s from './Tabs.module.css';
 
 export const Tabs = ({ list, tabsPosition }) => {
   const [isModalShown, setIsModalShown] = useState(false);
+  const breakpoints = useBreakpoint();
+  const isDesktop = breakpoints.lg;
 
   return (
     <>
@@ -21,23 +24,18 @@ export const Tabs = ({ list, tabsPosition }) => {
         }
         defaultIndex={0}
       >
-        {/* <div
+        <Tab.List
+          as="ul"
           className={
-            tabsPosition === 'right'
-              ? `${s.scrollboxLeft} scrollbar`
-              : `${s.scrollboxRight} scrollbar`
+            tabsPosition === 'right' ? s.tabsListRight : s.tabsListLeft
           }
-        > */}
-        <Scroll
-          heigth={400}
-          trackVerticalStyles="op-0 right-0 h-full !w-[8px] rounded-main border border-green"
-          thumbVerticalStyles="rounded-main bg-green"
         >
-          <Tab.List
-            as="ul"
-            className={
-              tabsPosition === 'right' ? s.tabsListRight : s.tabsListLeft
+          <Scroll
+            heigth={isDesktop ? 420 : 216}
+            trackVerticalStyles={
+              tabsPosition === 'right' ? s.rightTabsScroll : s.leftTabsScroll
             }
+            thumbVerticalStyles="rounded-main bg-green"
           >
             {list &&
               list?.map(({ item, image, alt }, index) => {
@@ -63,16 +61,15 @@ export const Tabs = ({ list, tabsPosition }) => {
                   </Tab>
                 );
               })}
-          </Tab.List>
-        </Scroll>
-        {/* </div> */}
+          </Scroll>
+        </Tab.List>
 
         <Tab.Panels
           as="div"
           className={
             tabsPosition === 'right'
-              ? `${s.panelsWrapper} md:mr-8 xl:mr-[58px]`
-              : `${s.panelsWrapper} md:ml-8 xl:ml-[58px]`
+              ? `${s.panelsWrapper} md:mr-[20px]`
+              : `${s.panelsWrapper} md:ml-[20px]`
           }
         >
           {list &&
