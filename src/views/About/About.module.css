@@ -7,11 +7,8 @@
 .img {
   @apply h-[252px] w-full rounded-main md:w-[336px] xl:h-[396px] xl:w-[400px];
 }
-.button {
-  @apply absolute bottom-0 left-0 w-full rounded-main bg-gradient-green p-4 pt-[34px] text-white md:pt-4 md:text-big xl:p-6 xl:pt-6;
-}
 .link {
-  @apply flex items-center;
+  @apply absolute bottom-0 left-0 flex w-full items-center rounded-main bg-gradient-green p-4 pt-[34px] text-white md:pt-4 md:text-big xl:p-6 xl:pt-6;
 }
 .icon {
   @apply ml-4 w-6 stroke-2;
@@ -23,7 +20,7 @@
   @apply p-4 pr-2 md:pr-4 xl:p-6 xl:pr-[38px];
 }
 .content {
-  @apply !overflow-auto py-1 pr-6 md:pr-11 xl:pr-[70px] xl:text-big;
+  @apply !overflow-auto pb-4 pr-6 md:pr-11 xl:pr-[70px] xl:text-big;
 }
 .trackVertical {
   @apply top-0 right-0 h-full !w-[8px] rounded-main border border-green;

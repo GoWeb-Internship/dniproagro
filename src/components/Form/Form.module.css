@@ -2,19 +2,19 @@
   @apply w-full;
 }
 .title {
-  @apply mb-2 text-big font-bold;
+  @apply mb-2 mt-9 text-big font-bold;
 }
 .subTitle {
   @apply mb-9;
 }
 .wrapperInputs {
-  @apply flex flex-wrap justify-between;
+  @apply mb-[62px] grid grid-cols-1 gap-y-16;
 }
 .inputWrapper {
-  @apply relative mb-16 w-full;
+  @apply relative w-full;
 }
 .input {
-  @apply !w-full !rounded-main !border-2 !border-white !bg-transparent p-4 text-white;
+  @apply !w-full !rounded-main !border-2 !border-white !bg-transparent p-[14px] text-white;
 }
 .inputRed {
   @apply !w-full !rounded-main !border-2 !border-red !bg-transparent p-4 text-white;
@@ -26,10 +26,10 @@
   @apply !h-[52px] !w-full !rounded-main !border-2 !border-red !bg-transparent text-white;
 }
 .textarea {
-  @apply h-[112px] w-full resize-none rounded-main border-2 border-white bg-transparent  p-4 text-white;
+  @apply h-[112px] w-full resize-none rounded-main border-2 border-white  bg-transparent p-4 text-white;
 }
 .textareaRed {
-  @apply h-[112px] w-full resize-none rounded-main border-2 border-red bg-transparent  p-4 text-white;
+  @apply h-[112px] w-full resize-none rounded-main border-2 border-red  bg-transparent p-4 text-white;
 }
 .input::placeholder,
 .phoneInput::placeholder,
@@ -45,10 +45,10 @@
 .phoneInputRed:focus,
 .textarea:focus,
 .textareaRed:focus {
-  @apply !border-[3px] outline-0;
+  @apply !border-yellow text-yellow outline-0;
 }
 .errorMsg {
-  @apply absolute mb-9 w-full text-[12px] font-medium text-red;
+  @apply absolute w-full text-[12px] font-medium text-red;
 }
 .errorMsgTextarea {
   @apply absolute w-full text-[12px] font-medium text-red;

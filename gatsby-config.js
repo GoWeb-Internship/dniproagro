@@ -6,7 +6,7 @@
 const myCustomQueries = {
   sm: '(max-width: 767.98px)',
   md: '(min-width: 768px)',
-  mdt: '(max-width: 1279.99px)',
+  mdt: '(max-width: 1279.98px)',
   lg: '(min-width: 1280px)',
 };
 
@@ -50,7 +50,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: `${__dirname}/static/img`,
+        path: `${__dirname}/static/default_media`,
       },
     },
     {
