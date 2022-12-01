@@ -66,11 +66,16 @@ export const Hero = () => {
             level="h1"
           />
 
-          <p className={s.sloganDesc}>
+          <h2 className={s.sloganDesc}>
             <Markdown>{chapter?.content}</Markdown>
-          </p>
+          </h2>
 
-          <a href={`tel:${chapter?.phone}`} className={s.actionBtn}>
+          <a
+            href={`tel:${chapter?.phone}`}
+            className={s.actionBtn}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+          >
             {t('sloganBtn')}
           </a>
 

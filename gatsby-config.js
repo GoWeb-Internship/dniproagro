@@ -3,6 +3,13 @@
  *
  */
 
+const myCustomQueries = {
+  sm: '(max-width: 767.98px)',
+  md: '(min-width: 768px)',
+  mdt: '(max-width: 1279.99px)',
+  lg: '(min-width: 1280px)',
+};
+
 // const path = require('path');
 
 require('dotenv').config({
@@ -15,6 +22,12 @@ module.exports = {
     //TODO розмістити метадані сайту та кастомний хук useSiteMetadata
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-breakpoints',
+      options: {
+        queries: myCustomQueries,
+      },
+    },
     {
       resolve: 'gatsby-plugin-google-tagmanager',
       options: {

@@ -26,6 +26,6 @@ workers_list:
     position: director
     length_of_service: 20 years
     description: description about Mykola
-    photo: honngt-t45ftjj3bl6rmmrybzls2uei5iowd6qa.jpg
+    photo: image-28.jpg
     alt: Mykola
 ---

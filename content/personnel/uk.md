@@ -1,6 +1,6 @@
 ---
 chapter: personnel
-chapter_range: "4"
+chapter_range: '4'
 language: uk
 title: Персонал
 workers_list:
@@ -27,5 +27,5 @@ workers_list:
     position: Директор
     description: О﻿пис Миколи
     alt: Микола
-    photo: honngt-t45ftjj3bl6rmmrybzls2uei5iowd6qa.jpg
+    photo: image-28.jpg
 ---

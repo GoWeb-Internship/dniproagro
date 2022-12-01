@@ -6,6 +6,7 @@ export const Scroll = ({
   heigth,
   trackVerticalStyles,
   thumbVerticalStyles,
+  renderViewStyles,
 }) => {
   return (
     <Scrollbars
@@ -21,7 +22,7 @@ export const Scroll = ({
       )}
       renderTrackHorizontal={props => <div {...props} className="" />}
       renderThumbHorizontal={props => <div {...props} className="" />}
-      renderView={props => <div {...props} className="" />}
+      renderView={props => <div {...props} className={renderViewStyles} />}
     >
       {children}
     </Scrollbars>

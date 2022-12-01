@@ -59,7 +59,7 @@ export const Form = () => {
         .max(17, t(phoneMax)),
       email: yup
         .string()
-        .email(t(test))
+        .email(t(email))
         .required(t(required))
         .max(63, t(emailMax))
         .matches(
