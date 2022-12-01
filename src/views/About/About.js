@@ -99,7 +99,7 @@ export const About = () => {
           </div>
         </div>
       </div>
-      {/* <Statistics statistics={statistics} /> */}
+      <Statistics statistics={statistics} />
     </Section>
   );
 };
