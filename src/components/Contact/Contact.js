@@ -10,19 +10,25 @@ export const Contact = ({ contactsArr }) => (
       ({ department, phone, telegram, viber, whatsapp }, index) => (
         <li className="" key={index}>
           <ul className={s.messengerList}>
-            <li className={s.messengerListItem}>
-              <a href={telegram}>
-                <img src={telegramImg} className={s.icon} alt="telegram" />
+            <li>
+              <a className={s.messengerLink} href={telegram}>
+                <div className={s.imgWpapper}>
+                  <img src={telegramImg} className={s.icon} alt="telegram" />
+                </div>
               </a>
             </li>
-            <li className={s.messengerListItem}>
-              <a href={viber}>
-                <img src={viberImg} className={s.icon} alt="viber" />
+            <li>
+              <a className={s.messengerLink} href={viber}>
+                <div className={s.imgWpapper}>
+                  <img src={viberImg} className={s.icon} alt="viber" />
+                </div>
               </a>
             </li>
-            <li className={s.messengerListItem}>
-              <a href={whatsapp}>
-                <img src={whatsappImg} className={s.icon} alt="whatsapp" />
+            <li>
+              <a className={s.messengerLink} href={whatsapp}>
+                <div className={s.imgWpapper}>
+                  <img src={whatsappImg} className={s.icon} alt="whatsapp" />
+                </div>
               </a>
             </li>
           </ul>
