@@ -20,11 +20,11 @@
   @apply p-4 pr-2 md:pr-4 xl:p-6 xl:pr-[38px];
 }
 .content {
-  @apply !overflow-auto pb-4 pr-6 md:pr-11 xl:pr-[70px] xl:text-big;
+  @apply pb-4 pr-6 md:pr-4 xl:pr-[70px] xl:text-big;
 }
-.trackVertical {
-  @apply top-0 right-0 h-full !w-[8px] rounded-main border border-green;
-}
-.thumbVertical {
+/* .trackVertical {
+  @apply  right-0;
+} */
+/* .thumbVertical {
   @apply rounded-main bg-green;
-}
+} */

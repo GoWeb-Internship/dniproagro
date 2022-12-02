@@ -90,13 +90,10 @@ export const About = () => {
 
         <div className={s.contentWrapper}>
           <div className={s.contentInnerWrapper}>
-            <Scroll
-              heigth={isDesktop ? 351 : 220}
-              trackVerticalStyles={s.trackVertical}
-              thumbVerticalStyles={s.thumbVertical}
-              renderViewStyles={s.content}
-            >
-              <Markdown>{description}</Markdown>
+            <Scroll heigth={isDesktop ? 351 : 220}>
+              <div className={s.content}>
+                <Markdown>{description}</Markdown>
+              </div>
             </Scroll>
           </div>
         </div>
