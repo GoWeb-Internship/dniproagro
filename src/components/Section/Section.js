@@ -5,9 +5,9 @@ import * as s from './Section.module.css';
 
 export const Section = ({
   children,
-  className,
+  className = '',
   id,
-  styleContainer,
+  styleContainer = '',
   isContainer = 'true',
 }) => {
   return (

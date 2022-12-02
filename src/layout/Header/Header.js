@@ -18,8 +18,6 @@ export const Header = () => {
   const isDesktop = useMediaQuery({ query: '(min-width: 1280px)' });
   const isMobOrTablet = useMediaQuery({ query: '(max-width: 1279px)' });
 
-  console.log('isDesktop: ', isDesktop, 'isMobOrTablet: ', isMobOrTablet);
-
   const {
     allMarkdownRemark: { nodes },
   } = useStaticQuery(graphql`
