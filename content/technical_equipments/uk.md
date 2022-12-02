@@ -14,11 +14,11 @@ list:
     image: tech_equip.jpg
     alt: Технічний засіб 2
     range: "2"
-  - item: Lorem ipsum
+  - item: Технічний засіб 3
     description: Lorem ipsum
     image: slogan-5.jpg
     alt: трактор
-  - item: Lorem ipsum
+  - item: Технічний засіб 4
     description: Lorem ipsum
     image: image-63.jpg
     alt: Lorem ipsum
