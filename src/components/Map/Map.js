@@ -6,8 +6,8 @@ import * as s from './Map.module.css';
 const GOOGLE_API_KEY = process.env.GATSBY_GOOGLE_API_KEY;
 
 let center = {
-  lat: 50.4277571,
-  lng: 30.6026473,
+  lat: 48.184682,
+  lng: 36.240398,
 };
 
 function MyComponent() {
@@ -51,7 +51,7 @@ function MyComponent() {
 
   return (
     <LoadScript googleMapsApiKey={GOOGLE_API_KEY}>
-      <GoogleMap mapContainerClassName={s.container} center={center} zoom={13}>
+      <GoogleMap mapContainerClassName={s.container} center={center} zoom={12}>
         <Marker position={center} />
       </GoogleMap>
     </LoadScript>

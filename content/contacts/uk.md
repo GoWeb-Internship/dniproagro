@@ -1,11 +1,12 @@
 ---
 chapter: contacts
-chapter_range: "7"
+chapter_range: '7'
 language: uk
 title: Контакти
-address: 51940 Украіна,  Дніпропетровська обл., Васильківський р-н, с.
-  Свиридове, вул. Дзержинського, буд. 42
-location: '{"type":"Point","coordinates":[32.5191663,48.5910557]}'
+address:
+  52650, Україна, Дніпропетровська обл., Синельниківський р-н, с. Свиридове,
+  вул. Миру, буд. 42
+location: '{"type":"Point","coordinates":[36.2402565,48.1845817]}'
 contacts:
   - department: Генеральний Директор
     phone: +380 67 853 38 18

@@ -4,6 +4,11 @@
 .section {
   @apply relative  overflow-x-hidden;
 }
+
+.sectionTitle {
+  @apply !mb-[6px] md:!mb-[14px] xl:!mb-[42px];
+}
+
 .thumb {
   @apply absolute bottom-0 hidden w-full rounded-main bg-gradient-green font-normal text-white xl:block  xl:p-4;
 }
@@ -26,4 +31,20 @@
 
 .position {
   @apply text-small;
+}
+
+.worker {
+  @apply mb-2 text-xs font-bold leading-5 md:text-small xl:mb-1 xl:text-big;
+}
+
+.positionInfo {
+  @apply mb-4 text-xs font-bold leading-5 md:text-small xl:mb-[14px];
+}
+
+.description {
+  @apply max-h-[160px]  overflow-y-auto rounded border-green text-xs leading-5 md:max-h-[263px] md:border md:p-2 md:text-small xl:max-h-[338px];
+}
+
+.experience {
+  @apply text-xs leading-5 md:text-small;
 }

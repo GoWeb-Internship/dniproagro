@@ -3,21 +3,25 @@
 }
 
 .tabsListRight {
-  @apply h-[216px] overflow-y-auto pr-[30px] max-md:mb-[36px] xl:h-[448px] xl:w-[306px];
+  @apply flex flex-col items-end overflow-y-auto max-md:mb-[36px] md:w-[349px] xl:w-[400px];
 }
 
 .tabsListLeft {
-  @apply h-[216px] overflow-y-auto pr-[30px] max-md:mb-[36px] xl:h-[448px] xl:w-[306px];
+  @apply overflow-y-auto max-md:mb-[36px] md:w-[349px] xl:w-[400px];
 }
 
 @media screen and (min-width: 768px) {
-  .tabsListRight {
-    @apply pl-[30px] pr-0;
+  .tabsListLeft > div > div {
+    @apply flex flex-col items-end;
+  }
+
+  .tabsListRight > div > div {
+    @apply flex flex-col items-start;
   }
 }
 
 .tabItem {
-  @apply mb-4 h-[100px] last:mb-0 xl:w-full;
+  @apply mb-4 h-[100px] last:mb-0 xl:w-[295px];
 }
 
 .tabBtn {
@@ -88,16 +92,10 @@
   @apply text-small font-normal;
 }
 
-.scrollboxLeft {
-  direction: ltr;
+.rightTabsScroll {
+  @apply top-0 right-[38px] h-full !w-[8px] rounded-main border border-green;
 }
 
-.scrollboxRight {
-  direction: ltr;
-}
-
-@media screen and (min-width: 768px) {
-  .scrollboxLeft {
-    direction: rtl;
-  }
+.leftTabsScroll {
+  @apply top-0 left-[38px]  h-full !w-[8px]  rounded-main border border-green;
 }
