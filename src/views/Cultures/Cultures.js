@@ -8,54 +8,54 @@ export const Cultures = () => {
   const [chapter, setChapter] = useState(null);
   const { i18n } = useTranslation();
 
-  // const {
-  //   allMarkdownRemark: { nodes },
-  // } = useStaticQuery(graphql`
-  //   query {
-  //     allMarkdownRemark(
-  //       filter: { frontmatter: { chapter: { eq: "cultures" } } }
-  //     ) {
-  //       nodes {
-  //         frontmatter {
-  //           chapter
-  //           title
-  //           list {
-  //             alt
-  //             item
-  //             range
-  //             description
-  //             image {
-  //               childImageSharp {
-  //                 gatsbyImageData(
-  //                   width: 900
-  //                   placeholder: BLURRED
-  //                   jpgOptions: { progressive: true }
-  //                   formats: [AUTO, WEBP, AVIF]
-  //                 )
-  //               }
-  //             }
-  //           }
-  //           language
-  //         }
-  //       }
-  //     }
-  //   }
-  // `);
+  const {
+    allMarkdownRemark: { nodes },
+  } = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark(
+        filter: { frontmatter: { chapter: { eq: "cultures" } } }
+      ) {
+        nodes {
+          frontmatter {
+            chapter
+            title
+            list {
+              alt
+              item
+              range
+              description
+              image {
+                childImageSharp {
+                  gatsbyImageData(
+                    width: 900
+                    placeholder: BLURRED
+                    jpgOptions: { progressive: true }
+                    formats: [AUTO, WEBP, AVIF]
+                  )
+                }
+              }
+            }
+            language
+          }
+        }
+      }
+    }
+  `);
 
-  // useEffect(() => {
-  //   if (nodes?.frontmatter === null || !i18n.language) return;
+  useEffect(() => {
+    if (nodes?.frontmatter === null || !i18n.language) return;
 
-  //   const cultureChapter = nodes?.find(
-  //     ({ frontmatter: { language } }) => language === i18n.language,
-  //   )?.frontmatter;
+    const cultureChapter = nodes?.find(
+      ({ frontmatter: { language } }) => language === i18n.language,
+    )?.frontmatter;
 
-  //   const sortedList = [...cultureChapter?.list].sort(
-  //     (a, b) => a.range - b.range,
-  //   );
+    const sortedList = [...cultureChapter?.list].sort(
+      (a, b) => a.range - b.range,
+    );
 
-  //   const sortedChapter = { ...cultureChapter, list: sortedList };
-  //   setChapter(sortedChapter);
-  // }, [i18n, i18n.language, nodes]);
+    const sortedChapter = { ...cultureChapter, list: sortedList };
+    setChapter(sortedChapter);
+  }, [i18n, i18n.language, nodes]);
 
   return (
     <>
