@@ -13,7 +13,7 @@ workers_list:
     worker: Savyn V. V.
     length_of_service: 10 Jahre
     position: Techniker
-    photo: blob:https://lucent-semolina-877c33.netlify.app/a37db4e6-1e1c-4ea8-af49-8544ca509a92
+    photo: image-28.jpg
     alt: Savyn
   - description: >-
       Lorem ipsum dolor sit amet consectetur. Dui enim adipiscing eget ultrices
@@ -21,7 +21,7 @@ workers_list:
       iaculis morbi tempor nunc aenean sit tortor.
 
       Tellus in duis sit varius leo malesuada lacus volutpat. Lorem ipsum dolor sit amet consectetur. Dui enim adipiscing eget ultrices dictumst mattis. Proin mauris turpis odio commodo. arrow icon Proin mauris turpis odio commodo. arrow icon Lorem ipsum dolor sit amet consectetur. Dui enim adipiscing eget ultrices dictumst mattis.
-    photo: blob:https://lucent-semolina-877c33.netlify.app/a37db4e6-1e1c-4ea8-af49-8544ca509a92
+    photo: image-32.jpg
     worker: Anatoly Mykolayovych Trynchuk
     length_of_service: 4 Jahre
     position: Agronom
@@ -32,7 +32,7 @@ workers_list:
       iaculis morbi tempor nunc aenean sit tortor.
 
       Tellus in duis sit varius leo malesuada lacus volutpat. Lorem ipsum dolor sit amet consectetur. Dui enim adipiscing eget ultrices dictumst mattis. Proin mauris turpis odio commodo. arrow icon Proin mauris turpis odio commodo. arrow icon Lorem ipsum dolor sit amet consectetur. Dui enim adipiscing eget ultrices dictumst mattis.
-    photo: blob:https://lucent-semolina-877c33.netlify.app/a37db4e6-1e1c-4ea8-af49-8544ca509a92
+    photo: image-32.jpg
     worker: Chris
     length_of_service: 20 Jahre
     position: Operator kombinieren
@@ -43,7 +43,7 @@ workers_list:
       iaculis morbi tempor nunc aenean sit tortor.
 
       Tellus in duis sit varius leo malesuada lacus volutpat. Lorem ipsum dolor sit amet consectetur. Dui enim adipiscing eget ultrices dictumst mattis. Proin mauris turpis odio commodo. arrow icon Proin mauris turpis odio commodo. arrow icon Lorem ipsum dolor sit amet consectetur. Dui enim adipiscing eget ultrices dictumst mattis.
-    photo: blob:https://lucent-semolina-877c33.netlify.app/a37db4e6-1e1c-4ea8-af49-8544ca509a92
+    photo: image-32.jpg
     worker: Mykola Valeriyovych Dobrokhanskyi
     length_of_service: 20 Jahre
     position: Direktor
