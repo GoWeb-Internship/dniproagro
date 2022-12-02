@@ -8,7 +8,8 @@
     "nameInput": "Ім'я",
     "emailInput": "Email",
     "messageInput": "Написати нам",
-    "submit": "Відправити"
+    "submit": "Відправити",
+    "phonePlaceholder": "Введіть номер телефону"
   },
   "formValidation": {
     "required": "Це поле обов'язкове",

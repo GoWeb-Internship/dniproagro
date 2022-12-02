@@ -32,12 +32,17 @@ export const Form = () => {
   } = t('formValidation', {
     returnObjects: true,
   });
-  const { title, subTitle, nameInput, emailInput, messageInput, submit } = t(
-    'form',
-    {
-      returnObjects: true,
-    },
-  );
+  const {
+    title,
+    subTitle,
+    nameInput,
+    emailInput,
+    messageInput,
+    submit,
+    phonePlaceholder,
+  } = t('form', {
+    returnObjects: true,
+  });
 
   const schema = yup
     .object({
@@ -139,7 +144,7 @@ export const Form = () => {
               defaultValue=""
               render={({ field }) => (
                 <PhoneInput
-                  placeholder="Enter phone number"
+                  placeholder={t(phonePlaceholder)}
                   inputClass={
                     errors.phone === undefined ? s.phoneInput : s.phoneInputRed
                   }

@@ -8,7 +8,8 @@
     "nameInput": "Name",
     "emailInput": "Email",
     "messageInput": "Schreib uns",
-    "submit": "Senden"
+    "submit": "Senden",
+    "phonePlaceholder": "Telefonnummer eingeben"
   },
   "formValidation": {
     "required": "Dieses Feld ist erforderlich",

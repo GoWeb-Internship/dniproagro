@@ -8,7 +8,8 @@
     "nameInput": "Imię",
     "emailInput": "Email",
     "messageInput": "Napisz do nas",
-    "submit": "Wysłać"
+    "submit": "Wysłać",
+    "phonePlaceholder": "Wpisz numer telefonu"
   },
   "formValidation": {
     "required": "To pole jest obowiązkowe",
