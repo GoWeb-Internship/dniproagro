@@ -5,7 +5,7 @@ language: en
 title: Technical means
 list:
   - item: Technical means 1
-    image: image-63.jpg
+    image: technical_equipment.jpg
     description: Technical means 1
     alt: Technical means 1
     range: '1'
@@ -13,10 +13,10 @@ list:
     description: Technical means 2
     alt: Technical means 2
     range: '2'
-    image: image-63.jpg
+    image: slogan-5.jpg
   - item: Technical means 3
     description: Lorem ipsum
-    image: image-63.jpg
+    image: tech_equip.jpg
     alt: tractor
     range: '3'
   - item: Technical means 4
