@@ -1,18 +1,15 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+import * as s from './Map.module.css';
 
 const GOOGLE_API_KEY = process.env.GATSBY_GOOGLE_API_KEY;
-
-const containerStyle = {
-  width: '100%',
-  height: '100%',
-};
 
 let center = {
   lat: 50.4277571,
   lng: 30.6026473,
 };
+
 function MyComponent() {
   const data = useStaticQuery(
     graphql`
@@ -54,7 +51,7 @@ function MyComponent() {
 
   return (
     <LoadScript googleMapsApiKey={GOOGLE_API_KEY}>
-      <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={13}>
+      <GoogleMap mapContainerClassName={s.container} center={center} zoom={13}>
         <Marker position={center} />
       </GoogleMap>
     </LoadScript>

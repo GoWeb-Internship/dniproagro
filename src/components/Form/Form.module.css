@@ -2,10 +2,10 @@
   @apply w-full;
 }
 .title {
-  @apply mb-2 mt-9 text-big font-bold;
+  @apply mb-2 mt-9 text-big font-bold md:mt-0 xl:mb-[14px] xl:text-large;
 }
 .subTitle {
-  @apply mb-9;
+  @apply mb-9 md:mb-[40px] xl:mb-6;
 }
 .wrapperInputs {
   @apply mb-[62px] grid grid-cols-1 gap-y-16;
@@ -17,19 +17,19 @@
   @apply !w-full !rounded-main !border-2 !border-white !bg-transparent p-[14px] text-white;
 }
 .inputRed {
-  @apply !w-full !rounded-main !border-2 !border-red !bg-transparent p-4 text-white;
+  @apply !w-full !rounded-main !border-2 !border-red !bg-transparent p-[14px] text-white;
 }
 .phoneInput {
-  @apply !h-[52px] !w-full !rounded-main !border-2 !border-white !bg-transparent text-white;
+  @apply !h-[52px] !w-full !rounded-main !border-2 !border-white !bg-transparent !pl-[72px] !text-small text-white;
 }
 .phoneInputRed {
-  @apply !h-[52px] !w-full !rounded-main !border-2 !border-red !bg-transparent text-white;
+  @apply !h-[52px] !w-full !rounded-main !border-2 !border-red !bg-transparent !pl-[72px] !text-small text-white;
 }
 .textarea {
-  @apply h-[112px] w-full resize-none rounded-main border-2 border-white  bg-transparent p-4 text-white;
+  @apply h-[112px] w-full resize-none rounded-main border-2 border-white bg-transparent  p-[14px] text-white xl:h-[150px];
 }
 .textareaRed {
-  @apply h-[112px] w-full resize-none rounded-main border-2 border-red  bg-transparent p-4 text-white;
+  @apply h-[112px] w-full resize-none rounded-main border-2 border-red bg-transparent  p-[14px] text-white xl:h-[150px];
 }
 .input::placeholder,
 .phoneInput::placeholder,
@@ -54,17 +54,34 @@
   @apply absolute w-full text-[12px] font-medium text-red;
 }
 .button {
-  @apply block h-14 min-w-[153px] rounded-main border border-white !bg-white !text-green transition-all;
+  @apply block h-[52px] min-w-[153px] rounded-main border border-white !bg-white !text-green transition-all;
 }
 .button:hover,
 .button:focus {
-  @apply !bg-green !text-white;
+  @apply !bg-green !text-white outline-none;
 }
-.dropdown,
-.dropdown:hover,
-.dropdown:focus,
-.dropdown .selected-flag,
-.dropdown .selected-flag:hover,
-.dropdown .selected-flag:focus {
-  @apply !border-none !bg-transparent;
+.button:active {
+  @apply border-yellow !bg-yellow !text-white;
+}
+.dropdownBtn,
+.dropdownBtn:hover,
+.dropdownBtn:focus,
+.dropdownBtn .selected-flag,
+.dropdownBtn .selected-flag:hover,
+.dropdownBtn .selected-flag:focus,
+.dropdownBtn .selected-flag:active {
+  @apply !border-hidden !bg-transparent !pl-4;
+}
+.dropdown {
+  @apply left-1 !rounded-main !bg-white !pl-[14px] !font-mulish !text-small !text-green !outline !outline-white;
+}
+.dropdown {
+  scrollbar-width: thin;
+  scrollbar-color: green #e5e5e5;
+}
+.dropdown::-webkit-scrollbar {
+  @apply w-2 rounded-main border border-solid border-green outline outline-white;
+}
+.dropdown::-webkit-scrollbar-thumb {
+  @apply h-[28px] rounded bg-green;
 }
