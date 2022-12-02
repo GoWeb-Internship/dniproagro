@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/bundle';
 import 'assets/styles/slider.css';
 
-export const Slider = ({ children, className = '' }) => {
+export const Slider = ({ children, className = '', slideToClickedSlide }) => {
   return (
     <div className="mx-auto">
       <Swiper
@@ -17,21 +17,22 @@ export const Slider = ({ children, className = '' }) => {
         }}
         loop={true}
         slidesPerGroup={1}
+        slideToClickedSlide={slideToClickedSlide}
         breakpoints={{
           320: {
             slidesPerView: 1.5,
           },
           375: {
-            slidesPerView: 1.7,
+            slidesPerView: 1.5,
             navigation: false,
             // spaceBetween: 30,
           },
           480: {
             slidesPerView: 2,
           },
-          627: {
-            slidesPerView: 3,
-          },
+          // 627: {
+          //   slidesPerView: 3,
+          // },
           768: {
             slidesPerView: 2.23,
             // spaceBetween: 20,

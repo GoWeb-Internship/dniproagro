@@ -19,7 +19,7 @@ workers_list:
       adipiscing eget ultrices dictumst mattis.
     photo: image-32.jpg
     alt: Савин
-  - worker: Трінчук
+  - worker: Трінчук Анатолій Миколайович
     length_of_service: 4 роки
     position: Агроном
     description: >-
@@ -52,7 +52,7 @@ workers_list:
       nunc aenean sit tortor. Consectetur lacus Consectetur lacus iaculis.
     alt: Кріс
     photo: image-28.jpg
-  - worker: Микола
+  - worker: Доброханський Микола Валерійович
     length_of_service: 20 років
     position: Директор
     description: >-

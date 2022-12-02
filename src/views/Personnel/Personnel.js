@@ -56,7 +56,7 @@ export const Personnel = () => {
   return (
     <Section isContainer="false" className={s.section} id={personnel?.chapter}>
       <Container>
-        <SectionTitle title={personnel?.title} />
+        <SectionTitle className={s.sectionTitle} title={personnel?.title} />
       </Container>
 
       <div className="swiperContainer">
@@ -98,21 +98,15 @@ export const Personnel = () => {
                           </p>
                         </div>
                         {isActive && (
-                          <div className="absolute top-0 flex h-full w-full flex-col justify-between rounded-main bg-white p-4 shadow-modal md:p-5  ">
+                          <div className="infoModal">
                             <div>
-                              <p className="mb-2 text-xs font-bold leading-5 md:text-small xl:mb-1 xl:text-big">
-                                {worker}
-                              </p>
-                              <p className="mb-4 text-xs font-bold leading-5 md:text-small xl:mb-[14px] ">
-                                {position}
-                              </p>
-                              <div className="text-xs leading-5 md:text-small ">
+                              <p className={s.worker}>{worker}</p>
+                              <p className={s.positionInfo}>{position}</p>
+                              <div className={s.description}>
                                 <Markdown>{description}</Markdown>
                               </div>
                             </div>
-                            <p className="text-xs leading-5 md:text-small">
-                              {length_of_service}
-                            </p>
+                            <p className={s.experience}>{length_of_service}</p>
                           </div>
                         )}
                       </>
