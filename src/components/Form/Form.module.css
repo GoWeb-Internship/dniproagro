@@ -20,10 +20,10 @@
   @apply !w-full !rounded-main !border-2 !border-red !bg-transparent p-[14px] text-white;
 }
 .phoneInput {
-  @apply !h-[52px] !w-full !rounded-main !border-2 !border-white !bg-transparent !pl-[72px] !text-small text-white;
+  @apply !h-[52px] !w-full !rounded-main !border-2 !border-white !bg-transparent !pl-[102px] !text-small text-white;
 }
 .phoneInputRed {
-  @apply !h-[52px] !w-full !rounded-main !border-2 !border-red !bg-transparent !pl-[72px] !text-small text-white;
+  @apply !h-[52px] !w-full !rounded-main !border-2 !border-red !bg-transparent !pl-[102px] !text-small text-white;
 }
 .textarea {
   @apply h-[112px] w-full resize-none rounded-main border-2 border-white bg-transparent  p-[14px] text-white xl:h-[150px];
@@ -73,7 +73,7 @@
   @apply !border-hidden !bg-transparent !pl-4;
 }
 .dropdown {
-  @apply left-1 !rounded-main !bg-white !pl-[14px] !font-mulish !text-small !text-green !outline !outline-white;
+  @apply left-1 !w-[calc(100vw-63px)] !rounded-main !bg-white !pl-[14px] !font-mulish !text-small !text-green !outline !outline-white sm:!w-[434px] md:!w-[330px] xl:!w-[551px];
 }
 .dropdown {
   scrollbar-width: thin;
