@@ -5,7 +5,7 @@ language: en
 title: Technical means
 list:
   - item: Technical means 1
-    image: blob:https://lucent-semolina-877c33.netlify.app/5ec9c768-dcff-4f21-a142-ebe19df5adc2
+    image: technical_equipment.jpg
     description: Technical means 1
     alt: Technical means 1
     range: "1"
@@ -13,15 +13,15 @@ list:
     description: Technical means 2
     alt: Technical means 2
     range: "2"
-    image: blob:https://lucent-semolina-877c33.netlify.app/3b9c5b75-a4aa-47da-9f1a-fc683249280f
+    image: slogan-5.jpg
   - item: Technical means 3
     description: Lorem ipsum
-    image: blob:https://lucent-semolina-877c33.netlify.app/7b732593-8e2b-49bf-a106-9198dc96607f
+    image: tech_equip.jpg
     alt: tractor
     range: "3"
   - item: Technical means 4
     description: Lorem ipsum
-    image: blob:https://lucent-semolina-877c33.netlify.app/b3149565-48fc-4f94-a070-6fa05eebe47e
+    image: image-63.jpg
     range: "4"
     alt: Lorem ipsum
 ---
