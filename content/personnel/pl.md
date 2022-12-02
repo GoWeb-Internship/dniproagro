@@ -14,7 +14,7 @@ workers_list:
     worker: Savyn V.V.
     alt: Savyn
     position: inżynier
-    photo: blob:https://lucent-semolina-877c33.netlify.app/a37db4e6-1e1c-4ea8-af49-8544ca509a92
+    photo: image-32.jpg
   - description: >-
       Lorem ipsum dolor sit amet consectetur. Dui enim adipiscing eget ultrices
       dictumst mattis. Proin mauris turpis odio commodo. Consectetur lacus
@@ -22,7 +22,7 @@ workers_list:
 
       Tellus in duis sit varius leo malesuada lacus volutpat. Lorem ipsum dolor sit amet consectetur. Dui enim adipiscing eget ultrices dictumst mattis. Proin mauris turpis odio commodo. arrow icon Proin mauris turpis odio commodo. arrow icon Lorem ipsum dolor sit amet consectetur. Dui enim adipiscing eget ultrices dictumst mattis.
     position: Agronom
-    photo: blob:https://lucent-semolina-877c33.netlify.app/a37db4e6-1e1c-4ea8-af49-8544ca509a92
+    photo: image-32.jpg
     worker: Anatolij Mykołajowycz Trynczuk
     alt: Trynczuk
     length_of_service: 4 lata
@@ -33,7 +33,7 @@ workers_list:
 
       Tellus in duis sit varius leo malesuada lacus volutpat. Lorem ipsum dolor sit amet consectetur. Dui enim adipiscing eget ultrices dictumst mattis. Proin mauris turpis odio commodo. arrow icon Proin mauris turpis odio commodo. arrow icon Lorem ipsum dolor sit amet consectetur. Dui enim adipiscing eget ultrices dictumst mattis.
     length_of_service: 20 lat
-    photo: blob:https://lucent-semolina-877c33.netlify.app/a37db4e6-1e1c-4ea8-af49-8544ca509a92
+    photo: image-32.jpg
     worker: Chris
     position: Operator kombajnu
     alt: Chris
@@ -44,7 +44,7 @@ workers_list:
 
       Tellus in duis sit varius leo malesuada lacus volutpat. Lorem ipsum dolor sit amet consectetur. Dui enim adipiscing eget ultrices dictumst mattis. Proin mauris turpis odio commodo. arrow icon Proin mauris turpis odio commodo. arrow icon Lorem ipsum dolor sit amet consectetur. Dui enim adipiscing eget ultrices dictumst mattis.
     length_of_service: 20 lat
-    photo: blob:https://lucent-semolina-877c33.netlify.app/a37db4e6-1e1c-4ea8-af49-8544ca509a92
+    photo: image-32.jpg
     worker: Mykoła Walerijowycz Dobrochanskij
     alt: Dobrochanskij
     position: Dyrektor
