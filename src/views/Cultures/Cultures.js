@@ -60,7 +60,7 @@ export const Cultures = () => {
   return (
     <>
       {chapter && (
-        <Section id={chapter?.chapter} className={s.culturesSection}>
+        <Section id={chapter?.chapter}>
           <SectionTitle title={chapter?.title} />
 
           <Tabs list={chapter?.list} tabsPosition="right" />

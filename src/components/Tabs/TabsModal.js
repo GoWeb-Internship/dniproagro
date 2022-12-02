@@ -1,9 +1,14 @@
 import React from 'react';
+import Markdown from 'markdown-to-jsx';
 import { XMarkIcon } from '@heroicons/react/24/solid';
+import { useBreakpoint } from 'gatsby-plugin-breakpoints';
+import { Scroll } from 'components';
 import * as s from './Tabs.module.css';
 
 export const TabsModal = ({ isModalShown, itemData, setIsModalShown }) => {
   const { item, description } = itemData;
+  const breakepoints = useBreakpoint();
+  const isDesktop = breakepoints.lg;
 
   return (
     <>
@@ -12,7 +17,16 @@ export const TabsModal = ({ isModalShown, itemData, setIsModalShown }) => {
           <h2 className={s.modalTitle}>{item}</h2>
 
           <div className={s.descriptionBox}>
-            <p className={s.modalDescription}>{description}</p>
+            <div className={s.modalDescription}>
+              <Scroll
+                heigth={isDesktop ? 270 : 263}
+                trackVerticalStyles={s.trackVertical}
+                thumbVerticalStyles={s.thumbVertical}
+                // renderViewStyles={s.content}
+              >
+                <Markdown>{description}</Markdown>
+              </Scroll>
+            </div>
           </div>
 
           <button

@@ -2,12 +2,12 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { ChevronRightIcon } from '@heroicons/react/24/outline';
-import { Statistics, Section, SectionTitle } from 'components';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
-import * as s from './About.module.css';
-import { Scroll } from 'components';
 import { useBreakpoint } from 'gatsby-plugin-breakpoints';
 import Markdown from 'markdown-to-jsx';
+import { Statistics, Section, SectionTitle } from 'components';
+import { Scroll } from 'components';
+import * as s from './About.module.css';
 
 export const About = () => {
   const { i18n } = useTranslation();
@@ -87,6 +87,7 @@ export const About = () => {
             <ChevronRightIcon className={s.icon} />
           </a>
         </div>
+
         <div className={s.contentWrapper}>
           <div className={s.contentInnerWrapper}>
             <Scroll

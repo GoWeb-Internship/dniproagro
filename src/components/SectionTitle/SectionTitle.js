@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import * as s from './SectionTitle.module.css';
 
-export const SectionTitle = ({ title, level = 'h2', className }) => {
+export const SectionTitle = ({ title, level = 'h2', className = '' }) => {
   return (
     <>
       {level === 'h2' && (
