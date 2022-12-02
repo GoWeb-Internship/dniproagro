@@ -12,6 +12,7 @@ import { sendMessage } from '../../utils/telegramApi';
 import * as s from './Form.module.css';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
+import { locationApi } from 'utils/locationApi';
 
 export const Form = () => {
   const [error, setError] = useState(null);
@@ -28,7 +29,6 @@ export const Form = () => {
     messageMin,
     messageMax,
     success,
-    test,
   } = t('formValidation', {
     returnObjects: true,
   });
@@ -87,6 +87,11 @@ export const Form = () => {
   } = useForm({
     resolver: yupResolver(schema),
   });
+  const [userLocation, setUserLocation] = React.useState('');
+
+  locationApi()
+    .then(location => setUserLocation(location))
+    .catch(err => console.log(err));
 
   const onSubmit = (data, e) => {
     try {
@@ -127,7 +132,6 @@ export const Form = () => {
             />
             <p className={s.errorMsg}>{errors.name?.message}</p>
           </div>
-
           <div className={s.inputWrapper}>
             <Controller
               control={control}
@@ -135,11 +139,13 @@ export const Form = () => {
               defaultValue=""
               render={({ field }) => (
                 <PhoneInput
+                  placeholder="Enter phone number"
                   inputClass={
                     errors.phone === undefined ? s.phoneInput : s.phoneInputRed
                   }
-                  buttonClass={s.dropdown}
-                  country={'ua'}
+                  buttonClass={s.dropdownBtn}
+                  dropdownClass={s.dropdown}
+                  country={userLocation || 'ua'}
                   preferredCountries={['ua', 'pl', 'us', 'de', 'gb']}
                   {...field}
                 />
@@ -147,7 +153,6 @@ export const Form = () => {
             />
             <p className={s.errorMsg}>{errors.phone?.message}</p>
           </div>
-
           <div className={s.inputWrapper}>
             <input
               className={errors.email === undefined ? s.input : s.inputRed}

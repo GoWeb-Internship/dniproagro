@@ -14,6 +14,3 @@
 .link:focus {
   @apply text-yellow;
 }
-.mapWrapper {
-  @apply -mx-5 mt-9 h-[164px] w-[calc(100%_+_40px)] md:mx-0 md:h-[168px] md:w-full xl:mt-[38px] xl:h-[232px];
-}
