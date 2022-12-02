@@ -1,27 +1,13 @@
 .tabsMainWrapper {
-  @apply flex items-center justify-between max-md:block;
+  @apply flex flex-row-reverse items-center justify-between max-md:block;
 }
 
-.tabsListRight {
-  @apply flex flex-col items-end overflow-y-auto max-md:mb-[36px] md:w-[349px] xl:w-[400px];
-}
-
-.tabsListLeft {
+.tabsList {
   @apply overflow-y-auto max-md:mb-[36px] md:w-[349px] xl:w-[400px];
 }
 
-@media screen and (min-width: 768px) {
-  .tabsListLeft > div > div {
-    @apply flex flex-col items-end;
-  }
-
-  .tabsListRight > div > div {
-    @apply flex flex-col items-start;
-  }
-}
-
 .tabItem {
-  @apply mb-4 h-[100px] last:mb-0 xl:w-[295px];
+  @apply mb-4 h-[100px] w-[calc(100%-32px)] last:mb-0 xl:w-[295px];
 }
 
 .tabBtn {
@@ -33,15 +19,15 @@
 }
 
 .tabTitleBox {
-  @apply absolute bottom-0 left-0 h-[52px] w-full bg-gradient-green p-4 text-left text-middle text-white;
+  @apply absolute bottom-0 left-0 h-[52px] w-full bg-gradient-green p-4 text-left text-small text-white xl:text-middle;
 }
 
 .panelsWrapper {
-  @apply xl:h-[448px] xl:w-[820px];
+  @apply h-[254px] max-md:w-full md:mr-[20px] md:h-[216px] md:w-[336px] xl:h-[448px] xl:w-[820px];
 }
 
 .panel {
-  @apply relative h-[254px] w-full md:h-[216px] md:w-[336px] xl:h-full xl:w-[820px];
+  @apply relative h-full w-full;
 }
 
 .panelImgWrapper {
@@ -53,7 +39,7 @@
 }
 
 .modalOpenBtn {
-  @apply absolute bottom-0 left-0 flex w-full items-end justify-start rounded-main bg-gradient-green p-4 text-white xl:h-[100px] xl:p-6 xl:text-[24px] xl:leading-[30px];
+  @apply absolute bottom-0 left-0 flex w-full items-end justify-start rounded-main bg-gradient-green p-4 text-middle text-white xl:h-[100px] xl:p-6 xl:text-[24px] xl:font-bold xl:leading-[30px];
 }
 
 .modal {
@@ -95,12 +81,4 @@
 .modalDescription > p,
 .modalDescription > span {
   @apply text-middle font-normal;
-}
-
-.rightTabsScroll {
-  @apply top-0 right-[38px] h-full !w-[8px] rounded-main border border-green;
-}
-
-.leftTabsScroll {
-  @apply top-0 left-[38px]  h-full !w-[8px]  rounded-main border border-green;
 }

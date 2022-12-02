@@ -7,7 +7,7 @@ import { TabsModal } from './TabsModal';
 import { Scroll } from 'components';
 import * as s from './Tabs.module.css';
 
-export const Tabs = ({ list, tabsPosition }) => {
+export const Tabs = ({ list }) => {
   const [isModalShown, setIsModalShown] = useState(false);
   const breakpoints = useBreakpoint();
   const isDesktop = breakpoints.lg;
@@ -17,25 +17,13 @@ export const Tabs = ({ list, tabsPosition }) => {
       <Tab.Group
         as="div"
         vertical
-        className={
-          tabsPosition === 'right'
-            ? `${s.tabsMainWrapper} md:flex-row-reverse`
-            : `${s.tabsMainWrapper} md:flex-row`
-        }
+        className={s.tabsMainWrapper}
         defaultIndex={0}
       >
-        <Tab.List
-          as="ul"
-          className={
-            tabsPosition === 'right' ? s.tabsListRight : s.tabsListLeft
-          }
-        >
+        <Tab.List as="ul" className={s.tabsList}>
           <Scroll
             heigth={isDesktop ? 420 : 216}
-            trackVerticalStyles={
-              tabsPosition === 'right' ? s.rightTabsScroll : s.leftTabsScroll
-            }
-            thumbVerticalStyles="rounded-main bg-green"
+            position={isDesktop ? 'right-[37px]' : 'right-0'}
           >
             {list &&
               list?.map(({ item, image, alt }, index) => {
@@ -64,14 +52,7 @@ export const Tabs = ({ list, tabsPosition }) => {
           </Scroll>
         </Tab.List>
 
-        <Tab.Panels
-          as="div"
-          className={
-            tabsPosition === 'right'
-              ? `${s.panelsWrapper} md:mr-[20px]`
-              : `${s.panelsWrapper} md:ml-[20px]`
-          }
-        >
+        <Tab.Panels as="div" className={s.panelsWrapper}>
           {list &&
             list?.map((item, index) => {
               return (

@@ -18,12 +18,7 @@ export const TabsModal = ({ isModalShown, itemData, setIsModalShown }) => {
 
           <div className={s.descriptionBox}>
             <div className={s.modalDescription}>
-              <Scroll
-                heigth={isDesktop ? 270 : 263}
-                trackVerticalStyles={s.trackVertical}
-                thumbVerticalStyles={s.thumbVertical}
-                // renderViewStyles={s.content}
-              >
+              <Scroll heigth={isDesktop ? 270 : 263}>
                 <Markdown>{description}</Markdown>
               </Scroll>
             </div>
