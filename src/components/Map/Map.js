@@ -10,8 +10,8 @@ const containerStyle = {
 };
 
 let center = {
-  lat: 50.4277571,
-  lng: 30.6026473,
+  lat: 48.184682,
+  lng: 36.240398,
 };
 function MyComponent() {
   const data = useStaticQuery(
@@ -54,7 +54,7 @@ function MyComponent() {
 
   return (
     <LoadScript googleMapsApiKey={GOOGLE_API_KEY}>
-      <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={13}>
+      <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={12}>
         <Marker position={center} />
       </GoogleMap>
     </LoadScript>

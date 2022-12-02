@@ -1,0 +1,7 @@
+.section {
+  @apply relative  overflow-x-hidden pb-[40px] md:pb-[64px] xl:pb-[95px];
+}
+
+.sectionTitle {
+  @apply !mb-[6px] md:!mb-[14px] xl:!mb-[42px];
+}

@@ -5,6 +5,7 @@ import { Section, SectionTitle, Container } from 'components';
 import { Slider } from 'components/Slider/Slider';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import * as s from './Gallery.module.css';
 
 export const Gallery = () => {
   const { i18n } = useTranslation();
@@ -48,17 +49,13 @@ export const Gallery = () => {
   const gallerylist = gallery?.photos_list;
 
   return (
-    <Section
-      isContainer="false"
-      className="relative  overflow-x-hidden pb-[40px] md:pb-[64px] xl:pb-[100px]"
-      id={gallery?.chapter}
-    >
+    <Section isContainer="false" className={s.section} id={gallery?.chapter}>
       <Container>
-        <SectionTitle title={gallery?.title} />
+        <SectionTitle className={s.sectionTitle} title={gallery?.title} />
       </Container>
 
       <div className="swiperContainer">
-        <Slider>
+        <Slider slideToClickedSlide={true}>
           {nodes &&
             gallerylist?.map(({ photo, alt }, index) => {
               return (

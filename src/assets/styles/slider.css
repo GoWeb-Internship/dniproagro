@@ -4,6 +4,23 @@
   @apply mx-auto max-w-[627px] md:max-w-[756px] xl:max-w-[1200px];
 }
 
+.infoModal {
+  @apply absolute top-0 flex  h-full w-full scale-125 flex-col justify-between overflow-y-hidden rounded-main bg-white p-4 opacity-0 shadow-modal transition-all duration-300 md:p-5;
+}
+
+.sliderSwiper .swiper-slide-active:hover {
+  overflow: visible;
+}
+
+.sliderSwiper .swiper-slide-active:hover .infoModal,
+.sliderSwiper .swiper-slide-active:focus .infoModal {
+  opacity: 1;
+  transform: scale(1);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
 .swiper-button-next:after,
 .swiper-button-prev:after {
   display: none;
@@ -24,6 +41,7 @@
 
 .swiperContainer .swiper {
   padding-bottom: 20px;
+  padding-top: 30px;
 }
 
 .swiperContainer .swiper-wrapper {
@@ -37,13 +55,20 @@
 }
 
 .sliderSwiper .swiper-slide {
+  border-radius: 4px;
   transition: all 200ms linear;
   scale: 0.9;
+  overflow: hidden;
 }
 
 .sliderSwiper .swiper-slide-active {
   scale: 1;
 }
+
+/* .sliderSwiper .swiper-slide-active:hover, 
+.sliderSwiper .swiper-slide-active:focus{
+  
+} */
 
 .swiperContainer .prev-slider,
 .swiperContainer .next-slider {
@@ -66,7 +91,7 @@
 
 @media screen and (min-width: 1280px) {
   .sliderSwiper .swiper-slide {
-    scale: 0.8;
+    scale: 0.9;
   }
 
   .sliderSwiper .swiper-slide-active {
@@ -74,7 +99,7 @@
   }
 
   .swiperContainer .swiper {
-    padding-bottom: 0px;
+    padding-bottom: 5px;
   }
 
   .swiperContainer .swiper-pagination {
@@ -84,8 +109,7 @@
   .swiperContainer .prev-slider,
   .swiperContainer .next-slider {
     position: absolute;
-    top: 20px;
-    transform: translateY(-50%);
+    top: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
