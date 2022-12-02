@@ -9,7 +9,7 @@ backend:
     deleteMedia: '[skip ci] Delete “{{path}}” {{commit_date}}'
 
 local_backend: true
-media_folder: /static/default_media
+media_folder: /static/img
 public_folder: /img
 
 collections:
@@ -125,13 +125,13 @@ collections:
           name: 'images_list',
           widget: 'list',
           required: true,
-          fields:
-            [
+          fields: [
               {
                 label: 'Image',
                 name: 'image',
                 widget: 'image',
                 required: true,
+                # choose_url: false,
                 hint:
                   'Завантажте фото для слайдера (орієнтація - "Пейзаж",
                   мінімальні та оптимальні розміри: 1440 x 580 px)',
@@ -194,14 +194,13 @@ collections:
           name: 'bg-img',
           widget: 'object',
           required: true,
-          fields:
-            [
+          fields: [
               {
                 label: 'Photo',
                 name: 'photo',
                 widget: 'image',
                 required: true,
-                choose_url: false,
+                # choose_url: false,
                 hint:
                   'Завантажте фото для розділу "Про компанію" (мінімальні та
                   оптимальні розміри: 400 х 400 px, бажана пропорція: близько
@@ -236,7 +235,6 @@ collections:
                 label: 'File with report',
                 name: 'report_file',
                 widget: 'file',
-                choose_url: false,
                 required: true,
                 hint: 'Завантажте файл звітності у форматі pdf',
               },
@@ -312,8 +310,7 @@ collections:
           name: 'list',
           widget: 'list',
           required: true,
-          fields:
-            [
+          fields: [
               {
                 label: 'Culture',
                 name: 'item',
@@ -335,7 +332,7 @@ collections:
                 name: 'image',
                 widget: 'image',
                 required: true,
-                choose_url: false,
+                # choose_url: false,
                 hint:
                   'Завантажте зображення даної культури (орієнтація "Пейзаж",
                   мінімальні розміри: 820 x 450 px)',
@@ -402,8 +399,7 @@ collections:
           name: 'workers_list',
           widget: 'list',
           required: true,
-          fields:
-            [
+          fields: [
               {
                 label: 'Worker',
                 name: 'worker',
@@ -439,7 +435,7 @@ collections:
                 name: 'photo',
                 widget: 'image',
                 required: true,
-                choose_url: false,
+                # choose_url: false,
                 hint:
                   'Завантажте фото працівника (орієнтація - "Портрет",
                   мінімальні та оптимальні розміри - 400 х 500 px, бажана
@@ -494,8 +490,7 @@ collections:
           name: 'list',
           widget: 'list',
           required: true,
-          fields:
-            [
+          fields: [
               {
                 label: 'Equipment',
                 name: 'item',
@@ -517,7 +512,7 @@ collections:
                 name: 'image',
                 widget: 'image',
                 required: true,
-                choose_url: false,
+                # choose_url: false,
                 hint:
                   'Завантажте зображення даного технічного засобу (орієнтація
                   "Пейзаж", мінімальний розмір - 820 х 448px)',
@@ -585,14 +580,13 @@ collections:
           name: 'photos_list',
           widget: 'list',
           required: true,
-          fields:
-            [
+          fields: [
               {
                 label: 'Photo',
                 name: 'photo',
                 widget: 'image',
                 required: true,
-                choose_url: false,
+                # choose_url: false,
                 hint:
                   'Завантажте фото для галереї (мінімальні розміри: 400 х 500
                   px)',
