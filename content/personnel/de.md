@@ -13,7 +13,7 @@ workers_list:
     worker: Savyn V. V.
     length_of_service: 10 Jahre
     position: Techniker
-    photo: image-28.jpg
+    photo: image-25.jpg
     alt: Savyn
   - description: >-
       Lorem ipsum dolor sit amet consectetur. Dui enim adipiscing eget ultrices
