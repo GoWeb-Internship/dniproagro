@@ -7,8 +7,8 @@ import * as s from './Tabs.module.css';
 
 export const TabsModal = ({ isModalShown, itemData, setIsModalShown }) => {
   const { item, description } = itemData;
-  const breakepoints = useBreakpoint();
-  const isDesktop = breakepoints.lg;
+  const breakpoints = useBreakpoint();
+  const isDesktop = breakpoints.lg;
 
   return (
     <>
@@ -18,7 +18,7 @@ export const TabsModal = ({ isModalShown, itemData, setIsModalShown }) => {
 
           <div className={s.descriptionBox}>
             <div className={s.modalDescription}>
-              <Scroll heigth={isDesktop ? 270 : 263}>
+              <Scroll height={isDesktop ? 270 : 263}>
                 <Markdown>{description}</Markdown>
               </Scroll>
             </div>
