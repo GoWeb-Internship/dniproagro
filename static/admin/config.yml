@@ -64,8 +64,8 @@ collections:
     identifier_field: language
     description: 'Розділ "Наш слоган"'
     folder: 'content/our-slogan'
-    create: true
-    delete: true
+    create: false
+    delete: false
     path: '{{language}}'
     sortable_fields: ['commit_date', 'title', 'language']
     fields:
@@ -91,9 +91,9 @@ collections:
           buttons: [],
           required: true,
           hint:
-            'Введіть слоган компанії, який буде відображатися на сторінці. Для
-            відображення його на сторінці у два рядки потрібно розбити його на
-            два рядки тут',
+            'Введіть слоган компанії, який буде відображатися на сторінці.
+            (максимальна кількість символів - 35). Для відображення його на
+            сторінці у два рядки потрібно розбити його на два рядки тут',
         }
       - {
           label: 'Content',
@@ -103,8 +103,9 @@ collections:
           buttons: [],
           required: true,
           hint:
-            'Введіть контент розділу "Наш слоган". Для відображення його на
-            сторінці у два рядки потрібно розбити його на два рядки тут',
+            'Введіть контент розділу "Наш слоган" (максимальна кількість
+            символів - 70). Для відображення його на сторінці у два рядки
+            потрібно розбити його на два рядки тут',
         }
       - {
           label: 'Company phone number',
@@ -112,7 +113,7 @@ collections:
           widget: 'string',
           required: true,
           pattern:
-            ['^[+0-9]$', 'Номер телефону може містити тільки цифри та знак +'],
+            ['^[+0-9]+$', 'Номер телефону може містити тільки цифри та знак +'],
           hint:
             "Введіть телефон компанії для зворотнього зв'язку (у міжнародному
             форматі)",
@@ -152,8 +153,8 @@ collections:
     identifier_field: language
     description: 'Розділ "Про компанію"'
     folder: 'content/about-company'
-    create: true
-    delete: true
+    create: false
+    delete: false
     path: '{{language}}'
     sortable_fields: ['commit_date', 'title', 'language']
     fields:
@@ -279,8 +280,8 @@ collections:
     identifier_field: language
     description: 'Розділ "Культури і технології посіву"'
     folder: 'content/cultures'
-    create: true
-    delete: true
+    create: false
+    delete: false
     path: '{{language}}'
     sortable_fields: ['commit_date', 'title', 'language']
     fields:
@@ -370,8 +371,8 @@ collections:
     identifier_field: language
     description: 'Розділ "Персонал"'
     folder: 'content/personnel'
-    create: true
-    delete: true
+    ccreate: false
+    delete: false
     path: '{{language}}'
     sortable_fields: ['commit_date', 'title', 'language']
     fields:
@@ -463,8 +464,8 @@ collections:
     identifier_field: language
     description: 'Розділ "Технічні засоби"'
     folder: 'content/technical_equipments'
-    create: true
-    delete: true
+    create: false
+    delete: false
     path: '{{language}}'
     sortable_fields: ['commit_date', 'title', 'language']
     fields:
@@ -556,8 +557,8 @@ collections:
     identifier_field: language
     description: 'Розділ "Галерея"'
     folder: 'content/gallery'
-    create: true
-    delete: true
+    create: false
+    delete: false
     path: '{{language}}'
     sortable_fields: ['commit_date', 'title', 'language']
     fields:
@@ -618,8 +619,8 @@ collections:
     identifier_field: language
     description: 'Розділ "Контакти"'
     folder: 'content/contacts'
-    create: true
-    delete: true
+    create: false
+    delete: false
     path: '{{language}}'
     sortable_fields: ['commit_date', 'title', 'language']
     fields:
@@ -685,8 +686,10 @@ collections:
                 required: true,
                 pattern:
                   [
-                    '^[+0-9]$',
-                    'Номер телефону може містити тільки цифри та знак +',
+                    [
+                      '^[+0-9]+$',
+                      'Номер телефону може містити тільки цифри та знак +',
+                    ],
                   ],
                 hint:
                   'Введіть номер телефону даного відділу у міжнародному форматі',

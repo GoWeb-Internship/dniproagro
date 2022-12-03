@@ -1,9 +1,10 @@
 ---
 chapter: contacts
-chapter_range: "7"
+chapter_range: '7'
 language: pl
 title: Łączność
-address: 52650, Ukraina, region Dnipropetrovsk, Dystrykt Sintelnikov, wioska.
+address:
+  52650, Ukraina, region Dnipropetrovsk, Dystrykt Sintelnikov, wioska.
   Sviridovo, vul. Pokój, budynek. 42
 location: '{"type":"Point","coordinates":[36.2399341,48.1846822]}'
 contacts:
@@ -11,9 +12,9 @@ contacts:
     whatsapp: whatsapp
     viber: viber
     telegram: telegram
-    phone: +380 67 853 38 18
+    phone: "+380678533818"
   - department: CEO
-    phone: +380 96 520 80 60
+    phone: "+380965208060"
     telegram: telegram
     viber: viber
     whatsapp: whatsapp
@@ -21,6 +22,6 @@ contacts:
     whatsapp: whatsapp
     viber: viber
     telegram: telegram
-    phone: +380 98 209 81 86
+    phone: "+380982098186"
 email: dniproagro@gmail.com
 ---
