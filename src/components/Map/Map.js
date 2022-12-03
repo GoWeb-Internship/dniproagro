@@ -37,6 +37,7 @@ const Map = () => {
     ({ frontmatter: { language } }) => language === i18n.language,
   )?.frontmatter;
   console.log(nodes);
+  const language = location?.language;
 
   const coordinates = location?.location.split(':')[2].slice(1, -2);
   console.log(coordinates);
@@ -65,7 +66,7 @@ const Map = () => {
             zoom={12}
             onLoad={onLoad}
             onUnmount={onUnmount}
-            language={i18n.language}
+            language={language}
           >
             <Marker position={center} />
           </GoogleMap>
@@ -78,7 +79,7 @@ const Map = () => {
             zoom={12}
             onLoad={onLoad}
             onUnmount={onUnmount}
-            language={i18n.language}
+            language={language}
           >
             <Marker position={defaultcenter} />
           </GoogleMap>

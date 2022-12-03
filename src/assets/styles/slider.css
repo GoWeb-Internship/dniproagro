@@ -5,7 +5,7 @@
 }
 
 .infoModal {
-  @apply absolute top-0 flex  h-full w-full scale-125 flex-col justify-between overflow-y-hidden rounded-main bg-white p-4 opacity-0 shadow-modal transition-all duration-300 md:p-5;
+  @apply absolute top-0 flex  h-full w-full flex-col justify-between overflow-y-hidden rounded-main bg-white p-4 opacity-0 shadow-modal transition-all duration-300 md:p-5;
 }
 
 .sliderSwiper .swiper-slide-active:hover {
@@ -15,7 +15,6 @@
 .sliderSwiper .swiper-slide-active:hover .infoModal,
 .sliderSwiper .swiper-slide-active:focus .infoModal {
   opacity: 1;
-  transform: scale(1);
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;

@@ -1,15 +1,20 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { SwiperSlide } from 'swiper/react';
-import { Section, SectionTitle, Container } from 'components';
+import { Section, SectionTitle, Container, Scroll } from 'components';
 import { Slider } from 'components/Slider/Slider';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
+import { useBreakpoint } from 'gatsby-plugin-breakpoints';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import * as s from './Personnel.module.css';
 import Markdown from 'markdown-to-jsx';
 
 export const Personnel = () => {
   const { i18n } = useTranslation();
+  const brakepoints = useBreakpoint();
+  const isMobile = brakepoints.sm;
+  const isTablet = brakepoints.md;
+  const isDesktop = brakepoints.lg;
 
   const {
     allMarkdownRemark: { nodes },
@@ -104,7 +109,9 @@ export const Personnel = () => {
                               <p className={s.worker}>{worker}</p>
                               <p className={s.positionInfo}>{position}</p>
                               <div className={s.description}>
-                                <Markdown>{description}</Markdown>
+                                <Scroll heigth={isDesktop ? 263 : 160}>
+                                  <Markdown>{description}</Markdown>
+                                </Scroll>
                               </div>
                             </div>
                             <p className={s.experience}>{length_of_service}</p>
