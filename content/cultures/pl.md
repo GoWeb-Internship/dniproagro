@@ -5,18 +5,43 @@ language: pl
 title: polska
 list:
   - item: Kukurudza
-    description:
+    description: >-
       Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed vel
-      mauris massa velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum
-      dolor sit amet consectetur. Placerat et at aenean sed vel mauris massa
-      velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor sit
-      amet consectetur. Placerat et at aenean sed vel mauris massa velit. Nisl
-      donec ut cras netus risus sapien vel Lorem ipsum dolor sit amet
-      consectetur. Placerat et at aenean sed vel mauris massa velit. Nisl donec
-      ut cras netus risus sapien vel Lorem ipsum dolor sit amet consectetur.
-      Placerat et at aenean sed vel mauris massa velit. Nisl donec ut cras netus
-      risus sapien vel
+
+
+            mauris massa velit. Nisl donec ut cras netus risus sapien vel Lorem
+      ipsum
+
+
+            dolor sit amet consectetur. Placerat et at aenean sed vel mauris
+      massa
+
+
+            velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor
+      sit
+
+
+            amet consectetur. Placerat et at aenean sed vel mauris massa velit.
+      Nisl
+
+
+            donec ut cras netus risus sapien vel Lorem ipsum dolor sit amet
+
+
+            consectetur. Placerat et at aenean sed vel mauris massa velit. Nisl
+      donec
+
+
+            ut cras netus risus sapien vel Lorem ipsum dolor sit amet
+      consectetur.
+
+
+            Placerat et at aenean sed vel mauris massa velit. Nisl donec ut cras
+      netus
+
+
+            risus sapien vel
     image: corn.jpg
     alt: Kukurudza
-    range: '4'
+    range: '3'
 ---
