@@ -43,7 +43,7 @@ collections:
                 required: true,
                 pattern:
                   [
-                    '^[a-z]{1,3}$',
+                    '^[a-z]{1,4}$',
                     'Назва мови може містити тільки малі латинські літери. Не
                     більше 3 символів',
                   ],
@@ -122,7 +122,8 @@ collections:
           name: 'images_list',
           widget: 'list',
           label_singular: 'Add new image',
-          min: 1,
+          min: 3,
+          max: 10,
           fields:
             [
               {
@@ -185,7 +186,7 @@ collections:
           widget: 'markdown',
           editor_components: [],
           buttons: ['link', 'bulleted-list'],
-          min: 1,
+          required: true,
           hint: "Введіть контент розділу 'Про компанію'",
         }
       - {
@@ -244,7 +245,8 @@ collections:
           name: 'statistics',
           widget: 'list',
           label_singular: 'Add new category',
-          min: 1,
+          min: 4,
+          max: 4,
           fields:
             [
               {
@@ -309,7 +311,8 @@ collections:
           label: 'Cultures',
           name: 'list',
           widget: 'list',
-          min: 1,
+          min: 4,
+          max: 50,
           label_singular: 'Add new culture',
           fields:
             [
@@ -399,7 +402,8 @@ collections:
           label: 'Workers',
           name: 'workers_list',
           widget: 'list',
-          min: 1,
+          min: 3,
+          max: 50,
           label_singular: 'Add new worker',
           fields:
             [
@@ -492,7 +496,8 @@ collections:
           name: 'list',
           widget: 'list',
           label_singular: 'Add new equipment',
-          min: 1,
+          min: 4,
+          max: 50,
           fields:
             [
               {
@@ -584,7 +589,8 @@ collections:
           name: 'photos_list',
           widget: 'list',
           label_singular: 'Add new photo',
-          min: 1,
+          min: 3,
+          max: 50,
           fields:
             [
               {
@@ -661,7 +667,8 @@ collections:
           name: 'contacts',
           widget: 'list',
           label_singular: 'Add new contact',
-          min: 1,
+          min: 3,
+          max: 3,
           fields:
             [
               {
