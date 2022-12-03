@@ -2,7 +2,7 @@
 chapter: cultures
 chapter_range: '3'
 language: pl
-title: polska
+title: Uprawy i technologie siewu
 list:
   - item: Kukurudza
     description: >-
