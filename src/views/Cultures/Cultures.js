@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { Section, Tabs, SectionTitle } from 'components';
-import * as s from './Cultures.module.css';
 
 export const Cultures = () => {
   const [chapter, setChapter] = useState(null);

@@ -9,17 +9,17 @@ address:
 location: '{"type":"Point","coordinates":[36.2402565,48.1845817]}'
 contacts:
   - department: Генеральний Директор
-    phone: +380 67 853 38 18
+    phone: '+380678533818'
     telegram: telegram
     viber: viber
     whatsapp: whatsapp
   - department: Виконавчий директор
-    phone: +380 96 520 80 60
+    phone: '+380965208060'
     telegram: telegram
     viber: viber
     whatsapp: whatsapp
   - department: Бухгалтерія
-    phone: +380 98 209 81 86
+    phone: '+380982098186'
     telegram: telegram
     viber: viber
     whatsapp: whatsapp
