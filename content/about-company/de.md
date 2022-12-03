@@ -32,6 +32,6 @@ statistics:
   - category: Partner
     value: '150'
   - category: Ernte
-    value: '32 000 '
+    value: '32 000'
     units: Tonnen
 ---

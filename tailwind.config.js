@@ -45,6 +45,7 @@ module.exports = {
         gray: '#374151', // class="bg-gray text-gray border-gray"
         'dark-grey': '#CDCDCD', // class="bg-dark-grey text-dark-grey border-dark-grey"
         mint: 'rgba(2, 147, 28, 0.2)', // class="bg-mint text-mint border-mint"
+        'mint-hover': 'rgba(2, 147, 28, 0.1)', // class="bg-mint-hover text-mint-hover border-mint-hover"
         accent: {
           DEFAULT: '#064E3B', // class="bg-accent text-accent border-accent"
           bright: '#02931C', // class="bg-accent-bright text-accent-bright border-accent-bright"
@@ -71,6 +72,7 @@ module.exports = {
       // TRANSITION
       transitionTimingFunction: {
         'in-expo': 'cubic-bezier(0.25, 1, 0.5, 1)', // class='ease-in-expo'
+        hover: 'cubic-bezier(0.4, 0, 0.2, 1)', // class='ease-hover'
       },
       // CONTAINER
       container: {

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
+import Markdown from 'markdown-to-jsx';
 import { Section, SectionTitle, SlideShow } from 'components';
 import * as s from './Hero.module.css';
-import Markdown from 'markdown-to-jsx';
 
 export const Hero = () => {
   const [chapter, setChapter] = useState(null);
