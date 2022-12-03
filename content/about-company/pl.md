@@ -31,5 +31,5 @@ statistics:
     value: "150"
   - category: Żniwa
     value: "32000"
-    units: т
+    units: t
 ---
