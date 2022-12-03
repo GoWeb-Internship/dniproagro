@@ -1,7 +1,7 @@
 ---
 chapter: cultures
 chapter_range: "3"
-language: uk
+language: de
 title: Pflanzen und Aussaattechnologien
 list:
   - description: Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed
