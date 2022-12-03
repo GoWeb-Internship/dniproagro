@@ -24,4 +24,7 @@ statistics:
   - category: Na rynku
     value: "10"
     units: lat
+  - category: Ziemi
+    value: "860"
+    units: ha
 ---
