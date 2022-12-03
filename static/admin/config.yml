@@ -112,10 +112,7 @@ collections:
           widget: 'string',
           required: true,
           pattern:
-            [
-              '^[+0-9]{12,19}$',
-              'Номер телефону може містити тільки цифри та знак +',
-            ],
+            ['^[+0-9]$', 'Номер телефону може містити тільки цифри та знак +'],
           hint:
             "Введіть телефон компанії для зворотнього зв'язку (у міжнародному
             форматі)",
@@ -124,17 +121,19 @@ collections:
           label: 'Images for slider',
           name: 'images_list',
           widget: 'list',
-          required: true,
-          fields: [
+          label_singular: 'Add new image',
+          min: 1,
+          fields:
+            [
               {
                 label: 'Image',
                 name: 'image',
                 widget: 'image',
                 required: true,
-                # choose_url: false,
                 hint:
                   'Завантажте фото для слайдера (орієнтація - "Пейзаж",
-                  мінімальні та оптимальні розміри: 1440 x 580 px)',
+                  мінімальні та оптимальні розміри: 1440 x 580 px, формат: jpg
+                  або jpeg)',
               },
               {
                 label: 'Alternative title of image',
@@ -186,7 +185,7 @@ collections:
           widget: 'markdown',
           editor_components: [],
           buttons: ['link', 'bulleted-list'],
-          required: true,
+          min: 1,
           hint: "Введіть контент розділу 'Про компанію'",
         }
       - {
@@ -194,17 +193,17 @@ collections:
           name: 'bg-img',
           widget: 'object',
           required: true,
-          fields: [
+          fields:
+            [
               {
                 label: 'Photo',
                 name: 'photo',
                 widget: 'image',
                 required: true,
-                # choose_url: false,
                 hint:
                   'Завантажте фото для розділу "Про компанію" (мінімальні та
                   оптимальні розміри: 400 х 400 px, бажана пропорція: близько
-                  1х1)',
+                  1х1, формат: jpg або jpeg)',
               },
               {
                 label: 'Alt title of photo',
@@ -244,7 +243,8 @@ collections:
           label: 'Statistics',
           name: 'statistics',
           widget: 'list',
-          required: true,
+          label_singular: 'Add new category',
+          min: 1,
           fields:
             [
               {
@@ -309,8 +309,10 @@ collections:
           label: 'Cultures',
           name: 'list',
           widget: 'list',
-          required: true,
-          fields: [
+          min: 1,
+          label_singular: 'Add new culture',
+          fields:
+            [
               {
                 label: 'Culture',
                 name: 'item',
@@ -332,10 +334,9 @@ collections:
                 name: 'image',
                 widget: 'image',
                 required: true,
-                # choose_url: false,
                 hint:
                   'Завантажте зображення даної культури (орієнтація "Пейзаж",
-                  мінімальні розміри: 820 x 450 px)',
+                  мінімальні розміри: 820 x 450 px, формат: jpg або jpeg)',
               },
               {
                 label: 'Alt title of image',
@@ -398,8 +399,10 @@ collections:
           label: 'Workers',
           name: 'workers_list',
           widget: 'list',
-          required: true,
-          fields: [
+          min: 1,
+          label_singular: 'Add new worker',
+          fields:
+            [
               {
                 label: 'Worker',
                 name: 'worker',
@@ -412,7 +415,7 @@ collections:
                 name: 'length_of_service',
                 widget: 'string',
                 required: true,
-                hint: "Введіть стаж роботи працівника у форматі 'N років'",
+                hint: "Введіть стаж роботи працівника за зразком: 'N років'",
               },
               {
                 label: 'Position',
@@ -426,7 +429,7 @@ collections:
                 name: 'description',
                 widget: 'markdown',
                 editor_components: [],
-                buttons: ['link', 'bulleted-list'],
+                buttons: [],
                 required: true,
                 hint: 'Введіть інформацію про працівника',
               },
@@ -435,11 +438,10 @@ collections:
                 name: 'photo',
                 widget: 'image',
                 required: true,
-                # choose_url: false,
                 hint:
                   'Завантажте фото працівника (орієнтація - "Портрет",
                   мінімальні та оптимальні розміри - 400 х 500 px, бажана
-                  пропорція: близько 3х4)',
+                  пропорція: близько 3х4, формат: jpg або jpeg)',
               },
               {
                 label: 'Alt title of photo',
@@ -489,8 +491,10 @@ collections:
           label: 'Equipments',
           name: 'list',
           widget: 'list',
-          required: true,
-          fields: [
+          label_singular: 'Add new equipment',
+          min: 1,
+          fields:
+            [
               {
                 label: 'Equipment',
                 name: 'item',
@@ -512,10 +516,10 @@ collections:
                 name: 'image',
                 widget: 'image',
                 required: true,
-                # choose_url: false,
                 hint:
                   'Завантажте зображення даного технічного засобу (орієнтація
-                  "Пейзаж", мінімальний розмір - 820 х 448px)',
+                  "Пейзаж", мінімальний розмір - 820 х 448px, формат: jpg або
+                  jpeg)',
               },
               {
                 label: 'Alt title of image',
@@ -579,17 +583,18 @@ collections:
           label: 'Photos',
           name: 'photos_list',
           widget: 'list',
-          required: true,
-          fields: [
+          label_singular: 'Add new photo',
+          min: 1,
+          fields:
+            [
               {
                 label: 'Photo',
                 name: 'photo',
                 widget: 'image',
                 required: true,
-                # choose_url: false,
                 hint:
                   'Завантажте фото для галереї (мінімальні розміри: 400 х 500
-                  px)',
+                  px, формат: jpg або jpeg)',
               },
               {
                 label: 'Alt title of photo',
@@ -655,7 +660,8 @@ collections:
           label: 'Contacts',
           name: 'contacts',
           widget: 'list',
-          required: true,
+          label_singular: 'Add new contact',
+          min: 1,
           fields:
             [
               {
@@ -672,7 +678,7 @@ collections:
                 required: true,
                 pattern:
                   [
-                    '^[+0-9]{12,19}$',
+                    '^[+0-9]$',
                     'Номер телефону може містити тільки цифри та знак +',
                   ],
                 hint:
