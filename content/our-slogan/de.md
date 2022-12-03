@@ -6,7 +6,7 @@ title: Unser Slogan   lkasndgb'sldfknv 'lawekmf'wemv'wepfmbggbadv
 content:
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
   incididunt ut labore et dolore magna aliqua.
-phone: +38
+phone: "+380990000000"
 images_list:
   - image: slogan-1.jpg
     alt: Weizenfeld
