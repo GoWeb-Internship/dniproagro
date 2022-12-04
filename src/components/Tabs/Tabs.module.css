@@ -7,7 +7,19 @@
 }
 
 .tabItem {
-  @apply mb-4 h-[100px] w-[calc(100%-8px)] last:mb-0 xl:w-[295px];
+  @apply mb-4 h-[100px] w-[calc(100%-16px)] last:mb-0 xl:w-[295px];
+}
+
+.tabItem:hover .overlayTabsInactive,
+.tabBtn:focus .overlayTabsInactive,
+.tabBtn:active .overlayTabsInactive {
+  @apply opacity-0;
+}
+
+.tabItem:hover .tabTitleBoxInactive,
+.tabBtn:focus .tabTitleBoxInactive,
+.tabBtn:active .tabTitleBoxInactive {
+  @apply opacity-100;
 }
 
 .tabBtn {
@@ -19,15 +31,15 @@
 }
 
 .overlayTabs {
-  @apply absolute bottom-0 left-0 h-full w-full bg-transparent transition-all duration-300 ease-in-expo;
+  @apply absolute bottom-0 left-0 h-full w-full bg-transparent transition-all duration-500 ease-in-expo;
 }
 
 .overlayTabsActive {
-  @apply overlayTabs !bg-transparent;
+  @apply overlayTabs !bg-[rgba(0,0,0,0)];
 }
 
 .overlayTabsInactive {
-  @apply overlayTabs !bg-[rgba(0,0,0,0.7)];
+  @apply overlayTabs h-[100px] !bg-[rgba(0,0,0,0.7)];
 }
 
 .tabImg {
@@ -35,15 +47,15 @@
 }
 
 .tabTitleBox {
-  @apply absolute bottom-0 left-0 h-[54px] w-full bg-gradient-green px-4 pb-4 pt-[15px] text-left text-small text-white xl:text-middle;
+  @apply absolute bottom-0 left-0 z-10 h-[54px] w-full px-4 pb-4 pt-[15px] text-left text-small text-white xl:text-middle;
 }
 
 .tabTitleBoxActive {
-  @apply tabTitleBox;
+  @apply absolute bottom-0 left-0 z-[5] h-[54px] w-full bg-gradient-green opacity-100 transition-all duration-500 ease-in-expo;
 }
 
 .tabTitleBoxInactive {
-  @apply tabTitleBox z-[5] !bg-none;
+  @apply absolute bottom-0 left-0 z-[5] h-[54px] w-full bg-gradient-green opacity-0 transition-all duration-500 ease-in-expo;
 }
 
 .panelsWrapper {
@@ -105,5 +117,9 @@
 .modalDescription p,
 .modalDescription span,
 .modalDescription ul {
-  @apply mb-2 font-normal text-inherit last:mb-0;
+  @apply mb-2 font-normal text-inherit last:mb-0 md:mb-4 xl:mb-6;
+}
+
+.modalDescription::-webkit-scrollbar {
+  @apply !w-[8px] rounded-main bg-white md:!w-[8px] xl:!w-[12px];
 }

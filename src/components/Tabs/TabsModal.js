@@ -23,12 +23,8 @@ export const TabsModal = ({
           </h2>
 
           <div className={s.descriptionBox}>
-            <div className="scrollbar">
-              <div className={s.modalDescription}>
-                {/* <Scroll height={isDesktop ? 270 : 263}> */}
-                <Markdown>{description}</Markdown>
-                {/* </Scroll> */}
-              </div>
+            <div className={s.modalDescription}>
+              <Markdown>{description}</Markdown>
             </div>
           </div>
 

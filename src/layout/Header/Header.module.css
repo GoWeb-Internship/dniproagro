@@ -15,8 +15,13 @@
 }
 
 .menuBtn {
-  @apply z-30 flex h-[50px] w-[50px] items-center justify-center rounded-full;
+  @apply z-30 flex h-[50px] w-[50px] items-center justify-center rounded-full bg-transparent text-accent transition-all duration-300 ease-in-expo;
 }
+
+/* .menuBtn:hover,
+.menuBtn:focus {
+  @apply bg-mint-hex;
+} */
 
 .menuIcon {
   @apply h-6 w-6;

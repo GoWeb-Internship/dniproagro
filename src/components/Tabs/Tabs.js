@@ -20,54 +20,41 @@ export const Tabs = ({ list, isAddition = false }) => {
         defaultIndex={0}
       >
         <Tab.List as="ul" className={s.tabsList}>
-          {/* <Scroll
-            height={isDesktop ? 420 : 216}
-            position={isDesktop ? 'right-[37px]' : 'right-0'}
-          > */}
+          {list &&
+            list?.map(({ item, image, alt }, index) => {
+              return (
+                <Tab as="li" className={s.tabItem} key={index}>
+                  {({ selected }) => (
+                    <button
+                      type="button"
+                      className={selected ? s.tabBtnActive : s.tabBtn}
+                      onClick={() => {
+                        isModalShown && setIsModalShown(false);
+                      }}
+                    >
+                      <GatsbyImage
+                        image={getImage(image)}
+                        alt={alt}
+                        className={s.tabImg}
+                      />
 
-          <div className="scrollbar">
-            {list &&
-              list?.map(({ item, image, alt }, index) => {
-                return (
-                  <Tab as="li" className={s.tabItem} key={index}>
-                    {({ selected }) => (
-                      <button
-                        type="button"
-                        className={selected ? s.tabBtnActive : s.tabBtn}
-                        onClick={() => {
-                          isModalShown && setIsModalShown(false);
-                        }}
-                      >
-                        <GatsbyImage
-                          image={getImage(image)}
-                          alt={alt}
-                          className={s.tabImg}
-                        />
+                      <p className={s.tabTitleBox}>{item}</p>
+                      <div
+                        className={
+                          selected ? s.tabTitleBoxActive : s.tabTitleBoxInactive
+                        }
+                      ></div>
 
-                        <p
-                          className={
-                            selected
-                              ? s.tabTitleBoxActive
-                              : s.tabTitleBoxInactive
-                          }
-                        >
-                          {item}
-                        </p>
-
-                        <div
-                          className={
-                            selected
-                              ? s.overlayTabsActive
-                              : s.overlayTabsInactive
-                          }
-                        ></div>
-                      </button>
-                    )}
-                  </Tab>
-                );
-              })}
-          </div>
-          {/* </Scroll> */}
+                      <div
+                        className={
+                          selected ? s.overlayTabsActive : s.overlayTabsInactive
+                        }
+                      ></div>
+                    </button>
+                  )}
+                </Tab>
+              );
+            })}
         </Tab.List>
 
         <Tab.Panels as="div" className={s.panelsWrapper}>

@@ -5,13 +5,13 @@
     display: none;
   }
   ::-webkit-scrollbar {
-    @apply !w-[12px] rounded-main border border-solid border-mint bg-transparent;
+    @apply !w-[12px] rounded-main  bg-transparent;
   }
   ::-webkit-scrollbar-thumb {
-    @apply !box-border !w-[10px] rounded-main border-[2px] border-solid border-mint bg-mint; /*color trackbar*/
+    @apply !box-border rounded-main  bg-mint-hex; /*color trackbar*/
   }
   ::-webkit-scrollbar-track {
-    @apply !box-border rounded-main border-[2px] border-solid border-mint;
+    @apply !box-border rounded-main border-[2px] border-solid border-mint-hex;
   }
   ::-webkit-scrollbar-button {
     @apply hidden;
@@ -20,6 +20,11 @@
 
 @tailwind components;
 @tailwind utilities;
+
+* {
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(2, 147, 28, 0.2) white;
+}
 
 body {
   @apply bg-white pt-[92px] font-mulish text-small font-normal text-accent xl:pt-[138px];
@@ -38,33 +43,42 @@ img {
 .selected-flag {
   @apply !bg-transparent;
 }
+
 .flag {
   @apply scale-[2] rounded-main;
 }
+
 .arrow {
   border-top: 4px solid #fcfcfc !important;
   margin-left: 8px !important;
 }
+
 .up {
   border-top: none !important;
   border-bottom: 4px solid #fcfcfc !important;
 }
+
 .country-name {
   @apply !ml-[10px];
 }
+
 .react-tel-input:focus-within .arrow {
   border-top: 4px solid #a16207 !important;
 }
+
 .react-tel-input:focus-within .up {
   border-top: none !important;
   border-bottom: 4px solid #a16207 !important;
 }
+
 .react-tel-input:focus-within .form-control {
   @apply !border-yellow text-yellow outline-0;
 }
+
 .country {
   @apply !py-4;
 }
+
 /* .react-tel-input:focus-within .country-list {
   @apply !outline-yellow;
 } */
