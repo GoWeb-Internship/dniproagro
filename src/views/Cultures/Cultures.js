@@ -62,7 +62,7 @@ export const Cultures = () => {
         <Section id={chapter?.chapter}>
           <SectionTitle title={chapter?.title} />
 
-          <Tabs list={chapter?.list} tabsPosition="right" />
+          <Tabs list={chapter?.list} isAddition={true} />
         </Section>
       )}
     </>

@@ -3,14 +3,14 @@ import { Scrollbars } from 'react-custom-scrollbars-2';
 
 export const Scroll = ({
   children,
-  heigth,
+  height,
   position = 'right-0',
   // trackVerticalStyles,
   // renderViewStyles,
 }) => {
   return (
     <Scrollbars
-      style={{ height: heigth }}
+      style={{ height: height }}
       universal
       hideTracksWhenNotNeeded={true}
       renderTrackVertical={props => (
