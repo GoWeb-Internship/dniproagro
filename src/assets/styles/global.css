@@ -1,4 +1,23 @@
 @tailwind base;
+
+@layer base {
+  .invisible-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  ::-webkit-scrollbar {
+    @apply !w-[12px] rounded-main border border-solid border-mint bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply !box-border !w-[10px] rounded-main border-[2px] border-solid border-mint bg-mint; /*color trackbar*/
+  }
+  ::-webkit-scrollbar-track {
+    @apply !box-border rounded-main border-[2px] border-solid border-mint;
+  }
+  ::-webkit-scrollbar-button {
+    @apply hidden;
+  }
+}
+
 @tailwind components;
 @tailwind utilities;
 

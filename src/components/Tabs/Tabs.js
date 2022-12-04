@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Tab } from '@headlessui/react';
-import { useBreakpoint } from 'gatsby-plugin-breakpoints';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { ChevronRightIcon } from '@heroicons/react/24/solid';
 import { TabsModal } from './TabsModal';
-import { Scroll } from 'components';
+// import { Scroll } from 'components';
 import * as s from './Tabs.module.css';
 
-export const Tabs = ({ list }) => {
+export const Tabs = ({ list, isAddition = false }) => {
   const [isModalShown, setIsModalShown] = useState(false);
-  const breakpoints = useBreakpoint();
-  const isDesktop = breakpoints.lg;
+  const { t } = useTranslation();
 
   return (
     <>
@@ -21,10 +20,12 @@ export const Tabs = ({ list }) => {
         defaultIndex={0}
       >
         <Tab.List as="ul" className={s.tabsList}>
-          <Scroll
-            heigth={isDesktop ? 420 : 216}
+          {/* <Scroll
+            height={isDesktop ? 420 : 216}
             position={isDesktop ? 'right-[37px]' : 'right-0'}
-          >
+          > */}
+
+          <div className="scrollbar">
             {list &&
               list?.map(({ item, image, alt }, index) => {
                 return (
@@ -32,7 +33,7 @@ export const Tabs = ({ list }) => {
                     {({ selected }) => (
                       <button
                         type="button"
-                        className={selected ? s.tabBtn : s.tabBtn}
+                        className={selected ? s.tabBtnActive : s.tabBtn}
                         onClick={() => {
                           isModalShown && setIsModalShown(false);
                         }}
@@ -43,13 +44,30 @@ export const Tabs = ({ list }) => {
                           className={s.tabImg}
                         />
 
-                        <p className={s.tabTitleBox}>{item}</p>
+                        <p
+                          className={
+                            selected
+                              ? s.tabTitleBoxActive
+                              : s.tabTitleBoxInactive
+                          }
+                        >
+                          {item}
+                        </p>
+
+                        <div
+                          className={
+                            selected
+                              ? s.overlayTabsActive
+                              : s.overlayTabsInactive
+                          }
+                        ></div>
                       </button>
                     )}
                   </Tab>
                 );
               })}
-          </Scroll>
+          </div>
+          {/* </Scroll> */}
         </Tab.List>
 
         <Tab.Panels as="div" className={s.panelsWrapper}>
@@ -57,27 +75,34 @@ export const Tabs = ({ list }) => {
             list?.map((item, index) => {
               return (
                 <Tab.Panel as="div" key={index} className={s.panel}>
-                  <div className={s.panelImgWrapper}>
-                    <GatsbyImage
-                      image={getImage(item?.image)}
-                      alt={item?.alt}
-                      className={s.panelImg}
-                    />
-                  </div>
+                  {({ selected }) => (
+                    <>
+                      <div className={s.panelImgWrapper}>
+                        <GatsbyImage
+                          image={getImage(item?.image)}
+                          alt={item?.alt}
+                          className={s.panelImg}
+                        />
+                      </div>
 
-                  <button
-                    className={s.modalOpenBtn}
-                    onClick={() => setIsModalShown(true)}
-                  >
-                    {item?.item}
-                    <ChevronRightIcon className={s.modalOpenIcon} />
-                  </button>
+                      <button
+                        className={s.modalOpenBtn}
+                        onClick={() => setIsModalShown(true)}
+                      >
+                        {isAddition
+                          ? `${item?.item} ${t('culturesModalBtn')}`
+                          : item?.item}
+                        <ChevronRightIcon className={s.modalOpenIcon} />
+                      </button>
 
-                  <TabsModal
-                    isModalShown={isModalShown}
-                    itemData={item}
-                    setIsModalShown={setIsModalShown}
-                  />
+                      <TabsModal
+                        isModalShown={isModalShown}
+                        itemData={item}
+                        setIsModalShown={setIsModalShown}
+                        isAddition={isAddition}
+                      />
+                    </>
+                  )}
                 </Tab.Panel>
               );
             })}
