@@ -1,17 +1,16 @@
 ---
 chapter: cultures
-chapter_range: '3'
+chapter_range: "3"
 language: uk
 title: Культури і технології посіву
 list:
   - item: Кукурудза
-    description:
-      Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed vel
-      mauris massa velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum
-      dolor sit amet consectetur. Placerat et at aenean sed vel mauris massa
-      velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor sit
-      amet consectetur. Placerat et at aenean sed vel mauris massa velit. Nisl
-      donec ut cras netus risus sapien vel Lorem ipsum dolor sit amet
+    description: Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed
+      vel mauris massa velit. Nisl donec ut cras netus risus sapien vel Lorem
+      ipsum dolor sit amet consectetur. Placerat et at aenean sed vel mauris
+      massa velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor
+      sit amet consectetur. Placerat et at aenean sed vel mauris massa velit.
+      Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor sit amet
       consectetur. Placerat et at aenean sed vel mauris massa velit. Nisl donec
       ut cras netus risus sapien vel Lorem ipsum dolor sit amet consectetur.
       Placerat et at aenean sed vel mauris massa velit. Nisl donec ut cras netus
@@ -19,15 +18,14 @@ list:
       aenean sed vel mauris
     image: corn.jpg
     alt: Кукурудза
-    range: '3'
+    range: "4"
   - item: Пшениця
-    description:
-      Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed vel
-      mauris massa velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum
-      dolor sit amet consectetur. Placerat et at aenean sed vel mauris massa
-      velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor sit
-      amet consectetur. Placerat et at aenean sed vel mauris massa velit. Nisl
-      donec ut cras netus risus sapien vel Lorem ipsum dolor sit amet
+    description: Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed
+      vel mauris massa velit. Nisl donec ut cras netus risus sapien vel Lorem
+      ipsum dolor sit amet consectetur. Placerat et at aenean sed vel mauris
+      massa velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor
+      sit amet consectetur. Placerat et at aenean sed vel mauris massa velit.
+      Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor sit amet
       consectetur. Placerat et at aenean sed vel mauris massa velit. Nisl donec
       ut cras netus risus sapien vel Lorem ipsum dolor sit amet consectetur.
       Placerat et at aenean sed vel mauris massa velit. Nisl donec ut cras netus
@@ -35,15 +33,14 @@ list:
       aenean sed vel mauris
     image: wheat.jpg
     alt: Пшениця
-    range: '4'
+    range: "4"
   - item: Рапс
-    description:
-      Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed vel
-      mauris massa velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum
-      dolor sit amet consectetur. Placerat et at aenean sed vel mauris massa
-      velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor sit
-      amet consectetur. Placerat et at aenean sed vel mauris massa velit. Nisl
-      donec ut cras netus risus sapien vel Lorem ipsum dolor sit amet
+    description: Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed
+      vel mauris massa velit. Nisl donec ut cras netus risus sapien vel Lorem
+      ipsum dolor sit amet consectetur. Placerat et at aenean sed vel mauris
+      massa velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor
+      sit amet consectetur. Placerat et at aenean sed vel mauris massa velit.
+      Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor sit amet
       consectetur. Placerat et at aenean sed vel mauris massa velit. Nisl donec
       ut cras netus risus sapien vel Lorem ipsum dolor sit amet consectetur.
       Placerat et at aenean sed vel mauris massa velit. Nisl donec ut cras netus
@@ -51,9 +48,24 @@ list:
       aenean sed vel mauris
     alt: Рапс
     image: canola.jpg
-    range: '2'
+    range: "3"
   - item: Соняшник
-    description:
+    description: Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed
+      vel mauris massa velit. Nisl donec ut cras netus risus sapien vel Lorem
+      ipsum dolor sit amet consectetur. Placerat et at aenean sed vel mauris
+      massa velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor
+      sit amet consectetur. Placerat et at aenean sed vel mauris massa velit.
+      Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor sit amet
+      consectetur. Placerat et at aenean sed vel mauris massa velit. Nisl donec
+      ut cras netus risus sapien vel Lorem ipsum dolor sit amet consectetur.
+      Placerat et at aenean sed vel mauris massa velit. Nisl donec ut cras netus
+      risus sapien vel Lorem ipsum dolor sit amet consectetur. Placerat et at
+      aenean sed vel mauris
+    alt: Соняшник
+    image: sunflower.jpg
+    range: "2"
+  - item: Льон
+    description: >-
       Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed vel
       mauris massa velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum
       dolor sit amet consectetur. Placerat et at aenean sed vel mauris massa
@@ -64,8 +76,11 @@ list:
       ut cras netus risus sapien vel Lorem ipsum dolor sit amet consectetur.
       Placerat et at aenean sed vel mauris massa velit. Nisl donec ut cras netus
       risus sapien vel Lorem ipsum dolor sit amet consectetur. Placerat et at
-      aenean sed vel mauris
-    alt: Соняшник
-    image: sunflower.jpg
-    range: '1'
+      aenean sed vel mauris.
+
+
+      Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed vel mauris massa velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed vel mauris massa velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed vel mauris massa velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor sit amet consectetur.
+    image: linen.jpg
+    alt: льон
+    range: "5"
 ---
