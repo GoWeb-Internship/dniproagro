@@ -45,6 +45,7 @@ module.exports = {
         gray: '#374151', // class="bg-gray text-gray border-gray"
         'dark-grey': '#CDCDCD', // class="bg-dark-grey text-dark-grey border-dark-grey"
         mint: 'rgba(2, 147, 28, 0.2)', // class="bg-mint text-mint border-mint"
+        'mint-hex': '#E1F1E6', // class="bg-mint text-mint border-mint"
         'mint-hover': 'rgba(2, 147, 28, 0.1)', // class="bg-mint-hover text-mint-hover border-mint-hover"
         accent: {
           DEFAULT: '#064E3B', // class="bg-accent text-accent border-accent"

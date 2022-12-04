@@ -7,7 +7,7 @@
 }
 
 .tabItem {
-  @apply mb-4 h-[100px] w-[calc(100%-8px)] last:mb-0 xl:w-[295px];
+  @apply mb-4 h-[100px] w-[calc(100%-16px)] last:mb-0 xl:w-[295px];
 }
 
 .tabItem:hover .overlayTabsInactive,
@@ -117,5 +117,9 @@
 .modalDescription p,
 .modalDescription span,
 .modalDescription ul {
-  @apply mb-2 font-normal text-inherit last:mb-0;
+  @apply mb-2 font-normal text-inherit last:mb-0 md:mb-4 xl:mb-6;
+}
+
+.modalDescription::-webkit-scrollbar {
+  @apply !w-[8px] rounded-main bg-white md:!w-[8px] xl:!w-[12px];
 }

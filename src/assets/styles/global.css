@@ -5,13 +5,13 @@
     display: none;
   }
   ::-webkit-scrollbar {
-    @apply !w-[12px] rounded-main border border-solid border-mint bg-transparent;
+    @apply !w-[12px] rounded-main  bg-transparent;
   }
   ::-webkit-scrollbar-thumb {
-    @apply !box-border !w-[10px] rounded-main border-[2px] border-solid border-mint bg-mint; /*color trackbar*/
+    @apply !box-border rounded-main  bg-mint-hex; /*color trackbar*/
   }
   ::-webkit-scrollbar-track {
-    @apply !box-border rounded-main border-[2px] border-solid border-mint;
+    @apply !box-border rounded-main border-[2px] border-solid border-mint-hex;
   }
   ::-webkit-scrollbar-button {
     @apply hidden;
