@@ -64,6 +64,8 @@ module.exports = {
           'linear-gradient(180deg, rgba(24, 55, 55, 0) 0%, #183737 100%);', // class="bg-gradient-green"
         'gradient-gray':
           'linear-gradient(89.63deg, rgba(0, 0, 0, 0.5) 26.03%, rgba(116, 115, 115, 0.01) 99.73%);', // class="bg-gradient-gray"
+        'gradient-transparent':
+          'linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%);', // class="bg-gradient-green"
       },
       // BUTTON RADIUS
       borderRadius: {
