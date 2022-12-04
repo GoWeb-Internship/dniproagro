@@ -36,11 +36,11 @@ const Map = () => {
   const location = nodes?.find(
     ({ frontmatter: { language } }) => language === i18n.language,
   )?.frontmatter;
-  console.log(nodes);
+
   const language = location?.language;
 
   const coordinates = location?.location.split(':')[2].slice(1, -2);
-  console.log(coordinates);
+
   const center = {
     lat: Number(coordinates?.split(',')[1]),
     lng: Number(coordinates?.split(',')[0]),

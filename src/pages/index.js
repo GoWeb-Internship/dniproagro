@@ -40,7 +40,7 @@ const IndexPage = () => {
 
 export default withLayout(IndexPage);
 
-export const Head = () => <title>Home Page</title>;
+// export const Head = () => <title>Home Page</title>;
 
 export const query = graphql`
   query ($language: String!) {
