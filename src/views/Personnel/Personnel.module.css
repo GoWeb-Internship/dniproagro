@@ -34,18 +34,18 @@
 }
 
 .worker {
-  @apply mb-1 text-xs font-bold leading-5 md:text-small xl:mb-1 xl:text-big;
+  @apply mb-2 text-xs font-bold leading-5 md:text-small xl:mb-1 xl:text-big;
 }
 
 .positionInfo {
-  @apply mb-2 text-xs leading-5 md:text-small xl:mb-[14px];
+  @apply mb-4 text-xs leading-5 md:text-small xl:mb-[14px];
 }
 .wrapper {
-  @apply rounded border-green md:border md:p-2;
+  @apply h-[61%] rounded border-green md:h-[72%] md:border md:p-2 xl:h-[75%];
 }
 
 .description {
-  @apply h-[160px] overflow-y-auto pr-[2px] text-xs leading-5  md:h-[239px] md:text-small   xl:h-[319px];
+  @apply h-full overflow-y-auto pr-[2px] text-xs leading-5   md:text-small;
 }
 
 /* .description::-webkit-scrollbar-track {
@@ -66,7 +66,7 @@
 } */
 
 .experience {
-  @apply text-xs leading-5 md:text-small;
+  @apply mt-auto text-xs leading-5 md:text-small;
 }
 
 /* max-h-[160px] md:max-h-[263px] xl:max-h-[338px] */

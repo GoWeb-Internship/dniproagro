@@ -28,7 +28,7 @@ export const Slider = ({ children, className = '', slideToClickedSlide }) => {
             // spaceBetween: 30,
           },
           480: {
-            slidesPerView: 1.5,
+            slidesPerView: 2,
           },
           // 627: {
           //   slidesPerView: 3,

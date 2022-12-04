@@ -105,13 +105,11 @@ export const Personnel = () => {
                         </div>
                         {isActive && (
                           <div className="infoModal">
-                            <div>
-                              <p className={s.worker}>{worker}</p>
-                              <p className={s.positionInfo}>{position}</p>
-                              <div className={s.wrapper}>
-                                <div className={s.description}>
-                                  <Markdown>{description}</Markdown>
-                                </div>
+                            <p className={s.worker}>{worker}</p>
+                            <p className={s.positionInfo}>{position}</p>
+                            <div className={s.wrapper}>
+                              <div className={s.description}>
+                                <Markdown>{description}</Markdown>
                               </div>
                             </div>
                             <p className={s.experience}>{length_of_service}</p>
