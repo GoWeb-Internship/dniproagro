@@ -11,7 +11,7 @@ content: |-
   та постачаємо в різні куточки світу
 phone: "+380990000000"
 images_list:
-  - image: slogan-1.jpg
+  - image: slider-1.jpg
     alt: Пшеничне поле
   - image: slogan-7.jpg
     alt: Ростки
