@@ -13,13 +13,13 @@
 .tabItem:hover .overlayTabsInactive,
 .tabBtn:focus .overlayTabsInactive,
 .tabBtn:active .overlayTabsInactive {
-  @apply !bg-gradient-green opacity-0;
+  @apply opacity-0;
 }
 
 .tabItem:hover .tabTitleBoxInactive,
 .tabBtn:focus .tabTitleBoxInactive,
 .tabBtn:active .tabTitleBoxInactive {
-  @apply h-[54px] !bg-gradient-green opacity-100;
+  @apply opacity-100;
 }
 
 .tabBtn {

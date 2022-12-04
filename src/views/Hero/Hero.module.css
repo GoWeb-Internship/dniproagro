@@ -23,5 +23,14 @@
 }
 
 .actionBtn {
-  @apply mt-auto flex h-[52px] w-[195px] cursor-pointer items-center justify-center rounded-main bg-accent text-small font-normal text-white;
+  @apply mt-auto flex h-[52px] w-[195px] cursor-pointer items-center justify-center rounded-main bg-accent text-small font-normal text-white transition-colors duration-300 ease-hover;
+}
+
+.actionBtn:hover,
+.actionBtn:focus {
+  @apply bg-white text-accent transition-colors duration-300 ease-hover;
+}
+
+.actionBtn:active {
+  @apply border-[1px] border-white bg-transparent text-white transition-colors duration-300 ease-hover;
 }
