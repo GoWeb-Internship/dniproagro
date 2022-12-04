@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { SwiperSlide } from 'swiper/react';
-import { Section, SectionTitle, Container, Scroll } from 'components';
+import { Section, SectionTitle, Container } from 'components';
 import { Slider } from 'components/Slider/Slider';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { useBreakpoint } from 'gatsby-plugin-breakpoints';
@@ -108,10 +108,10 @@ export const Personnel = () => {
                             <div>
                               <p className={s.worker}>{worker}</p>
                               <p className={s.positionInfo}>{position}</p>
-                              <div className={s.description}>
-                                <Scroll heigth={isDesktop ? 263 : 160}>
+                              <div className={s.wrapper}>
+                                <div className={s.description}>
                                   <Markdown>{description}</Markdown>
-                                </Scroll>
+                                </div>
                               </div>
                             </div>
                             <p className={s.experience}>{length_of_service}</p>
