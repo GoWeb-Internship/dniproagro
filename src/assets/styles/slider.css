@@ -5,7 +5,7 @@
 }
 
 .infoModal {
-  @apply absolute top-0 flex  h-full w-full scale-125 flex-col justify-between overflow-y-hidden rounded-main bg-white p-4 opacity-0 shadow-modal transition-all duration-300 md:p-5;
+  @apply absolute top-0 flex  h-full w-full flex-col  overflow-y-hidden rounded-main bg-white p-4 opacity-0 shadow-modal transition-all duration-300 md:p-5;
 }
 
 .sliderSwiper .swiper-slide-active:hover {
@@ -15,7 +15,6 @@
 .sliderSwiper .swiper-slide-active:hover .infoModal,
 .sliderSwiper .swiper-slide-active:focus .infoModal {
   opacity: 1;
-  transform: scale(1);
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 300ms;
@@ -26,17 +25,25 @@
   display: none;
 }
 
-.swiperContainer .prev-slider {
+/* .swiperContainer .prev-slider {
   right: 86px;
 }
 
 .swiperContainer .next-slider {
   right: 30px;
-}
+} */
 
 .swiper-horizontal > .swiper-pagination-bullets {
   bottom: 0px;
   height: 10px;
+}
+
+.swiper-pagination-bullet {
+  cursor: pointer;
+  border: 2px solid #064e3b;
+  background: transparent;
+  width: 8px;
+  height: 8px;
 }
 
 .swiperContainer .swiper {
@@ -85,7 +92,7 @@
   }
 
   .swiperContainer .swiper {
-    padding-bottom: 25px;
+    padding-bottom: 24px;
   }
 }
 
@@ -99,14 +106,25 @@
   }
 
   .swiperContainer .swiper {
-    padding-bottom: 5px;
+    padding-bottom: 52px;
   }
 
-  .swiperContainer .swiper-pagination {
+  .swiper-pagination-bullet {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
+  .swiper-horizontal > .swiper-pagination-bullets {
+    height: 36px;
+    /* display: flex;
+    align-items: center; */
+  }
+
+  /* .swiperContainer .swiper-pagination {
     display: none;
-  }
+  } */
 
-  .swiperContainer .prev-slider,
+  /* .swiperContainer .prev-slider,
   .swiperContainer .next-slider {
     position: absolute;
     top: 8px;
@@ -121,14 +139,14 @@
     transition: opacity 200ms linear;
     z-index: 2;
     color: #064e3b;
-  }
+  } */
 
-  .swiperContainer .prev-slider:hover,
+  /* .swiperContainer .prev-slider:hover,
   .swiperContainer .prev-slider:focus,
   .swiperContainer .next-slider:hover,
   .swiperContainer .next-slider:focus {
     background-color: rgba(2, 147, 28, 0.1);
-  }
+  } */
 }
 
 /* green bullets */
@@ -136,7 +154,9 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: #064e3b;
 }
 
-.swiperContainer .swiper-pagination-bullet {
+/* .swiperContainer .swiper-pagination-bullet {
   border: 1px solid #064e3b;
   background: transparent;
-}
+  width: 24px;
+  height: 24px;
+} */
