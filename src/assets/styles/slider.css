@@ -35,10 +35,11 @@
 
 .swiper-horizontal > .swiper-pagination-bullets {
   bottom: 0px;
-  height: 8px;
+  height: 10px;
 }
 
-.swiperContainer .swiper-pagination-bullet {
+.swiper-pagination-bullet {
+  cursor: pointer;
   border: 2px solid #064e3b;
   background: transparent;
   width: 8px;
@@ -105,18 +106,18 @@
   }
 
   .swiperContainer .swiper {
-    padding-bottom: 54px;
+    padding-bottom: 52px;
   }
 
-  /* .swiperContainer .swiper-pagination-bullet {
-    width: 24px;
-    height: 24px;
-  } */
+  .swiper-pagination-bullet {
+    width: 24px !important;
+    height: 24px !important;
+  }
 
   .swiper-horizontal > .swiper-pagination-bullets {
     height: 36px;
-    display: flex;
-    align-items: center;
+    /* display: flex;
+    align-items: center; */
   }
 
   /* .swiperContainer .swiper-pagination {

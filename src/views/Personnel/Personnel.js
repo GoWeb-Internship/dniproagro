@@ -4,17 +4,18 @@ import { SwiperSlide } from 'swiper/react';
 import { Section, SectionTitle, Container } from 'components';
 import { Slider } from 'components/Slider/Slider';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
-import { useBreakpoint } from 'gatsby-plugin-breakpoints';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import * as s from './Personnel.module.css';
 import Markdown from 'markdown-to-jsx';
+// import { useBreakpoint } from 'gatsby-plugin-breakpoints';
 
 export const Personnel = () => {
-  const { i18n } = useTranslation();
-  const brakepoints = useBreakpoint();
-  const isMobile = brakepoints.sm;
-  const isTablet = brakepoints.md;
-  const isDesktop = brakepoints.lg;
+  const { i18n, t } = useTranslation();
+
+  // const brakepoints = useBreakpoint();
+  // const isMobile = brakepoints.sm;
+  // const isTablet = brakepoints.md;
+  // const isDesktop = brakepoints.lg;
 
   const {
     allMarkdownRemark: { nodes },
@@ -112,7 +113,9 @@ export const Personnel = () => {
                                 <Markdown>{description}</Markdown>
                               </div>
                             </div>
-                            <p className={s.experience}>{length_of_service}</p>
+                            <p className={s.experience}>
+                              {length_of_service} {t('experience')}
+                            </p>
                           </div>
                         )}
                       </>

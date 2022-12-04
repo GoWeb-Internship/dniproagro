@@ -13,6 +13,7 @@ export const Slider = ({ children, className = '', slideToClickedSlide }) => {
       <Swiper
         className={`${className} sliderSwiper`}
         pagination={{
+          clickable: true,
           dynamicBullets: true,
         }}
         loop={true}
