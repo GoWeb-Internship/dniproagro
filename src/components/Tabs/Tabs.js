@@ -1,17 +1,14 @@
 import React, { useState } from 'react';
 import { Tab } from '@headlessui/react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { useBreakpoint } from 'gatsby-plugin-breakpoints';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { ChevronRightIcon } from '@heroicons/react/24/solid';
 import { TabsModal } from './TabsModal';
-import { Scroll } from 'components';
+// import { Scroll } from 'components';
 import * as s from './Tabs.module.css';
 
-export const Tabs = ({ list }) => {
+export const Tabs = ({ list, isAddition = false }) => {
   const [isModalShown, setIsModalShown] = useState(false);
-  const breakpoints = useBreakpoint();
-  const isDesktop = breakpoints.lg;
   const { t } = useTranslation();
 
   return (
@@ -23,10 +20,12 @@ export const Tabs = ({ list }) => {
         defaultIndex={0}
       >
         <Tab.List as="ul" className={s.tabsList}>
-          <Scroll
+          {/* <Scroll
             height={isDesktop ? 420 : 216}
             position={isDesktop ? 'right-[37px]' : 'right-0'}
-          >
+          > */}
+
+          <div className="scrollbar">
             {list &&
               list?.map(({ item, image, alt }, index) => {
                 return (
@@ -67,7 +66,8 @@ export const Tabs = ({ list }) => {
                   </Tab>
                 );
               })}
-          </Scroll>
+          </div>
+          {/* </Scroll> */}
         </Tab.List>
 
         <Tab.Panels as="div" className={s.panelsWrapper}>
@@ -89,7 +89,9 @@ export const Tabs = ({ list }) => {
                         className={s.modalOpenBtn}
                         onClick={() => setIsModalShown(true)}
                       >
-                        {`${item?.item} ${t('culturesModalBtn')}`}
+                        {isAddition
+                          ? `${item?.item} ${t('culturesModalBtn')}`
+                          : item?.item}
                         <ChevronRightIcon className={s.modalOpenIcon} />
                       </button>
 
@@ -97,6 +99,7 @@ export const Tabs = ({ list }) => {
                         isModalShown={isModalShown}
                         itemData={item}
                         setIsModalShown={setIsModalShown}
+                        isAddition={isAddition}
                       />
                     </>
                   )}

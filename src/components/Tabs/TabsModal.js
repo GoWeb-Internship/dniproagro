@@ -1,26 +1,34 @@
 import React from 'react';
 import Markdown from 'markdown-to-jsx';
 import { XMarkIcon } from '@heroicons/react/24/solid';
-import { useBreakpoint } from 'gatsby-plugin-breakpoints';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { Scroll } from 'components';
 import * as s from './Tabs.module.css';
 
-export const TabsModal = ({ isModalShown, itemData, setIsModalShown }) => {
+export const TabsModal = ({
+  isModalShown,
+  itemData,
+  setIsModalShown,
+  isAddition,
+}) => {
   const { item, description } = itemData;
-  const breakpoints = useBreakpoint();
-  const isDesktop = breakpoints.lg;
+  const { t } = useTranslation();
 
   return (
     <>
       {itemData && (
         <div className={isModalShown ? s.modalShown : s.modalHidden}>
-          <h2 className={s.modalTitle}>{item}</h2>
+          <h2 className={s.modalTitle}>
+            {isAddition ? `${item} ${t('culturesModalBtn')}` : item}
+          </h2>
 
           <div className={s.descriptionBox}>
-            <div className={s.modalDescription}>
-              <Scroll height={isDesktop ? 270 : 263}>
+            <div className="scrollbar">
+              <div className={s.modalDescription}>
+                {/* <Scroll height={isDesktop ? 270 : 263}> */}
                 <Markdown>{description}</Markdown>
-              </Scroll>
+                {/* </Scroll> */}
+              </div>
             </div>
           </div>
 

@@ -63,7 +63,7 @@ export const TechnicalEquipments = () => {
         <Section id={chapter?.chapter}>
           <SectionTitle title={chapter?.title} />
 
-          <Tabs list={chapter?.list} tabsPosition="left" />
+          <Tabs list={chapter?.list} />
         </Section>
       )}
     </>
