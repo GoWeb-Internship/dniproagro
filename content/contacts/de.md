@@ -4,8 +4,8 @@ chapter_range: '7'
 language: de
 title: Kontakte
 address:
-  52650, Ukraine, Region Dnipropetrovsk, Distrikt Sinelnikov, Dorf. Sviridovo,
-  vul. Frieden, Gebäude. 42
+  52650, Ukraine, Gebiet Dnipropetrowsk, Sinelnikowski Bezirk, Dorf Sviridovo,
+  Friedenstraße, 42
 location: '{"type":"Point","coordinates":[36.2407704,48.1840906]}'
 contacts:
   - department: Vorsitzender

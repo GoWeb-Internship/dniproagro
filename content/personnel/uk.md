@@ -4,7 +4,7 @@ chapter_range: '4'
 language: uk
 title: Персонал
 workers_list:
-  - worker: Савин В.В.
+  - worker: Савин Анатолій
     length_of_service: 10 років
     position: інженер
     description: >-
@@ -19,7 +19,7 @@ workers_list:
       adipiscing eget ultrices dictumst mattis.
     photo: image-32.jpg
     alt: Савин
-  - worker: Трінчук Анатолій Миколайович
+  - worker: Трінчук Анатолій
     length_of_service: 4 роки
     position: Агроном
     description: >-
@@ -34,7 +34,7 @@ workers_list:
       adipiscing eget ultrices dictumst mattis.
     alt: Трінчук
     photo: image-25.jpg
-  - worker: Кріс
+  - worker: Кріс Анатолій
     length_of_service: 20 років
     position: Комбайнер
     description: >-
@@ -52,7 +52,7 @@ workers_list:
       nunc aenean sit tortor. Consectetur lacus Consectetur lacus iaculis.
     alt: Кріс
     photo: image-28.jpg
-  - worker: Доброханський Микола Валерійович
+  - worker: Доброханський Микола
     length_of_service: 20 років
     position: Директор
     description: >-

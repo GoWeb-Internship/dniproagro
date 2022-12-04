@@ -34,17 +34,39 @@
 }
 
 .worker {
-  @apply mb-2 text-xs font-bold leading-5 md:text-small xl:mb-1 xl:text-big;
+  @apply mb-2 text-base font-bold leading-5 md:text-small xl:mb-1 xl:text-big;
 }
 
 .positionInfo {
-  @apply mb-4 text-xs font-bold leading-5 md:text-small xl:mb-[14px];
+  @apply mb-4 text-sm  md:text-small xl:mb-[14px];
+}
+.wrapper {
+  @apply h-[56%] rounded border-green md:h-[72%] md:border md:p-2 xl:h-[75%];
 }
 
 .description {
-  @apply max-h-[160px]  overflow-y-auto rounded border-green text-xs leading-5 md:max-h-[263px] md:border md:p-2 md:text-small xl:max-h-[338px];
+  @apply h-full overflow-y-auto pr-2 text-xs leading-5   md:text-small;
 }
 
-.experience {
-  @apply text-xs leading-5 md:text-small;
+/* .description::-webkit-scrollbar-track {
+  @apply rounded-main border-[1px] border-solid border-mint;
+} */
+
+.description {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(2, 147, 28, 0.2) rgb(237, 233, 233);
 }
+
+.description::-webkit-scrollbar {
+  @apply !w-[6px] rounded-main bg-white md:!w-[8px] xl:!w-[12px];
+}
+
+/* .description::-webkit-scrollbar-thumb {
+  @apply rounded-main bg-mint;
+} */
+
+.experience {
+  @apply mt-auto text-sm md:text-small  md:font-bold;
+}
+
+/* max-h-[160px] md:max-h-[263px] xl:max-h-[338px] */

@@ -1,6 +1,6 @@
 ---
 chapter: personnel
-chapter_range: "4"
+chapter_range: '4'
 language: de
 title: Personal
 workers_list:
@@ -9,7 +9,11 @@ workers_list:
       dictumst mattis. Proin mauris turpis odio commodo. Consectetur lacus
       iaculis morbi tempor nunc aenean sit tortor.
 
-      Tellus in duis sit varius leo malesuada lacus volutpat. Lorem ipsum dolor sit amet consectetur. Dui enim adipiscing eget ultrices dictumst mattis. Proin mauris turpis odio commodo. arrow icon Proin mauris turpis odio commodo. arrow icon Lorem ipsum dolor sit amet consectetur. Dui enim adipiscing eget ultrices dictumst mattis.
+      Tellus in duis sit varius leo malesuada lacus volutpat. Lorem ipsum dolor
+      sit amet consectetur. Dui enim adipiscing eget ultrices dictumst mattis.
+      Proin mauris turpis odio commodo. arrow icon Proin mauris turpis odio
+      commodo. arrow icon Lorem ipsum dolor sit amet consectetur. Dui enim
+      adipiscing eget ultrices dictumst mattis.
     worker: Savyn V. V.
     length_of_service: 10 Jahre
     position: Techniker
@@ -20,9 +24,13 @@ workers_list:
       dictumst mattis. Proin mauris turpis odio commodo. Consectetur lacus
       iaculis morbi tempor nunc aenean sit tortor.
 
-      Tellus in duis sit varius leo malesuada lacus volutpat. Lorem ipsum dolor sit amet consectetur. Dui enim adipiscing eget ultrices dictumst mattis. Proin mauris turpis odio commodo. arrow icon Proin mauris turpis odio commodo. arrow icon Lorem ipsum dolor sit amet consectetur. Dui enim adipiscing eget ultrices dictumst mattis.
+      Tellus in duis sit varius leo malesuada lacus volutpat. Lorem ipsum dolor
+      sit amet consectetur. Dui enim adipiscing eget ultrices dictumst mattis.
+      Proin mauris turpis odio commodo. arrow icon Proin mauris turpis odio
+      commodo. arrow icon Lorem ipsum dolor sit amet consectetur. Dui enim
+      adipiscing eget ultrices dictumst mattis.
     photo: image-32.jpg
-    worker: Anatoly Mykolayovych Trynchuk
+    worker: Anatoly  Trynchuk
     length_of_service: 4 Jahre
     position: Agronom
     alt: Trynchuk
@@ -31,7 +39,11 @@ workers_list:
       dictumst mattis. Proin mauris turpis odio commodo. Consectetur lacus
       iaculis morbi tempor nunc aenean sit tortor.
 
-      Tellus in duis sit varius leo malesuada lacus volutpat. Lorem ipsum dolor sit amet consectetur. Dui enim adipiscing eget ultrices dictumst mattis. Proin mauris turpis odio commodo. arrow icon Proin mauris turpis odio commodo. arrow icon Lorem ipsum dolor sit amet consectetur. Dui enim adipiscing eget ultrices dictumst mattis.
+      Tellus in duis sit varius leo malesuada lacus volutpat. Lorem ipsum dolor
+      sit amet consectetur. Dui enim adipiscing eget ultrices dictumst mattis.
+      Proin mauris turpis odio commodo. arrow icon Proin mauris turpis odio
+      commodo. arrow icon Lorem ipsum dolor sit amet consectetur. Dui enim
+      adipiscing eget ultrices dictumst mattis.
     photo: image-32.jpg
     worker: Chris
     length_of_service: 20 Jahre
@@ -42,9 +54,13 @@ workers_list:
       dictumst mattis. Proin mauris turpis odio commodo. Consectetur lacus
       iaculis morbi tempor nunc aenean sit tortor.
 
-      Tellus in duis sit varius leo malesuada lacus volutpat. Lorem ipsum dolor sit amet consectetur. Dui enim adipiscing eget ultrices dictumst mattis. Proin mauris turpis odio commodo. arrow icon Proin mauris turpis odio commodo. arrow icon Lorem ipsum dolor sit amet consectetur. Dui enim adipiscing eget ultrices dictumst mattis.
+      Tellus in duis sit varius leo malesuada lacus volutpat. Lorem ipsum dolor
+      sit amet consectetur. Dui enim adipiscing eget ultrices dictumst mattis.
+      Proin mauris turpis odio commodo. arrow icon Proin mauris turpis odio
+      commodo. arrow icon Lorem ipsum dolor sit amet consectetur. Dui enim
+      adipiscing eget ultrices dictumst mattis.
     photo: image-32.jpg
-    worker: Mykola Valeriyovych Dobrokhanskyi
+    worker: Mykola  Dobrokhanskyi
     length_of_service: 20 Jahre
     position: Direktor
     alt: Dobrokhanskyi
