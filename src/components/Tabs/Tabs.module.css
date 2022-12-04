@@ -3,7 +3,7 @@
 }
 
 .tabsList {
-  @apply h-[216px] overflow-y-auto max-md:mb-[36px] md:w-[349px] xl:h-[420px] xl:w-[352px];
+  @apply h-[216px] overflow-y-auto max-md:mb-[36px] md:w-[349px] xl:h-[448px] xl:w-[352px];
 }
 
 .tabItem {
@@ -99,10 +99,11 @@
 }
 
 .modalDescription {
-  @apply h-[140px] overflow-y-auto text-small font-normal md:h-[120px] xl:h-[270px] xl:text-big;
+  @apply h-[140px] overflow-y-auto pr-2 text-small font-normal md:h-[120px] xl:h-[270px] xl:pr-[33px] xl:text-big;
 }
 
-.modalDescription > p,
-.modalDescription > span {
-  @apply font-normal text-inherit;
+.modalDescription p,
+.modalDescription span,
+.modalDescription ul {
+  @apply mb-2 font-normal text-inherit last:mb-0;
 }
