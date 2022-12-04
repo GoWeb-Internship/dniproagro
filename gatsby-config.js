@@ -20,9 +20,12 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.yourdomain.tld`,
-    //TODO розмістити метадані сайту та кастомний хук useSiteMetadata
+    title: `DniproAgro`,
+    description: ``,
+    author: `GoWeb`,
+    siteUrl: `https://lucent-semolina-877c33.netlify.app/`,
   },
+
   plugins: [
     {
       resolve: 'gatsby-plugin-breakpoints',
