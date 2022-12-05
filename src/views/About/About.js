@@ -3,16 +3,12 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { ChevronRightIcon } from '@heroicons/react/24/outline';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
-import { useBreakpoint } from 'gatsby-plugin-breakpoints';
 import Markdown from 'markdown-to-jsx';
 import { Statistics, Section, SectionTitle } from 'components';
-import { Scroll } from 'components';
 import * as s from './About.module.css';
 
 export const About = () => {
   const { i18n } = useTranslation();
-  const brakepoints = useBreakpoint();
-  const isDesktop = brakepoints.lg;
 
   const {
     allMarkdownRemark: { nodes },
@@ -87,14 +83,11 @@ export const About = () => {
             <ChevronRightIcon className={s.icon} />
           </a>
         </div>
-
         <div className={s.contentWrapper}>
           <div className={s.contentInnerWrapper}>
-            <Scroll height={isDesktop ? 351 : 220}>
-              <div className={s.content}>
-                <Markdown>{description}</Markdown>
-              </div>
-            </Scroll>
+            <div className={s.content}>
+              <Markdown>{description}</Markdown>
+            </div>
           </div>
         </div>
       </div>

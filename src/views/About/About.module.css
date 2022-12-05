@@ -14,17 +14,11 @@
   @apply ml-4 w-6 stroke-2;
 }
 .contentWrapper {
-  @apply mt-9 max-w-full rounded border border-green md:mt-0 md:w-[336px] xl:w-[820px];
+  @apply mt-9 max-w-full rounded border border-green p-4 md:mt-0 md:w-[336px] md:pr-2 xl:w-[820px] xl:p-[24px];
 }
 .contentInnerWrapper {
-  @apply p-4 pr-2 md:pr-4 xl:p-6 xl:pr-[38px];
+  @apply h-[222px] overflow-y-scroll pr-2 xl:h-[346px] xl:pr-[38px];
 }
 .content {
-  @apply pb-4 pr-6 md:pr-4 xl:pr-[70px] xl:text-big;
+  @apply xl:text-big;
 }
-/* .trackVertical {
-  @apply  right-0;
-} */
-/* .thumbVertical {
-  @apply rounded-main bg-green;
-} */

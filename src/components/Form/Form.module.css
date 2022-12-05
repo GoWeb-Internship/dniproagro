@@ -75,13 +75,3 @@
 .dropdown {
   @apply left-1 !w-[calc(100vw-63px)] !rounded-main !bg-white !pl-[14px] !font-mulish !text-small !text-green !outline !outline-white sm:!w-[434px] md:!w-[330px] xl:!w-[551px];
 }
-.dropdown {
-  scrollbar-width: thin;
-  scrollbar-color: green #e5e5e5;
-}
-.dropdown::-webkit-scrollbar {
-  @apply w-2 rounded-main border border-solid border-green outline outline-white;
-}
-.dropdown::-webkit-scrollbar-thumb {
-  @apply h-[28px] rounded bg-green;
-}

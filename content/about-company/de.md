@@ -33,5 +33,6 @@ statistics:
     value: "150"
   - category: Ernte
     value: "32000"
-    units: Tonnen
+    fix/styles
+    units: T
 ---
