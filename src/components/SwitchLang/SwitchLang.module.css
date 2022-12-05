@@ -27,11 +27,11 @@
 }
 
 .langItemLink {
-  @apply flex h-full w-full items-center justify-center  p-4 text-white;
+  @apply flex  w-full items-center justify-center  text-white;
 }
 
 .langItemLinkActive {
-  @apply relative text-white after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-10 after:translate-x-[-8px] after:bg-current after:content-[''];
+  @apply relative flex w-full justify-center  text-white after:absolute after:left-[50%] after:bottom-[-4px] after:h-[2px] after:w-10 after:translate-x-[-50%] after:bg-current after:content-[''];
 }
 
 .langListItem:hover > .langItemLink,

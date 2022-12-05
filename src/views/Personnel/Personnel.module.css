@@ -38,32 +38,23 @@
 }
 
 .positionInfo {
-  @apply mb-4 text-sm  md:text-small xl:mb-[14px];
+  @apply mb-2 text-sm   md:mb-4;
 }
 .wrapper {
-  @apply h-[56%] rounded border-green md:h-[72%] md:border md:p-2 xl:h-[75%];
+  @apply h-[62%] rounded border border-green p-2 md:h-[72%] xl:h-[75%];
 }
 
 .description {
-  @apply h-full overflow-y-auto pr-2 text-xs leading-5   md:text-small;
+  @apply h-full overflow-y-auto pr-2 text-xs leading-5 md:pr-3 md:text-sm   xl:text-small;
 }
 
-/* .description::-webkit-scrollbar-track {
-  @apply rounded-main border-[1px] border-solid border-mint;
-} */
-
-.description {
-  scrollbar-width: thin;
-  scrollbar-color: rgba(2, 147, 28, 0.2) rgb(237, 233, 233);
+.description p {
+  @apply mb-2 last:mb-0 md:mb-4;
 }
 
 .description::-webkit-scrollbar {
-  @apply !w-[6px] rounded-main bg-white md:!w-[8px] xl:!w-[12px];
+  @apply !w-[8px] rounded-main bg-white;
 }
-
-/* .description::-webkit-scrollbar-thumb {
-  @apply rounded-main bg-mint;
-} */
 
 .experience {
   @apply mt-auto text-sm md:text-small;

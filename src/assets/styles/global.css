@@ -23,7 +23,7 @@
 
 * {
   scrollbar-width: thin !important;
-  scrollbar-color: rgba(2, 147, 28, 0.2) white;
+  scrollbar-color: rgba(2, 147, 28, 0.2) #f3f3f3;
 }
 
 body {
