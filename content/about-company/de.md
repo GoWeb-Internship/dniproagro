@@ -33,5 +33,5 @@ statistics:
     value: "150"
   - category: Ernte
     value: "32000"
-    units: t
+    units: "t "
 ---
