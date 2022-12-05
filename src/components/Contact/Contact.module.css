@@ -1,8 +1,8 @@
 .contactsList {
-  @apply mt-9 mb-16 grid grid-cols-2 gap-x-[18px] gap-y-9 md:gap-y-[46px] xl:mt-[38px] xl:mb-16 xl:grid-cols-3;
+  @apply mt-9 mb-9 grid grid-cols-2 gap-x-[18px] gap-y-9 md:gap-y-[46px] xl:mt-[38px] xl:mb-16 xl:grid-cols-3;
 }
 .messengerList {
-  @apply mb-2 flex gap-4;
+  @apply mb-2 flex gap-4 xl:mb-4;
 }
 .link {
   @apply cursor-pointer font-light transition-all;
@@ -12,7 +12,7 @@
   @apply text-yellow;
 }
 .imgWpapper {
-  @apply cursor-pointer rounded-full border border-transparent p-[6px] transition-all;
+  @apply cursor-pointer rounded-full border border-transparent p-[7px] transition-all;
 }
 .messengerLink:hover,
 .messengerLink:focus {
@@ -26,5 +26,5 @@
   @apply mt-2 text-[14px];
 }
 .icon {
-  @apply h-3 w-3;
+  @apply h-[18px] w-[18px];
 }

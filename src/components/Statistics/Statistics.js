@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import CountUp from 'react-countup';
 import ProgressBar from 'react-customizable-progressbar';
 import * as s from './Statistics.module.css';
@@ -112,4 +113,8 @@ export const Statistics = ({ statistics }) => {
         ))}
     </ul>
   );
+};
+
+Statistics.propTypes = {
+  statistics: PropTypes.array,
 };
