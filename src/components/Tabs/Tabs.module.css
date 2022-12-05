@@ -117,7 +117,7 @@
 .modalDescription p,
 .modalDescription span,
 .modalDescription ul {
-  @apply mb-2 font-normal text-inherit last:mb-0 md:mb-3 xl:mb-6;
+  @apply font-normal text-inherit last:mb-0 max-md:mb-4 xl:mb-6;
 }
 
 .modalDescription::-webkit-scrollbar {

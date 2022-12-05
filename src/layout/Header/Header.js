@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { useMediaQuery } from 'react-responsive';
 import { graphql, useStaticQuery } from 'gatsby';
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
-import { XMarkIcon, Bars3Icon } from '@heroicons/react/24/solid';
+import { useBreakpoint } from 'gatsby-plugin-breakpoints';
+import { Bars3Icon } from '@heroicons/react/24/solid';
 import { Container, Logo, NavBar, SwitchLang, Menu } from 'components';
 import { anchors } from 'utils/constants';
 import * as s from './Header.module.css';
@@ -15,8 +15,10 @@ export const Header = () => {
   const [target, setTarget] = useState(null);
 
   const { i18n } = useTranslation();
-  const isDesktop = useMediaQuery({ query: '(min-width: 1280px)' });
-  const isMobOrTablet = useMediaQuery({ query: '(max-width: 1279px)' });
+
+  const breakpoints = useBreakpoint();
+  const isMobOrTablet = breakpoints.mdt;
+  const isDesktop = breakpoints.lg;
 
   const {
     allMarkdownRemark: { nodes },
