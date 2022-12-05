@@ -19,7 +19,6 @@ export const SlideShow = ({ images }) => {
         delay: 3000,
         disableOnInteraction: false,
       }}
-      // autoplay={false}
       speed={2000}
       modules={[Autoplay]}
       className="heroSwiper"

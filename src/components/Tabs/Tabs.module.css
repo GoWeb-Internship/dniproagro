@@ -103,7 +103,7 @@
 }
 
 .modalTitle {
-  @apply mb-4 text-small font-bold xl:mb-[27px] xl:text-big;
+  @apply mb-4 w-[calc(100%-30px)] text-small font-bold xl:mb-6 xl:text-big;
 }
 
 .descriptionBox {
@@ -111,7 +111,7 @@
 }
 
 .modalDescription {
-  @apply h-[140px] overflow-y-auto pr-2 text-small font-normal md:h-[120px] xl:h-[270px] xl:pr-[33px] xl:text-big;
+  @apply h-full overflow-y-auto pr-2 text-small font-normal xl:pr-[33px] xl:text-middle;
 }
 
 .modalDescription p,

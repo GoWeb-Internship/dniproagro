@@ -1,7 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
-import { Footer } from 'layout/Footer/Footer';
-import { Header } from 'layout/Header/Header';
+import { Footer, Header } from 'layout';
 import Seo from 'components/Seo';
 
 const Layout = ({ children }) => {

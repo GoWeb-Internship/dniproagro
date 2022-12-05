@@ -80,14 +80,10 @@ export const Header = () => {
             <button
               type="button"
               aria-expanded={isMenuOpen ? true : false}
-              className={s.menuBtn}
-              onClick={toggleMenu}
+              className={s.menuOpenBtn}
+              onClick={() => setIsMenuOpen(true)}
             >
-              {isMenuOpen ? (
-                <XMarkIcon className={s.menuIconClose} />
-              ) : (
-                <Bars3Icon className={s.menuIconOpen} />
-              )}
+              <Bars3Icon className={s.menuIconOpen} />
             </button>
           </div>
         )}
@@ -108,6 +104,7 @@ export const Header = () => {
             setIsMenuOpen={setIsMenuOpen}
             isMenuOpen={isMenuOpen}
             sections={sections}
+            toggleMenu={toggleMenu}
           />
         )}
       </Container>

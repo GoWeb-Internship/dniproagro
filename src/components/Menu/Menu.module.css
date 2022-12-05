@@ -9,3 +9,16 @@
 .menuHidden {
   @apply -translate-x-full opacity-0;
 }
+
+.menuCloseBtn {
+  @apply absolute top-[-44px] right-[15px] flex h-[40px] w-[40px] items-center justify-center rounded-full bg-transparent text-white transition-all duration-1000 ease-in-expo;
+}
+
+.menuCloseBtn:hover,
+.menuCloseBtn:focus {
+  @apply bg-mint-hex text-accent;
+}
+
+.menuIconClose {
+  @apply h-6 w-6 text-current;
+}
