@@ -28,19 +28,6 @@ module.exports = {
 
   plugins: [
     {
-      resolve: 'gatsby-plugin-breakpoints',
-      options: {
-        queries: myCustomQueries,
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-google-tagmanager',
-      options: {
-        id: process.env.GOOGLE_TAGMANAGER_ID,
-        includeInDevelopment: false,
-      },
-    },
-    {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -132,6 +119,19 @@ module.exports = {
       resolve: `gatsby-plugin-facebook-pixel`,
       options: {
         pixelId: 605102281370010,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-breakpoints',
+      options: {
+        queries: myCustomQueries,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-google-tagmanager',
+      options: {
+        id: process.env.GOOGLE_TAGMANAGER_ID,
+        includeInDevelopment: false,
       },
     },
   ],

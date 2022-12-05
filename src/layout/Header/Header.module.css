@@ -14,23 +14,15 @@
   @apply flex items-center;
 }
 
-.menuBtn {
-  @apply z-30 flex h-[50px] w-[50px] items-center justify-center rounded-full bg-transparent text-accent transition-all duration-300 ease-in-expo;
+.menuOpenBtn {
+  @apply z-10 flex h-[40px] w-[40px] items-center justify-center rounded-full bg-transparent text-accent transition-all duration-300 ease-in-expo;
 }
 
-/* .menuBtn:hover,
-.menuBtn:focus {
+.menuOpenBtn:hover,
+.menuOpenBtn:focus {
   @apply bg-mint-hex;
-} */
-
-.menuIcon {
-  @apply h-6 w-6;
-}
-
-.menuIconClose {
-  @apply menuIcon text-white;
 }
 
 .menuIconOpen {
-  @apply menuIcon text-accent;
+  @apply h-6 w-6 text-accent;
 }

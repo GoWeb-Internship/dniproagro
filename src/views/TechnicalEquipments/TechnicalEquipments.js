@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { Section, Tabs, SectionTitle } from 'components';
 
 export const TechnicalEquipments = () => {
-  const [chapter, setChapter] = useState(null);
   const { i18n } = useTranslation();
 
   const {
@@ -42,28 +41,21 @@ export const TechnicalEquipments = () => {
     }
   `);
 
-  useEffect(() => {
-    if (nodes?.frontmatter === null || !i18n.language) return;
+  const equipments = nodes?.find(
+    ({ frontmatter: { language } }) => language === i18n.language,
+  )?.frontmatter;
 
-    const equipmentsChapter = nodes?.find(
-      ({ frontmatter: { language } }) => language === i18n.language,
-    )?.frontmatter;
-
-    const sortedList = [...equipmentsChapter?.list].sort(
-      (a, b) => a.range - b.range,
-    );
-
-    const sortedChapter = { ...equipmentsChapter, list: sortedList };
-    setChapter(sortedChapter);
-  }, [i18n, i18n.language, nodes]);
+  const title = equipments?.title;
+  const id = equipments?.chapter;
+  const list = [...equipments?.list]?.sort((a, b) => a.range - b.range);
 
   return (
     <>
-      {chapter && (
-        <Section id={chapter?.chapter}>
-          <SectionTitle title={chapter?.title} />
+      {equipments && (
+        <Section id={id}>
+          <SectionTitle title={title} />
 
-          <Tabs list={chapter?.list} />
+          <Tabs list={list} />
         </Section>
       )}
     </>

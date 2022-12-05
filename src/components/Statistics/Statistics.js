@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import CountUp from 'react-countup';
 import ProgressBar from 'react-customizable-progressbar';
 import * as s from './Statistics.module.css';
@@ -6,10 +7,10 @@ import { useInView } from 'react-intersection-observer';
 import { useBreakpoint } from 'gatsby-plugin-breakpoints';
 
 export const Statistics = ({ statistics }) => {
-  const brakepoints = useBreakpoint();
-  const isMobile = brakepoints.sm;
-  const isTablet = brakepoints.md && brakepoints.mdt;
-  const isDesktop = brakepoints.lg;
+  const breakpoints = useBreakpoint();
+  const isMobile = breakpoints.sm;
+  const isTablet = breakpoints.md && breakpoints.mdt;
+  const isDesktop = breakpoints.lg;
 
   const getClass = index => {
     if (index === 0) {
@@ -112,4 +113,8 @@ export const Statistics = ({ statistics }) => {
         ))}
     </ul>
   );
+};
+
+Statistics.propTypes = {
+  statistics: PropTypes.array,
 };

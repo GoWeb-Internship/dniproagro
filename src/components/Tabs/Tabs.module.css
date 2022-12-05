@@ -3,7 +3,7 @@
 }
 
 .tabsList {
-  @apply h-[216px] overflow-y-auto max-md:mb-[36px] md:w-[349px] xl:h-[448px] xl:w-[352px];
+  @apply h-[216px] shrink-0 overflow-y-auto max-md:mb-[38px] md:w-[349px] xl:h-[448px] xl:w-[351px];
 }
 
 .tabItem {
@@ -59,7 +59,7 @@
 }
 
 .panelsWrapper {
-  @apply h-[254px] shrink-0 max-md:w-full md:mr-[20px] md:h-[216px] md:w-[336px] xl:h-[448px] xl:w-[820px];
+  @apply h-[254px] shrink-0 max-md:w-full md:mr-[32px] md:h-[216px] md:w-[336px] xl:mr-[20px] xl:h-[448px] xl:w-[820px];
 }
 
 .panel {
@@ -75,7 +75,7 @@
 }
 
 .modalOpenBtn {
-  @apply absolute bottom-0 left-0 flex w-full items-end justify-start rounded-main bg-gradient-green p-4 text-left text-middle text-white xl:h-[100px] xl:p-6 xl:text-[24px] xl:font-bold xl:leading-[30px];
+  @apply absolute bottom-0 left-0 flex h-[56px] w-full items-end justify-start rounded-main bg-gradient-green p-4 text-left text-middle text-white xl:h-[100px] xl:p-6 xl:text-[24px] xl:font-bold xl:leading-[30px];
 }
 
 .closeModalBtn {
@@ -103,7 +103,7 @@
 }
 
 .modalTitle {
-  @apply mb-4 text-small font-bold xl:mb-[27px] xl:text-big;
+  @apply mb-4 w-[calc(100%-30px)] text-small font-bold xl:mb-6 xl:text-big;
 }
 
 .descriptionBox {
@@ -111,13 +111,13 @@
 }
 
 .modalDescription {
-  @apply h-[140px] overflow-y-auto pr-2 text-small font-normal md:h-[120px] xl:h-[270px] xl:pr-[33px] xl:text-big;
+  @apply h-full overflow-y-auto pr-2 text-small font-normal md:pr-3 xl:pr-6 xl:text-middle;
 }
 
 .modalDescription p,
 .modalDescription span,
 .modalDescription ul {
-  @apply mb-2 font-normal text-inherit last:mb-0 md:mb-4 xl:mb-6;
+  @apply font-normal text-inherit last:mb-0 max-md:mb-4 xl:mb-6;
 }
 
 .modalDescription::-webkit-scrollbar {

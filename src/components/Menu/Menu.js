@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { NavBar, Container } from 'components';
+import { XMarkIcon } from '@heroicons/react/24/solid';
 import * as s from './Menu.module.css';
 
 export const Menu = ({ setIsMenuOpen, toggleMenu, isMenuOpen, sections }) => {
@@ -35,9 +37,30 @@ export const Menu = ({ setIsMenuOpen, toggleMenu, isMenuOpen, sections }) => {
       className={`${s.menuBox}
           ${isMenuOpen ? s.menuShown : s.menuHidden}`}
     >
-      <Container className="px-[30px]">
+      <Container className="relative px-[30px]">
         <NavBar sections={sections} setIsMenuOpen={setIsMenuOpen} />
+
+        <button
+          type="button"
+          aria-expanded={isMenuOpen ? true : false}
+          className={s.menuCloseBtn}
+          onClick={() => setIsMenuOpen(false)}
+        >
+          <XMarkIcon className={s.menuIconClose} />
+        </button>
       </Container>
     </div>
   );
+};
+
+Menu.propTypes = {
+  setIsMenuOpen: PropTypes.func.isRequired,
+  toggleMenu: PropTypes.func.isRequired,
+  isMenuOpen: PropTypes.bool.isRequired,
+  sections: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      chapter: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
 };

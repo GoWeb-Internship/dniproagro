@@ -3,5 +3,5 @@
 }
 
 .mainPageTitle {
-  @apply mb-4 w-[222px] text-[24px] font-bold leading-[30px] text-white xl:mb-[24px] xl:w-[398px] xl:text-[48px] xl:leading-[60px];
+  @apply mb-4 w-full text-[24px] font-bold leading-[30px] text-white md:w-[336px] xl:mb-[24px] xl:w-[610px] xl:text-[48px] xl:leading-[60px];
 }
