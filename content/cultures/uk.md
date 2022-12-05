@@ -37,7 +37,7 @@ list:
       aenean sed vel mauris
     image: wheat.jpg
     alt: Пшениця
-    range: "4"
+    range: "1"
   - item: Рапс
     description: Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed
       vel mauris massa velit. Nisl donec ut cras netus risus sapien vel Lorem
