@@ -69,7 +69,7 @@ export const Statistics = ({ statistics }) => {
   };
 
   const { ref, inView } = useInView({
-    threshold: 0,
+    threshold: 0.5,
     triggerOnce: true,
   });
   return (
