@@ -11,6 +11,8 @@ backend:
 local_backend: true
 media_folder: /static/img
 public_folder: /img
+site_url: https://lucent-semolina-877c33.netlify.app
+display_url: https://lucent-semolina-877c33.netlify.app
 
 collections:
   - label: 'Перелік мов контенту'
@@ -261,6 +263,11 @@ collections:
                 label: 'Value',
                 name: 'value',
                 widget: 'string',
+                pattern:
+                  [
+                    '^[0-9]{1,6}$',
+                    'Введіть, будь ласка, число (максимальна кількість - 6 цифр)',
+                  ],
                 required: true,
                 hint: 'Введіть значення для даної категорії',
               },
@@ -357,7 +364,7 @@ collections:
                 required: false,
                 pattern:
                   [
-                    '^[+0-9]{1,2}$',
+                    '^[0-9]{1,2}$',
                     'Введіть, будь ласка, цифру або двоцифрове число',
                   ],
                 hint:
@@ -543,7 +550,7 @@ collections:
                 required: false,
                 pattern:
                   [
-                    '^[+0-9]{1,2}$',
+                    '^[0-9]{1,2}$',
                     'Введіть, будь ласка, цифру або двоцифрове число',
                   ],
                 hint:
