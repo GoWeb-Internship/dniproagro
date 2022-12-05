@@ -33,5 +33,5 @@ statistics:
     value: '150'
   - category: Врожай
     value: '32000'
-    units: т
+    units:
 ---

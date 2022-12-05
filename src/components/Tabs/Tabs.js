@@ -4,7 +4,6 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { ChevronRightIcon } from '@heroicons/react/24/solid';
 import { TabsModal } from './TabsModal';
-// import { Scroll } from 'components';
 import * as s from './Tabs.module.css';
 
 export const Tabs = ({ list, isAddition = false }) => {
@@ -76,9 +75,10 @@ export const Tabs = ({ list, isAddition = false }) => {
                         className={s.modalOpenBtn}
                         onClick={() => setIsModalShown(true)}
                       >
-                        {isAddition
+                        {/* {isAddition
                           ? `${item?.item} ${t('culturesModalBtn')}`
-                          : item?.item}
+                          : item?.item} */}
+                        {item?.item}
                         <ChevronRightIcon className={s.modalOpenIcon} />
                       </button>
 
