@@ -49,7 +49,7 @@ export const Contacts = () => {
   return (
     <Section className={s.section} id={chapter}>
       <div className={s.wrapper}>
-        <div>
+        <div className={s.contactsWrapper}>
           <SectionTitle title={title} />
           <a className={s.link} href={`mailto:${email}`}>
             {email}

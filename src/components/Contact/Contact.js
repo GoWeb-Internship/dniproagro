@@ -1,8 +1,9 @@
 import React from 'react';
-import * as s from './Contact.module.css';
+import PropTypes from 'prop-types';
 import telegramImg from 'assets/images/telegram.svg';
 import viberImg from 'assets/images/viber.svg';
 import whatsappImg from 'assets/images/whatsapp.svg';
+import * as s from './Contact.module.css';
 
 export const Contact = ({ contactsArr }) => (
   <ul className={s.contactsList}>
@@ -41,3 +42,7 @@ export const Contact = ({ contactsArr }) => (
     )}
   </ul>
 );
+
+Contact.propTypes = {
+  contactsArr: PropTypes.array,
+};
