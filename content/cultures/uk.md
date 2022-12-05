@@ -64,23 +64,4 @@ list:
     alt: Соняшник
     image: sunflower.jpg
     range: "2"
-  - item: Льон
-    description: >-
-      Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed vel
-      mauris massa velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum
-      dolor sit amet consectetur. Placerat et at aenean sed vel mauris massa
-      velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor sit
-      amet consectetur. Placerat et at aenean sed vel mauris massa velit. Nisl
-      donec ut cras netus risus sapien vel Lorem ipsum dolor sit amet
-      consectetur. Placerat et at aenean sed vel mauris massa velit. Nisl donec
-      ut cras netus risus sapien vel Lorem ipsum dolor sit amet consectetur.
-      Placerat et at aenean sed vel mauris massa velit. Nisl donec ut cras netus
-      risus sapien vel Lorem ipsum dolor sit amet consectetur. Placerat et at
-      aenean sed vel mauris.
-
-
-      Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed vel mauris massa velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed vel mauris massa velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed vel mauris massa velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor sit amet consectetur.
-    image: linen.jpg
-    alt: льон
-    range: "5"
 ---

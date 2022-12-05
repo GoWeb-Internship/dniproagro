@@ -4,11 +4,11 @@ chapter_range: "6"
 language: uk
 title: Галерея
 photos_list:
-  - photo: pod-agr-1.jpg
+  - photo: gallery1.jpg
     alt: працівник
-  - photo: honngt-t45ftjj3bl6rmmrybzls2uei5iowd6qa.jpg
+  - photo: gallery2.jpg
     alt: аграрій
-  - photo: ba8d-gallery.jpg
+  - photo: gallery3.png
     alt: зрошування
   - alt: посів
     photo: sowing.jpg
