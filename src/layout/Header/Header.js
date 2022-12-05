@@ -12,15 +12,13 @@ const { SLOGAN } = anchors;
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // const [target, setTarget] = useState(null);
+  const [target, setTarget] = useState(null);
 
   const { i18n } = useTranslation();
 
   const breakpoints = useBreakpoint();
   const isMobOrTablet = breakpoints.mdt;
   const isDesktop = breakpoints.lg;
-
-  const target = document.getElementById('menu');
 
   const {
     allMarkdownRemark: { nodes },
@@ -41,7 +39,7 @@ export const Header = () => {
 
   const sections = nodes
     ?.filter(({ frontmatter: { chapter } }) => chapter !== SLOGAN)
-    .reduce((acc, { frontmatter: { title, language, chapter } }) => {
+    ?.reduce((acc, { frontmatter: { title, language, chapter } }) => {
       if (language === i18n.language) {
         acc.push({
           title,
@@ -55,10 +53,10 @@ export const Header = () => {
     isMenuOpen ? setIsMenuOpen(false) : setIsMenuOpen(true);
   };
 
-  // useEffect(() => {
-  //   const menuRef = document.getElementById('menu');
-  //   setTarget(menuRef);
-  // }, []);
+  useEffect(() => {
+    const menuRef = document.getElementById('menu');
+    setTarget(menuRef);
+  }, []);
 
   useEffect(() => {
     if (!target) return;
