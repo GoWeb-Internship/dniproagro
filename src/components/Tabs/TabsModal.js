@@ -2,7 +2,6 @@ import React from 'react';
 import Markdown from 'markdown-to-jsx';
 import { XMarkIcon } from '@heroicons/react/24/solid';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
-import { Scroll } from 'components';
 import * as s from './Tabs.module.css';
 
 export const TabsModal = ({
@@ -12,14 +11,15 @@ export const TabsModal = ({
   isAddition,
 }) => {
   const { item, description } = itemData;
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
 
   return (
     <>
       {itemData && (
         <div className={isModalShown ? s.modalShown : s.modalHidden}>
           <h2 className={s.modalTitle}>
-            {isAddition ? `${item} ${t('culturesModalBtn')}` : item}
+            {item}
+            {/* {isAddition ? `${item} ${t('culturesModalBtn')}` : item} */}
           </h2>
 
           <div className={s.descriptionBox}>
