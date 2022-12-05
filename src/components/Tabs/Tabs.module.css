@@ -59,7 +59,7 @@
 }
 
 .panelsWrapper {
-  @apply h-[254px] shrink-0 max-md:w-full md:h-[216px] md:w-[336px] xl:mr-[20px] xl:h-[448px] xl:w-[820px];
+  @apply h-[254px] shrink-0 max-md:w-full md:mr-[32px] md:h-[216px] md:w-[336px] xl:mr-[20px] xl:h-[448px] xl:w-[820px];
 }
 
 .panel {
@@ -75,7 +75,7 @@
 }
 
 .modalOpenBtn {
-  @apply absolute bottom-0 left-0 flex w-full items-end justify-start rounded-main bg-gradient-green p-4 text-left text-middle text-white xl:h-[100px] xl:p-6 xl:text-[24px] xl:font-bold xl:leading-[30px];
+  @apply absolute bottom-0 left-0 flex h-[56px] w-full items-end justify-start rounded-main bg-gradient-green p-4 text-left text-middle text-white xl:h-[100px] xl:p-6 xl:text-[24px] xl:font-bold xl:leading-[30px];
 }
 
 .closeModalBtn {
@@ -117,7 +117,7 @@
 .modalDescription p,
 .modalDescription span,
 .modalDescription ul {
-  @apply mb-2 font-normal text-inherit last:mb-0 md:mb-4 xl:mb-6;
+  @apply mb-2 font-normal text-inherit last:mb-0 md:mb-3 xl:mb-6;
 }
 
 .modalDescription::-webkit-scrollbar {

@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import { Tab } from '@headlessui/react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-// import { useTranslation } from 'gatsby-plugin-react-i18next';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { ChevronRightIcon } from '@heroicons/react/24/solid';
 import { TabsModal } from './TabsModal';
 import * as s from './Tabs.module.css';
 
-export const Tabs = ({ list }) => {
+export const Tabs = ({ list, isAddition = false }) => {
   const [isModalShown, setIsModalShown] = useState(false);
-  // const { t } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <>
@@ -75,7 +75,7 @@ export const Tabs = ({ list }) => {
                         className={s.modalOpenBtn}
                         onClick={() => setIsModalShown(true)}
                       >
-                        {item?.item}
+                        {isAddition ? t('culturesModalBtn') : item?.item}
                         <ChevronRightIcon className={s.modalOpenIcon} />
                       </button>
 
