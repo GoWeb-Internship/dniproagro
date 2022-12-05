@@ -1,6 +1,6 @@
 ---
 chapter: gallery
-chapter_range: "6"
+chapter_range: '6'
 language: uk
 title: Галерея
 photos_list:
@@ -8,10 +8,10 @@ photos_list:
     alt: працівник
   - photo: gallery2.jpg
     alt: аграрій
-  - photo: gallery3.png
+  - photo: gallery4.jpg
     alt: зрошування
   - alt: посів
-    photo: sowing.jpg
+    photo: gallery5.jpg
   - alt: кукурузда
     photo: corn-2.jpg
   - alt: кукурудза 2
