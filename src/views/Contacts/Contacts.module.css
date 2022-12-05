@@ -5,7 +5,10 @@
   @apply mb-4 after:hidden md:mb-2 xl:mb-4;
 }
 .wrapper {
-  @apply md:grid md:grid-cols-2 md:gap-[32px] xl:gap-[125px];
+  @apply md:flex md:justify-between;
+}
+.contactsWrapper {
+  @apply md:w-[335px] xl:w-[610px];
 }
 .link {
   @apply cursor-pointer font-light lowercase transition-all;

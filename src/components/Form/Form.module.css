@@ -1,5 +1,5 @@
 .wrapper {
-  @apply w-full;
+  @apply w-full md:w-[335px] xl:w-[505px];
 }
 .title {
   @apply mb-2 mt-9 text-big font-bold md:mt-0 xl:mb-[14px] xl:text-large;
@@ -73,5 +73,5 @@
   @apply !border-hidden !bg-transparent !pl-4;
 }
 .dropdown {
-  @apply left-1 !w-[calc(100vw-63px)] !rounded-main !bg-white !pl-[14px] !font-mulish !text-small !text-green !outline !outline-white sm:!w-[434px] md:!w-[330px] xl:!w-[551px];
+  @apply left-1 !w-[calc(100vw-63px)] !rounded-main !bg-white !pr-[18px] !font-mulish !text-small !text-green !outline !outline-white sm:!w-[434px] md:!w-[329px] xl:!w-[499px];
 }

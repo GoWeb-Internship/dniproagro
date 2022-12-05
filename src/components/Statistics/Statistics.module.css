@@ -5,16 +5,16 @@
   @apply relative;
 }
 .mainWrapperFirst {
-  @apply absolute top-0 left-0 h-[196px] w-[196px] md:h-[152px] md:w-[152px] xl:h-[240px] xl:w-[240px];
+  @apply absolute top-0 left-[5px] h-[196px] w-[196px] md:h-[152px] md:w-[152px] xl:h-[240px] xl:w-[240px];
 }
 .mainWrapperSecond {
-  @apply absolute right-0 bottom-0 h-[152px] w-[152px] md:h-[196px] md:w-[196px] xl:h-[258px] xl:w-[258px];
+  @apply absolute right-1 bottom-0 h-[152px] w-[152px] md:right-0 md:h-[196px] md:w-[196px] xl:h-[258px] xl:w-[258px];
 }
 .mainWrapperThird {
-  @apply absolute left-0 top-0 h-[152px] w-[152px] xl:h-[240px] xl:w-[240px];
+  @apply absolute left-1 top-0 h-[152px] w-[152px] md:left-0 xl:h-[240px] xl:w-[240px];
 }
 .mainWrapperFourth {
-  @apply absolute right-0 bottom-0 h-[196px] w-[196px] xl:h-[258px] xl:w-[258px];
+  @apply absolute right-[5px] bottom-0 h-[196px] w-[196px] xl:h-[258px] xl:w-[258px];
 }
 .wrapper {
   @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold text-green;

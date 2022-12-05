@@ -1,6 +1,7 @@
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { useForm, Controller } from 'react-hook-form';
 import {
   NotificationContainer,
@@ -186,4 +187,9 @@ export const Form = () => {
       <NotificationContainer />
     </div>
   );
+};
+
+Form.propTypes = {
+  sendMessage: PropTypes.func,
+  locationApi: PropTypes.func,
 };
