@@ -3,7 +3,7 @@
 }
 
 .navItem {
-  @apply w-max cursor-pointer last:m-0 max-xl:mb-2 max-xl:w-full max-xl:rounded-main xl:mr-4;
+  @apply w-max last:m-0 max-xl:mb-2 max-xl:w-full max-xl:rounded-main xl:mr-4;
 }
 
 .baseLink:hover,

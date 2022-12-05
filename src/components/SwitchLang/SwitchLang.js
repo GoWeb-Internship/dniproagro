@@ -6,7 +6,6 @@ import Backdrop from './Backdrop';
 import {
   langSwitch,
   buttonSwitch,
-  langLabel,
   globeIcon,
   langBackdrop,
 } from './SwitchLang.module.css';
@@ -25,7 +24,7 @@ export const SwitchLang = () => {
   return (
     <div className={langSwitch}>
       <button type="button" className={buttonSwitch} onClick={toggle}>
-        <span className={langLabel}>{normalizeLang(language)}</span>
+        <span>{normalizeLang(language)}</span>
         <GlobeAltIcon className={globeIcon} />
       </button>
 

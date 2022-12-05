@@ -19,7 +19,7 @@
 }
 
 .sloganDesc {
-  @apply w-[276px] text-small font-normal text-white  md:w-[276px] xl:w-[340px] xl:text-big;
+  @apply w-full text-small font-normal text-white md:w-[320px] xl:w-[504px] xl:text-big;
 }
 
 .actionBtn {
@@ -32,5 +32,5 @@
 }
 
 .actionBtn:active {
-  @apply border-[1px] border-white bg-transparent text-white transition-colors duration-300 ease-hover;
+  @apply border-[1px] border-accent bg-white text-accent transition-colors duration-300 ease-hover;
 }

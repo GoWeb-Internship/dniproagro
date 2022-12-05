@@ -7,10 +7,10 @@ import { useInView } from 'react-intersection-observer';
 import { useBreakpoint } from 'gatsby-plugin-breakpoints';
 
 export const Statistics = ({ statistics }) => {
-  const brakepoints = useBreakpoint();
-  const isMobile = brakepoints.sm;
-  const isTablet = brakepoints.md && brakepoints.mdt;
-  const isDesktop = brakepoints.lg;
+  const breakpoints = useBreakpoint();
+  const isMobile = breakpoints.sm;
+  const isTablet = breakpoints.md && breakpoints.mdt;
+  const isDesktop = breakpoints.lg;
 
   const getClass = index => {
     if (index === 0) {

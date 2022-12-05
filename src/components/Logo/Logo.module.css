@@ -1,7 +1,3 @@
-/* .logoLink {
-  @apply block h-[60px] w-[100px] flex-shrink-0 xl:h-[90px] xl:w-[150px];
-} */
-
 .logoIcon {
   @apply h-[60px] w-[100px] shrink-0 xl:h-[90px] xl:w-[150px];
 }

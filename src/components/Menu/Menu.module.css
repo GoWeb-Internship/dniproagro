@@ -1,5 +1,5 @@
 .menuBox {
-  @apply fixed left-0 top-0 z-20 h-screen w-screen bg-accent pt-[70px] transition duration-300 xl:hidden;
+  @apply fixed left-0 top-0 z-30 h-screen w-screen bg-accent pt-[70px] transition duration-300 xl:hidden;
 }
 
 .menuShown {
@@ -8,4 +8,17 @@
 
 .menuHidden {
   @apply -translate-x-full opacity-0;
+}
+
+.menuCloseBtn {
+  @apply absolute top-[-44px] right-[15px] flex h-[40px] w-[40px] items-center justify-center rounded-full bg-transparent text-white transition-all duration-300 ease-in-expo;
+}
+
+.menuCloseBtn:hover,
+.menuCloseBtn:focus {
+  @apply bg-mint-hex text-accent;
+}
+
+.menuIconClose {
+  @apply h-6 w-6 text-current;
 }
