@@ -21,7 +21,7 @@ export const Slider = ({ children, className = '', slideToClickedSlide }) => {
         slideToClickedSlide={slideToClickedSlide}
         breakpoints={{
           320: {
-            slidesPerView: 1.7,
+            slidesPerView: 1.5,
           },
           375: {
             slidesPerView: 1.7,

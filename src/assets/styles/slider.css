@@ -5,7 +5,7 @@
 }
 
 .infoModal {
-  @apply absolute top-0 flex  h-full w-full flex-col  overflow-y-hidden rounded-main bg-white p-4 opacity-0 shadow-modal transition-all duration-300 md:p-5;
+  @apply absolute top-0 flex  h-full w-full flex-col  overflow-y-hidden rounded-main bg-white py-4 px-2 opacity-0 shadow-modal transition-all duration-300 md:p-5 xl:p-6;
 }
 
 .sliderSwiper .swiper-slide-active:hover {
