@@ -75,7 +75,7 @@
 }
 
 .modalOpenBtn {
-  @apply absolute bottom-0 left-0 flex w-full items-end justify-start rounded-main bg-gradient-green p-4 text-middle text-white xl:h-[100px] xl:p-6 xl:text-[24px] xl:font-bold xl:leading-[30px];
+  @apply absolute bottom-0 left-0 flex w-full items-end justify-start rounded-main bg-gradient-green p-4 text-left text-middle text-white xl:h-[100px] xl:p-6 xl:text-[24px] xl:font-bold xl:leading-[30px];
 }
 
 .closeModalBtn {
