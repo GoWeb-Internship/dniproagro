@@ -31,5 +31,6 @@ Section.propTypes = {
   className: PropTypes.string,
   id: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
+  styleContainer: PropTypes.string,
   isContainer: PropTypes.oneOf(['true', 'false']),
 };

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { Footer, Header } from 'layout';
 import Seo from 'components/Seo';
@@ -23,4 +24,8 @@ export const withLayout = Component => props => {
       <Component {...props} />
     </Layout>
   );
+};
+
+Layout.propTypes = {
+  children: PropTypes.node.isRequired,
 };

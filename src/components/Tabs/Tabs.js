@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import { Tab } from '@headlessui/react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
@@ -93,4 +94,17 @@ export const Tabs = ({ list, isAddition = false }) => {
       </Tab.Group>
     </>
   );
+};
+
+Tabs.propTypes = {
+  list: PropTypes.arrayOf(
+    PropTypes.shape({
+      alt: PropTypes.string.isRequired,
+      item: PropTypes.string.isRequired,
+      range: PropTypes.string,
+      description: PropTypes.string.isRequired,
+      image: PropTypes.object.isRequired,
+    }),
+  ).isRequired,
+  isAddition: PropTypes.bool,
 };

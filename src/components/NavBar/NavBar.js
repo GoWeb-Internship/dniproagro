@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Link } from 'react-scroll';
+import PropTypes from 'prop-types';
 import { useBreakpoint } from 'gatsby-plugin-breakpoints';
 import { anchorScrollDuration } from 'utils/constants';
 import * as s from './NavBar.module.css';
@@ -33,4 +34,14 @@ export const NavBar = ({ sections, setIsMenuOpen }) => {
       </ul>
     </nav>
   );
+};
+
+NavBar.propTypes = {
+  setIsMenuOpen: PropTypes.func.isRequired,
+  sections: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+      chapter: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
 };

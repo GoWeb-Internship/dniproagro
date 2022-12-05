@@ -17,4 +17,5 @@ export const SectionTitle = ({ title, level = 'h2', className = '' }) => {
 SectionTitle.propTypes = {
   title: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   level: PropTypes.oneOf(['h2', 'h1']),
+  className: PropTypes.string,
 };

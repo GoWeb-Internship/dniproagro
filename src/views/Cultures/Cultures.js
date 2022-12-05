@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { Section, Tabs, SectionTitle } from 'components';
 
 export const Cultures = () => {
-  const [chapter, setChapter] = useState(null);
   const { i18n } = useTranslation();
 
   const {
@@ -41,28 +40,21 @@ export const Cultures = () => {
     }
   `);
 
-  useEffect(() => {
-    if (nodes?.frontmatter === null || !i18n.language) return;
+  const cultures = nodes?.find(
+    ({ frontmatter: { language } }) => language === i18n.language,
+  )?.frontmatter;
 
-    const cultureChapter = nodes?.find(
-      ({ frontmatter: { language } }) => language === i18n.language,
-    )?.frontmatter;
-
-    const sortedList = [...cultureChapter?.list].sort(
-      (a, b) => a.range - b.range,
-    );
-
-    const sortedChapter = { ...cultureChapter, list: sortedList };
-    setChapter(sortedChapter);
-  }, [i18n, i18n.language, nodes]);
+  const title = cultures?.title;
+  const id = cultures?.chapter;
+  const list = [...cultures?.list]?.sort((a, b) => a.range - b.range);
 
   return (
     <>
-      {chapter && (
-        <Section id={chapter?.chapter}>
-          <SectionTitle title={chapter?.title} />
+      {cultures && (
+        <Section id={id}>
+          <SectionTitle title={title} />
 
-          <Tabs list={chapter?.list} isAddition={true} />
+          <Tabs list={list} isAddition={true} />
         </Section>
       )}
     </>

@@ -11,11 +11,11 @@
 }
 
 .langBackdrop {
-  @apply fixed top-0 left-0 z-40 h-full w-full;
+  @apply fixed top-0 left-0 z-20 h-full w-full;
 }
 
 .langList {
-  @apply absolute right-1/2 z-50 mt-5 box-content h-[230px] w-[72px] translate-x-1/2 overflow-hidden rounded-main border-2 border-[#fff] bg-[#fff] md:right-1/2 md:translate-x-1/2 xl:right-0 xl:translate-x-0;
+  @apply absolute right-1/2 z-[21] mt-5 box-content h-[230px] w-[72px] translate-x-1/2 overflow-hidden rounded-main border-2 border-[#fff] bg-[#fff] md:right-1/2 md:translate-x-1/2 xl:right-0 xl:translate-x-0;
 }
 
 .langListItem {
