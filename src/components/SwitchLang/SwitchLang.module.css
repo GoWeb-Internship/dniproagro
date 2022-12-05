@@ -23,15 +23,15 @@
 }
 
 .langListItem {
-  @apply mb-[2px] flex h-[56px] cursor-pointer items-center  justify-center bg-accent transition-all first:rounded-tr-main first:rounded-tl-main    last:rounded-bl-main  last:rounded-br-main hover:border  hover:border-accent hover:bg-white hover:text-accent;
+  @apply mb-[2px] flex h-[56px] cursor-pointer items-center justify-center bg-accent py-1 transition-all first:rounded-tr-main first:rounded-tl-main    last:rounded-bl-main  last:rounded-br-main hover:border  hover:border-accent hover:bg-white hover:text-accent;
 }
 
 .langItemLink {
-  @apply flex  w-full items-center justify-center  text-white;
+  @apply flex  h-full w-full items-center justify-center   text-white;
 }
 
 .langItemLinkActive {
-  @apply relative flex w-full justify-center  text-white after:absolute after:left-[50%] after:bottom-[-4px] after:h-[2px] after:w-10 after:translate-x-[-50%] after:bg-current after:content-[''];
+  @apply relative flex h-full w-full items-center justify-center  text-white after:absolute after:left-[50%] after:bottom-[10px] after:h-[2px] after:w-10 after:translate-x-[-50%] after:bg-current after:content-[''];
 }
 
 .langListItem:hover > .langItemLink,
