@@ -28,7 +28,7 @@
     "test": "test"
   },
   "404": {
-    "title": "Something went wrong, or the page was not found...",
+    "title": "Something went wrong ...",
     "description": "Would you like to return to the home page?",
     "button": "Home"
   }

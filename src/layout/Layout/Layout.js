@@ -1,14 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { Footer, Header } from 'layout';
-import Seo from 'components/Seo';
 
 const Layout = ({ children }) => {
-  const { i18n } = useTranslation();
   return (
     <div className="flex h-screen flex-col">
-      <Seo title="DniproAgro" description="Опис сайту" lang={i18n.language} />
       <Header />
 
       <main className="flex-grow">{children}</main>

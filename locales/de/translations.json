@@ -27,7 +27,7 @@
     "success": "Die Nachricht wurde versendet"
   },
   "404": {
-    "title": "Etwas ist schief gelaufen oder Seite wurde nicht gefunden...",
+    "title": "Etwas ist schief gelaufen ...",
     "description": "Möchten Sie zur Hauptseite zurückkehren?",
     "button": "Startseite"
   }
