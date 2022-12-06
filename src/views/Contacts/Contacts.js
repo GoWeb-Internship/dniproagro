@@ -59,7 +59,7 @@ export const Contacts = () => {
           <Address address={address} />
           <Map />
         </div>
-        {/* <Form /> */}
+        <Form />
       </div>
     </Section>
   );

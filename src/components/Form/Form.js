@@ -93,7 +93,7 @@ export const Form = () => {
   } = useForm({
     resolver: yupResolver(schema),
   });
-  const [userLocation, setUserLocation] = React.useState('');
+  const [userLocation, setUserLocation] = useState('');
 
   locationApi()
     .then(location => setUserLocation(location))
