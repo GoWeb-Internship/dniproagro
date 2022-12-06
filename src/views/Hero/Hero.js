@@ -2,7 +2,7 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import Markdown from 'markdown-to-jsx';
-import { Section, SectionTitle, SlideShow } from 'components';
+import { Section, SectionTitle, SlideShow, Spinner } from 'components';
 import * as s from './Hero.module.css';
 
 export const Hero = () => {
@@ -54,6 +54,7 @@ export const Hero = () => {
 
   return (
     <>
+      <Spinner />
       {heroData && (
         <Section
           className={s.heroSection}
