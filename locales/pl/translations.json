@@ -25,5 +25,10 @@
     "messageMin": "Komentarz musi zawierać minimum 20 znaków",
     "messageMax": "Komentarz musi zawierać minimum 2000 znaków",
     "success": "Wiadomość wysłana"
+  },
+  "404": {
+    "title": "Coś poszło nie tak lub strona nie została znaleziona...",
+    "description": "Czy chcesz wrócić do strony głównej?",
+    "button": "Główna"
   }
 }
