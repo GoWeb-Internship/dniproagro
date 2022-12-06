@@ -1,10 +1,10 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { SwiperSlide } from 'swiper/react';
-import { Section, SectionTitle, Container } from 'components';
-import { Slider } from 'components/Slider/Slider';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import { Section, SectionTitle, Container } from 'components';
+import { Slider } from 'components/Slider/Slider';
 import * as s from './Gallery.module.css';
 
 export const Gallery = () => {

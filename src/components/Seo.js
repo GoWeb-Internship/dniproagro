@@ -76,6 +76,12 @@ function Seo({ description, title, lang = 'uk', meta = [] }) {
         rel="canonical"
         href="https://lucent-semolina-877c33.netlify.app/"
       ></link>
+      <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+      <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+      ></link>
       <link rel="apple-touch-icon" sizes="180x180" href={appleTouchIcon}></link>
       <link rel="icon" type="image/png" sizes="32x32" href={faviconBig}></link>
       <link

@@ -11,6 +11,17 @@ const defaultcenter = {
   lng: 36.240398,
 };
 
+const defaultOptions = {
+  panControl: true,
+  zoomControl: true,
+  mapTypeControl: false,
+  scaleControl: false,
+  streetViewControl: false,
+  rotateControl: false,
+  keyboardShortcuts: false,
+  fullscreenControl: false,
+};
+
 const Map = () => {
   const { i18n } = useTranslation();
 
@@ -59,29 +70,29 @@ const Map = () => {
   return (
     <>
       {location ? (
-        <LoadScript googleMapsApiKey={GOOGLE_API_KEY}>
+        <LoadScript googleMapsApiKey={GOOGLE_API_KEY} language={language}>
           <GoogleMap
             mapContainerClassName={s.container}
             center={center}
-            zoom={12}
+            zoom={13}
             onLoad={onLoad}
             onUnmount={onUnmount}
-            language={language}
+            options={defaultOptions}
           >
-            <Marker position={center} />
+            <Marker position={center} label="DniproAgro" />
           </GoogleMap>
         </LoadScript>
       ) : (
-        <LoadScript googleMapsApiKey={GOOGLE_API_KEY}>
+        <LoadScript googleMapsApiKey={GOOGLE_API_KEY} language={language}>
           <GoogleMap
             mapContainerClassName={s.container}
             center={defaultcenter}
-            zoom={12}
+            zoom={13}
             onLoad={onLoad}
             onUnmount={onUnmount}
-            language={language}
+            options={defaultOptions}
           >
-            <Marker position={defaultcenter} />
+            <Marker position={defaultcenter} label="DniproAgro" />
           </GoogleMap>
         </LoadScript>
       )}

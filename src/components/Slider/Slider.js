@@ -2,6 +2,7 @@ import React from 'react';
 import { Swiper } from 'swiper/react';
 import { Pagination } from 'swiper';
 import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
+import PropTypes from 'prop-types';
 
 import 'swiper/css';
 import 'swiper/css/bundle';
@@ -26,25 +27,15 @@ export const Slider = ({ children, className = '', slideToClickedSlide }) => {
           375: {
             slidesPerView: 1.7,
             navigation: false,
-            // spaceBetween: 30,
           },
           480: {
             slidesPerView: 2,
           },
-          // 627: {
-          //   slidesPerView: 3,
-          // },
           768: {
             slidesPerView: 2.23,
-            // spaceBetween: 20,
           },
           1280: {
             slidesPerView: 3,
-            // spaceBetween: 30,
-            // navigation: {
-            //   nextEl: '.next-slider',
-            //   prevEl: '.prev-slider',
-            // },
           },
         }}
         centeredSlides={true}
@@ -61,4 +52,10 @@ export const Slider = ({ children, className = '', slideToClickedSlide }) => {
       </Swiper>
     </div>
   );
+};
+
+Slider.propTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  slideToClickedSlide: PropTypes.bool,
 };

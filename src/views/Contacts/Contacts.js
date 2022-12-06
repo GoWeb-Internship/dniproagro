@@ -1,10 +1,12 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 // import { ArrowRightIcon } from '@heroicons/react/24/outline';
+import loadable from '@loadable/component';
 import { Section, SectionTitle, Address, Form, Contact } from 'components';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
-import Map from 'components/Map/Map';
 import * as s from './Contacts.module.css';
+
+const Map = loadable(() => import('components/Map/Map'));
 
 export const Contacts = () => {
   const { i18n } = useTranslation();
