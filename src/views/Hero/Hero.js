@@ -67,13 +67,18 @@ export const Hero = () => {
           id={id}
           styleContainer={s.heroContainer}
         >
-          <SectionTitle title={<Markdown>{slogan}</Markdown>} level="h1" />
-          <h2 className={s.sloganDesc}>
+          {/* <SectionTitle level="h1"> */}
+          <Markdown>{slogan}</Markdown>
+          {/* </SectionTitle> */}
+
+          <p className={s.sloganDesc}>
             <Markdown>{description}</Markdown>
-          </h2>
+          </p>
+
           <a href={`tel:${phone}`} className={s.actionBtn}>
             {t('sloganBtn')}
           </a>
+
           <div className={s.sliderWrapper}>
             <div className={s.overlay}></div>
 

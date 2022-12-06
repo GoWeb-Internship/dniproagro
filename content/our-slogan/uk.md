@@ -1,16 +1,8 @@
 ---
 chapter: our_slogan
-chapter_range: "1"
+chapter_range: '1'
 language: uk
-title: |-
-  # Т﻿епло сонця
-
-  # у﻿ кожному зерні
-content: |-
-  З﻿ року в рік вирощуємо культури
-
-  т﻿а постачаємо в різні куточки світу
-phone: "+380990000000"
+phone: '+380990000000'
 images_list:
   - image: slider-1.jpg
     alt: Пшеничне поле

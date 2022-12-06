@@ -86,28 +86,56 @@ collections:
           hint: 'Виберіть мову, яка відповідає контенту даного розділу',
         }
       - {
-          label: 'Title at page',
-          name: 'title',
-          widget: 'markdown',
-          editor_components: [],
-          buttons: [],
-          required: true,
-          hint:
-            'Введіть слоган компанії, який буде відображатися на сторінці.
-            (максимальна кількість символів - 35). Для відображення його на
-            сторінці у два рядки потрібно розбити його на два рядки тут',
+          label: 'Slogan at page',
+          name: 'page_title',
+          widget: 'object',
+          fields:
+            [
+              {
+                label: 'First line of title',
+                name: 'first_line',
+                widget: 'string',
+                required: true,
+                hint:
+                  'Введіть слоган компанії, який буде відображатися на сторінці
+                  (ПЕРШИЙ РЯДОК - У ЦЕ ПОЛЕ)',
+              },
+              {
+                label: 'Second line of title',
+                name: 'second_line',
+                widget: 'string',
+                required: true,
+                hint:
+                  'Введіть слоган компанії, який буде відображатися на сторінці
+                  (ДРУГИЙ РЯДОК - У ЦЕ ПОЛЕ)',
+              },
+            ],
         }
       - {
-          label: 'Content',
-          name: 'content',
-          widget: 'markdown',
-          editor_components: [],
-          buttons: [],
-          required: true,
-          hint:
-            'Введіть контент розділу "Наш слоган" (максимальна кількість
-            символів - 70). Для відображення його на сторінці у два рядки
-            потрібно розбити його на два рядки тут',
+          label: 'Slogan description',
+          name: 'description',
+          widget: 'object',
+          fields:
+            [
+              {
+                label: 'First line of description',
+                name: 'first_line',
+                widget: 'string',
+                required: true,
+                hint:
+                  'Введіть опис слогану компанії, який буде відображатися на
+                  сторінці (ПЕРШИЙ РЯДОК - У ЦЕ ПОЛЕ)',
+              },
+              {
+                label: 'Second line of description',
+                name: 'second_line',
+                widget: 'string',
+                required: true,
+                hint:
+                  'Введіть опис слогану компанії, який буде відображатися на
+                  сторінці (ДРУГИЙ РЯДОК - У ЦЕ ПОЛЕ)',
+              },
+            ],
         }
       - {
           label: 'Company phone number',
