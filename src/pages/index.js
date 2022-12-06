@@ -31,19 +31,19 @@ const IndexPage = () => {
       <Hero />
 
       {/* про компанію */}
-      <About />
+      {/* <About /> */}
 
       {/* культури */}
-      <Cultures />
+      {/* <Cultures /> */}
 
       {/* персонал */}
-      <Personnel />
+      {/* <Personnel /> */}
 
       {/* техзасоби */}
-      <TechnicalEquipments />
+      {/* <TechnicalEquipments /> */}
 
       {/* галерея */}
-      <Gallery />
+      {/* <Gallery /> */}
 
       {/* контакти */}
       <Contacts />
