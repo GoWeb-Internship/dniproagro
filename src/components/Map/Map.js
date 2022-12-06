@@ -79,7 +79,7 @@ const Map = () => {
             onUnmount={onUnmount}
             options={defaultOptions}
           >
-            <Marker position={center} label="DniproAgro" />
+            <Marker position={center} />
           </GoogleMap>
         </LoadScript>
       ) : (
@@ -92,7 +92,7 @@ const Map = () => {
             onUnmount={onUnmount}
             options={defaultOptions}
           >
-            <Marker position={defaultcenter} label="DniproAgro" />
+            <Marker position={defaultcenter} />
           </GoogleMap>
         </LoadScript>
       )}

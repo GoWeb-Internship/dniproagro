@@ -1,9 +1,7 @@
 .spinner {
-  position: absolute;
-  height: 60px;
-  width: 60px;
+  @apply absolute h-[30px] w-[30px] md:h-[40px] md:w-[40px] xl:h-[80px] xl:w-[80px];
   border: 3px solid transparent;
-  border-top-color: #a04668;
+  border-top-color: #064e3b;
   top: 50%;
   left: 50%;
   margin: -30px;
@@ -18,7 +16,7 @@
   border-radius: 50%;
 }
 .spinner::before {
-  border-top-color: #254e70;
+  border-top-color: #a16207;
   top: -12px;
   left: -12px;
   right: -12px;
@@ -26,7 +24,7 @@
   animation: spin 3s linear infinite;
 }
 .spinner::after {
-  border-top-color: #009b00;
+  border-top-color: rgba(2, 147, 28, 0.5);
   top: 6px;
   left: 6px;
   right: 6px;

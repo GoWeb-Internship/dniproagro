@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import Markdown from 'markdown-to-jsx';
@@ -7,6 +7,7 @@ import * as s from './Hero.module.css';
 
 export const Hero = () => {
   const { t, i18n } = useTranslation();
+  const [isLoading, setIsLoading] = useState(true);
 
   const {
     allMarkdownRemark: { nodes },
@@ -52,37 +53,35 @@ export const Hero = () => {
   const phone = heroData?.phone;
   const images = heroData?.images_list;
 
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+  }, [heroData]);
+
   return (
     <>
-      <Spinner />
-      {heroData && (
+      {heroData ? (
         <Section
           className={s.heroSection}
           id={id}
           styleContainer={s.heroContainer}
         >
           <SectionTitle title={<Markdown>{slogan}</Markdown>} level="h1" />
-
           <h2 className={s.sloganDesc}>
             <Markdown>{description}</Markdown>
           </h2>
-
-          <a
-            href={`tel:${phone}`}
-            className={s.actionBtn}
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-          >
+          <a href={`tel:${phone}`} className={s.actionBtn}>
             {t('sloganBtn')}
           </a>
-
           <div className={s.sliderWrapper}>
             <div className={s.overlay}></div>
 
             <SlideShow images={images} />
           </div>
+          {isLoading && <Spinner />}
         </Section>
-      )}
+      ) : null}
     </>
   );
 };

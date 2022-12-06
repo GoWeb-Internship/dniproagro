@@ -17,7 +17,7 @@ export const SlideShow = ({ images }) => {
       slidesPerView={1}
       lazy={true}
       autoplay={{
-        delay: 3000,
+        delay: 4000,
         disableOnInteraction: false,
       }}
       speed={2000}
