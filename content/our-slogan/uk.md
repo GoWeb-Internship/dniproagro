@@ -2,6 +2,9 @@
 chapter: our_slogan
 chapter_range: '1'
 language: uk
+page_title:
+  first_line: Тепло сонця
+  second_line: в кожному зерні
 phone: '+380990000000'
 images_list:
   - image: slider-1.jpg
