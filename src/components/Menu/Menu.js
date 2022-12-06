@@ -45,6 +45,7 @@ export const Menu = ({ setIsMenuOpen, toggleMenu, isMenuOpen, sections }) => {
           aria-expanded={isMenuOpen ? true : false}
           className={s.menuCloseBtn}
           onClick={() => setIsMenuOpen(false)}
+          aria-label="close menu button"
         >
           <XMarkIcon className={s.menuIconClose} />
         </button>
