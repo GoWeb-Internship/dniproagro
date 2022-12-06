@@ -7,6 +7,13 @@
   background-size: cover;
 }
 
+/* @media (min-device-pixel-ratio: 2) and (max-width: 767px),
+  (min-resolution: 192dpi) and (max-width: 767px),
+  (min-resolution: 2dppx) and (max-width: 767px) {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('../images/bg.jpg');
+} */
+
 .wrapper {
   @apply md:px-[67px];
 }
