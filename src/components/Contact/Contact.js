@@ -12,21 +12,24 @@ export const Contact = ({ contactsArr }) => (
         <li className="" key={index}>
           <ul className={s.messengerList}>
             <li>
-              <a className={s.messengerLink} href={telegram}>
+              <a className={s.messengerLink} href={`https://t.me/${telegram}`}>
                 <div className={s.imgWpapper}>
                   <img src={telegramImg} className={s.icon} alt="telegram" />
                 </div>
               </a>
             </li>
             <li>
-              <a className={s.messengerLink} href={viber}>
+              <a
+                className={s.messengerLink}
+                href={`viber://chat?number=%2B${viber}`}
+              >
                 <div className={s.imgWpapper}>
                   <img src={viberImg} className={s.icon} alt="viber" />
                 </div>
               </a>
             </li>
             <li>
-              <a className={s.messengerLink} href={whatsapp}>
+              <a className={s.messengerLink} href={`https://wa.me/${whatsapp}`}>
                 <div className={s.imgWpapper}>
                   <img src={whatsappImg} className={s.icon} alt="whatsapp" />
                 </div>

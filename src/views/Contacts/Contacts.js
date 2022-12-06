@@ -46,6 +46,7 @@ export const Contacts = () => {
   const address = contacts?.address;
   const contactsArr = contacts?.contacts;
   const chapter = contacts?.chapter;
+  console.log(contactsArr);
 
   return (
     <Section className={s.section} id={chapter}>
