@@ -46,7 +46,7 @@ const IndexPage = () => {
       {/* <Gallery /> */}
 
       {/* контакти */}
-      {/* <Contacts /> */}
+      <Contacts />
     </>
   );
 };
