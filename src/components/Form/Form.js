@@ -13,7 +13,7 @@ import { sendMessage } from '../../utils/telegramApi';
 import * as s from './Form.module.css';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
-// import { locationApi } from 'utils/locationApi';
+import { locationApi } from 'utils/locationApi';
 
 export const Form = () => {
   const [error, setError] = useState(null);
