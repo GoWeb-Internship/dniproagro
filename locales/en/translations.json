@@ -2,14 +2,14 @@
   "sloganBtn": "Call us",
   "logoAlt": "Logo",
   "culturesModalBtn": "Sowing technologies",
-  "ourAddress": "Our address",
+  "ourAddress": "Our address:",
   "experience": "of cooperation",
   "form": {
-    "title": "Write to us",
+    "title": "Write us",
     "subTitle": "Fill in the data",
     "nameInput": "Name",
     "emailInput": "Email",
-    "messageInput": "Write to us",
+    "messageInput": "Write us",
     "submit": "Send",
     "phonePlaceholder": "Enter phone number"
   },
