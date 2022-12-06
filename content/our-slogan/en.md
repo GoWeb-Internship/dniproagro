@@ -2,8 +2,14 @@
 chapter: our_slogan
 chapter_range: "1"
 language: en
-title: Our slogan
-content: Lorem ipsum dolor sit amet consectetur dolor amet ipsum.
+title: |-
+  The warmth of the sun
+
+  in every grain
+content: |-
+  Lorem ipsum dolor sit amet consectetur
+
+  dolor amet ipsum.
 phone: "+380990000000"
 images_list:
   - image: slider-1.jpg
