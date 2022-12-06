@@ -1,6 +1,5 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-// import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import loadable from '@loadable/component';
 import { Section, SectionTitle, Address, Form, Contact } from 'components';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
