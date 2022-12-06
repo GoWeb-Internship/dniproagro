@@ -34,3 +34,7 @@
 .actionBtn:active {
   @apply border-[1px] border-accent bg-white text-accent transition-colors duration-300 ease-hover;
 }
+
+.sloganSpan {
+  @apply block text-inherit;
+}

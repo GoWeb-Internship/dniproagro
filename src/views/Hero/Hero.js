@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
-import Markdown from 'markdown-to-jsx';
 import { Section, SectionTitle, SlideShow, Spinner } from 'components';
 import * as s from './Hero.module.css';
 
@@ -19,10 +18,16 @@ export const Hero = () => {
         nodes {
           frontmatter {
             chapter
-            title
+            page_title {
+              first_line
+              second_line
+            }
             chapter_range
             language
-            content
+            description {
+              first_line
+              second_line
+            }
             phone
             images_list {
               alt
@@ -48,8 +53,8 @@ export const Hero = () => {
   )?.frontmatter;
 
   const id = heroData?.chapter;
-  const slogan = heroData?.title;
-  const description = heroData?.content;
+  const slogan = heroData?.page_title;
+  const description = heroData?.description;
   const phone = heroData?.phone;
   const images = heroData?.images_list;
 
@@ -67,12 +72,14 @@ export const Hero = () => {
           id={id}
           styleContainer={s.heroContainer}
         >
-          {/* <SectionTitle level="h1"> */}
-          <Markdown>{slogan}</Markdown>
-          {/* </SectionTitle> */}
+          <SectionTitle level="h1">
+            <span className={s.sloganSpan}>{slogan?.first_line}</span>
+            <span className={s.sloganSpan}>{slogan?.second_line}</span>
+          </SectionTitle>
 
           <p className={s.sloganDesc}>
-            <Markdown>{description}</Markdown>
+            <span className={s.sloganSpan}>{description?.first_line}</span>
+            <span className={s.sloganSpan}>{description?.second_line}</span>
           </p>
 
           <a href={`tel:${phone}`} className={s.actionBtn}>
@@ -84,6 +91,7 @@ export const Hero = () => {
 
             <SlideShow images={images} />
           </div>
+
           {isLoading && <Spinner />}
         </Section>
       ) : null}
