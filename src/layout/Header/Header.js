@@ -84,6 +84,7 @@ export const Header = () => {
               aria-expanded={isMenuOpen ? true : false}
               className={s.menuOpenBtn}
               onClick={() => setIsMenuOpen(true)}
+              aria-label="open menu button"
             >
               <Bars3Icon className={s.menuIconOpen} />
             </button>

@@ -45,7 +45,7 @@ module.exports = {
         gray: '#374151', // class="bg-gray text-gray border-gray"
         'dark-grey': '#CDCDCD', // class="bg-dark-grey text-dark-grey border-dark-grey"
         mint: 'rgba(2, 147, 28, 0.2)', // class="bg-mint text-mint border-mint"
-        'mint-hex': '#E1F1E6', // class="bg-mint text-mint border-mint"
+        'mint-hex': '#E1F1E6', // class="bg-mint-hex text-mint-hex border-mint-hex"
         'mint-hover': 'rgba(2, 147, 28, 0.1)', // class="bg-mint-hover text-mint-hover border-mint-hover"
         accent: {
           DEFAULT: '#064E3B', // class="bg-accent text-accent border-accent"
@@ -66,7 +66,7 @@ module.exports = {
         'gradient-gray':
           'linear-gradient(89.63deg, rgba(0, 0, 0, 0.5) 26.03%, rgba(116, 115, 115, 0.01) 99.73%);', // class="bg-gradient-gray"
         'gradient-transparent':
-          'linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%);', // class="bg-gradient-green"
+          'linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%);', // class="bg-gradient-transparent"
       },
       // BUTTON RADIUS
       borderRadius: {

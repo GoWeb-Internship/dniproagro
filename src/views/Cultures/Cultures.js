@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { Section, Tabs, SectionTitle } from 'components';
 
 export const Cultures = () => {
+  const [chapter, setChapter] = useState(null);
   const { i18n } = useTranslation();
 
   const {
@@ -40,23 +41,48 @@ export const Cultures = () => {
     }
   `);
 
-  const cultures = nodes?.find(
-    ({ frontmatter: { language } }) => language === i18n.language,
-  )?.frontmatter;
+  useEffect(() => {
+    if (nodes?.frontmatter === null || !i18n.language) return;
+    const equipmentsChapter = nodes?.find(
+      ({ frontmatter: { language } }) => language === i18n.language,
+    )?.frontmatter;
+    const sortedList = [...equipmentsChapter?.list].sort(
+      (a, b) => a.range - b.range,
+    );
+    const sortedChapter = { ...equipmentsChapter, list: sortedList };
+    setChapter(sortedChapter);
+  }, [i18n, i18n.language, nodes]);
 
-  const title = cultures?.title;
-  const id = cultures?.chapter;
-  const list = [...cultures?.list]?.sort((a, b) => a.range - b.range);
+  // const cultures = nodes?.find(
+  //   ({ frontmatter: { language } }) => language === i18n.language,
+  // )?.frontmatter;
+
+  // const title = cultures?.title;
+  // const id = cultures?.chapter;
+  // const list = [...cultures?.list]?.sort((a, b) => a.range - b.range);
 
   return (
     <>
-      {cultures && (
-        <Section id={id}>
-          <SectionTitle title={title} />
+      {chapter && (
+        <Section id={chapter?.chapter}>
+          <SectionTitle title={chapter?.title} />
 
-          <Tabs list={list} isAddition={true} />
+          <Tabs list={chapter?.list} tabsPosition="left" />
+          <Tabs list={chapter?.list} />
         </Section>
       )}
     </>
   );
+
+  // return (
+  //   <>
+  //     {cultures && (
+  //       <Section id={id}>
+  //         <SectionTitle title={title} />
+
+  //         <Tabs list={list} isAddition={true} />
+  //       </Section>
+  //     )}
+  //   </>
+  // );
 };
