@@ -27,7 +27,7 @@
     "success": "Wiadomość wysłana"
   },
   "404": {
-    "title": "Coś poszło nie tak lub strona nie została znaleziona...",
+    "title": "Coś poszło nie tak ...",
     "description": "Czy chcesz wrócić do strony głównej?",
     "button": "Główna"
   }

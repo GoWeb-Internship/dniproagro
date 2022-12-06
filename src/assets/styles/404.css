@@ -7,15 +7,18 @@
   background-size: cover;
 }
 
-/* @media (min-device-pixel-ratio: 2) and (max-width: 767px),
-  (min-resolution: 192dpi) and (max-width: 767px),
-  (min-resolution: 2dppx) and (max-width: 767px) {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url('../images/bg.jpg');
-} */
-
 .wrapper {
-  @apply md:px-[67px];
+  @apply md:px-[67px] xl:px-[185px] xl:py-[86px];
+}
+
+@media screen and (min-width: 1280px) {
+  .wrapper {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+      url('../images/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: cover;
+  }
 }
 
 .main {
