@@ -57,9 +57,9 @@ export const Contacts = () => {
           </a>
           <Contact contactsArr={contactsArr} />
           <Address address={address} />
-          {/* <Map /> */}
+          <Map />
         </div>
-        <Form />
+        {/* <Form /> */}
       </div>
     </Section>
   );
