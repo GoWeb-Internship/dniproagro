@@ -21,7 +21,7 @@ const Gallery = loadable(() => import('views'), {
   resolveComponent: views => views.Gallery,
 });
 const Contacts = loadable(() => import('views'), {
-  resolveComponent: views => views.Cultures,
+  resolveComponent: views => views.Contacts,
 });
 
 const IndexPage = () => {
