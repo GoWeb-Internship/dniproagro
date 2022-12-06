@@ -25,5 +25,10 @@
     "messageMin": "Der Kommentar muss mindestens 20 Zeichen lang sein",
     "messageMax": "Der Kommentar muss mindestens 2000 Zeichen enthalten",
     "success": "Die Nachricht wurde versendet"
+  },
+  "404": {
+    "title": "Etwas ist schief gelaufen oder Seite wurde nicht gefunden...",
+    "description": "Möchten Sie zur Hauptseite zurückkehren?",
+    "button": "Startseite"
   }
 }

@@ -26,5 +26,10 @@
     "messageMax": "The comment must contain a minimum of 2000 characters",
     "success": "Message sent",
     "test": "test"
+  },
+  "404": {
+    "title": "Something went wrong, or the page was not found...",
+    "description": "Would you like to return to the home page?",
+    "button": "Home"
   }
 }
