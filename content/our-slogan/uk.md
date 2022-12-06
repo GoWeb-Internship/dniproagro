@@ -3,8 +3,9 @@ chapter: our_slogan
 chapter_range: "1"
 language: uk
 title: |-
-  Тепло сонця
-  в кожному зерні
+  # Т﻿епло сонця
+
+  # у﻿ кожному зерні
 content: |-
   З﻿ року в рік вирощуємо культури
 
