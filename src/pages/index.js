@@ -1,15 +1,28 @@
 import * as React from 'react';
 import { withLayout } from 'layout';
 import { graphql } from 'gatsby';
-import {
-  About,
-  Contacts,
-  Cultures,
-  Personnel,
-  Gallery,
-  TechnicalEquipments,
-  Hero,
-} from 'views';
+import loadable from '@loadable/component';
+const Hero = loadable(() => import('views'), {
+  resolveComponent: views => views.Hero,
+});
+const About = loadable(() => import('views'), {
+  resolveComponent: views => views.About,
+});
+const Cultures = loadable(() => import('views'), {
+  resolveComponent: views => views.Cultures,
+});
+const Personnel = loadable(() => import('views'), {
+  resolveComponent: views => views.Personnel,
+});
+const TechnicalEquipments = loadable(() => import('views'), {
+  resolveComponent: views => views.TechnicalEquipments,
+});
+const Gallery = loadable(() => import('views'), {
+  resolveComponent: views => views.Gallery,
+});
+const Contacts = loadable(() => import('views'), {
+  resolveComponent: views => views.Contacts,
+});
 
 const IndexPage = () => {
   return (
