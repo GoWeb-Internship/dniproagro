@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useI18next } from 'gatsby-plugin-react-i18next';
-import LangList from './LangList';
 import { GlobeAltIcon } from '@heroicons/react/24/outline';
+import LangList from './LangList';
 import Backdrop from './Backdrop';
 import {
   langSwitch,

@@ -6,7 +6,6 @@ import {
   langListItem,
   langItemLinkActive,
   langItemLink,
-  // langItemLinkMain,
 } from './SwitchLang.module.css';
 
 const LangList = ({ active }) => {
@@ -46,6 +45,6 @@ const LangList = ({ active }) => {
 
 export default LangList;
 
-// LangList.propTypes = {
-//   active: PropTypes.string.isRequired,
-// };
+LangList.propTypes = {
+  active: PropTypes.string.isRequired,
+};

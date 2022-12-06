@@ -1,21 +1,15 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { SwiperSlide } from 'swiper/react';
-import { Section, SectionTitle, Container } from 'components';
-import { Slider } from 'components/Slider/Slider';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import * as s from './Personnel.module.css';
 import Markdown from 'markdown-to-jsx';
-// import { useBreakpoint } from 'gatsby-plugin-breakpoints';
+import { Section, SectionTitle, Container } from 'components';
+import { Slider } from 'components/Slider/Slider';
+import * as s from './Personnel.module.css';
 
 export const Personnel = () => {
   const { i18n, t } = useTranslation();
-
-  // const brakepoints = useBreakpoint();
-  // const isMobile = brakepoints.sm;
-  // const isTablet = brakepoints.md;
-  // const isDesktop = brakepoints.lg;
 
   const {
     allMarkdownRemark: { nodes },
