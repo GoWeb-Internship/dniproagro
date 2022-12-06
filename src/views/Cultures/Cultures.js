@@ -42,7 +42,7 @@ export const Cultures = () => {
   `);
 
   useEffect(() => {
-    if (nodes?.frontmatter === null || !i18n.language) return;
+    if (nodes?.frontmatter?.length === 0 || !i18n.language) return;
 
     const equipmentsChapter = nodes?.find(
       ({ frontmatter: { language } }) => language === i18n.language,
