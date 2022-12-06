@@ -75,22 +75,18 @@ function Seo({ description, title, lang = 'uk', meta = [] }) {
       <link
         rel="canonical"
         href="https://lucent-semolina-877c33.netlify.app/"
-      ></link>
-      <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+      />
+      <link rel="preload" href="https://fonts.googleapis.com" as="font" />
       <link
-        rel="preconnect"
+        rel="preload"
         href="https://fonts.gstatic.com"
+        as="font"
         crossorigin
-      ></link>
-      <link rel="apple-touch-icon" sizes="180x180" href={appleTouchIcon}></link>
-      <link rel="icon" type="image/png" sizes="32x32" href={faviconBig}></link>
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href={faviconSmall}
-      ></link>
-      {/* <link rel="manifest" href="favicon/manifest.json" /> */}
+      />
+      <link rel="apple-touch-icon" sizes="180x180" href={appleTouchIcon} />
+      <link rel="icon" type="image/png" sizes="32x32" href={faviconBig} />
+      <link rel="icon" type="image/png" sizes="16x16" href={faviconSmall} />
+      {/* <link rel="manifest" href="site.webmanifest" /> */}
     </Helmet>
   );
 }
