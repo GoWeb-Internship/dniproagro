@@ -76,6 +76,7 @@ export const About = () => {
           <a
             className={s.link}
             href={buttonLink}
+            aria-label="statistics"
             target="_blank"
             rel="noopener noreferrer nofollow"
           >
