@@ -2,7 +2,7 @@
   "sloganBtn": "Zadzwonić",
   "logoAlt": "Logo",
   "culturesModalBtn": "Technologii siewu",
-  "ourAddress": "Nasz adres",
+  "ourAddress": "Nasz adres:",
   "experience": "współpracy",
   "form": {
     "title": "Napisz do nas",
@@ -25,5 +25,10 @@
     "messageMin": "Komentarz musi zawierać minimum 20 znaków",
     "messageMax": "Komentarz musi zawierać minimum 2000 znaków",
     "success": "Wiadomość wysłana"
+  },
+  "404": {
+    "title": "Coś poszło nie tak ...",
+    "description": "Czy chcesz wrócić do strony głównej?",
+    "button": "Główna"
   }
 }

@@ -1,0 +1,38 @@
+.section {
+  @apply -mt-[92px] flex min-h-[100vh] items-center text-center font-bold text-white xl:-mt-[138px];
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('../images/bg.jpg');
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: cover;
+}
+
+.wrapper {
+  @apply md:px-[67px] xl:px-[185px] xl:py-[86px];
+}
+
+@media screen and (min-width: 1280px) {
+  .wrapper {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+      url('../images/bg.jpg');
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: cover;
+  }
+}
+
+.main {
+  @apply mb-9 text-center text-9xl leading-tight md:mb-[43px] xl:mb-[38px];
+}
+
+.title {
+  @apply mb-4 text-2xl leading-tight xl:mb-6;
+}
+
+.text {
+  @apply mb-9 text-base leading-5 xl:mb-[38px] xl:text-2xl xl:leading-tight;
+}
+
+.link {
+  @apply mt-auto inline-block cursor-pointer rounded-main border-transparent bg-accent py-4 px-8  text-small font-normal text-white transition-colors duration-300 ease-hover hover:bg-white hover:text-accent active:border active:border-accent active:bg-white  active:text-accent;
+}

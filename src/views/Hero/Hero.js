@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import Markdown from 'markdown-to-jsx';
-import { Section, SectionTitle, SlideShow } from 'components';
+import { Section, SectionTitle, SlideShow, Spinner } from 'components';
 import * as s from './Hero.module.css';
 
 export const Hero = () => {
-  const [chapter, setChapter] = useState(null);
   const { t, i18n } = useTranslation();
+  const [isLoading, setIsLoading] = useState(true);
 
   const {
     allMarkdownRemark: { nodes },
@@ -43,49 +43,45 @@ export const Hero = () => {
     }
   `);
 
+  const heroData = nodes?.find(
+    ({ frontmatter: { language } }) => language === i18n.language,
+  )?.frontmatter;
+
+  const id = heroData?.chapter;
+  const slogan = heroData?.title;
+  const description = heroData?.content;
+  const phone = heroData?.phone;
+  const images = heroData?.images_list;
+
   useEffect(() => {
-    if (nodes?.frontmatter === null || !i18n.language) return;
-
-    const sloganChapter = nodes?.find(
-      ({ frontmatter: { language } }) => language === i18n.language,
-    )?.frontmatter;
-
-    setChapter(sloganChapter);
-  }, [i18n, i18n.language, nodes]);
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1500);
+  }, [heroData]);
 
   return (
     <>
-      {chapter && (
+      {heroData ? (
         <Section
           className={s.heroSection}
-          id={chapter?.chapter}
+          id={id}
           styleContainer={s.heroContainer}
         >
-          <SectionTitle
-            title={<Markdown>{chapter?.title}</Markdown>}
-            level="h1"
-          />
-
+          <SectionTitle title={<Markdown>{slogan}</Markdown>} level="h1" />
           <h2 className={s.sloganDesc}>
-            <Markdown>{chapter?.content}</Markdown>
+            <Markdown>{description}</Markdown>
           </h2>
-
-          <a
-            href={`tel:${chapter?.phone}`}
-            className={s.actionBtn}
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-          >
+          <a href={`tel:${phone}`} className={s.actionBtn}>
             {t('sloganBtn')}
           </a>
-
           <div className={s.sliderWrapper}>
             <div className={s.overlay}></div>
 
-            <SlideShow images={chapter?.images_list} />
+            <SlideShow images={images} />
           </div>
+          {isLoading && <Spinner />}
         </Section>
-      )}
+      ) : null}
     </>
   );
 };

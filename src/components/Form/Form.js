@@ -13,7 +13,6 @@ import { sendMessage } from '../../utils/telegramApi';
 import * as s from './Form.module.css';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
-import { locationApi } from 'utils/locationApi';
 
 export const Form = () => {
   const [error, setError] = useState(null);
@@ -93,11 +92,6 @@ export const Form = () => {
   } = useForm({
     resolver: yupResolver(schema),
   });
-  const [userLocation, setUserLocation] = React.useState('');
-
-  locationApi()
-    .then(location => setUserLocation(location))
-    .catch(err => console.log(err));
 
   const onSubmit = (data, e) => {
     try {
@@ -151,7 +145,7 @@ export const Form = () => {
                   }
                   buttonClass={s.dropdownBtn}
                   dropdownClass={s.dropdown}
-                  country={userLocation || 'ua'}
+                  country={'ua'}
                   preferredCountries={['ua', 'pl', 'us', 'de', 'gb']}
                   {...field}
                 />

@@ -2,8 +2,14 @@
 chapter: our_slogan
 chapter_range: "1"
 language: pl
-title: Nasze hasło
-content: Lorem ipsum dolor sit amet consectetur dolor amet ipsum.
+title: |-
+  Ciepło słońca
+
+  w każdym ziarnie
+content: |-
+  Lorem ipsum dolor sit amet 
+
+  consectetur dolor amet ipsum.
 phone: "+380990000000"
 images_list:
   - image: slider-1.jpg
