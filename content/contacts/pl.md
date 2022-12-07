@@ -2,7 +2,7 @@
 chapter: contacts
 chapter_range: "7"
 language: pl
-title: Łączność
+title: Kontakty
 address: 52650, Ukraina, obwód dniepropietrowski, rejon wasylkiwski, wieś
   Swyrydowe, ul. Myru, dom 42
 location: '{"type":"Point","coordinates":[36.2399341,48.1846822]}'
