@@ -61,7 +61,7 @@ list:
       risus sapien vel Lorem ipsum dolor sit amet consectetur. Placerat et at
       aenean sed vel mauris
     range: "1"
-    item: Sonnenblume
-    alt: Sonnenblume
+    item: Sonnenblumen
+    alt: Sonnenblumen
     image: sunflower.jpg
 ---
