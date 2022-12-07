@@ -51,7 +51,9 @@ function Seo({ description, title, lang = 'uk', meta = [] }) {
         },
         {
           property: `og:image`,
-          content: site.siteMetadata.siteUrl + image,
+          // content: site.siteMetadata.siteUrl + image,
+          content:
+            'https://res.cloudinary.com/dgukycvw0/image/upload/v1670396330/images/cover_klst2t.png',
         },
         {
           property: 'og:image:width',
