@@ -4,3 +4,6 @@
 .wrapper {
   @apply flex justify-center;
 }
+.wrapper img {
+  @apply h-[60px] w-[100px] shrink-0 md:h-[70px] xl:h-[90px] xl:w-[150px];
+}

@@ -1,5 +1,5 @@
 .contactsList {
-  @apply mt-9 mb-9 grid grid-cols-2 gap-x-[18px] gap-y-9 md:gap-y-[46px] xl:mt-[38px] xl:mb-16 xl:grid-cols-3;
+  @apply mt-9 mb-9 grid grid-cols-2 gap-x-[18px] gap-y-9 xl:mt-[38px] xl:mb-16 xl:grid-cols-3 xl:gap-y-[46px];
 }
 .messengerList {
   @apply mb-2 flex gap-4 xl:mb-4;
