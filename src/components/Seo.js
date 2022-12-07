@@ -2,7 +2,7 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
-// import image from '../assets/images/cover.png';
+import image from '../assets/images/cover.png';
 import appleTouchIcon from '../../static/favicon/apple-touch-icon.png';
 import faviconBig from '../../static/favicon/favicon-32x32.png';
 import faviconSmall from '../../static/favicon/favicon-16x16.png';
@@ -51,8 +51,14 @@ function Seo({ description, title, lang = 'uk', meta = [] }) {
         },
         {
           property: `og:image`,
-          //   content: site.siteMetadata.siteUrl + image,
+          content: site.siteMetadata.siteUrl + image,
         },
+        {
+          property: 'og:image:width',
+          content: '968',
+        },
+        { property: 'og:image:height', content: '504' },
+
         {
           name: `twitter:card`,
           content: `summary`,
@@ -75,22 +81,22 @@ function Seo({ description, title, lang = 'uk', meta = [] }) {
       <link
         rel="canonical"
         href="https://lucent-semolina-877c33.netlify.app/"
-      ></link>
-      <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+      />
+      <link rel="preconnect" as="font" href="https://fonts.googleapis.com" />
       <link
         rel="preconnect"
+        as="font"
         href="https://fonts.gstatic.com"
         crossorigin
-      ></link>
-      <link rel="apple-touch-icon" sizes="180x180" href={appleTouchIcon}></link>
-      <link rel="icon" type="image/png" sizes="32x32" href={faviconBig}></link>
+      />
       <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href={faviconSmall}
-      ></link>
-      {/* <link rel="manifest" href="favicon/manifest.json" /> */}
+        href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap"
+        rel="stylesheet"
+      />
+      <link rel="apple-touch-icon" sizes="180x180" href={appleTouchIcon} />
+      <link rel="icon" type="image/png" sizes="32x32" href={faviconBig} />
+      <link rel="icon" type="image/png" sizes="16x16" href={faviconSmall} />
+      {/* <link rel="manifest" href="site.webmanifest" /> */}
     </Helmet>
   );
 }

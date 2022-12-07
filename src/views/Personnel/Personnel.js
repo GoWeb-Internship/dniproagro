@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { SwiperSlide } from 'swiper/react';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import loadable from '@loadable/component';
 import Markdown from 'markdown-to-jsx';
 import { Section, SectionTitle, Container } from 'components';
 import { Slider } from 'components/Slider/Slider';
@@ -79,15 +80,7 @@ export const Personnel = () => {
                   <SwiperSlide key={index}>
                     {({ isActive }) => (
                       <>
-                        <GatsbyImage
-                          image={getImage(photo)}
-                          alt={alt}
-                          // className={
-                          //   isActive
-                          //     ? '  h-[295px] w-[218px] md:h-[402px] md:w-[336px] xl:h-[495px] xl:w-[400px]'
-                          //     : 'h-[266px] w-[184px] md:h-[218px] md:w-[152px] xl:h-[442px] xl:w-[294px]'
-                          // }
-                        />
+                        <GatsbyImage image={getImage(photo)} alt={alt} />
                         <div className={isActive ? s.thumbActive : s.thumb}>
                           <p className={isActive ? s.nameActiv : s.name}>
                             {worker}
