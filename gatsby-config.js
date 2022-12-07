@@ -106,6 +106,7 @@ module.exports = {
         },
       },
     },
+    // PIXEL треба додати у профілі замовників, тут id поки від Ігоря
     // {
     //   resolve: `gatsby-plugin-facebook-pixel`,
     //   options: {
