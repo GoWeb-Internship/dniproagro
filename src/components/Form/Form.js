@@ -73,6 +73,7 @@ export const Form = () => {
         ),
       message: yup
         .string()
+        .trim()
         .required(t(required))
         .min(20, t(messageMin))
         .max(2000, t(messageMax)),
