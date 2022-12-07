@@ -2,10 +2,11 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Helmet } from 'react-helmet';
-import image from '../assets/images/cover.png';
+import image from '../assets/images/cover.jpg';
 import appleTouchIcon from '../../static/favicon/apple-touch-icon.png';
 import faviconBig from '../../static/favicon/favicon-32x32.png';
 import faviconSmall from '../../static/favicon/favicon-16x16.png';
+// import manifest from '../../static/favicon/site.webmanifest';
 
 function Seo({ description, title, lang = 'uk', meta = [] }) {
   const { site } = useStaticQuery(
@@ -51,9 +52,7 @@ function Seo({ description, title, lang = 'uk', meta = [] }) {
         },
         {
           property: `og:image`,
-          // content: site.siteMetadata.siteUrl + image,
-          content:
-            'https://res.cloudinary.com/dgukycvw0/image/upload/v1670396330/images/cover_klst2t.png',
+          content: site.siteMetadata.siteUrl + image,
         },
         {
           property: 'og:image:width',
@@ -98,7 +97,7 @@ function Seo({ description, title, lang = 'uk', meta = [] }) {
       <link rel="apple-touch-icon" sizes="180x180" href={appleTouchIcon} />
       <link rel="icon" type="image/png" sizes="32x32" href={faviconBig} />
       <link rel="icon" type="image/png" sizes="16x16" href={faviconSmall} />
-      {/* <link rel="manifest" href="site.webmanifest" /> */}
+      {/* <link rel="manifest" href={manifest} /> */}
     </Helmet>
   );
 }
