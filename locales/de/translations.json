@@ -2,14 +2,14 @@
   "sloganBtn": "Anrufen",
   "logoAlt": "Logo",
   "culturesModalBtn": "Aussaattechnologien",
-  "ourAddress": "Unsere adresse:",
+  "ourAddress": "Unsere Adresse:",
   "experience": "Zusammenarbeit",
   "form": {
-    "title": "Schreib uns",
-    "subTitle": "Füllen Sie die Daten aus",
+    "title": "Uns schreiben",
+    "subTitle": "Daten ausfüllen",
     "nameInput": "Name",
     "emailInput": "Email",
-    "messageInput": "Schreib uns",
+    "messageInput": "Uns schreiben",
     "submit": "Senden",
     "phonePlaceholder": "Telefonnummer eingeben"
   },

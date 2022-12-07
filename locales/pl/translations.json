@@ -6,11 +6,11 @@
   "experience": "współpracy",
   "form": {
     "title": "Napisz do nas",
-    "subTitle": "Uzupełnij dane",
+    "subTitle": "Wypełnij dane",
     "nameInput": "Imię",
     "emailInput": "Email",
     "messageInput": "Napisz do nas",
-    "submit": "Wysłać",
+    "submit": "Wyślij",
     "phonePlaceholder": "Wpisz numer telefonu"
   },
   "formValidation": {
