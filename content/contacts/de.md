@@ -7,17 +7,17 @@ address: 52650, Ukraine, Gebiet Dnipropetrowsk, Sinelnikowski Bezirk, Dorf
   Sviridovo, Friedenstraße, 42
 location: '{"type":"Point","coordinates":[36.2407704,48.1840906]}'
 contacts:
-  - department: Vorsitzender
+  - department: Generaldirektor
     phone: "+380678533818"
     telegram: Mukola1111
     viber: "380678533818"
     whatsapp: "380678533818"
   - phone: "+380965208060"
-    department: Vorsitzender
+    department: " Geschäftsführer"
     telegram: Mukola1111
     viber: "380965208060"
     whatsapp: "380965208060"
-  - department: Rechnungswesen
+  - department: Buchhaltungsbüro
     phone: "+380982098186"
     telegram: Mukola1111
     viber: "380982098186"
