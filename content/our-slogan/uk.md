@@ -1,14 +1,23 @@
 ---
 chapter: our_slogan
+chapter_range: '1'
 language: uk
-title: Наш слоган
-content: Н﻿аш слоган
-phone: "+380990000000"
+page_title:
+  first_line: Тепло сонця
+  second_line: в кожному зерні
+description:
+  first_line: Lorem ipsum dolor sit amet
+  second_line: consectetur dolor amet ipsum.
+phone: '+380990000000'
 images_list:
-  - image: kukuruza.jpg
-    alt: кукурудза
-  - image: boats-g7e1dfc3d5_1280.jpg
-    alt: море
-  - image: son.jpg
-    alt: соняшник
+  - image: slider-1.jpg
+    alt: Пшеничне поле
+  - image: slogan-7.jpg
+    alt: Ростки
+  - image: slogan-5.jpg
+    alt: Полив
+  - image: slogan-11.jpg
+    alt: Зерно
+  - image: slogan-12.jpg
+    alt: Поле
 ---

@@ -1,0 +1,24 @@
+.wrapper {
+  @apply mb-9 md:flex md:justify-between xl:mb-16;
+}
+.imgWrapper {
+  @apply relative;
+}
+.img {
+  @apply h-[252px] w-full rounded-main md:w-[336px] xl:h-[396px] xl:w-[400px];
+}
+.link {
+  @apply absolute bottom-0 left-0 flex w-full items-center rounded-main bg-gradient-green p-4 pt-[34px] text-white md:pt-4 md:text-big xl:p-6 xl:pt-6;
+}
+.icon {
+  @apply ml-4 w-6 stroke-2;
+}
+.contentWrapper {
+  @apply mt-9 max-w-full rounded border border-green p-4 md:mt-0 md:w-[336px] xl:w-[820px] xl:p-[24px];
+}
+.contentInnerWrapper {
+  @apply h-[222px] overflow-y-auto pr-4 xl:h-[346px] xl:pr-[38px];
+}
+.content {
+  @apply xl:text-big;
+}

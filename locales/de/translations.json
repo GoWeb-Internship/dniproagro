@@ -1,0 +1,34 @@
+{
+  "sloganBtn": "Anrufen",
+  "logoAlt": "Logo",
+  "culturesModalBtn": "Aussaattechnologien",
+  "ourAddress": "Unsere Adresse:",
+  "experience": "Zusammenarbeit",
+  "form": {
+    "title": "Uns schreiben",
+    "subTitle": "Daten ausfüllen",
+    "nameInput": "Name",
+    "emailInput": "Email",
+    "messageInput": "Uns schreiben",
+    "submit": "Senden",
+    "phonePlaceholder": "Telefonnummer eingeben"
+  },
+  "formValidation": {
+    "required": "Dieses Feld ist erforderlich",
+    "name": "Es sollten nur Buchstaben sein",
+    "nameMin": "Der Name muss aus mindestens 2 Zeichen bestehen",
+    "nameMax": "Der Name darf maximal 100 Zeichen lang sein",
+    "phoneMin": "Die Telefonnummer muss aus mindestens 7 Zeichen bestehen",
+    "phoneMax": "Die Telefonnummer darf maximal 17 Zeichen lang sein",
+    "email": "Es dürfen nur lateinische Buchstaben und mindestens 3 Buchstaben vor @ stehen",
+    "emailMax": "Email darf aus maximal 63-x Zeichen bestehen",
+    "messageMin": "Der Kommentar muss mindestens 20 Zeichen lang sein",
+    "messageMax": "Der Kommentar muss mindestens 2000 Zeichen enthalten",
+    "success": "Die Nachricht wurde versendet"
+  },
+  "404": {
+    "title": "Etwas ist schief gelaufen ...",
+    "description": "Möchten Sie zur Hauptseite zurückkehren?",
+    "button": "Startseite"
+  }
+}

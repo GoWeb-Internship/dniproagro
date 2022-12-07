@@ -1,16 +1,35 @@
 ---
 chapter: about_company
+chapter_range: "2"
 language: pl
-title: sdf
-content: ф﻿укіке
+title: O firmie
+content: >-
+  Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed vel mauris
+  massa velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor sit
+  amet consectetur. Placerat et at aenean sed vel mauris massa velit. Nisl donec
+  ut cras netus risus sapien vel Lorem ipsum dolor sit amet consectetur. 
+
+
+  Placerat et at aenean sed vel mauris massa velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed vel mauris massa velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed vel mauris massa velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor sit amet consectetur. 
+
+
+  Placerat et at aenean sed vel mauris dolor sit amet consectetur. Placerat et at aenean sed vel mauris massa velit.  Placerat et at aenean sed vel mauris massa velit. Placerat et at aenean sed vel mauris massa velit.
+bg-img:
+  photo: image-20.jpg
+  alt: połączyć
 reporting:
-  title: Звітність
-  path: https://www.figma.com/file/eBol4oibsMJjCcUEvBDxhG/DniproAgro?node-id=0%3A1&t=vu7KqWZhmPt4LzVI-0
+  report_file: report_default.pdf
+  title: Sprawozdania
 statistics:
-  - category: Зібрано
-    value: "1684841"
-    units: кг
-  - category: Посіяно
-    value: "354684"
-    units: га
+  - category: na rynku
+    value: "10"
+    units: lat
+  - category: na ziemi
+    value: "860"
+    units: ha
+  - category: partnerów
+    value: "150"
+  - category: zbiorów
+    value: "32000"
+    units: t
 ---

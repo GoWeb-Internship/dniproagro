@@ -11,6 +11,8 @@ backend:
 local_backend: true
 media_folder: /static/img
 public_folder: /img
+site_url: https://lucent-semolina-877c33.netlify.app
+display_url: https://lucent-semolina-877c33.netlify.app
 
 collections:
   - label: 'Перелік мов контенту'
@@ -43,7 +45,7 @@ collections:
                 required: true,
                 pattern:
                   [
-                    '^[a-z]{1,3}$',
+                    '^[a-z]{1,4}$',
                     'Назва мови може містити тільки малі латинські літери. Не
                     більше 3 символів',
                   ],
@@ -64,17 +66,13 @@ collections:
     identifier_field: language
     description: 'Розділ "Наш слоган"'
     folder: 'content/our-slogan'
-    create: true
-    delete: true
+    create: false
+    delete: false
     path: '{{language}}'
     sortable_fields: ['commit_date', 'title', 'language']
     fields:
-      - {
-          label: 'Chapter',
-          name: 'chapter',
-          widget: 'hidden',
-          default: 'our_slogan',
-        }
+      - { name: 'chapter', widget: 'hidden', default: 'our_slogan' }
+      - { name: 'chapter_range', widget: 'hidden', default: '1' }
       - {
           label: 'Language',
           name: 'language',
@@ -88,59 +86,110 @@ collections:
           hint: 'Виберіть мову, яка відповідає контенту даного розділу',
         }
       - {
-          label: 'Title at page',
-          name: 'title',
-          widget: 'string',
-          required: true,
-          hint: 'Введіть слоган компанії, який буде відображатися на сторінці',
+          label: 'Slogan at page',
+          name: 'page_title',
+          widget: 'object',
+          fields:
+            [
+              {
+                label: 'First line of title',
+                name: 'first_line',
+                widget: 'string',
+                required: true,
+                hint:
+                  'Введіть слоган компанії, який буде відображатися на сторінці
+                  (ПЕРШИЙ РЯДОК - У ЦЕ ПОЛЕ)',
+              },
+              {
+                label: 'Second line of title',
+                name: 'second_line',
+                widget: 'string',
+                required: true,
+                hint:
+                  'Введіть слоган компанії, який буде відображатися на сторінці
+                  (ДРУГИЙ РЯДОК - У ЦЕ ПОЛЕ)',
+              },
+            ],
         }
       - {
-          label: 'Content',
-          name: 'content',
-          widget: 'markdown',
-          editor_components: [],
-          buttons: ['bold', 'code', 'link', 'bulleted-list'],
-          required: true,
-          hint: 'Введіть контент розділу "Наш слоган"',
+          label: 'Slogan description',
+          name: 'description',
+          widget: 'object',
+          fields:
+            [
+              {
+                label: 'First line of description',
+                name: 'first_line',
+                widget: 'string',
+                required: true,
+                hint:
+                  'Введіть опис слогану компанії, який буде відображатися на
+                  сторінці (ПЕРШИЙ РЯДОК - У ЦЕ ПОЛЕ)',
+              },
+              {
+                label: 'Second line of description',
+                name: 'second_line',
+                widget: 'string',
+                required: true,
+                hint:
+                  'Введіть опис слогану компанії, який буде відображатися на
+                  сторінці (ДРУГИЙ РЯДОК - У ЦЕ ПОЛЕ)',
+              },
+            ],
         }
       - {
           label: 'Company phone number',
           name: 'phone',
           widget: 'string',
-          default: '+380',
           required: true,
-          pattern: [
-              '^[+380]{1,}([0-9]){12}$',
-              # "+380([0-9]{9})$",
-              "Номер телефону може містити тільки цифри та знак +, повинен
-              починатися на '+380' та містити 13 символів",
-            ],
-          hint: "Введіть телефон компанії для зворотнього зв'язку",
+          pattern:
+            ['^[+0-9]+$', 'Номер телефону може містити тільки цифри та знак +'],
+          hint:
+            "Введіть телефон компанії для зворотнього зв'язку у міжнародному
+            форматі (+380XXXXXXXXX)",
         }
       - {
-          label: 'Add video file',
-          name: 'video_file',
-          widget: 'file',
-          media_folder: /static/video,
-          public_folder: /video,
-          choose_url: false,
+          label: 'Images for slider',
+          name: 'images_list',
+          widget: 'list',
+          label_singular: 'Add new image',
+          min: 3,
+          max: 10,
+          fields:
+            [
+              {
+                label: 'Image',
+                name: 'image',
+                widget: 'image',
+                required: true,
+                hint:
+                  'Завантажте фото для слайдера (орієнтація - "Пейзаж",
+                  мінімальні та оптимальні розміри: 1440 x 580 px, формат: jpg
+                  або jpeg)',
+              },
+              {
+                label: 'Alternative title of image',
+                name: 'alt',
+                widget: 'string',
+                required: true,
+                hint:
+                  'Введіть альтернативну назву для фото галереї (на мові
+                  колекції)',
+              },
+            ],
         }
   - label: 'Про компанію'
     name: 'about_company'
     identifier_field: language
     description: 'Розділ "Про компанію"'
     folder: 'content/about-company'
-    create: true
-    delete: true
+    create: false
+    delete: false
     path: '{{language}}'
     sortable_fields: ['commit_date', 'title', 'language']
     fields:
-      - {
-          label: 'Chapter',
-          name: 'chapter',
-          widget: 'hidden',
-          default: 'about_company',
-        }
+      - { name: 'chapter', widget: 'hidden', default: 'about_company' }
+      - { name: 'chapter_range', widget: 'hidden', default: '2' }
       - {
           label: 'Language',
           name: 'language',
@@ -167,9 +216,37 @@ collections:
           name: 'content',
           widget: 'markdown',
           editor_components: [],
-          buttons: ['bold', 'code', 'link', 'bulleted-list'],
+          buttons: ['link', 'bulleted-list'],
           required: true,
           hint: "Введіть контент розділу 'Про компанію'",
+        }
+      - {
+          label: 'Background Image',
+          name: 'bg-img',
+          widget: 'object',
+          required: true,
+          fields:
+            [
+              {
+                label: 'Photo',
+                name: 'photo',
+                widget: 'image',
+                required: true,
+                hint:
+                  'Завантажте фото для розділу "Про компанію" (мінімальні та
+                  оптимальні розміри: 400 х 400 px, бажана пропорція: близько
+                  1х1, формат: jpg або jpeg)',
+              },
+              {
+                label: 'Alt title of photo',
+                name: 'alt',
+                widget: 'string',
+                required: true,
+                hint:
+                  'Введіть альтернативну назву для фото галереї (на мові
+                  колекції)',
+              },
+            ],
         }
       - {
           label: 'Reporting',
@@ -186,11 +263,11 @@ collections:
                 hint: 'Введіть назву для кнопки звітності',
               },
               {
-                label: 'Absolute path to report file',
-                name: 'path',
-                widget: 'string',
+                label: 'File with report',
+                name: 'report_file',
+                widget: 'file',
                 required: true,
-                hint: 'Введіть абсолютний шлях до файлу звітності',
+                hint: 'Завантажте файл звітності у форматі pdf',
               },
             ],
         }
@@ -198,7 +275,9 @@ collections:
           label: 'Statistics',
           name: 'statistics',
           widget: 'list',
-          required: true,
+          label_singular: 'Add new category',
+          min: 4,
+          max: 4,
           fields:
             [
               {
@@ -212,6 +291,11 @@ collections:
                 label: 'Value',
                 name: 'value',
                 widget: 'string',
+                pattern:
+                  [
+                    '^[0-9]{1,6}$',
+                    'Введіть, будь ласка, число (максимальна кількість - 6 цифр)',
+                  ],
                 required: true,
                 hint: 'Введіть значення для даної категорії',
               },
@@ -219,27 +303,25 @@ collections:
                 label: 'Units of dimension',
                 name: 'units',
                 widget: 'string',
-                required: true,
-                hint: 'Введіть одиниці вимірювання для даної категорії',
+                required: false,
+                hint:
+                  "Введіть одиниці вимірювання для даної категорії, якщо такі є.
+                  *Необов'язкове поле",
               },
             ],
         }
-  - label: 'Технологія посіву'
-    name: 'sowing_technology'
+  - label: 'Культури і технології посіву'
+    name: 'cultures'
     identifier_field: language
-    description: 'Розділ "Технологія посіву"'
-    folder: 'content/sowing_technology'
-    create: true
-    delete: true
+    description: 'Розділ "Культури і технології посіву"'
+    folder: 'content/cultures'
+    create: false
+    delete: false
     path: '{{language}}'
     sortable_fields: ['commit_date', 'title', 'language']
     fields:
-      - {
-          label: 'Chapter',
-          name: 'chapter',
-          widget: 'hidden',
-          default: 'sowing_technology',
-        }
+      - { name: 'chapter', widget: 'hidden', default: 'cultures' }
+      - { name: 'chapter_range', widget: 'hidden', default: '3' }
       - {
           label: 'Language',
           name: 'language',
@@ -262,54 +344,17 @@ collections:
             сторінці',
         }
       - {
-          label: 'Content',
-          name: 'content',
-          widget: 'markdown',
-          editor_components: [],
-          buttons: ['bold', 'code', 'link', 'bulleted-list'],
-          required: true,
-          hint: "Введіть контент розділу 'Технологія посіву'",
-        }
-  - label: 'Культури'
-    name: 'cultures'
-    identifier_field: language
-    description: 'Розділ "Культури"'
-    folder: 'content/cultures'
-    media_folder: '/static/img'
-    public_folder: /img
-    create: true
-    delete: true
-    path: '{{language}}'
-    sortable_fields: ['commit_date', 'title', 'language']
-    fields:
-      - {
-          label: 'Chapter',
-          name: 'chapter',
-          widget: 'hidden',
-          default: 'cultures',
-        }
-      - {
-          label: 'Language',
-          name: 'language',
-          collection: 'list_of_languages',
-          widget: 'relation',
-          required: true,
-          search_fields: ['language_item.*.language_title'],
-          value_field: 'language_item.*.language_title',
-          display_fields:
-            ['language_item.*.language_title', 'language_item.*.title'],
-          hint: 'Виберіть мову, яка відповідає контенту даного розділу',
-        }
-      - {
           label: 'Cultures',
-          name: 'cultures_list',
+          name: 'list',
           widget: 'list',
-          required: true,
+          min: 4,
+          max: 50,
+          label_singular: 'Add new culture',
           fields:
             [
               {
                 label: 'Culture',
-                name: 'culture',
+                name: 'item',
                 widget: 'string',
                 required: true,
                 hint: 'Введіть назву культури',
@@ -319,26 +364,18 @@ collections:
                 name: 'description',
                 widget: 'markdown',
                 editor_components: [],
-                buttons: ['bold', 'code', 'link', 'bulleted-list'],
+                buttons: ['link', 'bulleted-list'],
                 required: true,
-                hint: 'Введіть опис для даної культури',
+                hint: 'Введіть опис технології посіву для даної культури',
               },
               {
                 label: 'Image',
                 name: 'image',
                 widget: 'image',
                 required: true,
-                hint: 'Завантажте зображення даної культури',
-              },
-              {
-                label: 'File',
-                name: 'culture_file',
-                widget: 'file',
-                required: true,
-                media_folder: /static/files,
-                public_folder: /files,
-                choose_url: false,
-                hint: 'Завантажте медіа-файл даної культури',
+                hint:
+                  'Завантажте зображення даної культури (орієнтація "Пейзаж",
+                  мінімальні розміри: 820 x 450 px, формат: jpg або jpeg)',
               },
               {
                 label: 'Alt title of image',
@@ -348,6 +385,20 @@ collections:
                 hint:
                   'Введіть альтернативну назву для зображення (на мові колекції)',
               },
+              {
+                label: 'Culture range',
+                name: 'range',
+                widget: 'string',
+                required: false,
+                pattern:
+                  [
+                    '^[0-9]{1,2}$',
+                    'Введіть, будь ласка, цифру або двоцифрове число',
+                  ],
+                hint:
+                  'Введіть цифру, що відповідає порядковому номеру розміщення
+                  культури у списку на сторінці. *Необов"язкове поле',
+              },
             ],
         }
   - label: 'Персонал'
@@ -355,19 +406,13 @@ collections:
     identifier_field: language
     description: 'Розділ "Персонал"'
     folder: 'content/personnel'
-    media_folder: '/static/img'
-    public_folder: /img
-    create: true
-    delete: true
+    ccreate: false
+    delete: false
     path: '{{language}}'
     sortable_fields: ['commit_date', 'title', 'language']
     fields:
-      - {
-          label: 'Chapter',
-          name: 'chapter',
-          widget: 'hidden',
-          default: 'personnel',
-        }
+      - { name: 'chapter', widget: 'hidden', default: 'personnel' }
+      - { name: 'chapter_range', widget: 'hidden', default: '4' }
       - {
           label: 'Language',
           name: 'language',
@@ -381,10 +426,21 @@ collections:
           hint: 'Виберіть мову, яка відповідає контенту даного розділу',
         }
       - {
+          label: 'Title at page',
+          name: 'title',
+          widget: 'string',
+          required: true,
+          hint:
+            'Введіть назву для даного розділу, яка буде відображатися на
+            сторінці',
+        }
+      - {
           label: 'Workers',
           name: 'workers_list',
           widget: 'list',
-          required: true,
+          min: 3,
+          max: 50,
+          label_singular: 'Add new worker',
           fields:
             [
               {
@@ -392,14 +448,14 @@ collections:
                 name: 'worker',
                 widget: 'string',
                 required: true,
-                hint: "Введіть прізвище, ім'я та по батькові працівника",
+                hint: "Введіть прізвище та ім'я працівника",
               },
               {
                 label: 'Length of service',
                 name: 'length_of_service',
                 widget: 'string',
                 required: true,
-                hint: "Введіть стаж роботи працівника у форматі 'N років'",
+                hint: "Введіть стаж роботи працівника за зразком: 'N років'",
               },
               {
                 label: 'Position',
@@ -413,7 +469,7 @@ collections:
                 name: 'description',
                 widget: 'markdown',
                 editor_components: [],
-                buttons: ['bold', 'code', 'link', 'bulleted-list'],
+                buttons: [],
                 required: true,
                 hint: 'Введіть інформацію про працівника',
               },
@@ -422,7 +478,10 @@ collections:
                 name: 'photo',
                 widget: 'image',
                 required: true,
-                hint: 'Завантажте фото працівника',
+                hint:
+                  'Завантажте фото працівника (орієнтація - "Портрет",
+                  мінімальні та оптимальні розміри - 400 х 500 px, бажана
+                  пропорція: близько 3х4, формат: jpg або jpeg)',
               },
               {
                 label: 'Alt title of photo',
@@ -430,7 +489,8 @@ collections:
                 widget: 'string',
                 required: true,
                 hint:
-                  'Введіть альтернативну назву для зображення (на мові колекції)',
+                  'Введіть альтернативну назву для зображення - ПІБ (на мові
+                  колекції)',
               },
             ],
         }
@@ -439,19 +499,13 @@ collections:
     identifier_field: language
     description: 'Розділ "Технічні засоби"'
     folder: 'content/technical_equipments'
-    media_folder: '/static/img'
-    public_folder: /img
-    create: true
-    delete: true
+    create: false
+    delete: false
     path: '{{language}}'
     sortable_fields: ['commit_date', 'title', 'language']
     fields:
-      - {
-          label: 'Chapter',
-          name: 'chapter',
-          widget: 'hidden',
-          default: 'technical_equipments',
-        }
+      - { name: 'chapter', widget: 'hidden', default: 'technical_equipments' }
+      - { name: 'chapter_range', widget: 'hidden', default: '5' }
       - {
           label: 'Language',
           name: 'language',
@@ -465,15 +519,26 @@ collections:
           hint: 'Виберіть мову, яка відповідає контенту даного розділу',
         }
       - {
-          label: 'Equipments',
-          name: 'Equipments_list',
-          widget: 'list',
+          label: 'Title at page',
+          name: 'title',
+          widget: 'string',
           required: true,
+          hint:
+            'Введіть назву для даного розділу, яка буде відображатися на
+            сторінці',
+        }
+      - {
+          label: 'Equipments',
+          name: 'list',
+          widget: 'list',
+          label_singular: 'Add new equipment',
+          min: 4,
+          max: 50,
           fields:
             [
               {
                 label: 'Equipment',
-                name: 'equipment',
+                name: 'item',
                 widget: 'string',
                 required: true,
                 hint: 'Введіть назву технічного засобу',
@@ -483,7 +548,7 @@ collections:
                 name: 'description',
                 widget: 'markdown',
                 editor_components: [],
-                buttons: ['bold', 'code', 'link', 'bulleted-list'],
+                buttons: [],
                 required: true,
                 hint: 'Введіть опис для даного технічного засобу',
               },
@@ -492,7 +557,10 @@ collections:
                 name: 'image',
                 widget: 'image',
                 required: true,
-                hint: 'Завантажте зображення даного технічного засобу',
+                hint:
+                  'Завантажте зображення даного технічного засобу (орієнтація
+                  "Пейзаж", мінімальний розмір - 820 х 448px, формат: jpg або
+                  jpeg)',
               },
               {
                 label: 'Alt title of image',
@@ -503,6 +571,20 @@ collections:
                   'Введіть альтернативну назву для зображення технічного засобу
                   (на мові колекції)',
               },
+              {
+                label: 'Equipment range',
+                name: 'range',
+                widget: 'string',
+                required: false,
+                pattern:
+                  [
+                    '^[0-9]{1,2}$',
+                    'Введіть, будь ласка, цифру або двоцифрове число',
+                  ],
+                hint:
+                  'Введіть цифру, що відповідає порядковому номеру розміщення
+                  технічного засобу у списку на сторінці',
+              },
             ],
         }
   - label: 'Галерея'
@@ -510,19 +592,13 @@ collections:
     identifier_field: language
     description: 'Розділ "Галерея"'
     folder: 'content/gallery'
-    media_folder: '/static/img'
-    public_folder: /img
-    create: true
-    delete: true
+    create: false
+    delete: false
     path: '{{language}}'
     sortable_fields: ['commit_date', 'title', 'language']
     fields:
-      - {
-          label: 'Chapter',
-          name: 'chapter',
-          widget: 'hidden',
-          default: 'gallery',
-        }
+      - { name: 'chapter', widget: 'hidden', default: 'gallery' }
+      - { name: 'chapter_range', widget: 'hidden', default: '6' }
       - {
           label: 'Language',
           name: 'language',
@@ -536,10 +612,21 @@ collections:
           hint: 'Виберіть мову, яка відповідає контенту даного розділу',
         }
       - {
-          label: 'Photos',
-          name: 'Photos_list',
-          widget: 'list',
+          label: 'Title at page',
+          name: 'title',
+          widget: 'string',
           required: true,
+          hint:
+            'Введіть назву для даного розділу, яка буде відображатися на
+            сторінці',
+        }
+      - {
+          label: 'Photos',
+          name: 'photos_list',
+          widget: 'list',
+          label_singular: 'Add new photo',
+          min: 3,
+          max: 50,
           fields:
             [
               {
@@ -547,7 +634,9 @@ collections:
                 name: 'photo',
                 widget: 'image',
                 required: true,
-                hint: 'Завантажте фото для галереї',
+                hint:
+                  'Завантажте фото для галереї (мінімальні розміри: 400 х 500
+                  px, формат: jpg або jpeg)',
               },
               {
                 label: 'Alt title of photo',
@@ -560,24 +649,18 @@ collections:
               },
             ],
         }
-  - label: 'Наша адреса'
+  - label: 'Контакти'
     name: 'contacts'
     identifier_field: language
-    description: 'Розділ "Наша адреса"'
+    description: 'Розділ "Контакти"'
     folder: 'content/contacts'
-    media_folder: '/static/img'
-    public_folder: /img
-    create: true
-    delete: true
+    create: false
+    delete: false
     path: '{{language}}'
     sortable_fields: ['commit_date', 'title', 'language']
     fields:
-      - {
-          label: 'Chapter',
-          name: 'chapter',
-          widget: 'hidden',
-          default: 'contacts',
-        }
+      - { name: 'chapter', widget: 'hidden', default: 'contacts' }
+      - { name: 'chapter_range', widget: 'hidden', default: '7' }
       - {
           label: 'Language',
           name: 'language',
@@ -589,6 +672,15 @@ collections:
           display_fields:
             ['language_item.*.language_title', 'language_item.*.title'],
           hint: 'Виберіть мову, яка відповідає контенту даного розділу',
+        }
+      - {
+          label: 'Title at page',
+          name: 'title',
+          widget: 'string',
+          required: true,
+          hint:
+            'Введіть назву для даного розділу, яка буде відображатися на
+            сторінці',
         }
       - {
           label: 'Address',
@@ -610,7 +702,9 @@ collections:
           label: 'Contacts',
           name: 'contacts',
           widget: 'list',
-          required: true,
+          label_singular: 'Add new contact',
+          min: 3,
+          max: 3,
           fields:
             [
               {
@@ -618,60 +712,65 @@ collections:
                 name: 'department',
                 widget: 'string',
                 required: true,
-                hint: 'Введіть назву відділу, для якого задаєте контактні дані',
+                hint: 'Введіть назву відділу, для якого хочете додати контакти',
               },
               {
                 label: 'Phone',
                 name: 'phone',
                 widget: 'string',
                 required: true,
-                pattern: [
-                    '^[+380]{1,}([0-9]){12}$',
-                    # "+380([0-9]{9})$",
-                    "Номер телефону може містити тільки цифри та знак +, повинен
-                    починатися на '+380' та містити 13 символів",
+                pattern:
+                  [
+                    '^[+0-9]+$',
+                    'Номер телефону може містити тільки цифри та знак +',
                   ],
-                hint: 'Введіть абсолютний шлях до файлу звітності',
+                hint:
+                  'Введіть номер телефону даного відділу у міжнародному форматі
+                  (+380XXXXXXXXX)',
               },
               {
                 label: 'Telegram',
                 name: 'telegram',
                 widget: 'string',
                 required: true,
-                hint: 'Введіть контакти в соцмережі Telegram',
+                hint: 'Введіть псевдонім даного відділу в соцмережі Telegram',
               },
               {
                 label: 'Viber',
                 name: 'viber',
                 widget: 'string',
                 required: true,
-                hint: 'Введіть контакти в соцмережі Viber',
+                pattern:
+                  [
+                    '^[0-9]+$',
+                    'Номер телефону може містити тільки цифри. Пробіли та +
+                    заборонено',
+                  ],
+                hint:
+                  'Введіть номер телефону даного відділу в соцмережі Viber у
+                  форматі 380XXXXXXXXX, (тільки цифри, без пробілів та +)',
               },
               {
                 label: 'WhatsApp',
                 name: 'whatsapp',
                 widget: 'string',
                 required: true,
-                hint: 'Введіть контакти в соцмережі WhatsApp',
+                pattern:
+                  [
+                    '^[0-9]+$',
+                    'Номер телефону може містити тільки цифри. Пробіли та +
+                    заборонено',
+                  ],
+                hint:
+                  'Введіть номер телефону даного відділу в соцмережі WhatsApp у
+                  форматі 380XXXXXXXXX, (тільки цифри, без пробілів та +)',
               },
             ],
-        }
-      - {
-          label: 'Schedule',
-          name: 'schedule',
-          widget: 'string',
-          required: true,
-          hint: 'Введіть графік роботи компанії',
         }
       - {
           label: 'Company email',
           name: 'email',
           widget: 'string',
           required: true,
-          # pattern: [
-          #     "^[+380]{1,}([0-9]){12}$",
-          #     # "+380([0-9]{9})$",
-          #     "Номер телефону може містити тільки цифри та знак +, повинен починатися на '+380' та містити 13 символів",
-          #   ],
           hint: 'Введіть електронну пошту компанії',
         }

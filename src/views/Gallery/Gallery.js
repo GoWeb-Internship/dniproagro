@@ -1,0 +1,79 @@
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import { SwiperSlide } from 'swiper/react';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import loadable from '@loadable/component';
+import { Section, SectionTitle, Container } from 'components';
+// import { Slider } from 'components/Slider/Slider';
+import * as s from './Gallery.module.css';
+
+const Slider = loadable(() => import('components'), {
+  resolveComponent: components => components.Slider,
+});
+
+export const Gallery = () => {
+  const { i18n } = useTranslation();
+
+  const {
+    allMarkdownRemark: { nodes },
+  } = useStaticQuery(
+    graphql`
+      query {
+        allMarkdownRemark(
+          filter: { frontmatter: { chapter: { eq: "gallery" } } }
+        ) {
+          nodes {
+            frontmatter {
+              language
+              chapter
+              title
+              photos_list {
+                alt
+                photo {
+                  childImageSharp {
+                    gatsbyImageData(
+                      placeholder: BLURRED
+                      jpgOptions: { progressive: true }
+                      formats: [AUTO, WEBP, AVIF]
+                      width: 416
+                    )
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    `,
+  );
+
+  const gallery = nodes?.find(
+    ({ frontmatter: { language } }) => language === i18n.language,
+  )?.frontmatter;
+
+  const gallerylist = gallery?.photos_list;
+
+  return (
+    <Section isContainer="false" className={s.section} id={gallery?.chapter}>
+      <Container>
+        <SectionTitle className={s.sectionTitle} title={gallery?.title} />
+      </Container>
+
+      <div className="swiperContainer">
+        <Slider slideToClickedSlide={true}>
+          {nodes &&
+            gallerylist?.map(({ photo, alt }, index) => {
+              return (
+                <SwiperSlide key={index}>
+                  {({ isActive }) => (
+                    <GatsbyImage image={getImage(photo)} alt={alt} />
+                  )}
+                </SwiperSlide>
+              );
+            })}
+        </Slider>
+      </div>
+    </Section>
+  );
+};

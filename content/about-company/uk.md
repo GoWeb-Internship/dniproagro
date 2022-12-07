@@ -1,19 +1,37 @@
 ---
 chapter: about_company
+chapter_range: '2'
 language: uk
 title: Про компанію
-content: П﻿ро компанію
+content:
+  Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed vel mauris
+  massa velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor sit
+  amet consectetur. Placerat et at aenean sed vel mauris massa velit. Nisl donec
+  ut cras netus risus sapien vel Lorem ipsum dolor sit amet consectetur.
+  Placerat et at aenean sed vel mauris massa velit. Nisl donec ut cras netus
+  risus sapien vel Lorem ipsum dolor sit amet consectetur. Placerat et at aenean
+  sed vel mauris massa velit. Nisl donec ut cras netus risus sapien vel Lorem
+  ipsum dolor sit amet consectetur. Placerat et at aenean sed vel mauris massa
+  velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor sit amet
+  consectetur. Placerat et at aenean sed vel mauris dolor sit amet consectetur.
+  Placerat et at aenean sed vel mauris massa velit.  Placerat et at aenean sed
+  vel mauris massa velit. Placerat et at aenean sed vel mauris massa velit.
+bg-img:
+  alt: Комбайн висипає зерно
+  photo: image-20.jpg
 reporting:
   title: Звітність
-  path: https://www.figma.com/file/eBol4oibsMJjCcUEvBDxhG/DniproAgro?node-id=0%3A1&t=vu7KqWZhmPt4LzVI-0
+  report_file: report_default.pdf
 statistics:
-  - category: Засіяно
-    value: "165848"
+  - category: на ринку
+    value: '10'
+    units: років
+  - category: землі
+    value: '860'
     units: га
-  - category: Продано
-    value: "65848"
-    units: га
+  - category: партнерів
+    value: '150'
   - category: Зібрано
-    value: "6541"
+    value: '6541'
     units: кг
 ---

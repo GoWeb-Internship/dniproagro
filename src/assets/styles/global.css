@@ -1,3 +1,96 @@
 @tailwind base;
+
+@layer base {
+  .invisible-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  ::-webkit-scrollbar {
+    @apply !w-[12px] rounded-main  bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply !box-border rounded-main  bg-mint-hex; /*color trackbar*/
+  }
+  ::-webkit-scrollbar-track {
+    @apply !box-border rounded-main border-[2px] border-solid border-mint-hex;
+  }
+  ::-webkit-scrollbar-button {
+    @apply hidden;
+  }
+}
+
 @tailwind components;
 @tailwind utilities;
+
+* {
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(2, 147, 28, 0.2) #f3f3f3;
+}
+
+body {
+  @apply bg-white pt-[92px] font-mulish text-small font-normal text-accent xl:pt-[138px];
+}
+
+.header {
+  @apply fixed left-0 top-0 z-10 flex w-full justify-between bg-white;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Styles for phone input */
+.selected-flag {
+  @apply !bg-transparent;
+}
+
+.flag {
+  @apply scale-[2] rounded-main;
+}
+
+.arrow {
+  position: relative;
+  top: 4px !important;
+  margin-top: 0 !important;
+  left: 27px !important;
+  width: 7px !important;
+  height: 7px !important;
+  border: 1px solid #fcfcfc !important;
+  border-left: 0 !important;
+  border-top: 0 !important;
+  transform: rotate(225deg);
+}
+
+.up {
+  top: 0 !important;
+  border: 1px solid #fcfcfc !important;
+  border-left: 0 !important;
+  border-top: 0 !important;
+  transform: rotate(45deg);
+}
+
+.country-name {
+  @apply !ml-[16px];
+}
+
+.dial-code {
+  @apply !ml-[10px] !text-green;
+}
+
+.react-tel-input:focus-within .arrow {
+  border: 1px solid #a16207 !important;
+  border-left: 0 !important;
+  border-top: 0 !important;
+}
+
+.react-tel-input:focus-within .form-control {
+  @apply !border-yellow text-yellow outline-0;
+}
+
+.country {
+  @apply rounded-main !py-4 !pl-[21px];
+}
+
+.highlight {
+  @apply !bg-mint;
+}

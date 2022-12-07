@@ -1,23 +1,61 @@
 ---
 chapter: personnel
+chapter_range: "4"
 language: uk
+title: Персонал
 workers_list:
-  - photo: /img/326946.jpg
-    description: опис
-    position: інженер
+  - worker: Савин Анатолій
     length_of_service: 10 років
-    worker: Савин В.В.
+    position: інженер
+    description: >-
+      Lorem ipsum dolor sit amet consectetur. Dui enim adipiscing eget ultrices
+      dictumst mattis. Proin mauris turpis odio commodo. Consectetur lacus
+      iaculis morbi tempor nunc aenean sit tortor.
+
+
+      Tellus in duis sit varius leo malesuada lacus volutpat. Lorem ipsum dolor sit amet consectetur. Dui enim adipiscing eget ultrices dictumst mattis. Proin mauris turpis odio commodo. arrow icon Proin mauris turpis odio commodo. arrow icon Lorem ipsum dolor sit amet consectetur. Dui enim adipiscing eget ultrices dictumst mattis.
+    photo: image-32.jpg
     alt: Савин
-  - worker: Трінчук
+  - worker: Трінчук Анатолій
     length_of_service: 4 роки
     position: Агроном
-    description: о﻿пис
-    photo: /img/5975de349b06e.jpeg
-    alt: том
-  - worker: Кріс
+    description: >-
+      Lorem ipsum dolor sit amet consectetur. Dui enim adipiscing eget ultrices
+      dictumst mattis. Proin mauris turpis odio commodo. Consectetur lacus
+      iaculis morbi tempor nunc aenean sit tortor.
+
+
+      Tellus in duis sit varius leo malesuada lacus volutpat. Lorem ipsum dolor sit amet consectetur. Dui enim adipiscing eget ultrices dictumst mattis. Proin mauris turpis odio commodo. arrow icon Proin mauris turpis odio commodo. arrow icon Lorem ipsum dolor sit amet consectetur. Dui enim adipiscing eget ultrices dictumst mattis.
+    alt: Трінчук
+    photo: image-25.jpg
+  - worker: Кріс Анатолій
     length_of_service: 20 років
     position: Комбайнер
-    description: опис
-    photo: /img/кріс-гемсворт-фото-chris-hemsworth-photo-2.jpg
-    alt: кріс
+    description: >-
+      Lorem ipsum dolor sit amet consectetur. Dui enim adipiscing eget ultrices
+      dictumst mattis. Proin mauris turpis odio commodo. Consectetur lacus
+      iaculis morbi tempor nunc aenean sit tortor.
+
+
+      Tellus in duis sit varius leo malesuada lacus volutpat. Lorem ipsum dolor sit amet consectetur. Dui enim adipiscing eget ultrices dictumst mattis. Proin mauris turpis odio commodo. arrow icon Proin mauris turpis odio commodo. arrow icon Lorem ipsum dolor sit amet consectetur. Dui enim adipiscing eget ultrices dictumst mattis.
+
+
+      Proin mauris turpis odio commodo. Consectetur lacus iaculis morbi tempor nunc aenean sit tortor. Consectetur lacus Consectetur lacus iaculis.
+    alt: Кріс
+    photo: image-28.jpg
+  - worker: Доброханський Микола
+    length_of_service: 20 років
+    position: Директор
+    description: >-
+      Lorem ipsum dolor sit amet consectetur. Dui enim adipiscing eget ultrices
+      dictumst mattis. Proin mauris turpis odio commodo. Consectetur lacus
+      iaculis morbi tempor nunc aenean sit tortor.
+
+
+      Tellus in duis sit varius leo malesuada lacus volutpat. Lorem ipsum dolor sit amet consectetur. Dui enim adipiscing eget ultrices dictumst mattis. Proin mauris turpis odio commodo. arrow icon Proin mauris turpis odio commodo. arrow icon Lorem ipsum dolor sit amet consectetur. Dui enim adipiscing eget ultrices dictumst mattis.
+
+
+      Proin mauris turpis odio commodo. Consectetur lacus iaculis morbi tempor nunc aenean sit tortor. Consectetur lacus Consectetur lacus iaculis.
+    alt: Микола
+    photo: image-28.jpg
 ---

@@ -1,0 +1,36 @@
+.langSwitch {
+  @apply relative mr-[23px] box-border py-4 md:mr-[15px] xl:ml-4;
+}
+
+.buttonSwitch {
+  @apply flex h-[24px] w-[52px] items-center justify-between gap-x-2 text-small hover:text-yellow focus:text-yellow active:text-accent;
+}
+
+.globeIcon {
+  @apply h-6 w-6 shrink-0;
+}
+
+.langBackdrop {
+  @apply fixed top-0 left-0 z-20 h-full w-full;
+}
+
+.langList {
+  @apply absolute right-1/2 z-[21] mt-5 box-content h-[230px] w-[72px] translate-x-1/2 overflow-hidden rounded-main border-2 border-[#fff] bg-[#fff] md:right-1/2 md:translate-x-1/2 xl:right-0 xl:translate-x-0;
+}
+
+.langListItem {
+  @apply mb-[2px] flex h-[56px] cursor-pointer items-center justify-center bg-accent py-1 transition-all first:rounded-tr-main first:rounded-tl-main    last:rounded-bl-main  last:rounded-br-main hover:border  hover:border-accent hover:bg-white hover:text-accent;
+}
+
+.langItemLink {
+  @apply flex  h-full w-full items-center justify-center   text-white;
+}
+
+.langItemLinkActive {
+  @apply relative flex h-full w-full items-center justify-center  text-white after:absolute after:left-[50%] after:bottom-[10px] after:h-[2px] after:w-10 after:translate-x-[-50%] after:bg-current after:content-[''];
+}
+
+.langListItem:hover > .langItemLink,
+.langListItem:hover > .langItemLinkActive {
+  @apply !text-accent;
+}

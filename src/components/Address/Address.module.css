@@ -1,0 +1,6 @@
+.title {
+  @apply mb-4 text-big font-bold xl:text-[24px] xl:leading-[30px];
+}
+.description {
+  @apply text-[14px] xl:text-small;
+}

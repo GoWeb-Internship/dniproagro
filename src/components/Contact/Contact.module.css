@@ -1,0 +1,30 @@
+.contactsList {
+  @apply mt-9 mb-9 grid grid-cols-2 gap-x-[18px] gap-y-9 md:gap-y-[46px] xl:mt-[38px] xl:mb-16 xl:grid-cols-3;
+}
+.messengerList {
+  @apply mb-2 flex gap-4 xl:mb-4;
+}
+.link {
+  @apply cursor-pointer font-light transition-all;
+}
+.link:hover,
+.link:focus {
+  @apply text-yellow;
+}
+.imgWpapper {
+  @apply cursor-pointer rounded-full border border-transparent p-[7px] transition-all;
+}
+.messengerLink:hover,
+.messengerLink:focus {
+  @apply outline-0;
+}
+.messengerLink:hover .imgWpapper,
+.messengerLink:focus .imgWpapper {
+  @apply border border-white outline-0;
+}
+.text {
+  @apply mt-2 text-[14px];
+}
+.icon {
+  @apply h-[18px] w-[18px];
+}

@@ -1,0 +1,19 @@
+.section {
+  @apply bg-green pt-9 pb-10 text-white md:pb-9 xl:py-16;
+}
+.section h2 {
+  @apply mb-4 after:hidden md:mb-2 xl:mb-4;
+}
+.wrapper {
+  @apply md:flex md:justify-between;
+}
+.contactsWrapper {
+  @apply md:w-[335px] xl:w-[610px];
+}
+.link {
+  @apply cursor-pointer font-light lowercase transition-all;
+}
+.link:hover,
+.link:focus {
+  @apply text-yellow;
+}

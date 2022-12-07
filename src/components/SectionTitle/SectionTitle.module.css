@@ -1,0 +1,7 @@
+.sectionTitle {
+  @apply relative mb-9 text-big font-bold after:bottom-[-6px] after:-translate-x-1/2 after:bg-yellow md:mb-11 md:after:absolute md:after:h-[2px] md:after:w-[104px] md:after:content-[''] xl:mb-[72px] xl:text-large xl:after:w-[208px];
+}
+
+.mainPageTitle {
+  @apply mb-4 w-full text-[24px] font-bold leading-[30px] text-white md:w-[336px] xl:mb-[24px] xl:w-[610px] xl:text-[48px] xl:leading-[60px];
+}

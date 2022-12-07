@@ -1,0 +1,40 @@
+.heroSection {
+  @apply relative z-10 pt-0;
+}
+
+.heroContainer {
+  @apply flex h-[284px] flex-col justify-between py-[40px] md:h-[318px] md:py-[57px] xl:h-[575px] xl:py-[130px];
+}
+
+.sliderWrapper {
+  @apply absolute !top-1/2 !left-1/2 -z-10 !-translate-y-1/2 !-translate-x-1/2  xl:w-full xl:max-w-[1440px];
+}
+
+.overlay {
+  @apply absolute top-0 left-0 z-[5] h-[284px] w-[237px] bg-gradient-gray md:h-[318px] md:w-[368px] xl:h-[575px] xl:w-[598px];
+}
+
+.heroSliderWrapper {
+  @apply relative mx-auto w-full max-w-[480px] overflow-x-hidden md:w-[768px] md:max-w-[768px] xl:mx-auto xl:w-full xl:max-w-[1440px];
+}
+
+.sloganDesc {
+  @apply w-full text-small font-normal text-white md:w-[320px] xl:w-[504px] xl:text-big;
+}
+
+.actionBtn {
+  @apply mt-auto flex h-[52px] w-[195px] cursor-pointer items-center justify-center rounded-main bg-accent text-small font-normal text-white transition-colors duration-300 ease-hover;
+}
+
+.actionBtn:hover,
+.actionBtn:focus {
+  @apply bg-white text-accent transition-colors duration-300 ease-hover;
+}
+
+.actionBtn:active {
+  @apply border-[1px] border-accent bg-white text-accent transition-colors duration-300 ease-hover;
+}
+
+.sloganSpan {
+  @apply block text-inherit;
+}

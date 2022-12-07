@@ -1,17 +1,86 @@
 ---
 chapter: cultures
+chapter_range: "3"
 language: uk
-cultures_list:
-  - culture: Соняшник
-    description: Соняшник
-    alt: Соняшник
-    image: /img/son.jpg
-  - culture: Кукурудза
-    description: Кукурудза
+title: Культури і технології посіву
+list:
+  - item: Кукурудза
+    description: >-
+      Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed vel
+      mauris massa velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum
+      dolor sit amet consectetur. Placerat et at aenean sed vel mauris massa
+      velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor sit
+      amet consectetur. Placerat et at aenean sed vel mauris massa velit. Nisl
+      donec ut cras netus risus sapien vel Lorem ipsum dolor sit amet
+      consectetur. Placerat et at aenean sed vel mauris massa velit. Nisl donec
+      ut cras netus risus sapien vel Lorem ipsum dolor sit amet consectetur.
+      Placerat et at aenean sed vel mauris massa velit. Nisl donec ut cras netus
+      risus sapien vel Lorem ipsum dolor sit amet consectetur. Placerat et at
+      aenean sed vel mauris.
+
+
+      Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed vel mauris massa velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed vel mauris massa velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor sit amet consectetur.
+    image: corn.jpg
     alt: Кукурудза
-    image: /img/kukuruza.jpg
-  - culture: Пшениця
-    description: П﻿шениця
-    culture_file: /files/production-id_9.mp4
-    alt: ефіукпу
+    range: "4"
+  - item: Пшениця
+    description: Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed
+      vel mauris massa velit. Nisl donec ut cras netus risus sapien vel Lorem
+      ipsum dolor sit amet consectetur. Placerat et at aenean sed vel mauris
+      massa velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor
+      sit amet consectetur. Placerat et at aenean sed vel mauris massa velit.
+      Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor sit amet
+      consectetur. Placerat et at aenean sed vel mauris massa velit. Nisl donec
+      ut cras netus risus sapien vel Lorem ipsum dolor sit amet consectetur.
+      Placerat et at aenean sed vel mauris massa velit. Nisl donec ut cras netus
+      risus sapien vel Lorem ipsum dolor sit amet consectetur. Placerat et at
+      aenean sed vel mauris
+    image: wheat.jpg
+    alt: Пшениця
+    range: "1"
+  - item: Рапс
+    description: Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed
+      vel mauris massa velit. Nisl donec ut cras netus risus sapien vel Lorem
+      ipsum dolor sit amet consectetur. Placerat et at aenean sed vel mauris
+      massa velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor
+      sit amet consectetur. Placerat et at aenean sed vel mauris massa velit.
+      Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor sit amet
+      consectetur. Placerat et at aenean sed vel mauris massa velit. Nisl donec
+      ut cras netus risus sapien vel Lorem ipsum dolor sit amet consectetur.
+      Placerat et at aenean sed vel mauris massa velit. Nisl donec ut cras netus
+      risus sapien vel Lorem ipsum dolor sit amet consectetur. Placerat et at
+      aenean sed vel mauris
+    alt: Рапс
+    image: canola.jpg
+    range: "3"
+  - item: Соняшник
+    description: Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed
+      vel mauris massa velit. Nisl donec ut cras netus risus sapien vel Lorem
+      ipsum dolor sit amet consectetur. Placerat et at aenean sed vel mauris
+      massa velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor
+      sit amet consectetur. Placerat et at aenean sed vel mauris massa velit.
+      Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor sit amet
+      consectetur. Placerat et at aenean sed vel mauris massa velit. Nisl donec
+      ut cras netus risus sapien vel Lorem ipsum dolor sit amet consectetur.
+      Placerat et at aenean sed vel mauris massa velit. Nisl donec ut cras netus
+      risus sapien vel Lorem ipsum dolor sit amet consectetur. Placerat et at
+      aenean sed vel mauris
+    alt: Соняшник
+    image: sunflower.jpg
+    range: "2"
+  - item: Ячмінь
+    description: Lorem ipsum dolor sit amet consectetur. Placerat et at aenean sed
+      vel mauris massa velit. Nisl donec ut cras netus risus sapien vel Lorem
+      ipsum dolor sit amet consectetur. Placerat et at aenean sed vel mauris
+      massa velit. Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor
+      sit amet consectetur. Placerat et at aenean sed vel mauris massa velit.
+      Nisl donec ut cras netus risus sapien vel Lorem ipsum dolor sit amet
+      consectetur. Placerat et at aenean sed vel mauris massa velit. Nisl donec
+      ut cras netus risus sapien vel Lorem ipsum dolor sit amet consectetur.
+      Placerat et at aenean sed vel mauris massa velit. Nisl donec ut cras netus
+      risus sapien vel Lorem ipsum dolor sit amet consectetur. Placerat et at
+      aenean sed vel mauris
+    image: barley.jpeg
+    alt: Ячмінь
+    range: "5"
 ---
