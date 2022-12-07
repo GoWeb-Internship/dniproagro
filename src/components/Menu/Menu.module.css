@@ -2,6 +2,10 @@
   @apply fixed left-0 top-0 z-30 h-screen w-screen bg-accent pt-[70px] transition duration-300 xl:hidden;
 }
 
+.menuContainer {
+  @apply relative px-[30px];
+}
+
 .menuShown {
   @apply translate-x-0 opacity-100;
 }

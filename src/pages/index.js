@@ -1,9 +1,11 @@
 import * as React from 'react';
+import { useEffect, useState } from 'react';
 import { withLayout } from 'layout';
 import { graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import loadable from '@loadable/component';
 import Seo from 'components/Seo';
+import { Spinner } from 'components';
 
 const Hero = loadable(() => import('views'), {
   resolveComponent: views => views.Hero,
@@ -28,11 +30,21 @@ const Contacts = loadable(() => import('views'), {
 });
 
 const IndexPage = ({ data }) => {
+  const [isLoading, setIsLoading] = useState(true);
   const { i18n } = useTranslation();
   const description =
     data?.allMarkdownRemark?.nodes[0]?.frontmatter?.page_title;
   const first = description?.first_line;
   const second = description?.second_line;
+
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+
+    setTimeout(() => {
+      setIsLoading(false);
+      document.body.style.overflow = 'auto';
+    }, 1500);
+  }, []);
 
   return (
     <>
@@ -41,6 +53,9 @@ const IndexPage = ({ data }) => {
         description={`${first} ${second}`}
         lang={i18n.language}
       />
+
+      {isLoading && <Spinner />}
+
       {/* герой */}
       <Hero />
 

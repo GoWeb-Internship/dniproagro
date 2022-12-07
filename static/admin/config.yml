@@ -448,7 +448,7 @@ collections:
                 name: 'worker',
                 widget: 'string',
                 required: true,
-                hint: "Введіть прізвище, ім'я та по батькові працівника",
+                hint: "Введіть прізвище та ім'я працівника",
               },
               {
                 label: 'Length of service',
