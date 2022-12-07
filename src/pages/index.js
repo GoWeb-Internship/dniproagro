@@ -29,14 +29,16 @@ const Contacts = loadable(() => import('views'), {
 
 const IndexPage = ({ data }) => {
   const { i18n } = useTranslation();
-  const description = data?.allMarkdownRemark?.nodes[0]?.frontmatter?.title;
-  const seoDescription = description?.split('\n\n').join('');
+  const description =
+    data?.allMarkdownRemark?.nodes[0]?.frontmatter?.page_title;
+  const first = description?.first_line;
+  const second = description?.second_line;
 
   return (
     <>
       <Seo
         title="DniproAgro"
-        description={seoDescription || ''}
+        description={`${first} ${second}`}
         lang={i18n.language}
       />
       {/* герой */}
@@ -77,7 +79,10 @@ export const query = graphql`
     ) {
       nodes {
         frontmatter {
-          title
+          page_title {
+            first_line
+            second_line
+          }
         }
       }
     }
