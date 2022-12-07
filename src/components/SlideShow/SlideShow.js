@@ -15,7 +15,7 @@ export const SlideShow = ({ images }) => {
       centeredSlides={true}
       loop={true}
       slidesPerView={1}
-      lazy={true}
+      lazy={false}
       autoplay={{
         delay: 4000,
         disableOnInteraction: false,
@@ -27,7 +27,7 @@ export const SlideShow = ({ images }) => {
       {images &&
         images.map(({ alt, image }, index) => {
           return (
-            <SwiperSlide key={index}>
+            <SwiperSlide key={`${index}-${alt}`}>
               <GatsbyImage image={getImage(image)} alt={alt} />
             </SwiperSlide>
           );

@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
-import { Section, SectionTitle, SlideShow, Spinner } from 'components';
+import { Section, SectionTitle, SlideShow } from 'components';
 import * as s from './Hero.module.css';
 
 export const Hero = () => {
   const { t, i18n } = useTranslation();
-  const [isLoading, setIsLoading] = useState(true);
 
   const {
     allMarkdownRemark: { nodes },
@@ -58,12 +57,6 @@ export const Hero = () => {
   const phone = heroData?.phone;
   const images = heroData?.images_list;
 
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 1500);
-  }, [heroData]);
-
   return (
     <>
       {heroData ? (
@@ -91,8 +84,6 @@ export const Hero = () => {
 
             <SlideShow images={images} />
           </div>
-
-          {isLoading && <Spinner />}
         </Section>
       ) : null}
     </>
