@@ -1,5 +1,5 @@
 .section {
-  @apply bg-green pt-9 pb-10 text-white md:pb-9 xl:py-16;
+  @apply bg-green py-9 text-white xl:py-16;
 }
 .section h2 {
   @apply mb-4 after:hidden md:mb-2 xl:mb-4;

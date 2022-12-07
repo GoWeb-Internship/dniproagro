@@ -5,10 +5,10 @@
   @apply mb-2 mt-9 text-big font-bold md:mt-0 xl:mb-[14px] xl:text-large;
 }
 .subTitle {
-  @apply mb-9 md:mb-[40px] xl:mb-6;
+  @apply mb-9 md:mb-[38px];
 }
 .wrapperInputs {
-  @apply mb-[62px] grid grid-cols-1 gap-y-16;
+  @apply mb-[62px] grid grid-cols-1 gap-y-[54px] md:mb-[58px] xl:mb-[67px];
 }
 .inputWrapper {
   @apply relative w-full;
