@@ -106,12 +106,12 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: `gatsby-plugin-facebook-pixel`,
-      options: {
-        pixelId: 605102281370010,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-facebook-pixel`,
+    //   options: {
+    //     pixelId: 605102281370010,
+    //   },
+    // },
     {
       resolve: 'gatsby-plugin-breakpoints',
       options: {
