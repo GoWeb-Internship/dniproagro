@@ -12,7 +12,11 @@ export const Contact = ({ contactsArr }) => (
         <li className="" key={index}>
           <ul className={s.messengerList}>
             <li>
-              <a className={s.messengerLink} href={`https://t.me/${telegram}`}>
+              <a
+                className={s.messengerLink}
+                href={`https://t.me/${telegram}`}
+                aria-label="telegram"
+              >
                 <div className={s.imgWpapper}>
                   <img src={telegramImg} className={s.icon} alt="telegram" />
                 </div>
@@ -22,6 +26,7 @@ export const Contact = ({ contactsArr }) => (
               <a
                 className={s.messengerLink}
                 href={`viber://chat?number=%2B${viber}`}
+                aria-label="viber"
               >
                 <div className={s.imgWpapper}>
                   <img src={viberImg} className={s.icon} alt="viber" />
@@ -29,14 +34,18 @@ export const Contact = ({ contactsArr }) => (
               </a>
             </li>
             <li>
-              <a className={s.messengerLink} href={`https://wa.me/${whatsapp}`}>
+              <a
+                className={s.messengerLink}
+                href={`https://wa.me/${whatsapp}`}
+                aria-label="whatsapp"
+              >
                 <div className={s.imgWpapper}>
                   <img src={whatsappImg} className={s.icon} alt="whatsapp" />
                 </div>
               </a>
             </li>
           </ul>
-          <a className={s.link} href={`tel:${phone}`}>
+          <a className={s.link} href={`tel:${phone}`} aria-label="phone number">
             {phone}
           </a>
           <p className={s.text}>{department}</p>

@@ -1,16 +1,14 @@
 ---
 chapter: our_slogan
-chapter_range: "1"
+chapter_range: '1'
 language: uk
-title: |-
-  Тепло сонця 
-
-  в кожному зерні
-content: |-
-  З року в рік вирощуємо культури 
-
-  та постачаємо в різні куточки світу
-phone: "+380990000000"
+page_title:
+  first_line: Тепло сонця
+  second_line: в кожному зерні
+description:
+  first_line: Lorem ipsum dolor sit amet
+  second_line: consectetur dolor amet ipsum.
+phone: '+380990000000'
 images_list:
   - image: slider-1.jpg
     alt: Пшеничне поле

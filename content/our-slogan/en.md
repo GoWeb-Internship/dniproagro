@@ -1,16 +1,14 @@
 ---
 chapter: our_slogan
-chapter_range: "1"
+chapter_range: '1'
 language: en
-title: |-
-  The warmth of the sun
-
-  in every grain
-content: |-
-  Lorem ipsum dolor sit amet consectetur
-
-  dolor amet ipsum.
-phone: "+380990000000"
+page_title:
+  first_line: The warmth of the sun
+  second_line: in every grain
+description:
+  first_line: Lorem ipsum dolor sit amet consectetur
+  second_line: dolor amet ipsum.
+phone: '+380990000000'
 images_list:
   - image: slider-1.jpg
     alt: wheat
