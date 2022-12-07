@@ -3,8 +3,8 @@ chapter: contacts
 chapter_range: "7"
 language: de
 title: Kontakte
-address: 52650, Ukraine, Gebiet Dnipropetrowsk, Sinelnikowski Bezirk, Dorf
-  Sviridovo, Friedenstraße, 42
+address: 52650, Ukraine, Gebiet Dnipropetrowsk, Bezirk Wassylkiwka, Dorf
+  Swyrydowe, Myru-Straße, H. 42
 location: '{"type":"Point","coordinates":[36.2407704,48.1840906]}'
 contacts:
   - department: Generaldirektor
