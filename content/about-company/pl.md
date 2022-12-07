@@ -19,17 +19,17 @@ bg-img:
   alt: połączyć
 reporting:
   report_file: report_default.pdf
-  title: Raportowanie
+  title: Sprawozdania
 statistics:
-  - category: Na rynku
+  - category: na rynku
     value: "10"
     units: lat
-  - category: Ziemi
+  - category: na ziemi
     value: "860"
     units: ha
-  - category: Partnerów
+  - category: partnerów
     value: "150"
-  - category: Żniwa
+  - category: zbiorów
     value: "32000"
     units: t
 ---
