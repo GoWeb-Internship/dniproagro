@@ -84,7 +84,7 @@ const IndexPage = ({ data }) => {
       {/* {isLoading && <Spinner />} */}
 
       {/* герой */}
-      {/* <Hero /> */}
+      <Hero />
 
       {/* про компанію */}
       {/* <About /> */}
