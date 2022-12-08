@@ -39,10 +39,10 @@ const IndexPage = ({ data }) => {
   useEffect(() => {
     document.body.style.overflow = 'hidden';
 
-    setTimeout(() => {
-      setIsLoading(false);
-      document.body.style.overflow = 'auto';
-    }, 1500);
+    // setTimeout(() => {
+    //   setIsLoading(false);
+    //   document.body.style.overflow = 'auto';
+    // }, 1500);
   }, []);
 
   return (

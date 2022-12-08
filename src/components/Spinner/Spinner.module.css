@@ -9,7 +9,7 @@
 }
 
 .spinner {
-  @apply h-[30px] w-[30px] md:h-[30px] md:w-[40px] xl:h-[80px] xl:w-[80px];
+  @apply h-[30px] w-[30px] md:h-[40px] md:w-[40px] xl:h-[80px] xl:w-[80px];
   position: absolute;
   top: 50%;
   left: 50%;
