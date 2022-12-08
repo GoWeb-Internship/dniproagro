@@ -39,39 +39,37 @@ const IndexPage = ({ data }) => {
   const first = description?.first_line;
   const second = description?.second_line;
 
-  //
+  // const breakpoints = useBreakpoint();
+  // const isMobile = breakpoints.sm;
+  // const isTablet = breakpoints.md && breakpoints.mdt;
+  // const isDesktop = breakpoints.lg;
 
-  const breakpoints = useBreakpoint();
-  const isMobile = breakpoints.sm;
-  const isTablet = breakpoints.md && breakpoints.mdt;
-  const isDesktop = breakpoints.lg;
+  // console.log(isMobile, 'isMobile');
+  // console.log(isTablet, 'isTablet');
+  // console.log(isDesktop, 'isDesktop');
 
-  console.log(isMobile, 'isMobile');
-  console.log(isTablet, 'isTablet');
-  console.log(isDesktop, 'isDesktop');
-
-  if (typeof window !== 'undefined') {
-    console.log(window.innerWidth);
-  }
-
-  useEffect(() => {
-    console.log(window.innerWidth);
-  }, []);
-
-  useLayoutEffect(() => {
-    console.log(window.innerWidth);
-  }, []);
-
-  //
+  // if (typeof window !== 'undefined') {
+  //   console.log(window.innerWidth);
+  // }
 
   // useEffect(() => {
-  //   document.body.style.overflow = 'hidden';
-
-  //   setTimeout(() => {
-  //     setIsLoading(false);
-  //     document.body.style.overflow = 'auto';
-  //   }, 5000);
+  //   console.log(window.innerWidth);
   // }, []);
+
+  // useLayoutEffect(() => {
+  //   console.log(window.innerWidth);
+  // }, []);
+
+  // //
+
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+
+    setTimeout(() => {
+      setIsLoading(false);
+      document.body.style.overflow = 'auto';
+    }, 5000);
+  }, []);
 
   return (
     <>
@@ -81,7 +79,7 @@ const IndexPage = ({ data }) => {
         lang={i18n.language}
       />
 
-      {/* {isLoading && <Spinner />} */}
+      {isLoading && <Spinner />}
 
       {/* герой */}
       <Hero />
@@ -90,19 +88,19 @@ const IndexPage = ({ data }) => {
       <About />
 
       {/* культури */}
-      {/* <Cultures /> */}
+      <Cultures />
 
       {/* персонал */}
-      {/* <Personnel /> */}
+      <Personnel />
 
       {/* техзасоби */}
-      {/* <TechnicalEquipments /> */}
+      <TechnicalEquipments />
 
       {/* галерея */}
-      {/* <Gallery /> */}
+      <Gallery />
 
       {/* контакти */}
-      {/* <Contacts /> */}
+      <Contacts />
     </>
   );
 };
