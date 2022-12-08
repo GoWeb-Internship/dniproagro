@@ -84,25 +84,25 @@ const IndexPage = ({ data }) => {
       {/* {isLoading && <Spinner />} */}
 
       {/* герой */}
-      <Hero />
+      {/* <Hero /> */}
 
       {/* про компанію */}
-      <About />
+      {/* <About /> */}
 
       {/* культури */}
-      <Cultures />
+      {/* <Cultures /> */}
 
       {/* персонал */}
-      <Personnel />
+      {/* <Personnel /> */}
 
       {/* техзасоби */}
-      <TechnicalEquipments />
+      {/* <TechnicalEquipments /> */}
 
       {/* галерея */}
-      <Gallery />
+      {/* <Gallery /> */}
 
       {/* контакти */}
-      <Contacts />
+      {/* <Contacts /> */}
     </>
   );
 };
