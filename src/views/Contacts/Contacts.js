@@ -19,6 +19,7 @@ export const Contacts = () => {
       ) {
         nodes {
           frontmatter {
+            location
             language
             title
             chapter
@@ -46,6 +47,7 @@ export const Contacts = () => {
   const address = contacts?.address;
   const contactsArr = contacts?.contacts;
   const chapter = contacts?.chapter;
+  const location = contacts?.location;
 
   return (
     <Section className={s.section} id={chapter}>
@@ -57,7 +59,7 @@ export const Contacts = () => {
           </a>
           <Contact contactsArr={contactsArr} />
           <Address address={address} />
-          <Map />
+          <Map location={location} />
         </div>
         <Form />
       </div>
