@@ -1,9 +1,8 @@
-import * as React from 'react';
-import { useEffect, useState } from 'react';
-import { withLayout } from 'layout';
+import React, { useEffect, useState } from 'react';
 import { graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import loadable from '@loadable/component';
+import { withLayout } from 'layout';
 import Seo from 'components/Seo';
 import { Spinner } from 'components';
 
