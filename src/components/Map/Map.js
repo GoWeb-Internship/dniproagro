@@ -1,5 +1,4 @@
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
 import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { useInView } from 'react-intersection-observer';
@@ -23,37 +22,12 @@ const defaultOptions = {
   fullscreenControl: false,
 };
 
-const Map = () => {
+const Map = location => {
   const { ref, inView } = useInView({
     threshold: 0,
     triggerOnce: true,
   });
   const { i18n } = useTranslation();
-
-  const {
-    allMarkdownRemark: { nodes },
-  } = useStaticQuery(
-    graphql`
-      query {
-        allMarkdownRemark(
-          filter: { frontmatter: { chapter: { eq: "contacts" } } }
-        ) {
-          nodes {
-            frontmatter {
-              location
-              language
-            }
-          }
-        }
-      }
-    `,
-  );
-
-  const location = nodes?.find(
-    ({ frontmatter: { language } }) => language === i18n.language,
-  )?.frontmatter;
-
-  const language = location?.language;
 
   const coordinates = location?.location.split(':')[2].slice(1, -2);
 
@@ -76,7 +50,10 @@ const Map = () => {
     <div ref={ref}>
       {location
         ? inView && (
-            <LoadScript googleMapsApiKey={GOOGLE_API_KEY} language={language}>
+            <LoadScript
+              googleMapsApiKey={GOOGLE_API_KEY}
+              language={i18n.language}
+            >
               <GoogleMap
                 mapContainerClassName={s.container}
                 center={center}
@@ -90,7 +67,10 @@ const Map = () => {
             </LoadScript>
           )
         : inView && (
-            <LoadScript googleMapsApiKey={GOOGLE_API_KEY} language={language}>
+            <LoadScript
+              googleMapsApiKey={GOOGLE_API_KEY}
+              language={i18n.language}
+            >
               <GoogleMap
                 mapContainerClassName={s.container}
                 center={defaultcenter}

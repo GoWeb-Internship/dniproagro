@@ -13,6 +13,11 @@ export const Slider = ({ children, className = '', slideToClickedSlide }) => {
     <div className="mx-auto">
       <Swiper
         className={`${className} sliderSwiper`}
+        preloadImages={false}
+        lazy={{
+          loadPrevNext: true,
+          loadOnTransitionStart: true,
+        }}
         pagination={{
           clickable: true,
           dynamicBullets: true,
