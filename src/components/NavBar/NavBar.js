@@ -4,15 +4,10 @@ import PropTypes from 'prop-types';
 import { useBreakpoint } from 'gatsby-plugin-breakpoints';
 import { anchorScrollDuration } from 'utils/constants';
 import * as s from './NavBar.module.css';
-import { useEffect } from 'react';
 
 export const NavBar = ({ sections, setIsMenuOpen }) => {
   const breakpoints = useBreakpoint();
   const isDesktop = breakpoints.lg;
-
-  useEffect(() => {
-    console.log(sections);
-  }, [sections]);
 
   return (
     <nav>
