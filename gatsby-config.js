@@ -10,6 +10,10 @@ const myCustomQueries = {
   lg: '(min-width: 1280px)',
 };
 
+// const getGoogleTagManagerId = setTimeout(
+//   () => process.env.GOOGLE_TAGMANAGER_ID,
+//   3000,
+// );
 // require('dotenv').config({
 //   path: `.env.${process.env.NODE_ENV}`,
 // });
