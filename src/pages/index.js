@@ -6,6 +6,7 @@ import { useTranslation } from 'gatsby-plugin-react-i18next';
 import loadable from '@loadable/component';
 import Seo from 'components/Seo';
 import { Spinner } from 'components';
+import { useBreakpoint } from 'gatsby-plugin-breakpoints';
 
 const Hero = loadable(() => import('views'), {
   resolveComponent: views => views.Hero,
@@ -37,14 +38,27 @@ const IndexPage = ({ data }) => {
   const first = description?.first_line;
   const second = description?.second_line;
 
-  useEffect(() => {
-    document.body.style.overflow = 'hidden';
+  //
 
-    setTimeout(() => {
-      setIsLoading(false);
-      document.body.style.overflow = 'auto';
-    }, 1500);
-  }, []);
+  const breakpoints = useBreakpoint();
+  const isMobile = breakpoints.sm;
+  const isTablet = breakpoints.md && breakpoints.mdt;
+  const isDesktop = breakpoints.lg;
+
+  console.log(isMobile, 'isMobile');
+  console.log(isTablet, 'isTablet');
+  console.log(isDesktop, 'isDesktop');
+
+  //
+
+  // useEffect(() => {
+  //   document.body.style.overflow = 'hidden';
+
+  //   setTimeout(() => {
+  //     setIsLoading(false);
+  //     document.body.style.overflow = 'auto';
+  //   }, 5000);
+  // }, []);
 
   return (
     <>
@@ -54,7 +68,7 @@ const IndexPage = ({ data }) => {
         lang={i18n.language}
       />
 
-      {isLoading && <Spinner />}
+      {/* {isLoading && <Spinner />} */}
 
       {/* герой */}
       <Hero />
