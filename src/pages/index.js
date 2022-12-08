@@ -87,7 +87,7 @@ const IndexPage = ({ data }) => {
       <Hero />
 
       {/* про компанію */}
-      {/* <About /> */}
+      <About />
 
       {/* культури */}
       {/* <Cultures /> */}
