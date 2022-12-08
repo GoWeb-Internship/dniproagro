@@ -42,7 +42,7 @@ const IndexPage = ({ data }) => {
     setTimeout(() => {
       setIsLoading(false);
       document.body.style.overflow = 'auto';
-    }, 1500);
+    }, 1000);
   }, []);
 
   return (
