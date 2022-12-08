@@ -7,6 +7,7 @@ import loadable from '@loadable/component';
 import Seo from 'components/Seo';
 import { Spinner } from 'components';
 import { useBreakpoint } from 'gatsby-plugin-breakpoints';
+import { useLayoutEffect } from 'react';
 
 const Hero = loadable(() => import('views'), {
   resolveComponent: views => views.Hero,
@@ -48,6 +49,18 @@ const IndexPage = ({ data }) => {
   console.log(isMobile, 'isMobile');
   console.log(isTablet, 'isTablet');
   console.log(isDesktop, 'isDesktop');
+
+  if (typeof window !== 'undefined') {
+    console.log(window.innerWidth);
+  }
+
+  useEffect(() => {
+    console.log(window.innerWidth);
+  }, []);
+
+  useLayoutEffect(() => {
+    console.log(window.innerWidth);
+  }, []);
 
   //
 
