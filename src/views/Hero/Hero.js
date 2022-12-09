@@ -4,7 +4,7 @@ import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { Section, SectionTitle, SlideShow } from 'components';
 import * as s from './Hero.module.css';
 
-export const Hero = () => {
+const Hero = () => {
   const { t, i18n } = useTranslation();
 
   const {
@@ -89,3 +89,5 @@ export const Hero = () => {
     </>
   );
 };
+
+export default Hero;

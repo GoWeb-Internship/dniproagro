@@ -9,11 +9,19 @@ export const NavBar = ({ sections, setIsMenuOpen }) => {
   const breakpoints = useBreakpoint();
   const isDesktop = breakpoints.lg;
 
+  const handleClick = evt => {
+    evt.target.blur();
+  };
+
+  const handleCloseMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav>
       <ul className={s.navList}>
         {sections?.map(({ title, chapter }, index) => (
-          <li key={index} className={`${s.navItem} group`}>
+          <li key={index} className={s.navItem}>
             <Link
               className={s.baseLink}
               activeClass={s.activeLink}
@@ -22,10 +30,11 @@ export const NavBar = ({ sections, setIsMenuOpen }) => {
               spy={true}
               hashSpy={true}
               smooth="easeInOutQuart"
-              delay={100}
+              delay={50}
               offset={isDesktop ? -137 : -91}
               duration={anchorScrollDuration}
-              onSetActive={!isDesktop ? () => setIsMenuOpen(false) : null}
+              onSetActive={!isDesktop ? handleCloseMenu : null}
+              onClick={handleClick}
             >
               {title}
             </Link>

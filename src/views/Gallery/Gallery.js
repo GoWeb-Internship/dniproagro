@@ -5,14 +5,11 @@ import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import loadable from '@loadable/component';
 import { Section, SectionTitle, Container } from 'components';
-// import { Slider } from 'components/Slider/Slider';
 import * as s from './Gallery.module.css';
 
-const Slider = loadable(() => import('components'), {
-  resolveComponent: components => components.Slider,
-});
+const Slider = loadable(() => import('components/Slider/Slider'));
 
-export const Gallery = () => {
+const Gallery = () => {
   const { i18n } = useTranslation();
 
   const {
@@ -77,3 +74,5 @@ export const Gallery = () => {
     </Section>
   );
 };
+
+export default Gallery;

@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { Section, Tabs, SectionTitle } from 'components';
 
-export const Cultures = () => {
+const Cultures = () => {
   const [chapter, setChapter] = useState(null);
   const { i18n } = useTranslation();
 
@@ -68,3 +68,5 @@ export const Cultures = () => {
     </>
   );
 };
+
+export default Cultures;
