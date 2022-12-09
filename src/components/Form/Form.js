@@ -11,10 +11,15 @@ import 'react-notifications/lib/notifications.css';
 import * as yup from 'yup';
 import { sendMessage } from '../../utils/telegramApi';
 import PhoneInput from 'react-phone-input-2';
-import * as s from './Form.module.css';
 import 'react-phone-input-2/lib/style.css';
+import { useInView } from 'react-intersection-observer';
+import * as s from './Form.module.css';
 
-export const Form = () => {
+const Form = () => {
+  const { ref, inView } = useInView({
+    threshold: 0,
+    triggerOnce: true,
+  });
   const [error, setError] = useState(null);
   const { t } = useTranslation();
   const {
@@ -120,65 +125,69 @@ export const Form = () => {
   };
 
   return (
-    <div className={s.wrapper}>
+    <div className={s.wrapper} ref={ref}>
       <h3 className={s.title}>{title}</h3>
       <p className={s.subTitle}>{subTitle}</p>
-      <form method="POST" name="contact" onSubmit={handleSubmit(onSubmit)}>
-        <div className={s.wrapperInputs}>
-          <div className={s.inputWrapper}>
-            <input
-              className={errors.name === undefined ? s.input : s.inputRed}
-              {...register('name')}
-              placeholder={t(nameInput)}
-            />
-            <p className={s.errorMsg}>{errors.name?.message}</p>
-          </div>
-          <div className={s.inputWrapper}>
-            <Controller
-              control={control}
-              name="phone"
-              defaultValue=""
-              render={({ field }) => (
-                <PhoneInput
-                  placeholder={t(phonePlaceholder)}
-                  inputClass={
-                    errors.phone === undefined ? s.phoneInput : s.phoneInputRed
-                  }
-                  buttonClass={s.dropdownBtn}
-                  dropdownClass={s.dropdown}
-                  country={'ua'}
-                  preferredCountries={['ua', 'pl', 'us', 'de', 'gb']}
-                  {...field}
-                />
-              )}
-            />
-            <p className={s.errorMsg}>{errors.phone?.message}</p>
-          </div>
-          <div className={s.inputWrapper}>
-            <input
-              className={errors.email === undefined ? s.input : s.inputRed}
-              {...register('email')}
-              placeholder={t(emailInput)}
-            />
-            <p className={s.errorMsg}>{errors.email?.message}</p>
+      {inView && (
+        <form method="POST" name="contact" onSubmit={handleSubmit(onSubmit)}>
+          <div className={s.wrapperInputs}>
+            <div className={s.inputWrapper}>
+              <input
+                className={errors.name === undefined ? s.input : s.inputRed}
+                {...register('name')}
+                placeholder={t(nameInput)}
+              />
+              <p className={s.errorMsg}>{errors.name?.message}</p>
+            </div>
+            <div className={s.inputWrapper}>
+              <Controller
+                control={control}
+                name="phone"
+                defaultValue=""
+                render={({ field }) => (
+                  <PhoneInput
+                    placeholder={t(phonePlaceholder)}
+                    inputClass={
+                      errors.phone === undefined
+                        ? s.phoneInput
+                        : s.phoneInputRed
+                    }
+                    buttonClass={s.dropdownBtn}
+                    dropdownClass={s.dropdown}
+                    country={'ua'}
+                    preferredCountries={['ua', 'pl', 'us', 'de', 'gb']}
+                    {...field}
+                  />
+                )}
+              />
+              <p className={s.errorMsg}>{errors.phone?.message}</p>
+            </div>
+            <div className={s.inputWrapper}>
+              <input
+                className={errors.email === undefined ? s.input : s.inputRed}
+                {...register('email')}
+                placeholder={t(emailInput)}
+              />
+              <p className={s.errorMsg}>{errors.email?.message}</p>
+            </div>
+
+            <div className={s.inputWrapper}>
+              <textarea
+                className={
+                  errors.message === undefined ? s.textarea : s.textareaRed
+                }
+                {...register('message')}
+                placeholder={t(messageInput)}
+              />
+              <p className={s.errorMsgTextarea}>{errors.message?.message}</p>
+            </div>
           </div>
 
-          <div className={s.inputWrapper}>
-            <textarea
-              className={
-                errors.message === undefined ? s.textarea : s.textareaRed
-              }
-              {...register('message')}
-              placeholder={t(messageInput)}
-            />
-            <p className={s.errorMsgTextarea}>{errors.message?.message}</p>
-          </div>
-        </div>
-
-        <button aria-label="submit form" className={s.button} type="submit">
-          {t(submit)}
-        </button>
-      </form>
+          <button aria-label="submit form" className={s.button} type="submit">
+            {t(submit)}
+          </button>
+        </form>
+      )}
       <NotificationContainer />
     </div>
   );
@@ -188,3 +197,5 @@ Form.propTypes = {
   sendMessage: PropTypes.func,
   locationApi: PropTypes.func,
 };
+
+export default Form;
