@@ -13,7 +13,7 @@ const Slider = loadable(() => import('components'), {
   resolveComponent: components => components.Slider,
 });
 
-export const Personnel = () => {
+const Personnel = () => {
   const { i18n, t } = useTranslation();
 
   const {
@@ -120,3 +120,5 @@ export const Personnel = () => {
     </Section>
   );
 };
+
+export default Personnel;

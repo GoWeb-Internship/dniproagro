@@ -12,7 +12,7 @@ const Slider = loadable(() => import('components'), {
   resolveComponent: components => components.Slider,
 });
 
-export const Gallery = () => {
+const Gallery = () => {
   const { i18n } = useTranslation();
 
   const {
@@ -77,3 +77,5 @@ export const Gallery = () => {
     </Section>
   );
 };
+
+export default Gallery;
