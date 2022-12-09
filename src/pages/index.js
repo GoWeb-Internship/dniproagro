@@ -1,33 +1,20 @@
-import * as React from 'react';
-import { useEffect, useState } from 'react';
-import { withLayout } from 'layout';
+import React, { useEffect, useState } from 'react';
 import { graphql } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import loadable from '@loadable/component';
+import { withLayout } from 'layout';
 import Seo from 'components/Seo';
 import { Spinner } from 'components';
+import Hero from 'views/Hero/Hero';
 
-const Hero = loadable(() => import('views'), {
-  resolveComponent: views => views.Hero,
-});
-const About = loadable(() => import('views'), {
-  resolveComponent: views => views.About,
-});
-const Cultures = loadable(() => import('views'), {
-  resolveComponent: views => views.Cultures,
-});
-const Personnel = loadable(() => import('views'), {
-  resolveComponent: views => views.Personnel,
-});
-const TechnicalEquipments = loadable(() => import('views'), {
-  resolveComponent: views => views.TechnicalEquipments,
-});
-const Gallery = loadable(() => import('views'), {
-  resolveComponent: views => views.Gallery,
-});
-const Contacts = loadable(() => import('views'), {
-  resolveComponent: views => views.Contacts,
-});
+const About = loadable(() => import('views/About/About'));
+const Cultures = loadable(() => import('views/Cultures/Cultures'));
+const Personnel = loadable(() => import('views/Personnel/Personnel'));
+const TechnicalEquipments = loadable(() =>
+  import('views/TechnicalEquipments/TechnicalEquipments'),
+);
+const Gallery = loadable(() => import('views/Gallery/Gallery'));
+const Contacts = loadable(() => import('views/Contacts/Contacts'));
 
 const IndexPage = ({ data }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -43,7 +30,7 @@ const IndexPage = ({ data }) => {
     setTimeout(() => {
       setIsLoading(false);
       document.body.style.overflow = 'auto';
-    }, 1500);
+    }, 1000);
   }, []);
 
   return (

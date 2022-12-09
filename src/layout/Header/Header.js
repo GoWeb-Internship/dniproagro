@@ -13,7 +13,6 @@ const { SLOGAN } = anchors;
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [target, setTarget] = useState(null);
-
   const { i18n } = useTranslation();
 
   const breakpoints = useBreakpoint();

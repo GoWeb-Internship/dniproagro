@@ -6,14 +6,11 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import loadable from '@loadable/component';
 import Markdown from 'markdown-to-jsx';
 import { Section, SectionTitle, Container } from 'components';
-// import { Slider } from 'components/Slider/Slider';
 import * as s from './Personnel.module.css';
 
-const Slider = loadable(() => import('components'), {
-  resolveComponent: components => components.Slider,
-});
+const Slider = loadable(() => import('components/Slider/Slider'));
 
-export const Personnel = () => {
+const Personnel = () => {
   const { i18n, t } = useTranslation();
 
   const {
@@ -120,3 +117,5 @@ export const Personnel = () => {
     </Section>
   );
 };
+
+export default Personnel;

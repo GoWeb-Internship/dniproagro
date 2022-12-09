@@ -7,7 +7,7 @@ import Markdown from 'markdown-to-jsx';
 import { Statistics, Section, SectionTitle } from 'components';
 import * as s from './About.module.css';
 
-export const About = () => {
+const About = () => {
   const { i18n } = useTranslation();
 
   const {
@@ -96,3 +96,5 @@ export const About = () => {
     </Section>
   );
 };
+
+export default About;
