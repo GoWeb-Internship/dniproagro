@@ -7,7 +7,6 @@ export * from './Statistics/Statistics';
 export * from './NavBar/NavBar';
 export * from './Tabs/Tabs';
 export * from './Menu/Menu';
-export * from './Slider/Slider';
 export * from './SlideShow/SlideShow';
 export * from './Address/Address';
 export * from './Contact/Contact';
