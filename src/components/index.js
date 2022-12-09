@@ -10,5 +10,5 @@ export * from './Menu/Menu';
 export * from './SlideShow/SlideShow';
 export * from './Address/Address';
 export * from './Contact/Contact';
-export * from './Form/Form';
+// export * from './Form/Form';
 export * from './Spinner/Spinner';
