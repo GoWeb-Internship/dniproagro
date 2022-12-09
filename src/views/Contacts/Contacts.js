@@ -7,7 +7,7 @@ import * as s from './Contacts.module.css';
 
 const Map = loadable(() => import('components/Map/Map'));
 
-export const Contacts = () => {
+const Contacts = () => {
   const { i18n } = useTranslation();
 
   const {
@@ -66,3 +66,5 @@ export const Contacts = () => {
     </Section>
   );
 };
+
+export default Contacts;
