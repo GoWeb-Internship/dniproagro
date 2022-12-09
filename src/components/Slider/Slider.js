@@ -8,7 +8,7 @@ import 'swiper/css';
 import 'swiper/css/bundle';
 import 'assets/styles/slider.css';
 
-export const Slider = ({ children, className = '', slideToClickedSlide }) => {
+const Slider = ({ children, className = '', slideToClickedSlide }) => {
   return (
     <div className="mx-auto">
       <Swiper
@@ -53,6 +53,8 @@ export const Slider = ({ children, className = '', slideToClickedSlide }) => {
     </div>
   );
 };
+
+export default Slider;
 
 Slider.propTypes = {
   children: PropTypes.node.isRequired,
