@@ -15,9 +15,14 @@ export const SlideShow = ({ images }) => {
       centeredSlides={true}
       loop={true}
       slidesPerView={1}
-      lazy={false}
+      lazy={{
+        enabled: true,
+        loadPrevNext: true,
+        loadPrevNextAmount: 2,
+        loadOnTransitionStart: true,
+      }}
       autoplay={{
-        delay: 4000,
+        delay: 3000,
         disableOnInteraction: false,
       }}
       speed={2000}
