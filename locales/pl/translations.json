@@ -15,7 +15,7 @@
   },
   "formValidation": {
     "required": "To pole jest obowiązkowe",
-    "name": "Powinny być tylko litery",
+    "name": "Nazwa może składać się tylko z liter, myślnika i apostrofu",
     "nameMin": "Imię musi składać się z co najmniej 2 znaków",
     "nameMax": "Imię musi składać się maksymalnie ze 100 znaków",
     "phoneMin": "Numer telefonu musi składać się z co najmniej 7 znakówв",
