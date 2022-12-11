@@ -57,7 +57,7 @@ const Contacts = () => {
           <SectionTitle title={title} />
           <form
             action={`mailto:${email}`}
-            method="get"
+            method="POST"
             enctype="multipart/form-data"
           >
             <button className={s.link} type="submit">
