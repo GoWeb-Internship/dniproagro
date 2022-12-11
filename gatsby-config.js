@@ -93,7 +93,7 @@ module.exports = {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
         localeJsonSourceName: `locale`,
-        languages: [`uk`, `en`, `pl`, `de`],
+        languages: [`uk`, `en`, `de`, `pl`],
         defaultLanguage: `uk`,
         generateDefaultLanguagePage: '/uk',
         siteUrl: ``,
@@ -128,12 +128,6 @@ module.exports = {
       options: {
         id: process.env.GOOGLE_TAGMANAGER_ID,
         includeInDevelopment: false,
-        defaultDataLayer: { platform: 'gatsby' },
-
-        // Specify optional GTM environment details.
-        gtmAuth: 'YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_AUTH_STRING',
-        gtmPreview: 'YOUR_GOOGLE_TAGMANAGER_ENVIRONMENT_PREVIEW_NAME',
-        dataLayerName: 'YOUR_DATA_LAYER_NAME',
       },
     },
     {
