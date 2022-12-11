@@ -6,6 +6,7 @@ import { withLayout } from 'layout';
 import Seo from 'components/Seo';
 import { Spinner } from 'components';
 import Hero from 'views/Hero/Hero';
+import Events from 'components/scripts/Events';
 
 const About = loadable(() =>
   import(
@@ -63,6 +64,8 @@ const IndexPage = ({ data }) => {
 
   return (
     <>
+      <Events />
+
       <Seo
         title="DniproAgro"
         description={`${first} ${second}`}
