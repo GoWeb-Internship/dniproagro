@@ -55,9 +55,11 @@ const Contacts = () => {
       <div className={s.wrapper}>
         <div className={s.contactsWrapper}>
           <SectionTitle title={title} />
-          <a className={s.link} href={`mailto:${email}`}>
-            {email}
-          </a>
+          <form action={`mailto:${email}`} method="get">
+            <button className={s.link} type="submit">
+              {email}
+            </button>
+          </form>
           <Contact contactsArr={contactsArr} />
           <Address address={address} />
           <Map location={location} />
