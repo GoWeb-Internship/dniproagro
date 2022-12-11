@@ -51,7 +51,7 @@ export const Contact = ({ contactsArr }) => (
               </a>
             </li>
           </ul>
-          <a className={s.link} href={`tel:${phone}`} aria-label="phone number">
+          <a className={s.link} href={`tel:${phone}`} aria-label={phone}>
             {phone}
           </a>
           <p className={s.text}>{department}</p>
