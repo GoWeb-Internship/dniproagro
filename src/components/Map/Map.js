@@ -24,8 +24,8 @@ const defaultOptions = {
 
 const Map = location => {
   const { ref, inView } = useInView({
-    threshold: 0,
-    triggerOnce: true,
+    threshold: 0.5,
+    triggerOnce: false,
   });
   const { i18n } = useTranslation();
 
@@ -47,7 +47,7 @@ const Map = location => {
   }, []);
 
   return (
-    <div ref={ref}>
+    <div ref={ref} className={s.wrapper}>
       {location
         ? inView && (
             <LoadScript
