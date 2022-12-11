@@ -55,7 +55,7 @@ const Contacts = () => {
       <div className={s.wrapper}>
         <div className={s.contactsWrapper}>
           <SectionTitle title={title} />
-          <form action={`mailto:${email}`} method="get">
+          <form action={`mailto:${email}`} method="get" enctype="text/plain">
             <button className={s.link} type="submit">
               {email}
             </button>

@@ -136,7 +136,7 @@ const Form = () => {
             </div>
           </div>
 
-          <button aria-label="submit form" className={s.button} type="submit">
+          <button aria-label={t(submit)} className={s.button} type="submit">
             {t(submit)}
           </button>
         </form>
