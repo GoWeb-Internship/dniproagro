@@ -8,33 +8,22 @@ import {
   NotificationManager,
 } from 'react-notifications';
 import 'react-notifications/lib/notifications.css';
-import * as yup from 'yup';
 import { sendMessage } from '../../utils/telegramApi';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import { useInView } from 'react-intersection-observer';
+import { Schema } from 'utils/schema';
 import * as s from './Form.module.css';
 
 const Form = () => {
+  const schema = Schema();
   const { ref, inView } = useInView({
     threshold: 0,
     triggerOnce: true,
   });
   const [error, setError] = useState(null);
   const { t } = useTranslation();
-  const {
-    required,
-    name,
-    nameMin,
-    nameMax,
-    phoneMax,
-    phoneMin,
-    email,
-    emailMax,
-    messageMin,
-    messageMax,
-    success,
-  } = t('formValidation', {
+  const { success } = t('formValidation', {
     returnObjects: true,
   });
   const {
@@ -48,42 +37,6 @@ const Form = () => {
   } = t('form', {
     returnObjects: true,
   });
-
-  const schema = yup
-    .object({
-      name: yup
-        .string()
-        .trim()
-        .required(t(required))
-        .min(2, t(nameMin))
-        .max(100, t(nameMax))
-        .matches(
-          /^[а-яА-ЯёЁa-zA-ZіІїЇґҐєЄ]{1}[а-яА-ЯёЁa-zA-ZіІїЇґҐєЄ' ]+$/,
-          t(name),
-        ),
-      phone: yup
-        .string()
-        .trim()
-        .required(t(required))
-        .min(7, t(phoneMin))
-        .max(17, t(phoneMax)),
-      email: yup
-        .string()
-        .email(t(email))
-        .required(t(required))
-        .max(63, t(emailMax))
-        .matches(
-          /(?!-)^(?:[aA-zZ0-9_-]+(?:\.[aA-zZ0-9_-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*"){3}@(?:(?:[aA-zZ0-9](?:[aA-zZ0-9-]*[aA-zZ0-9])?\.)+[aA-zZ0-9](?:[aA-zZ0-9-]*[aA-zZ0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[aA-zZ0-9-]*[aA-zZ0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])$/g,
-          t(email),
-        ),
-      message: yup
-        .string()
-        .trim()
-        .required(t(required))
-        .min(20, t(messageMin))
-        .max(2000, t(messageMax)),
-    })
-    .required();
 
   const createNotification = () => NotificationManager.success(t(success));
   const createNotificationError = () =>

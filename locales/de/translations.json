@@ -15,11 +15,9 @@
   },
   "formValidation": {
     "required": "Dieses Feld ist erforderlich",
-    "name": "Es sollten nur Buchstaben sein",
+    "name": "Der Name darf nur aus Buchstaben, einem Bindestrich und einem Apostroph bestehen",
     "nameMin": "Der Name muss aus mindestens 2 Zeichen bestehen",
     "nameMax": "Der Name darf maximal 100 Zeichen lang sein",
-    "phoneMin": "Die Telefonnummer muss aus mindestens 7 Zeichen bestehen",
-    "phoneMax": "Die Telefonnummer darf maximal 17 Zeichen lang sein",
     "email": "Es dürfen nur lateinische Buchstaben und mindestens 3 Buchstaben vor @ stehen",
     "emailMax": "Email darf aus maximal 63-x Zeichen bestehen",
     "messageMin": "Der Kommentar muss mindestens 20 Zeichen lang sein",

@@ -76,7 +76,7 @@ const About = () => {
           <a
             className={s.link}
             href={buttonLink}
-            aria-label="statistics"
+            aria-label={buttonText}
             target="_blank"
             rel="noopener noreferrer nofollow"
           >

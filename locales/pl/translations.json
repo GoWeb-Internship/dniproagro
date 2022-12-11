@@ -15,11 +15,9 @@
   },
   "formValidation": {
     "required": "To pole jest obowiązkowe",
-    "name": "Powinny być tylko litery",
+    "name": "Nazwa może składać się tylko z liter, myślnika i apostrofu",
     "nameMin": "Imię musi składać się z co najmniej 2 znaków",
     "nameMax": "Imię musi składać się maksymalnie ze 100 znaków",
-    "phoneMin": "Numer telefonu musi składać się z co najmniej 7 znakówв",
-    "phoneMax": "Numer telefonu musi mieć maksymalnie 17 znaków",
     "email": "Muszą być tylko litery łacińskie i co najmniej 3 litery przed @",
     "emailMax": "Email musi składać się z maksymalnie 63-x znaków",
     "messageMin": "Komentarz musi zawierać minimum 20 znaków",
