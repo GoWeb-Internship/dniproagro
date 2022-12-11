@@ -16,6 +16,8 @@ export const Contact = ({ contactsArr }) => (
                 className={s.messengerLink}
                 href={`https://t.me/${telegram}`}
                 aria-label="telegram"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
               >
                 <div className={s.imgWpapper}>
                   <img src={telegramImg} className={s.icon} alt="telegram" />
@@ -27,6 +29,8 @@ export const Contact = ({ contactsArr }) => (
                 className={s.messengerLink}
                 href={`viber://chat?number=%2B${viber}`}
                 aria-label="viber"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
               >
                 <div className={s.imgWpapper}>
                   <img src={viberImg} className={s.icon} alt="viber" />
@@ -38,6 +42,8 @@ export const Contact = ({ contactsArr }) => (
                 className={s.messengerLink}
                 href={`https://wa.me/${whatsapp}`}
                 aria-label="whatsapp"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
               >
                 <div className={s.imgWpapper}>
                   <img src={whatsappImg} className={s.icon} alt="whatsapp" />

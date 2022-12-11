@@ -8,8 +8,6 @@ export const Schema = () => {
     name,
     nameMin,
     nameMax,
-    phoneMax,
-    phoneMin,
     email,
     emailMax,
     messageMin,
@@ -29,12 +27,7 @@ export const Schema = () => {
           /^[а-яА-ЯёЁa-zA-ZіІїЇґҐєЄäÄöÖüÜßąĄćĆęĘłŁńŃóÓśŚźŹżŻ]+(([ʼ’'` -][а-яА-ЯёЁa-zA-ZіІїЇґҐєЄäÄöÖüÜßąĄćĆęĘłŁńŃóÓśŚźŹżŻ ])?[а-яА-ЯёЁa-zA-ZіІїЇґҐєЄäÄöÖüÜßąĄćĆęĘłŁńŃóÓśŚźŹżŻ]*)*$/,
           t(name),
         ),
-      phone: yup
-        .string()
-        .trim()
-        .required(t(required))
-        .min(7, t(phoneMin))
-        .max(17, t(phoneMax)),
+      phone: yup.string().trim().required(t(required)),
       email: yup
         .string()
         .email(t(email))
