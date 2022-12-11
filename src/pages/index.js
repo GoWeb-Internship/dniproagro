@@ -11,37 +11,36 @@ const About = loadable(() =>
   import(
     /* webpackPrefetch: true */
     'views/About/About'
-    /* webpackChunkName: "component---view-about.js" */
   ),
 );
 const Cultures = loadable(() =>
   import(
     /* webpackPrefetch: true */
-    'views/Cultures/Cultures' /* webpackChunkName: "component---view-cultures.js" */
+    'views/Cultures/Cultures'
   ),
 );
 const Personnel = loadable(() =>
   import(
     /* webpackPrefetch: true */
-    'views/Personnel/Personnel' /* webpackChunkName: "component---view-personnel.js" */
+    'views/Personnel/Personnel'
   ),
 );
 const TechnicalEquipments = loadable(() =>
   import(
     /* webpackPrefetch: true */
-    'views/TechnicalEquipments/TechnicalEquipments' /* webpackChunkName: "component---view-technical-equipments.js" */
+    'views/TechnicalEquipments/TechnicalEquipments'
   ),
 );
 const Gallery = loadable(() =>
   import(
     /* webpackPrefetch: true */
-    'views/Gallery/Gallery' /* webpackChunkName: "component---view-gallery.js" */
+    'views/Gallery/Gallery'
   ),
 );
 const Contacts = loadable(() =>
   import(
     /* webpackPrefetch: true */
-    'views/Contacts/Contacts' /* webpackChunkName: "component---view-contacts.js" */
+    'views/Contacts/Contacts'
   ),
 );
 
