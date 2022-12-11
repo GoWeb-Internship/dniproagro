@@ -55,15 +55,14 @@ const Contacts = () => {
       <div className={s.wrapper}>
         <div className={s.contactsWrapper}>
           <SectionTitle title={title} />
-          <form
-            action={`mailto:${email}`}
-            method="POST"
-            enctype="multipart/form-data"
+          <a
+            className={s.link}
+            href={`mailto:${email}`}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
           >
-            <button className={s.link} type="submit">
-              {email}
-            </button>
-          </form>
+            {email}
+          </a>
           <Contact contactsArr={contactsArr} />
           <Address address={address} />
           <Map location={location} />
