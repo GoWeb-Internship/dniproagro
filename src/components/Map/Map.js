@@ -24,8 +24,8 @@ const defaultOptions = {
 
 const Map = location => {
   const { ref, inView } = useInView({
-    threshold: 0.5,
-    triggerOnce: false,
+    threshold: 0,
+    triggerOnce: true,
   });
   const { i18n } = useTranslation();
 
