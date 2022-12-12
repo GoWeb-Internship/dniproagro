@@ -54,8 +54,9 @@ export const Header = () => {
 
   useEffect(() => {
     const menuRef = document.getElementById('menu');
+
     setTarget(menuRef);
-  }, []);
+  }, [isMenuOpen]);
 
   useEffect(() => {
     if (!target) return;

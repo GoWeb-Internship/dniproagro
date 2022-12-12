@@ -22,7 +22,7 @@ export const TabsModal = ({ isModalShown, itemData, setIsModalShown }) => {
             type="button"
             onClick={() => setIsModalShown(false)}
             className={s.closeModalBtn}
-            ariaLabel="close modal button"
+            aria-label="close modal button"
           >
             <XMarkIcon className={s.closeModalIcon} />
           </button>
