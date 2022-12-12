@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useLayoutEffect, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { NavBar, Container } from 'components';
 import { XMarkIcon } from '@heroicons/react/24/solid';
@@ -30,6 +30,11 @@ export const Menu = ({ setIsMenuOpen, toggleMenu, isMenuOpen, sections }) => {
       window.removeEventListener('keydown', handleEscape);
     };
   }, [isMenuOpen, toggleMenu]);
+
+  useLayoutEffect(() => {
+    const doc = document.documentElement;
+    doc.style.setProperty('--app-height', `${window.innerHeight}px`);
+  }, [isMenuOpen]);
 
   return (
     <div
