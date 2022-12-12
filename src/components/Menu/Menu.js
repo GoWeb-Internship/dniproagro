@@ -1,10 +1,13 @@
 import React, { useLayoutEffect, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { NavBar, Container } from 'components';
 import { XMarkIcon } from '@heroicons/react/24/solid';
 import * as s from './Menu.module.css';
 
 export const Menu = ({ setIsMenuOpen, toggleMenu, isMenuOpen, sections }) => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     const handleEscape = e => {
       if (e.code !== 'Escape') return;
@@ -50,7 +53,7 @@ export const Menu = ({ setIsMenuOpen, toggleMenu, isMenuOpen, sections }) => {
           aria-expanded={isMenuOpen ? true : false}
           className={s.menuCloseBtn}
           onClick={() => setIsMenuOpen(false)}
-          aria-label="close menu button"
+          aria-label={t('closeMenuAria')}
         >
           <XMarkIcon className={s.menuIconClose} />
         </button>

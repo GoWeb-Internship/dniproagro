@@ -13,7 +13,7 @@ const { SLOGAN } = anchors;
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [target, setTarget] = useState(null);
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
 
   const breakpoints = useBreakpoint();
   const isMobOrTablet = breakpoints.mdt;
@@ -84,7 +84,7 @@ export const Header = () => {
               aria-expanded={isMenuOpen ? true : false}
               className={s.menuOpenBtn}
               onClick={() => setIsMenuOpen(true)}
-              aria-label="open menu button"
+              aria-label={t('openMenuAria')}
             >
               <Bars3Icon className={s.menuIconOpen} />
             </button>

@@ -28,5 +28,17 @@
     "title": "Etwas ist schief gelaufen ...",
     "description": "Möchten Sie zur Hauptseite zurückkehren?",
     "button": "Startseite"
-  }
+  },
+  "contact": {
+    "whatsappAlt": "WhatsApp",
+    "viberAlt": "Viber",
+    "telegramAlt": "Telegram",
+    "whatsappAriaL": "Link zu Whatsapp",
+    "viberAriaL": "Link zu Viber",
+    "telegramAriaL": "Link zu Telegramm"
+  },
+  "closeMenuAria": "Schließen Sie das Menü",
+  "openMenuAria": "Öffnen Sie das Menü",
+  "closeModalAria": "Schließen Sie das Modal",
+  "tabAria": "Tab-Schaltfläche"
 }

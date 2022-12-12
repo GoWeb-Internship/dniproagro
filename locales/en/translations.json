@@ -29,5 +29,17 @@
     "title": "Something went wrong ...",
     "description": "Would you like to return to the home page?",
     "button": "Home"
-  }
+  },
+  "contact": {
+    "whatsappAlt": "WhatsApp",
+    "viberAlt": "Viber",
+    "telegramAlt": "Telegram",
+    "whatsappAriaL": "Link to Whatsapp",
+    "viberAriaL": "Link to Viber",
+    "telegramAriaL": "Link to Telegram"
+  },
+  "closeMenuAria": "Close menu",
+  "openMenuAria": "Open menu",
+  "closeModalAria": "Close modal",
+  "tabAria": "Tab button"
 }
