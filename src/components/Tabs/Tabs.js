@@ -31,7 +31,7 @@ export const Tabs = ({ list, isAddition = false }) => {
                       onClick={() => {
                         isModalShown && setIsModalShown(false);
                       }}
-                      aria-label="tab button"
+                      aria-label={t('tabAria')}
                       aria-expanded={selected ? true : false}
                     >
                       <GatsbyImage

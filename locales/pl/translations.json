@@ -28,5 +28,17 @@
     "title": "Coś poszło nie tak ...",
     "description": "Czy chcesz wrócić do strony głównej?",
     "button": "Główna"
-  }
+  },
+  "contact": {
+    "whatsappAlt": "WhatsApp",
+    "viberAlt": "Viber",
+    "telegramAlt": "Telegram",
+    "whatsappAriaL": "Link do Whatsappa",
+    "viberAriaL": "Link do Vibera",
+    "telegramAriaL": "Link do Telegrama"
+  },
+  "closeMenuAria": "Zamknij menu",
+  "openMenuAria": "Otwórz menu",
+  "closeModalAria": "Zamknij modal",
+  "tabAria": "Tab przycisk"
 }
