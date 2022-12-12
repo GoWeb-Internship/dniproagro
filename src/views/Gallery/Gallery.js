@@ -58,7 +58,7 @@ const Gallery = () => {
       </Container>
 
       <div className="swiperContainer">
-        <Slider slideToClickedSlide={true}>
+        <Slider>
           {nodes &&
             gallerylist?.map(({ photo, alt }, index) => {
               return (
