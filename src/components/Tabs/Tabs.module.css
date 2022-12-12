@@ -3,11 +3,11 @@
 }
 
 .tabsList {
-  @apply h-[216px] shrink-0 overflow-y-auto max-md:mb-[38px] md:w-[349px] xl:h-[448px] xl:w-[351px];
+  @apply h-[216px] shrink-0 overflow-y-auto max-md:mb-[38px] md:w-[336px] xl:h-[448px] xl:w-[351px];
 }
 
 .tabItem {
-  @apply mb-4 h-[100px] w-[calc(100%-16px)] last:mb-0 xl:w-[295px];
+  @apply mb-4 h-[100px] w-[calc(100%-16px)] last:mb-0 md:w-[306px] xl:w-[295px];
 }
 
 .tabItem:hover .overlayTabsInactive,

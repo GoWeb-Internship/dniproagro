@@ -54,17 +54,18 @@ export const Header = () => {
 
   useEffect(() => {
     const menuRef = document.getElementById('menu');
+
     setTarget(menuRef);
-  }, []);
+  }, [isMenuOpen]);
 
   useEffect(() => {
     if (!target) return;
 
     if (isMenuOpen) {
-      document.body.style.overflowY = 'hidden';
+      document.body.classList.add('no-scroll');
       disableBodyScroll(target);
     } else {
-      document.body.style.overflowY = 'auto';
+      document.body.classList.remove('no-scroll');
       enableBodyScroll(target);
     }
   }, [isMenuOpen, target]);

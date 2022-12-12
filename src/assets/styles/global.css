@@ -27,7 +27,11 @@
 }
 
 body {
-  @apply bg-white pt-[92px] font-mulish text-small font-normal text-accent xl:pt-[138px];
+  @apply overflow-x-hidden bg-white pt-[92px] font-mulish text-small font-normal text-accent xl:pt-[138px];
+}
+
+body.no-scroll {
+  @apply overflow-y-hidden bg-white pt-[92px] font-mulish text-small font-normal text-accent xl:pt-[138px];
 }
 
 .header {
