@@ -21,6 +21,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --app-height: 100%;
+}
+
 * {
   scrollbar-width: thin !important;
   scrollbar-color: rgba(2, 147, 28, 0.2) #f3f3f3;
