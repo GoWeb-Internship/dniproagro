@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useLayoutEffect, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { NavBar, Container } from 'components';
@@ -33,6 +33,11 @@ export const Menu = ({ setIsMenuOpen, toggleMenu, isMenuOpen, sections }) => {
       window.removeEventListener('keydown', handleEscape);
     };
   }, [isMenuOpen, toggleMenu]);
+
+  useLayoutEffect(() => {
+    const doc = document.documentElement;
+    doc.style.setProperty('--app-height', `${window.innerHeight}px`);
+  }, [isMenuOpen]);
 
   return (
     <div
