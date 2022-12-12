@@ -38,6 +38,7 @@ export const Tabs = ({ list, isAddition = false }) => {
                         image={getImage(image)}
                         alt={alt}
                         className={s.tabImg}
+                        fluid={image.childImageSharp.fluid}
                       />
 
                       <p className={s.tabTitleBox}>{item}</p>

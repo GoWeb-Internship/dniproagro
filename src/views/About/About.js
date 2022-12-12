@@ -72,6 +72,7 @@ const About = () => {
             className={s.img}
             image={getImage(bgImg?.photo)}
             alt={bgImg?.alt}
+            loading="eager"
           />
           <a
             className={s.link}

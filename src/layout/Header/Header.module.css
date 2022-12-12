@@ -7,7 +7,7 @@
 }
 
 .mobHeaderWrapper {
-  @apply absolute right-[15px] top-[3px] flex items-center justify-center;
+  @apply absolute right-[10px] top-[3px] flex items-center justify-center md:right-[22px];
 }
 
 .desktopHeaderWrapper {
