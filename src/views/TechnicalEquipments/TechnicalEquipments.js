@@ -24,6 +24,7 @@ const TechnicalEquipments = () => {
               image {
                 childImageSharp {
                   gatsbyImageData(
+                    width: 780
                     jpgOptions: { progressive: true }
                     formats: [AUTO, WEBP, AVIF]
                     layout: CONSTRAINED
