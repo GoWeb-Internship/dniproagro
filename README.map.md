@@ -21,8 +21,8 @@
    DniproAgroReal, шукаємо поле Application restrictions, у ньому вибираємо HTTP
    referrers (web sites)(уже обрано). Спускаємося нижче, бачимо поле ADD,
    клікаємо на нього і вставляємо URL вашого актуального сайту, обовязково в
-   кінці з /_ . Приклад: https://lucent-semolina-877c33.netlify.app/_ або
-   https://vashdomain.com/* . Тільки на тих сайтах, які вказали у Website
+   кінці з `/*`. Приклад: `https://lucent-semolina-877c33.netlify.app/*` або
+   `https://vashdomain.com/*` . Тільки на тих сайтах, які вказали у Website
    Restrictions буде відображатися гугл карта.
 
 5. Якщо Google Maps API буде отримано з іншого облікового запису, то необхідно
