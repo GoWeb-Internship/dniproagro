@@ -55,12 +55,7 @@ const Contacts = () => {
       <div className={s.wrapper}>
         <div className={s.contactsWrapper}>
           <SectionTitle title={title} />
-          <a
-            className={s.link}
-            href={`mailto:${email}`}
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-          >
+          <a className={s.link} href={`mailto:${email}`}>
             {email}
           </a>
           <Contact contactsArr={contactsArr} />
