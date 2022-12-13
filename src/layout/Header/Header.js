@@ -63,10 +63,10 @@ export const Header = () => {
 
     if (isMenuOpen) {
       document.body.classList.add('no-scroll');
-      disableBodyScroll(target);
+      // disableBodyScroll(target);
     } else {
       document.body.classList.remove('no-scroll');
-      enableBodyScroll(target);
+      // enableBodyScroll(target);
     }
   }, [isMenuOpen, target]);
 

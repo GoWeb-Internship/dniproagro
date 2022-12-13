@@ -26,7 +26,6 @@ const Cultures = () => {
               image {
                 childImageSharp {
                   gatsbyImageData(
-                    width: 900
                     placeholder: BLURRED
                     jpgOptions: { progressive: true }
                     formats: [AUTO, WEBP, AVIF]
