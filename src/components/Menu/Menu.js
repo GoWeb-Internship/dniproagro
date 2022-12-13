@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect } from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { NavBar, Container } from 'components';
@@ -33,18 +33,6 @@ export const Menu = ({ setIsMenuOpen, toggleMenu, isMenuOpen, sections }) => {
       window.removeEventListener('keydown', handleEscape);
     };
   }, [isMenuOpen, toggleMenu]);
-
-  useLayoutEffect(() => {
-    const rootElement = document.documentElement;
-    const viewPortH = rootElement.getBoundingClientRect().height;
-
-    const windowH = window.innerHeight;
-    const browserUiBarsH = viewPortH - windowH;
-    rootElement.style.setProperty(
-      '--app-height',
-      `calc(100vh - ${browserUiBarsH}px)`,
-    );
-  }, []);
 
   return (
     <div
