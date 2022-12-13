@@ -6,15 +6,44 @@ import { withLayout } from 'layout';
 import Seo from 'components/Seo';
 import { Spinner } from 'components';
 import Hero from 'views/Hero/Hero';
+import Events from 'components/scripts/Events';
 
-const About = loadable(() => import('views/About/About'));
-const Cultures = loadable(() => import('views/Cultures/Cultures'));
-const Personnel = loadable(() => import('views/Personnel/Personnel'));
-const TechnicalEquipments = loadable(() =>
-  import('views/TechnicalEquipments/TechnicalEquipments'),
+const About = loadable(() =>
+  import(
+    /* webpackPrefetch: true */
+    'views/About/About'
+  ),
 );
-const Gallery = loadable(() => import('views/Gallery/Gallery'));
-const Contacts = loadable(() => import('views/Contacts/Contacts'));
+const Cultures = loadable(() =>
+  import(
+    /* webpackPrefetch: true */
+    'views/Cultures/Cultures'
+  ),
+);
+const Personnel = loadable(() =>
+  import(
+    /* webpackPrefetch: true */
+    'views/Personnel/Personnel'
+  ),
+);
+const TechnicalEquipments = loadable(() =>
+  import(
+    /* webpackPrefetch: true */
+    'views/TechnicalEquipments/TechnicalEquipments'
+  ),
+);
+const Gallery = loadable(() =>
+  import(
+    /* webpackPrefetch: true */
+    'views/Gallery/Gallery'
+  ),
+);
+const Contacts = loadable(() =>
+  import(
+    /* webpackPrefetch: true */
+    'views/Contacts/Contacts'
+  ),
+);
 
 const IndexPage = ({ data }) => {
   const [isLoading, setIsLoading] = useState(true);
@@ -25,16 +54,18 @@ const IndexPage = ({ data }) => {
   const second = description?.second_line;
 
   useEffect(() => {
-    document.body.style.overflow = 'hidden';
+    document.body.classList.add('no-scroll');
 
     setTimeout(() => {
       setIsLoading(false);
-      document.body.style.overflow = 'auto';
+      document.body.classList.remove('no-scroll');
     }, 1000);
   }, []);
 
   return (
     <>
+      <Events />
+
       <Seo
         title="DniproAgro"
         description={`${first} ${second}`}
@@ -43,25 +74,18 @@ const IndexPage = ({ data }) => {
 
       {isLoading && <Spinner />}
 
-      {/* герой */}
       <Hero />
 
-      {/* про компанію */}
       <About />
 
-      {/* культури */}
       <Cultures />
 
-      {/* персонал */}
       <Personnel />
 
-      {/* техзасоби */}
       <TechnicalEquipments />
 
-      {/* галерея */}
       <Gallery />
 
-      {/* контакти */}
       <Contacts />
     </>
   );

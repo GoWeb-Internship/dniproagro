@@ -31,13 +31,14 @@ export const Tabs = ({ list, isAddition = false }) => {
                       onClick={() => {
                         isModalShown && setIsModalShown(false);
                       }}
-                      aria-label="tab button"
+                      aria-label={t('tabAria')}
                       aria-expanded={selected ? true : false}
                     >
                       <GatsbyImage
                         image={getImage(image)}
                         alt={alt}
                         className={s.tabImg}
+                        loading="lazy"
                       />
 
                       <p className={s.tabTitleBox}>{item}</p>
@@ -71,6 +72,7 @@ export const Tabs = ({ list, isAddition = false }) => {
                           image={getImage(item?.image)}
                           alt={item?.alt}
                           className={s.panelImg}
+                          loading="lazy"
                         />
                       </div>
 

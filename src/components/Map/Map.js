@@ -47,7 +47,7 @@ const Map = location => {
   }, []);
 
   return (
-    <div ref={ref}>
+    <div ref={ref} className={s.wrapper}>
       {location
         ? inView && (
             <LoadScript

@@ -11,7 +11,7 @@
   @apply md:w-[335px] xl:w-[610px];
 }
 .link {
-  @apply cursor-pointer font-light lowercase transition-all;
+  @apply cursor-pointer border-none bg-none font-light lowercase transition-all;
 }
 .link:hover,
 .link:focus {

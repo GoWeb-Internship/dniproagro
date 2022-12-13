@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { useBreakpoint } from 'gatsby-plugin-breakpoints';
 import { Bars3Icon } from '@heroicons/react/24/solid';
@@ -13,7 +12,7 @@ const { SLOGAN } = anchors;
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [target, setTarget] = useState(null);
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
 
   const breakpoints = useBreakpoint();
   const isMobOrTablet = breakpoints.mdt;
@@ -54,18 +53,17 @@ export const Header = () => {
 
   useEffect(() => {
     const menuRef = document.getElementById('menu');
+
     setTarget(menuRef);
-  }, []);
+  }, [isMenuOpen]);
 
   useEffect(() => {
     if (!target) return;
 
     if (isMenuOpen) {
-      document.body.style.overflowY = 'hidden';
-      disableBodyScroll(target);
+      document.body.classList.add('no-scroll');
     } else {
-      document.body.style.overflowY = 'auto';
-      enableBodyScroll(target);
+      document.body.classList.remove('no-scroll');
     }
   }, [isMenuOpen, target]);
 
@@ -83,7 +81,7 @@ export const Header = () => {
               aria-expanded={isMenuOpen ? true : false}
               className={s.menuOpenBtn}
               onClick={() => setIsMenuOpen(true)}
-              aria-label="open menu button"
+              aria-label={t('openMenuAria')}
             >
               <Bars3Icon className={s.menuIconOpen} />
             </button>

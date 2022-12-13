@@ -1,10 +1,13 @@
 import React from 'react';
 import Markdown from 'markdown-to-jsx';
+import { useTranslation } from 'gatsby-plugin-react-i18next';
+
 import { XMarkIcon } from '@heroicons/react/24/solid';
 import * as s from './Tabs.module.css';
 
 export const TabsModal = ({ isModalShown, itemData, setIsModalShown }) => {
   const { item, description } = itemData;
+  const { t } = useTranslation();
 
   return (
     <>
@@ -22,6 +25,7 @@ export const TabsModal = ({ isModalShown, itemData, setIsModalShown }) => {
             type="button"
             onClick={() => setIsModalShown(false)}
             className={s.closeModalBtn}
+            aria-label={t('closeModalAria')}
           >
             <XMarkIcon className={s.closeModalIcon} />
           </button>

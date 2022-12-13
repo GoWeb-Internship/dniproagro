@@ -72,11 +72,12 @@ const About = () => {
             className={s.img}
             image={getImage(bgImg?.photo)}
             alt={bgImg?.alt}
+            loading="eager"
           />
           <a
             className={s.link}
             href={buttonLink}
-            aria-label="statistics"
+            aria-label={buttonText}
             target="_blank"
             rel="noopener noreferrer nofollow"
           >

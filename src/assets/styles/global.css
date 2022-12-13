@@ -21,13 +21,21 @@
 @tailwind components;
 @tailwind utilities;
 
+/* :root {
+  height: 100vh;
+} */
+
 * {
   scrollbar-width: thin !important;
   scrollbar-color: rgba(2, 147, 28, 0.2) #f3f3f3;
 }
 
 body {
-  @apply bg-white pt-[92px] font-mulish text-small font-normal text-accent xl:pt-[138px];
+  @apply overflow-x-hidden bg-white pt-[92px] font-mulish text-small font-normal text-accent xl:pt-[138px];
+}
+
+body.no-scroll {
+  @apply overflow-y-hidden bg-white pt-[92px] font-mulish text-small font-normal text-accent xl:pt-[138px];
 }
 
 .header {
