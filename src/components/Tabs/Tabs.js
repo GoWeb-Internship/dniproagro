@@ -38,7 +38,7 @@ export const Tabs = ({ list, isAddition = false }) => {
                         image={getImage(image)}
                         alt={alt}
                         className={s.tabImg}
-                        fluid={image.childImageSharp.fluid}
+                        loading="lazy"
                       />
 
                       <p className={s.tabTitleBox}>{item}</p>
@@ -72,6 +72,7 @@ export const Tabs = ({ list, isAddition = false }) => {
                           image={getImage(item?.image)}
                           alt={item?.alt}
                           className={s.panelImg}
+                          loading="lazy"
                         />
                       </div>
 

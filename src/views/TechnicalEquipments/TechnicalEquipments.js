@@ -24,10 +24,10 @@ const TechnicalEquipments = () => {
               image {
                 childImageSharp {
                   gatsbyImageData(
-                    width: 900
-                    placeholder: BLURRED
                     jpgOptions: { progressive: true }
                     formats: [AUTO, WEBP, AVIF]
+                    layout: CONSTRAINED
+                    outputPixelDensities: [0.25, 0.5, 1]
                   )
                 }
               }

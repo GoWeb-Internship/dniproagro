@@ -56,7 +56,21 @@ module.exports = {
       },
     },
     `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
+    // `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        defaults: {
+          formats: [`auto`, `webp`, `avif`],
+          placeholder: `blurred`,
+          quality: 50,
+          breakpoints: [480, 768, 1280],
+          backgroundColor: `transparent`,
+          // layout: `constrained`,
+          // outputPixelDensities: [0.25, 0.5, 1],
+        },
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-netlify`,
