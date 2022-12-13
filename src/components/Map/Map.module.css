@@ -1,5 +1,5 @@
 .container {
-  @apply -mx-5 mt-9 h-[164px] w-[calc(100%_+_40px)] md:mx-0 md:mt-4 md:h-[174px] md:w-full md:rounded-main xl:mt-[38px] xl:h-[302px];
+  @apply mt-9 h-[164px] w-full md:mx-0 md:mt-4 md:h-[174px] md:rounded-main xl:mt-[38px] xl:h-[302px];
 }
 .wrapper {
   @apply -mx-5 mt-9 h-[164px] w-[calc(100%_+_40px)] md:mx-0 md:mt-4 md:h-[174px] md:w-full md:rounded-main xl:mt-[38px] xl:h-[302px];
