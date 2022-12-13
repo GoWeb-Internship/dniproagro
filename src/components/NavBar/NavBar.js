@@ -30,11 +30,12 @@ export const NavBar = ({ sections, setIsMenuOpen }) => {
               spy={true}
               hashSpy={true}
               smooth="easeInOutQuart"
-              delay={50}
-              offset={isDesktop ? -137 : -86}
+              // delay={50}
+              offset={isDesktop ? -137 : -50}
               duration={anchorScrollDuration}
               onSetActive={!isDesktop ? handleCloseMenu : null}
               onClick={handleClick}
+              ignoreCancelEvents={true}
             >
               {title}
             </Link>

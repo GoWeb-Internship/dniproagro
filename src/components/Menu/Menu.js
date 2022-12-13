@@ -34,9 +34,22 @@ export const Menu = ({ setIsMenuOpen, toggleMenu, isMenuOpen, sections }) => {
     };
   }, [isMenuOpen, toggleMenu]);
 
-  useEffect(() => {
-    const doc = document.documentElement;
-    doc.style.setProperty('--app-height', `${window.innerHeight}px`);
+  useLayoutEffect(() => {
+    // const doc = document.documentElement;
+    // doc.style.setProperty('--app-height', `${window.innerHeight}px`);
+
+    const rootElement = document.documentElement;
+    const viewPortH = rootElement.getBoundingClientRect().height;
+
+    const windowH = window.innerHeight;
+    const browserUiBarsH = viewPortH - windowH;
+    rootElement.style.setProperty(
+      '--app-height',
+      `calc(100vh - ${browserUiBarsH}px)`,
+    );
+
+    // console.log(viewPortH);
+    // console.log(browserUiBarsH);
   }, []);
 
   return (
