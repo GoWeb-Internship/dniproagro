@@ -34,10 +34,10 @@ export const Menu = ({ setIsMenuOpen, toggleMenu, isMenuOpen, sections }) => {
     };
   }, [isMenuOpen, toggleMenu]);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const doc = document.documentElement;
     doc.style.setProperty('--app-height', `${window.innerHeight}px`);
-  }, [isMenuOpen]);
+  }, []);
 
   return (
     <div
