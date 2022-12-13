@@ -1,6 +1,6 @@
 .menuBox {
-  @apply fixed left-0 top-0 z-30 h-screen w-screen bg-accent pt-[70px] transition duration-300 xl:hidden;
-  height: var(--app-height);
+  @apply fixed left-0 top-0 z-30 h-screen w-screen bg-accent pt-[70px] transition duration-300 xl:hidden min-h-[100vh];
+/*   height: var(--app-height); */
 }
 
 .menuContainer {
