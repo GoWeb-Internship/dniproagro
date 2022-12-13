@@ -34,7 +34,7 @@ export const Menu = ({ setIsMenuOpen, toggleMenu, isMenuOpen, sections }) => {
     };
   }, [isMenuOpen, toggleMenu]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     // const doc = document.documentElement;
     // doc.style.setProperty('--app-height', `${window.innerHeight}px`);
 
