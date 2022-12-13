@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { NavBar, Container } from 'components';
@@ -34,23 +34,23 @@ export const Menu = ({ setIsMenuOpen, toggleMenu, isMenuOpen, sections }) => {
     };
   }, [isMenuOpen, toggleMenu]);
 
-  useLayoutEffect(() => {
-    // const doc = document.documentElement;
-    // doc.style.setProperty('--app-height', `${window.innerHeight}px`);
+  // useLayoutEffect(() => {
+  // const doc = document.documentElement;
+  // doc.style.setProperty('--app-height', `${window.innerHeight}px`);
 
-    const rootElement = document.documentElement;
-    const viewPortH = rootElement.getBoundingClientRect().height;
+  // const rootElement = document.documentElement;
+  // const viewPortH = rootElement.getBoundingClientRect().height;
 
-    const windowH = window.innerHeight;
-    const browserUiBarsH = viewPortH - windowH;
-    rootElement.style.setProperty(
-      '--app-height',
-      `calc(100vh - ${browserUiBarsH}px)`,
-    );
+  // const windowH = window.innerHeight;
+  // const browserUiBarsH = viewPortH - windowH;
+  // rootElement.style.setProperty(
+  //   '--app-height',
+  //   `calc(100vh - ${browserUiBarsH}px)`,
+  // );
 
-    // console.log(viewPortH);
-    // console.log(browserUiBarsH);
-  }, []);
+  // console.log(viewPortH);
+  // console.log(browserUiBarsH);
+  // }, []);
 
   return (
     <div

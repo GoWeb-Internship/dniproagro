@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
 import { useBreakpoint } from 'gatsby-plugin-breakpoints';
 import { Bars3Icon } from '@heroicons/react/24/solid';
@@ -63,10 +62,8 @@ export const Header = () => {
 
     if (isMenuOpen) {
       document.body.classList.add('no-scroll');
-      // disableBodyScroll(target);
     } else {
       document.body.classList.remove('no-scroll');
-      // enableBodyScroll(target);
     }
   }, [isMenuOpen, target]);
 
