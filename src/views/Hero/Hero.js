@@ -33,10 +33,9 @@ const Hero = () => {
               image {
                 childImageSharp {
                   gatsbyImageData(
-                    width: 1440
-                    height: 580
-                    jpgOptions: { progressive: false }
-                    formats: [AUTO, WEBP, AVIF]
+                    jpgOptions: { progressive: true }
+                    layout: CONSTRAINED
+                    outputPixelDensities: [0.25, 0.5, 1, 2]
                   )
                 }
               }

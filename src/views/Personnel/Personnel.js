@@ -35,10 +35,9 @@ const Personnel = () => {
                 photo {
                   childImageSharp {
                     gatsbyImageData(
-                      placeholder: BLURRED
                       jpgOptions: { progressive: true }
-                      formats: [AUTO, WEBP, AVIF]
-                      width: 416
+                      layout: CONSTRAINED
+                      outputPixelDensities: [0.25, 0.5, 1, 2]
                     )
                   }
                 }
