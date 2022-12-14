@@ -16,6 +16,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@fontsource/mulish": "^4.5.13",
     "@hookform/resolvers": "^2.9.10",
     "@loadable/babel-plugin": "^5.13.2",
     "@loadable/component": "^5.15.2",
@@ -26,7 +27,6 @@
     "gatsby": "4.24.4",
     "gatsby-plugin-breakpoints": "^1.3.9",
     "gatsby-plugin-facebook-pixel": "^1.0.8",
-    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-google-tagmanager": "^4.23.0",
     "gatsby-plugin-image": "^2.24.0",
     "gatsby-plugin-loadable-components-ssr": "^4.3.2",
