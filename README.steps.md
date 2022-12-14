@@ -1,6 +1,7 @@
 ## Після отримання хосту, на якому буде лежати сайт, необхідно замінити декотрі строчки коду
 
-1. У static/admin/config.yml - рядки 14, 15 замінити на актуальний url:
+1. У [static/admin/config.yml](static/admin/config.yml) - рядки 14, 15 замінити
+   на актуальний url:
 
    - site_url:
    - display_url:
