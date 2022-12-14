@@ -29,7 +29,7 @@ export const NavBar = ({ sections, setIsMenuOpen }) => {
               spy={true}
               hashSpy={true}
               smooth="easeInOutQuart"
-              offset={isDesktop ? -100 : -55}
+              offset={isDesktop ? -100 : -65}
               onClick={handleClick}
               ignoreCancelEvents={true}
             >
