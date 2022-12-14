@@ -63,11 +63,9 @@ module.exports = {
         defaults: {
           formats: [`auto`, `webp`, `avif`],
           placeholder: `blurred`,
-          quality: 50,
-          breakpoints: [480, 768, 1280],
+          quality: 75,
+          breakpoints: [375, 480, 768, 1280, 1440],
           backgroundColor: `transparent`,
-          // layout: `constrained`,
-          // outputPixelDensities: [0.25, 0.5, 1],
         },
       },
     },
