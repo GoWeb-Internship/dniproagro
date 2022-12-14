@@ -90,6 +90,17 @@ module.exports = {
     `gatsby-plugin-root-import`,
     `gatsby-plugin-postcss`,
     {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Mulish`,
+            variants: [`400`, `700`],
+          },
+        ],
+      },
+    },
+    {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
