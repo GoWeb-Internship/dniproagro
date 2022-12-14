@@ -1,15 +1,16 @@
-## Після отримання хосту, на якому буде лежати сайт, необхідно замінити декотрі строчки коду
+## Після отримання хосту, на якому буде лежати сайт, необхідно замінити наступні рядки коду:
 
-1. У static/admin/config.yml - рядки 14, 15 замінити на актуальний url:
+1. У **[static/admin/config.yml](static/admin/config.yml)** замінити на
+   актуальний url:
 
-   - site_url:
-   - display_url:
+   - **рядок 14**: _site_url_
+   - **рядок 15**: _display_url_
 
-2. У components/Seo.js - рядок 84:
+2. У **[src/components/Seo.js](src/components/Seo.js)**:
 
-- заміняємо href на URL актуального сайту
+   - **рядок 84**: заміняємо href на URL актуального сайту
 
-3. У gatsby-config.js рядок 30, замінити на актуальний url:
+3. У **[gatsby-config.js](gatsby-config.js)**:
 
-   - siteUrl:
-   - рядок 131: замінити pixelId на актуальний ID facebook pixel замовниці
+   - **рядок 30**: _siteUrl_ замінити на актуальний url
+   - **рядок 131**: _pixelId_ замінити на актуальний ID facebook pixel замовниці
