@@ -7,5 +7,3 @@ export const anchors = {
   GALLERY: 'gallery',
   CONTACTS: 'contacts',
 };
-
-export const anchorScrollDuration = 700;

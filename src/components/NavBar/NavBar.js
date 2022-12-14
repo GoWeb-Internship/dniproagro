@@ -2,7 +2,6 @@ import * as React from 'react';
 import { Link } from 'react-scroll';
 import PropTypes from 'prop-types';
 import { useBreakpoint } from 'gatsby-plugin-breakpoints';
-import { anchorScrollDuration } from 'utils/constants';
 import * as s from './NavBar.module.css';
 
 export const NavBar = ({ sections, setIsMenuOpen }) => {
@@ -11,10 +10,10 @@ export const NavBar = ({ sections, setIsMenuOpen }) => {
 
   const handleClick = evt => {
     evt.target.blur();
-  };
 
-  const handleCloseMenu = () => {
-    setIsMenuOpen(false);
+    if (!isDesktop) {
+      setIsMenuOpen(false);
+    }
   };
 
   return (
@@ -30,9 +29,7 @@ export const NavBar = ({ sections, setIsMenuOpen }) => {
               spy={true}
               hashSpy={true}
               smooth="easeInOutQuart"
-              offset={isDesktop ? -137 : -65}
-              duration={anchorScrollDuration}
-              onSetActive={!isDesktop ? handleCloseMenu : null}
+              offset={isDesktop ? -100 : -55}
               onClick={handleClick}
               ignoreCancelEvents={true}
             >
