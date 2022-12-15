@@ -38,9 +38,9 @@ const About = () => {
               photo {
                 childImageSharp {
                   gatsbyImageData(
-                    placeholder: BLURRED
                     jpgOptions: { progressive: true }
-                    formats: [AUTO, WEBP, AVIF]
+                    layout: CONSTRAINED
+                    outputPixelDensities: [0.25, 0.5, 1, 2]
                   )
                 }
               }
