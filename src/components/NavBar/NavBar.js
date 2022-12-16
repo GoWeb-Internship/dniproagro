@@ -27,7 +27,6 @@ export const NavBar = ({ sections, setIsMenuOpen }) => {
               to={chapter}
               href="/"
               spy={true}
-              hashSpy={true}
               smooth="easeInOutQuart"
               offset={isDesktop ? -100 : -65}
               onClick={handleClick}

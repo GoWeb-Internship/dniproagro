@@ -1,10 +1,15 @@
 import React from 'react';
-import logoImg from 'assets/images/logo.svg';
+import { Link } from 'gatsby';
 import { useTranslation } from 'gatsby-plugin-react-i18next';
-import { logoIcon } from './Logo.module.css';
+import logoImg from 'assets/images/logo.svg';
+import { logoLink, logoIcon } from './Logo.module.css';
 
 export const Logo = () => {
   const { t } = useTranslation();
 
-  return <img src={logoImg} alt={t('logoAlt')} className={logoIcon} />;
+  return (
+    <Link to="/" className={logoLink} aria-label="company logo">
+      <img src={logoImg} alt={t('logoAlt')} className={logoIcon} />
+    </Link>
+  );
 };
