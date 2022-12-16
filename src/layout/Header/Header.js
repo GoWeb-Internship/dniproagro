@@ -70,7 +70,7 @@ export const Header = () => {
   return (
     <header className={s.header}>
       <Container className={s.headerContainer}>
-        <Logo />
+        <Logo isClickable={true} />
 
         {isMobOrTablet && (
           <div className={s.mobHeaderWrapper}>
