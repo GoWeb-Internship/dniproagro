@@ -21,7 +21,7 @@
     "email": "Must be only Latin letters and at least 3 letters before @",
     "emailMax": "Email should be a maximum of 63-x characters",
     "messageMin": "The comment must contain a minimum of 20 characters",
-    "messageMax": "The comment must contain a minimum of 2000 characters",
+    "messageMax": "The comment must contain a maximum of 2000 characters",
     "success": "Message sent",
     "test": "test"
   },

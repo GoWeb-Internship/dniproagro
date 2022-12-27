@@ -21,7 +21,7 @@
     "email": "Muszą być tylko litery łacińskie i co najmniej 3 litery przed @",
     "emailMax": "Email musi składać się z maksymalnie 63-x znaków",
     "messageMin": "Komentarz musi zawierać minimum 20 znaków",
-    "messageMax": "Komentarz musi zawierać minimum 2000 znaków",
+    "messageMax": "Komentarz musi zawierać maximum 2000 znaków",
     "success": "Wiadomość wysłana"
   },
   "404": {
